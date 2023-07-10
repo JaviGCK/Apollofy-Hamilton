@@ -1,7 +1,7 @@
 import { TrackType } from "./track";
 
 export interface AlbumType {
-    id: number,
+    id: string,
     name: string,
     imageUrl: string,
     tracks: TrackType[],

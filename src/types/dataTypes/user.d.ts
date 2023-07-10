@@ -2,7 +2,7 @@ import { PlaylistsType } from "./playlist"
 import { TrackType } from "./track"
 
 export interface UserType {
-    id: number,
+    id: string,
     firstName: string,
     lastName: string,
     email: string,

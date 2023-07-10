@@ -1,6 +1,6 @@
 import { GenreTypes } from "./artist";
 interface TrackType {
-    id: number,
+    id: string,
     name: string,
     artistId: string,
     genre: GenreTypes[],

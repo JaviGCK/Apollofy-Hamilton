@@ -1,6 +1,28 @@
 {
     "artists": [
-        {}
+        {
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ",
+            "name": "The Weeknd",
+            "genres": [
+                "r&b",
+                "soul",
+                "dance",
+                "techno"
+            ],
+            "popularity": 99,
+            "photoUrl": "https://i.scdn.co/image/ab6761610000517401b9b4ec2a05d0805428acfa",
+            "albums": [],
+            "tracks": []
+        },
+        {
+            "id": "06HL4z0CvFAxyc27GXpf02",
+            "name": "Taylor Swift",
+            "genres": [],
+            "popularity": 99,
+            "photoUrl": "https://i.scdn.co/image/ab6761610000517401b9b4ec2a05d0805428acfa",
+            "albums": [],
+            "tracks": []
+        }
     ],
     "users": [
         {}

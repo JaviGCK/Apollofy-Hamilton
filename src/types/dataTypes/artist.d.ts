@@ -1,6 +1,6 @@
 
 export interface ArtistType {
-    id: number,
+    id: string,
     name: string,
     genres: GenreTypes[],
     popularity: number,
@@ -20,5 +20,8 @@ enum GenreTypes {
     funk = "funk",
     reggae = "reggae",
     country = "country",
-    classical = "classical"
+    classical = "classical",
+    soul = "soul",
+    dance = "dance",
+
 }

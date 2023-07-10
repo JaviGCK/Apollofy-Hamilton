@@ -1,5 +1,5 @@
 export interface PlaylistsType {
-    id: number,
+    id: string,
     name: string,
     isFollowed: boolean,
     thumbnail: string,
