@@ -3,70 +3,9 @@
         {}
     ],
     "users": [
-        {   "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7",
-            "firstName": "Ali",
-            "lastName": "Hourag",
-            "email": "ali-hourag@gmail.com",
-            "profilePicture": "https://avatars.githubusercontent.com/u/131694498?v=4",
-            "isLoggedIn": false,
-            "playlists": [],
-            "likedTracks": []
-        },
-        {   "id": "af99a651-4118-48ab-933c-0f7927fe70d2",
-            "firstName": "Javier",
-            "lastName": "Cabello",
-            "email": "javier-cabello@gmail.com",
-            "profilePicture": "https://avatars.githubusercontent.com/u/131688101?v=4",
-            "isLoggedIn": false,
-            "playlists": [],
-            "likedTracks": []
-        },
-        {   "id": "e47291ca-f376-4456-bd60-e02319ee280d",
-            "firstName": "Luis",
-            "lastName": "Jover",
-            "email": "luis-jover@gmail.com",
-            "profilePicture": "SomeUrl",
-            "isLoggedIn": false,
-            "playlists": [],
-            "likedTracks": []
-        },
-        {   "id": "ad84c6f9-e695-456d-95ef-cf8a982e2e7d",
-            "firstName": "Ivan",
-            "lastName": "...",
-            "email": "ivan-...@gmail.com",
-            "profilePicture": "SomeUrl",
-            "isLoggedIn": false,
-            "playlists": [],
-            "likedTracks": []
-        },
-        {   "id": "9b1421f2-e2a5-4200-8321-2224fcdfaf5d",
-            "firstName": "Matias",
-            "lastName": "Alaimo",
-            "email": "matias-alaimo@gmail.com",
-            "profilePicture": "https://avatars.githubusercontent.com/u/98781462?v=4",
-            "isLoggedIn": false,
-            "playlists": [],
-            "likedTracks": []
-        }
-
+        {}
     ],
     "tracks": [],
-    "playlists": [    ],
-    "albums": [
-        {
-        "id": "94b2f7e0-b6bc-4759-a5e4-6a0c86dad46a",
-        "name": "After Hours",
-        "imageUrl": "https://i.scdn.co/image/ab67616d00001e028863bc11d2aa12b54f5aeb36",
-        "tracks": ["Repeat after me", "Until I Bleed Out", "Alone Again", "In Your Eyes", "Snowchild", "Faith", "Hearthless", "Save Your Tears", "After Hours", "Too Late", "Scared yo Live", "Escape From LA", "Hardest to Love", "Blinding Ligths"],
-        "artistId": "The Weekend"
-        },
-        {
-        "id": "94b2f7e0-b6bc-4759-a5e4-6a0c86dad46a",
-        "name": "After Hours",
-        "imageUrl": "https://i.scdn.co/image/ab67616d00001e028863bc11d2aa12b54f5aeb36",
-        "tracks": ["Repeat after me", "Until I Bleed Out", "Alone Again", "In Your Eyes", "Snowchild", "Faith", "Hearthless", "Save Your Tears", "After Hours", "Too Late", "Scared yo Live", "Escape From LA", "Hardest to Love", "Blinding Ligths"],
-        "artistId": "The Weekend"
-        }
-
-    ]
+    "playlists": [],
+    "albums": []
 }
