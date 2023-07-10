@@ -2,7 +2,7 @@
 export interface ArtistType {
     id: number,
     name: string,
-    genres: GenreTypes,
+    genres: GenreTypes[],
     popularity: number,
     photoUrl: string,
     albums: AlbumType[],

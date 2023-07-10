@@ -3,7 +3,7 @@ interface TrackType {
     id: number,
     name: string,
     artistId: string,
-    genre: GenreTypes,
+    genre: GenreTypes[],
     liked: string,
     url: string
 }
