@@ -190,7 +190,10 @@
             "id": "40U8d12pC5UHqmHwXjHjjl",
             "name": "Repeat After Me (Interlude)",
             "artistId": [
-                "1Xyo4u8uXC1ZmMpatF05PJ"
+                {
+                    "artistId": "1Xyo4u8uXC1ZmMpatF05PJ",
+                    "artistName": "The Weeknd"
+                }
             ],
             "genre": [
                 "pop"
@@ -203,7 +206,10 @@
             "id": "2BcnxwxBuar5wjCaLqm5N3",
             "name": "Until I Bleed Out",
             "artistId": [
-                "1Xyo4u8uXC1ZmMpatF05PJ"
+                {
+                    "artistId": "1Xyo4u8uXC1ZmMpatF05PJ",
+                    "artistName": "The Weeknd"
+                }
             ],
             "genre": [
                 "r&b"
@@ -216,8 +222,14 @@
             "id": "5XbA7TAqsD0fj0dGBrbb0D",
             "name": "I Heard You’re Married (feat. Lil Wayne)",
             "artists": [
-                "1Xyo4u8uXC1ZmMpatF05PJ",
-                "55Aa2cqylxrFIXC767Z865"
+                {
+                    "artistId": "1Xyo4u8uXC1ZmMpatF05PJ",
+                    "artistName": "The Weeknd"
+                },
+                {
+                    "artistId": "55Aa2cqylxrFIXC767Z865",
+                    "artistName": "Lil Wayne"
+                }
             ],
             "genre": [
                 "r&b"
