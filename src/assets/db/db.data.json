@@ -37,13 +37,14 @@
             "tracks": []
         },
         {
-            "id": "2bKySOuviZxzwqrxu7Xq0w",
-            "name": "Chivi",
+            "id": "52iwsT98xCoGgiGntTiR7K",
+            "name": "Quevedo",
             "genres": [
-                "rock"
+                "rap",
+                "urban"
             ],
-            "popularity": 28,
-            "photoUrl": "https://i.scdn.co/image/ab67616100005174cbb8c84d32df7f38cf103a2b",
+            "popularity": 84,
+            "photoUrl": "https://i.scdn.co/image/ab6761610000517497848feb6af104e4562841ac",
             "albums": [],
             "tracks": []
         },
@@ -118,6 +119,18 @@
             "photoUrl": "https://i.scdn.co/image/ab676161000051745fe7cabb8de1c0266cd2179c",
             "albums": [],
             "tracks": []
+        },
+        {
+            "id": "55Aa2cqylxrFIXC767Z865",
+            "name": "Lil Wayne",
+            "genres": [
+                "rap",
+                "hip-hop"
+            ],
+            "popularity": 84,
+            "photoUrl": "https://i.scdn.co/image/ab67616100005174c63aded6f4bf4d06d1377106",
+            "albums": [],
+            "tracks": []
         }
     ],
     "users": [
@@ -172,39 +185,459 @@
             "likedTracks": []
         }
     ],
-    "tracks": [],
+    "tracks": [
+        {
+            "id": "40U8d12pC5UHqmHwXjHjjl",
+            "name": "Repeat After Me (Interlude)",
+            "artistId": [
+                "1Xyo4u8uXC1ZmMpatF05PJ"
+            ],
+            "genre": [
+                "pop"
+            ],
+            "liked": 545679,
+            "url": "",
+            "album": "4yP0hdKOZPNshxUOjY0cZj"
+        },
+        {
+            "id": "2BcnxwxBuar5wjCaLqm5N3",
+            "name": "Until I Bleed Out",
+            "artistId": [
+                "1Xyo4u8uXC1ZmMpatF05PJ"
+            ],
+            "genre": [
+                "r&b"
+            ],
+            "liked": 2545679,
+            "url": "",
+            "album": "4yP0hdKOZPNshxUOjY0cZj"
+        },
+        {
+            "id": "5XbA7TAqsD0fj0dGBrbb0D",
+            "name": "I Heard You’re Married (feat. Lil Wayne)",
+            "artists": [
+                "1Xyo4u8uXC1ZmMpatF05PJ",
+                "55Aa2cqylxrFIXC767Z865"
+            ],
+            "genre": [
+                "r&b"
+            ],
+            "liked": 1567980,
+            "url": "",
+            "album": "2nLOHgzXzwFEpl62zAgCEC"
+        },
+        {
+            "id": "1NlK2NtpuUazpziLhnJwEV",
+            "name": "Phantom Regret by Jim",
+            "artistId": [
+                "1Xyo4u8uXC1ZmMpatF05PJ"
+            ],
+            "genre": [
+                "pop"
+            ],
+            "liked": 1567980,
+            "url": "",
+            "album": "2nLOHgzXzwFEpl62zAgCEC"
+        },
+        {
+            "id": "0dRhSF9LV0HR8Jwd3MMMKJ",
+            "name": "Everytime",
+            "artistId": [
+                "26dSoYclwsYLMAKD3tpOr4"
+            ],
+            "genre": [
+                "pop"
+            ],
+            "liked": 10567980,
+            "url": "",
+            "album": "0z7pVBGOD7HCIB7S8eLkLI"
+        },
+        {
+            "id": "2vPCRs3g0vdLU8sHlAEytO",
+            "name": "Outrageous",
+            "artistId": [
+                "26dSoYclwsYLMAKD3tpOr4"
+            ],
+            "genre": [
+                "pop"
+            ],
+            "liked": 8567980,
+            "url": "",
+            "album": "0z7pVBGOD7HCIB7S8eLkLI"
+        },
+        {
+            "id": "3buxlp1m5TLONPem13GSpt",
+            "name": "Mannequin",
+            "artistId": [
+                "26dSoYclwsYLMAKD3tpOr4"
+            ],
+            "genre": [
+                "dance"
+            ],
+            "liked": 11567980,
+            "url": "",
+            "album": "2tve5DGwub1TtbX1khPX5j"
+        },
+        {
+            "id": "0Y7exe8Yu2nbuIvGDRGXcz",
+            "name": "Blur",
+            "artistId": [
+                "26dSoYclwsYLMAKD3tpOr4"
+            ],
+            "genre": [
+                "pop"
+            ],
+            "liked": 5567980,
+            "url": "",
+            "album": "2tve5DGwub1TtbX1khPX5j"
+        },
+        {
+            "id": "1PcANFoqnDsexSHXpWrn8Q",
+            "name": "Adderall",
+            "artistId": [
+                "05fG473iIaoy82BF1aGhL8"
+            ],
+            "genre": [
+                "rock"
+            ],
+            "liked": 447980,
+            "url": "",
+            "album": "3hWTXO0w02D6YpVRyLRmQz"
+        },
+        {
+            "id": "1PcANFoqnDsexSHXpWrn8Q",
+            "name": "Adderall",
+            "artists": [
+                {
+                    "artistId": "05fG473iIaoy82BF1aGhL8",
+                    "artistName": "Slipknot"
+                }
+            ],
+            "genre": [
+                "rock"
+            ],
+            "liked": 447980,
+            "url": "",
+            "album": "3hWTXO0w02D6YpVRyLRmQz"
+        },
+        {
+            "id": "5qP24CrDI0rmY5zwRvUfzU",
+            "name": "AHORA QUÉ",
+            "artistId": [
+                "52iwsT98xCoGgiGntTiR7K"
+            ],
+            "genre": [
+                "rap"
+            ],
+            "liked": 1525,
+            "url": "",
+            "album": "9f577af8-2562-467d-b6cb-c1cde31e1ccf"
+        },
+        {
+            "id": "0FirgnvrpCkkhdaq64Gfen",
+            "name": "YANKEE",
+            "artistId": [
+                "52iwsT98xCoGgiGntTiR7K"
+            ],
+            "genre": [
+                "rap"
+            ],
+            "liked": 15425,
+            "url": "",
+            "album": "9f577af8-2562-467d-b6cb-c1cde31e1ccf"
+        },
+        {
+            "id": "5q86iSKkBtOoNkdgEDY5WV",
+            "name": "VISTA AL MAR",
+            "artistId": [
+                "52iwsT98xCoGgiGntTiR7K"
+            ],
+            "genre": [
+                "rap"
+            ],
+            "liked": 25425,
+            "url": "",
+            "album": "9f577af8-2562-467d-b6cb-c1cde31e1ccf"
+        },
+        {
+            "id": "0Sfn2TYbpQtCGMBf6C0Y6T",
+            "name": "PLAYA DEL INGLÉS",
+            "artistId": [
+                "52iwsT98xCoGgiGntTiR7K"
+            ],
+            "genre": [
+                "rap"
+            ],
+            "liked": 25589,
+            "url": "",
+            "album": "9f577af8-2562-467d-b6cb-c1cde31e1ccf"
+        },
+        {
+            "id": "0FWAIRd9Uz5uNek7cALYNC",
+            "name": "Psycho",
+            "artistId": [
+                "6Ip8FS7vWT1uKkJSweANQK"
+            ],
+            "genre": [
+                "rap"
+            ],
+            "liked": 58589,
+            "url": "",
+            "album": "f19cab3c-ae1f-4c67-b52d-84445e6c24d2"
+        },
+        {
+            "id": "59PUOc7B0WCNNx8Nr4qaA4",
+            "name": "Streatham",
+            "artistId": [
+                "6Ip8FS7vWT1uKkJSweANQK"
+            ],
+            "genre": [
+                "rap"
+            ],
+            "liked": 9889,
+            "url": "",
+            "album": "f19cab3c-ae1f-4c67-b52d-84445e6c24d2"
+        },
+        {
+            "id": "22agj1ppHejR41cUyf7k6v",
+            "name": "We're All Alone In This Thogether",
+            "artistId": [
+                "6Ip8FS7vWT1uKkJSweANQK"
+            ],
+            "genre": [
+                "rap"
+            ],
+            "liked": 28859,
+            "url": "",
+            "album": "3ca1bb6f-74d9-4065-9c9f-a23bad5c670b"
+        },
+        {
+            "id": "7IPKXYU2rTMnrLW5IZ7ZI5",
+            "name": "Verdansk",
+            "artistId": [
+                "6Ip8FS7vWT1uKkJSweANQK"
+            ],
+            "genre": [
+                "rap"
+            ],
+            "liked": 21559,
+            "url": "",
+            "album": "3ca1bb6f-74d9-4065-9c9f-a23bad5c670b"
+        },
+        {
+            "id": "3uB9vGygaCRzhwe8jhiQL4",
+            "name": "Da New Age",
+            "artistId": [
+                "491U1PrV1EoQuhM0aUCn9r"
+            ],
+            "genre": [
+                "rap"
+            ],
+            "liked": 81559,
+            "url": "",
+            "album": "de1069f7-7c5b-41bc-a7aa-645f669a415c"
+        },
+        {
+            "id": "4lHVWC1WAWdic4jIK5DMNv",
+            "name": "Heroes",
+            "artistId": [
+                "491U1PrV1EoQuhM0aUCn9r"
+            ],
+            "genre": [
+                "rap"
+            ],
+            "liked": 84839,
+            "url": "",
+            "album": "de1069f7-7c5b-41bc-a7aa-645f669a415c"
+        },
+        {
+            "id": "1h5Sb44FGJdYqkrfznnau7",
+            "name": "Unapreciated",
+            "artistId": [
+                "491U1PrV1EoQuhM0aUCn9r"
+            ],
+            "genre": [
+                "rap"
+            ],
+            "liked": 37839,
+            "url": "",
+            "album": "57372193-a9f1-496d-8064-a2886015f1d5"
+        },
+        {
+            "id": "4iRDtaQCDsGxUN2MbfV8Tl",
+            "name": "Stainless",
+            "artistId": [
+                "491U1PrV1EoQuhM0aUCn9r"
+            ],
+            "genre": [
+                "rap"
+            ],
+            "liked": 7109,
+            "url": "",
+            "album": "57372193-a9f1-496d-8064-a2886015f1d5"
+        },
+        {
+            "id": "1tLV0GD0WXQ1Z8BKOQscti",
+            "name": "6 for 6",
+            "artistId": [
+                "5H4yInM5zmHqpKIoMNAx4r"
+            ],
+            "genre": [
+                "rap"
+            ],
+            "liked": 16160,
+            "url": "",
+            "album": "0c7f4bb7-aef8-4caa-82d7-56b3365fda10"
+        },
+        {
+            "id": "5gSZoRy42TxBxyAdHs9wXO",
+            "name": "Fraud",
+            "artistId": [
+                "5H4yInM5zmHqpKIoMNAx4r"
+            ],
+            "genre": [
+                "rap"
+            ],
+            "liked": 42069,
+            "url": "",
+            "album": "0c7f4bb7-aef8-4caa-82d7-56b3365fda10"
+        },
+        {
+            "id": "2ZVSjes0VFYg9uJu4olsi4",
+            "name": "Khabib",
+            "artistId": [
+                "5H4yInM5zmHqpKIoMNAx4r"
+            ],
+            "genre": [
+                "rap"
+            ],
+            "liked": 4878,
+            "url": "",
+            "album": "22454c0c-8de1-4afd-9ddc-a0ce27d73560"
+        },
+        {
+            "id": "709MdyUol3Qfgcowmd7KV4",
+            "name": "Straight Back To It",
+            "artistId": [
+                "5H4yInM5zmHqpKIoMNAx4r"
+            ],
+            "genre": [
+                "rap"
+            ],
+            "liked": 5854,
+            "url": "",
+            "album": "22454c0c-8de1-4afd-9ddc-a0ce27d73560"
+        },
+        {
+            "id": "4WT92JeiPDnktqlf7Ueqwh",
+            "name": "Sol de Sábado, Lluvia de domingo",
+            "artistId": [
+                "5t9ChGEQOzEA3gxWtXEw48"
+            ],
+            "genre": [
+                "hip-hop",
+                "rap"
+            ],
+            "liked": 784,
+            "url": "",
+            "album": "59a36aa4-a976-41e9-b73d-53d6d677e681"
+        },
+        {
+            "id": "4u4eYJPiIN1y8RgdcA9H2G",
+            "name": "1.000 Problemas",
+            "artistId": [
+                "5t9ChGEQOzEA3gxWtXEw48"
+            ],
+            "genre": [
+                "hip-hop",
+                "rap"
+            ],
+            "liked": 19854,
+            "url": "",
+            "album": "59a36aa4-a976-41e9-b73d-53d6d677e681"
+        },
+        {
+            "id": "4u4eYJPiIN1y8RgdcA9H2G",
+            "name": "1.000 Problemas",
+            "artistId": [
+                "5t9ChGEQOzEA3gxWtXEw48"
+            ],
+            "genre": [
+                "hip-hop",
+                "rap"
+            ],
+            "liked": 19854,
+            "url": "",
+            "album": "59a36aa4-a976-41e9-b73d-53d6d677e681"
+        },
+        {
+            "id": "4fhz2FJzEkLDPl7W6waSdY",
+            "name": "MK Ultra",
+            "artistId": [
+                "5t9ChGEQOzEA3gxWtXEw48"
+            ],
+            "genre": [
+                "hip-hop",
+                "rap"
+            ],
+            "liked": 6859,
+            "url": "",
+            "album": "5be7e234-aa04-47d5-8390-a543416a765f"
+        },
+        {
+            "id": "7wf5IS43OXNh70ZX46UCoy",
+            "name": "Gafas",
+            "artistId": [
+                "5t9ChGEQOzEA3gxWtXEw48"
+            ],
+            "genre": [
+                "hip-hop",
+                "rap"
+            ],
+            "liked": 62308,
+            "url": "",
+            "album": "5be7e234-aa04-47d5-8390-a543416a765f"
+        }
+    ],
     "playlists": [],
     "albums": [
         {
-            "id": "94b2f7e0-b6bc-4759-a5e4-6a0c86dad46a",
+            "id": "4yP0hdKOZPNshxUOjY0cZj",
             "name": "After Hours",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e028863bc11d2aa12b54f5aeb36",
             "tracks": [
                 "Repeat after me",
-                "Until I Bleed Out",
-                "Alone Again"
+                "Until I Bleed Out"
             ],
-            "artistId": "1Xyo4u8uXC1ZmMpatF05PJ"
+            "artists": [
+                {
+                    "artistId": "1Xyo4u8uXC1ZmMpatF05PJ",
+                    "artistName": "The Weeknd"
+                }
+            ]
         },
         {
-            "id": "166afcd5-a965-46e3-9c18-5023cc1db662",
+            "id": "2nLOHgzXzwFEpl62zAgCEC",
             "name": "Dawn FM",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e02ade87e5f9c3764f0a1e5df64",
             "tracks": [
                 "I Heard You're Married",
-                "Phatom Regret by Jim",
-                "A Tale By Quincy"
+                "Phatom Regret by Jim"
             ],
-            "artistId": "1Xyo4u8uXC1ZmMpatF05PJ"
+            "artistId": [
+                {
+                    "artistId": "1Xyo4u8uXC1ZmMpatF05PJ",
+                    "artistName": "The Weeknd"
+                }
+            ]
         },
         {
-            "id": "f3a2a868-ad1b-48e0-80a9-0a4b8618d1ce",
+            "id": "0z7pVBGOD7HCIB7S8eLkLI",
             "name": "In the Zone",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e02efc6988972cb04105f002cd4",
             "tracks": [
-                "Me Against the Music",
-                "Outrageous",
-                "Touch of My Hand"
+                "Everytime",
+                "Outrageous"
             ],
             "artistId": "2bKySOuviZxzwqrxu7Xq0w"
         },
@@ -214,30 +647,27 @@
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e0254c6edd554935d73e159e199",
             "tracks": [
                 "Mannequin",
-                "Blur",
-                "Circus"
+                "Blur"
             ],
             "artistId": "2bKySOuviZxzwqrxu7Xq0w"
         },
         {
-            "id": "3ba5580a-664c-41aa-974f-a11d6a5bc444",
+            "id": "3hWTXO0w02D6YpVRyLRmQz",
             "name": "The End, So Far",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e02c3eedff14af24fdd988ed1a7",
             "tracks": [
                 "Adderall",
-                "The Dying Song",
-                "The Chapeltown Rag"
+                "The Dying Song"
             ],
             "artistId": "05fG473iIaoy82BF1aGhL8"
         },
         {
-            "id": "706d69d7-99ce-4b81-9b20-2b560d331995",
+            "id": "754RY5WpZ2LTUZsk8kDBju",
             "name": "We Are Not Your Kind",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e0226f20b4d67c0c7b0f137ce4f",
             "tracks": [
                 "Insert Coin",
-                "Unsainted",
-                "Birth Of The Cruel"
+                "Unsainted"
             ],
             "artistId": "05fG473iIaoy82BF1aGhL8"
         },
@@ -247,10 +677,131 @@
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e0281eeace38068e9444cb28a3e",
             "tracks": [
                 "Radioactive",
-                "Tiptoe",
-                "It's Time"
+                "Tiptoe"
             ],
             "artistId": "53XhwfbYqKCa1cC15pYq2q"
+        },
+        {
+            "id": "6ce083e2-f4a9-4023-ad43-f1de2bc69e5e",
+            "name": "Mercury",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02fc915b69600dce2991a61f13",
+            "tracks": [
+                "Enemy",
+                "My Life"
+            ],
+            "artistId": "53XhwfbYqKCa1cC15pYq2q"
+        },
+        {
+            "id": "b6f40db0-7c0f-4607-9f0e-6f946ae1f4ca",
+            "name": "This Machine Still Kills",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02e68cf651a94fb62172da266b",
+            "tracks": [
+                "Two 6's Upside Down",
+                "Talking Jukebox"
+            ],
+            "artistId": "7w9jdhcgHNdiPeNPUoFSlx"
+        },
+        {
+            "id": "c5b5470e-3e07-47b1-b377-c8c4524936b2",
+            "name": "Okemah Rising",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02639ebb8e7a3eb1f03c8839d2",
+            "tracks": [
+                "My Eyes Are Gonna Shine",
+                "Gotta Get To Peekskill"
+            ],
+            "artistId": "7w9jdhcgHNdiPeNPUoFSlx"
+        },
+        {
+            "id": "5be7e234-aa04-47d5-8390-a543416a765f",
+            "name": "El Testimonio Libra",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02a7810ebe026261b68cb194c8",
+            "tracks": [
+                "MK Ultra",
+                "Gafas"
+            ],
+            "artistId": "5t9ChGEQOzEA3gxWtXEw48"
+        },
+        {
+            "id": "59a36aa4-a976-41e9-b73d-53d6d677e681",
+            "name": "Phantom Pop",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02c7c678df37ad4d1cf0043947",
+            "tracks": [
+                "Sol de Sábado, Lluvia de domingo",
+                "1.000 Problemas"
+            ],
+            "artistId": "5t9ChGEQOzEA3gxWtXEw48"
+        },
+        {
+            "id": "22454c0c-8de1-4afd-9ddc-a0ce27d73560",
+            "name": "23",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02e1f05c994777b79bc5c87547",
+            "tracks": [
+                "Khabib",
+                "Straight Back to it"
+            ],
+            "artistId": "5H4yInM5zmHqpKIoMNAx4r"
+        },
+        {
+            "id": "0c7f4bb7-aef8-4caa-82d7-56b3365fda10",
+            "name": "Wild West",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e021675d50a0ba7919b5e5797fe",
+            "tracks": [
+                "6 for 6",
+                "Fraud"
+            ],
+            "artistId": "5H4yInM5zmHqpKIoMNAx4r"
+        },
+        {
+            "id": "57372193-a9f1-496d-8064-a2886015f1d5",
+            "name": "Chasing Euphoria",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e0256760083a7f21cf162ed1806",
+            "tracks": [
+                "Unappreciated",
+                "Stainless"
+            ],
+            "artistId": "491U1PrV1EoQuhM0aUCn9r"
+        },
+        {
+            "id": "de1069f7-7c5b-41bc-a7aa-645f669a415c",
+            "name": "DNA",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02d90c5bc665345e6d06687578",
+            "tracks": [
+                "Da New Age",
+                "Heroes"
+            ],
+            "artistId": "491U1PrV1EoQuhM0aUCn9r"
+        },
+        {
+            "id": "3ca1bb6f-74d9-4065-9c9f-a23bad5c670b",
+            "name": "We're All Alone In This Thogether",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02da5b9c1eb275d48e14d25f3e",
+            "tracks": [
+                "We're All Alone",
+                "Verdansk"
+            ],
+            "artistId": "6Ip8FS7vWT1uKkJSweANQK"
+        },
+        {
+            "id": "f19cab3c-ae1f-4c67-b52d-84445e6c24d2",
+            "name": "PHYCHODRAMA",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02c1c8d2889455db6d03d309ed",
+            "tracks": [
+                "Psycho",
+                "Streatham"
+            ],
+            "artistId": "6Ip8FS7vWT1uKkJSweANQK"
+        },
+        {
+            "id": "9f577af8-2562-467d-b6cb-c1cde31e1ccf",
+            "name": "DONDE QUIERO ESTAR",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02efc1b8f6beda4abe848a84e0",
+            "tracks": [
+                "AHORA QUÉ",
+                "YANKEE",
+                "VISTA AL MAR",
+                "PLAYA DEL INGLÉS"
+            ],
+            "artistId": "2bKySOuviZxzwqrxu7Xq0w"
         }
     ]
 }

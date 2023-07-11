@@ -24,6 +24,7 @@ enum GenreTypes {
     soul = "soul",
     dance = "dance",
     rap = "rap",
-    drill = "drill"
+    drill = "drill",
+    urabn = "urban"
 
 }
