@@ -9,8 +9,34 @@
             ],
             "popularity": 94,
             "photoUrl": "https://i.scdn.co/image/ab6761610000517401b9b4ec2a05d0805428acfa",
-            "albums": [],
-            "tracks": []
+            "albums": [
+                {
+                    "albumId": "4yP0hdKOZPNshxUOjY0cZj",
+                    "albumName": "After Hours"
+                },
+                {
+                    "albumId": "2nLOHgzXzwFEpl62zAgCEC",
+                    "albumName": "Dawn FM"
+                }
+            ],
+            "tracks": [
+                {
+                    "trackId": "40U8d12pC5UHqmHwXjHjjl",
+                    "trackName": "Repeat After Me (Interlude)"
+                },
+                {
+                    "trackId": "2BcnxwxBuar5wjCaLqm5N3",
+                    "trackName": "Until I Bleed Out"
+                },
+                {
+                    "trackId": "5XbA7TAqsD0fj0dGBrbb0D",
+                    "trackName": "I Heard You’re Married (feat. Lil Wayne)"
+                },
+                {
+                    "trackId": "1NlK2NtpuUazpziLhnJwEV",
+                    "trackName": "Phantom Regret by Jim"
+                }
+            ]
         },
         {
             "id": "7w9jdhcgHNdiPeNPUoFSlx",
@@ -21,8 +47,34 @@
             ],
             "popularity": 60,
             "photoUrl": "https://i.scdn.co/image/ab676161000051742b3032f701dee12a10157f83",
-            "albums": [],
-            "tracks": []
+            "albums": [
+                {
+                    "albumId": "3WK3HkX9lTZIhnHdehjEGB",
+                    "albumName": "This Machine Still Kills Fascists (Expanded Edition)"
+                },
+                {
+                    "albumId": "40SrskkBlg2KUdW4zhG2hK",
+                    "albumName": "Okemah Rising"
+                }
+            ],
+            "tracks": [
+                {
+                    "trackId": "0aE2HXcm7eoEGZG5i6rPXK",
+                    "trackName": "Two 6's Upside Down"
+                },
+                {
+                    "trackId": "4qF2ncOvyw04e8Cbe5WvO2",
+                    "trackName": "Talking Jukebox"
+                },
+                {
+                    "trackId": "0rCu0jiqoJHsqaarwraeRA",
+                    "trackName": "My Eyes Are Gonna Shine"
+                },
+                {
+                    "trackId": "3H23O1qOJa99E7wFpPT6Ln",
+                    "trackName": "Watching The World Go By"
+                }
+            ]
         },
         {
             "id": "5t9ChGEQOzEA3gxWtXEw48",
@@ -33,8 +85,34 @@
             ],
             "popularity": 33,
             "photoUrl": "https://i.scdn.co/image/ab676161000051743dc69e75a2c86e2341c64064",
-            "albums": [],
-            "tracks": []
+            "albums": [
+                {
+                    "albumId": "32HzePZsOJ6gWR6MXB5gBQ",
+                    "albumName": "Phantom Pop"
+                },
+                {
+                    "albumId": "2Ppv8YROLkQ2IcmjMCytS0",
+                    "albumName": "El Testimonio Libra"
+                }
+            ],
+            "tracks": [
+                {
+                    "trackId": "4fhz2FJzEkLDPl7W6waSdY",
+                    "trackName": "MK Ultra - El testimonio Libra titles"
+                },
+                {
+                    "trackId": "7wf5IS43OXNh70ZX46UCoy",
+                    "trackName": "Gafas"
+                },
+                {
+                    "trackId": "4WT92JeiPDnktqlf7Ueqwh",
+                    "trackName": "Sol de Sábado, Lluvia de domingo"
+                },
+                {
+                    "trackId": "4u4eYJPiIN1y8RgdcA9H2G",
+                    "trackName": "1.000 Problemas"
+                }
+            ]
         },
         {
             "id": "52iwsT98xCoGgiGntTiR7K",
@@ -45,8 +123,30 @@
             ],
             "popularity": 84,
             "photoUrl": "https://i.scdn.co/image/ab6761610000517497848feb6af104e4562841ac",
-            "albums": [],
-            "tracks": []
+            "albums": [
+                {
+                    "albumId": "156gxGFDxadwiIC3Bfwmj3",
+                    "albumName": "DONDE QUIERO ESTAR"
+                }
+            ],
+            "tracks": [
+                {
+                    "trackId": "5qP24CrDI0rmY5zwRvUfzU",
+                    "trackName": "AHORA QUÉ"
+                },
+                {
+                    "trackId": "0FirgnvrpCkkhdaq64Gfen",
+                    "trackName": "YANKEE"
+                },
+                {
+                    "trackId": "5q86iSKkBtOoNkdgEDY5WV",
+                    "trackName": "VISTA AL MAR"
+                },
+                {
+                    "trackId": "156gxGFDxadwiIC3Bfwmj3",
+                    "trackName": "DONDE QUIERO ESTAR"
+                }
+            ]
         },
         {
             "id": "2bKySOuviZxzwqrxu7Xq0w",
@@ -57,8 +157,34 @@
             ],
             "popularity": 78,
             "photoUrl": "https://i.scdn.co/image/ab676161000051744e7e6ded87a4e0f65b5afcec",
-            "albums": [],
-            "tracks": []
+            "albums": [
+                {
+                    "albumId": "2tve5DGwub1TtbX1khPX5j",
+                    "albumName": "Circus"
+                },
+                {
+                    "albumId": "0z7pVBGOD7HCIB7S8eLkLI",
+                    "albumName": "In the Zone"
+                }
+            ],
+            "tracks": [
+                {
+                    "trackId": "0dRhSF9LV0HR8Jwd3MMMKJ",
+                    "trackName": "Everytime"
+                },
+                {
+                    "trackId": "2vPCRs3g0vdLU8sHlAEytO",
+                    "trackName": "Outrageous"
+                },
+                {
+                    "trackId": "3buxlp1m5TLONPem13GSpt",
+                    "trackName": "Mannequin"
+                },
+                {
+                    "trackId": "0Y7exe8Yu2nbuIvGDRGXcz",
+                    "trackName": "Blur"
+                }
+            ]
         },
         {
             "id": "05fG473iIaoy82BF1aGhL8",
@@ -70,8 +196,34 @@
             ],
             "popularity": 77,
             "photoUrl": "https://i.scdn.co/image/ab67616100005174ec01c52d6030a1574070e308",
-            "albums": [],
-            "tracks": []
+            "albums": [
+                {
+                    "albumId": "754RY5WpZ2LTUZsk8kDBju",
+                    "albumName": "We Are Not Your Kind"
+                },
+                {
+                    "albumId": "3hWTXO0w02D6YpVRyLRmQz",
+                    "albumName": "The End, So Far"
+                }
+            ],
+            "tracks": [
+                {
+                    "trackId": "1PcANFoqnDsexSHXpWrn8Q",
+                    "trackName": "Adderall"
+                },
+                {
+                    "trackId": "6rsoBvxrlxdmqJyGPPciyq",
+                    "trackName": "The Dying Song (Time To Sing)"
+                },
+                {
+                    "trackId": "5Oca13ac6cZ0hwZAs1SXse",
+                    "trackName": "Insert Coin"
+                },
+                {
+                    "trackId": "5mpUKTdskZea0gStWzeHUZ",
+                    "trackName": "Unsainted"
+                }
+            ]
         },
         {
             "id": "53XhwfbYqKCa1cC15pYq2q",
@@ -82,8 +234,34 @@
             ],
             "popularity": 86,
             "photoUrl": "https://i.scdn.co/image/ab67616100005174920dc1f617550de8388f368e",
-            "albums": [],
-            "tracks": []
+            "albums": [
+                {
+                    "albumId": "6yiXkzHvC0OTmhfDQOEWtS",
+                    "albumName": "Mercury - Acts 1 & 2"
+                },
+                {
+                    "albumId": "6nxDQi0FeEwccEPJeNySoS",
+                    "albumName": "Night Visions"
+                }
+            ],
+            "tracks": [
+                {
+                    "trackId": "62yJjFtgkhUrXktIoSjgP2",
+                    "trackName": "Radioactive"
+                },
+                {
+                    "trackId": "7lBPn6LpIvbvAihTRvBMig",
+                    "trackName": "TipToe"
+                },
+                {
+                    "trackId": "1VMBapbhHidf6ALFszT7w1",
+                    "trackName": "Lonely"
+                },
+                {
+                    "trackId": "0E0kxko3i9b5JxxMoGH3At",
+                    "trackName": "My Life"
+                }
+            ]
         },
         {
             "id": "6Ip8FS7vWT1uKkJSweANQK",
@@ -94,8 +272,46 @@
             ],
             "popularity": 80,
             "photoUrl": "https://i.scdn.co/image/ab67616100005174d03e9ecf77419871b96daee1",
-            "albums": [],
-            "tracks": []
+            "albums": [
+                {
+                    "albumId": "4GrFuXwRmEBJec22p58fsD",
+                    "albumName": "PHYCHODRAMA"
+                },
+                {
+                    "albumId": "6HwzIlrCDq3WF9vMq8meqG",
+                    "albumName": "We're All Alone In This Thogether"
+                },
+                {
+                    "albumId": "0On7uutIu9rZRvP9aJbMog",
+                    "albumName": "Split Decision"
+                }
+            ],
+            "tracks": [
+                {
+                    "trackId": "0FWAIRd9Uz5uNek7cALYNC",
+                    "trackName": "Psycho"
+                },
+                {
+                    "trackId": "59PUOc7B0WCNNx8Nr4qaA4",
+                    "trackName": "Streatham"
+                },
+                {
+                    "trackId": "22agj1ppHejR41cUyf7k6v",
+                    "trackName": "We're All Alone"
+                },
+                {
+                    "trackId": "7IPKXYU2rTMnrLW5IZ7ZI5",
+                    "trackName": "Verdansk"
+                },
+                {
+                    "trackId": "08YvUaUsZktAG6zEMDwUqO",
+                    "trackName": "Sprinter"
+                },
+                {
+                    "trackId": "2VjOTvl50tscmc0RDjPdr2",
+                    "trackName": "UK Rap"
+                }
+            ]
         },
         {
             "id": "491U1PrV1EoQuhM0aUCn9r",
@@ -106,8 +322,34 @@
             ],
             "popularity": 61,
             "photoUrl": "https://i.scdn.co/image/ab676161000051742565e2b9a6311e6b80cf87f8",
-            "albums": [],
-            "tracks": []
+            "albums": [
+                {
+                    "albumId": "6YlILpG7sdsgCODA8VO15d",
+                    "albumName": "Utopia"
+                },
+                {
+                    "albumId": "2tjspYARHteVufdXfLEkJa",
+                    "albumName": "Chasing Euphoria"
+                }
+            ],
+            "tracks": [
+                {
+                    "trackId": "2kSdFyyM9O7JqmmTBgVs6V",
+                    "trackName": "Birds"
+                },
+                {
+                    "trackId": "6Ex1f0wNa3kkol50oTsvzC",
+                    "trackName": "Tranquility"
+                },
+                {
+                    "trackId": "1h5Sb44FGJdYqkrfznnau7",
+                    "trackName": "Unapreciated"
+                },
+                {
+                    "trackId": "4iRDtaQCDsGxUN2MbfV8Tl",
+                    "trackName": "Stainless"
+                }
+            ]
         },
         {
             "id": "5H4yInM5zmHqpKIoMNAx4r",
@@ -117,8 +359,34 @@
             ],
             "popularity": 82,
             "photoUrl": "https://i.scdn.co/image/ab676161000051745fe7cabb8de1c0266cd2179c",
-            "albums": [],
-            "tracks": []
+            "albums": [
+                {
+                    "albumId": "0On7uutIu9rZRvP9aJbMog",
+                    "albumName": "Split Decision"
+                },
+                {
+                    "albumId": "0SakL2ra5Cik5yQgKQBHGp",
+                    "albumName": "23"
+                }
+            ],
+            "tracks": [
+                {
+                    "trackId": "709MdyUol3Qfgcowmd7KV4",
+                    "trackName": "Straight Back To It"
+                },
+                {
+                    "trackId": "2ZVSjes0VFYg9uJu4olsi4",
+                    "trackName": "Khabib"
+                },
+                {
+                    "trackId": "2VjOTvl50tscmc0RDjPdr2",
+                    "trackName": "UK Rap"
+                },
+                {
+                    "trackId": "08YvUaUsZktAG6zEMDwUqO",
+                    "trackName": "Sprinter"
+                }
+            ]
         },
         {
             "id": "55Aa2cqylxrFIXC767Z865",
@@ -130,7 +398,12 @@
             "popularity": 84,
             "photoUrl": "https://i.scdn.co/image/ab67616100005174c63aded6f4bf4d06d1377106",
             "albums": [],
-            "tracks": []
+            "tracks": [
+                {
+                    "trackId": "5XbA7TAqsD0fj0dGBrbb0D",
+                    "trackName": "I Heard You’re Married (feat. Lil Wayne)"
+                }
+            ]
         }
     ],
     "users": [
@@ -141,8 +414,22 @@
             "email": "ali-hourag@gmail.com",
             "profilePicture": "https://avatars.githubusercontent.com/u/131694498?v=4",
             "isLoggedIn": false,
-            "playlists": [],
-            "likedTracks": []
+            "playlists": [
+                {
+                    "playlistId": "7960b357-dc43-4939-832d-b2115f163bc3",
+                    "playlistName": "My Personal Favourites"
+                }
+            ],
+            "likedTracks": [
+                {
+                    "trackId": "08YvUaUsZktAG6zEMDwUqO",
+                    "trackName": "Sprinter"
+                },
+                {
+                    "trackId": "2ZVSjes0VFYg9uJu4olsi4",
+                    "trackName": "Khabib"
+                }
+            ]
         },
         {
             "id": "af99a651-4118-48ab-933c-0f7927fe70d2",
@@ -200,7 +487,10 @@
             ],
             "liked": 545679,
             "url": "",
-            "album": "4yP0hdKOZPNshxUOjY0cZj"
+            "album": {
+                "albumId": "4yP0hdKOZPNshxUOjY0cZj",
+                "albumName": "After Hours"
+            }
         },
         {
             "id": "2BcnxwxBuar5wjCaLqm5N3",
@@ -216,7 +506,10 @@
             ],
             "liked": 2545679,
             "url": "",
-            "album": "4yP0hdKOZPNshxUOjY0cZj"
+            "album": {
+                "albumId": "4yP0hdKOZPNshxUOjY0cZj",
+                "albumName": "After Hours"
+            }
         },
         {
             "id": "5XbA7TAqsD0fj0dGBrbb0D",
@@ -236,7 +529,10 @@
             ],
             "liked": 1567980,
             "url": "",
-            "album": "2nLOHgzXzwFEpl62zAgCEC"
+            "album": {
+                "albumId": "2nLOHgzXzwFEpl62zAgCEC",
+                "albumName": "Dawn FM"
+            }
         },
         {
             "id": "1NlK2NtpuUazpziLhnJwEV",
@@ -252,7 +548,10 @@
             ],
             "liked": 1567980,
             "url": "",
-            "album": "2nLOHgzXzwFEpl62zAgCEC"
+            "album": {
+                "albumId": "2nLOHgzXzwFEpl62zAgCEC",
+                "albumName": "Dawn FM"
+            }
         },
         {
             "id": "0dRhSF9LV0HR8Jwd3MMMKJ",
@@ -268,7 +567,10 @@
             ],
             "liked": 10567980,
             "url": "",
-            "album": "0z7pVBGOD7HCIB7S8eLkLI"
+            "album": {
+                "albumId": "0z7pVBGOD7HCIB7S8eLkLI",
+                "albumName": "In The Zone"
+            }
         },
         {
             "id": "2vPCRs3g0vdLU8sHlAEytO",
@@ -284,7 +586,10 @@
             ],
             "liked": 8567980,
             "url": "",
-            "album": "0z7pVBGOD7HCIB7S8eLkLI"
+            "album": {
+                "albumId": "0z7pVBGOD7HCIB7S8eLkLI",
+                "albumName": "In The Zone"
+            }
         },
         {
             "id": "3buxlp1m5TLONPem13GSpt",
@@ -300,7 +605,10 @@
             ],
             "liked": 11567980,
             "url": "",
-            "album": "2tve5DGwub1TtbX1khPX5j"
+            "album": {
+                "albumId": "2tve5DGwub1TtbX1khPX5j",
+                "albumName": "Circus (Deluxe Version)"
+            }
         },
         {
             "id": "0Y7exe8Yu2nbuIvGDRGXcz",
@@ -316,7 +624,10 @@
             ],
             "liked": 5567980,
             "url": "",
-            "album": "2tve5DGwub1TtbX1khPX5j"
+            "album": {
+                "albumId": "2tve5DGwub1TtbX1khPX5j",
+                "albumName": "Circus (Deluxe Version)"
+            }
         },
         {
             "id": "1PcANFoqnDsexSHXpWrn8Q",
@@ -332,7 +643,10 @@
             ],
             "liked": 447980,
             "url": "",
-            "album": "3hWTXO0w02D6YpVRyLRmQz"
+            "album": {
+                "albumId": "3hWTXO0w02D6YpVRyLRmQz",
+                "albumName": "The End, So Far"
+            }
         },
         {
             "id": "6rsoBvxrlxdmqJyGPPciyq",
@@ -348,7 +662,10 @@
             ],
             "liked": 747980,
             "url": "",
-            "album": "3hWTXO0w02D6YpVRyLRmQz"
+            "album": {
+                "albumId": "3hWTXO0w02D6YpVRyLRmQz",
+                "albumName": "The End, So Far"
+            }
         },
         {
             "id": "5Oca13ac6cZ0hwZAs1SXse",
@@ -364,11 +681,14 @@
             ],
             "liked": 947980,
             "url": "",
-            "album": "754RY5WpZ2LTUZsk8kDBju"
+            "album": {
+                "albumId": "754RY5WpZ2LTUZsk8kDBju",
+                "albumName": "We Are Not Your Kind"
+            }
         },
         {
             "id": "5mpUKTdskZea0gStWzeHUZ",
-            "name": "Insert Coin",
+            "name": "Unsainted",
             "artists": [
                 {
                     "artistId": "05fG473iIaoy82BF1aGhL8",
@@ -380,7 +700,10 @@
             ],
             "liked": 1123768,
             "url": "",
-            "album": "754RY5WpZ2LTUZsk8kDBju"
+            "album": {
+                "albumId": "754RY5WpZ2LTUZsk8kDBju",
+                "albumName": "We Are Not Your Kind"
+            }
         },
         {
             "id": "62yJjFtgkhUrXktIoSjgP2",
@@ -396,7 +719,10 @@
             ],
             "liked": 45987675,
             "url": "",
-            "album": "6nxDQi0FeEwccEPJeNySoS"
+            "album": {
+                "albumId": "6nxDQi0FeEwccEPJeNySoS",
+                "albumName": "Night Visions"
+            }
         },
         {
             "id": "7lBPn6LpIvbvAihTRvBMig",
@@ -412,7 +738,10 @@
             ],
             "liked": 22987675,
             "url": "",
-            "album": "6nxDQi0FeEwccEPJeNySoS"
+            "album": {
+                "albumId": "6nxDQi0FeEwccEPJeNySoS",
+                "albumName": "Night Visions"
+            }
         },
         {
             "id": "1VMBapbhHidf6ALFszT7w1",
@@ -428,7 +757,10 @@
             ],
             "liked": 18009890,
             "url": "",
-            "album": "6yiXkzHvC0OTmhfDQOEWtS"
+            "album": {
+                "albumId": "6yiXkzHvC0OTmhfDQOEWtS",
+                "albumName": "Mercury - Acts 1 & 2"
+            }
         },
         {
             "id": "0E0kxko3i9b5JxxMoGH3At",
@@ -444,7 +776,10 @@
             ],
             "liked": 28009890,
             "url": "",
-            "album": "6yiXkzHvC0OTmhfDQOEWtS"
+            "album": {
+                "albumId": "6yiXkzHvC0OTmhfDQOEWtS",
+                "albumName": "Mercury - Acts 1 & 2"
+            }
         },
         {
             "id": "0aE2HXcm7eoEGZG5i6rPXK",
@@ -460,7 +795,10 @@
             ],
             "liked": 8009890,
             "url": "",
-            "album": "3WK3HkX9lTZIhnHdehjEGB"
+            "album": {
+                "albumId": "3WK3HkX9lTZIhnHdehjEGB",
+                "albumName": "This Machine Still Kills Fascists (Expanded Edition)"
+            }
         },
         {
             "id": "4qF2ncOvyw04e8Cbe5WvO2",
@@ -476,7 +814,10 @@
             ],
             "liked": 4009890,
             "url": "",
-            "album": "3WK3HkX9lTZIhnHdehjEGB"
+            "album": {
+                "albumId": "3WK3HkX9lTZIhnHdehjEGB",
+                "albumName": "This Machine Still Kills Fascists (Expanded Edition)"
+            }
         },
         {
             "id": "0rCu0jiqoJHsqaarwraeRA",
@@ -492,7 +833,10 @@
             ],
             "liked": 12009890,
             "url": "",
-            "album": "40SrskkBlg2KUdW4zhG2hK"
+            "album": {
+                "albumId": "40SrskkBlg2KUdW4zhG2hK",
+                "albumName": "Okemah Rising"
+            }
         },
         {
             "id": "3H23O1qOJa99E7wFpPT6Ln",
@@ -508,7 +852,10 @@
             ],
             "liked": 1009890,
             "url": "",
-            "album": "40SrskkBlg2KUdW4zhG2hK"
+            "album": {
+                "albumId": "40SrskkBlg2KUdW4zhG2hK",
+                "albumName": "Okemah Rising"
+            }
         },
         {
             "id": "4fhz2FJzEkLDPl7W6waSdY",
@@ -524,7 +871,10 @@
             ],
             "liked": 109890,
             "url": "",
-            "album": "2Ppv8YROLkQ2IcmjMCytS0"
+            "album": {
+                "albumId": "2Ppv8YROLkQ2IcmjMCytS0",
+                "albumName": "El testimonio Libra"
+            }
         },
         {
             "id": "7wf5IS43OXNh70ZX46UCoy",
@@ -540,7 +890,10 @@
             ],
             "liked": 409890,
             "url": "",
-            "album": "2Ppv8YROLkQ2IcmjMCytS0"
+            "album": {
+                "albumId": "2Ppv8YROLkQ2IcmjMCytS0",
+                "albumName": "El testimonio Libra"
+            }
         },
         {
             "id": "4WT92JeiPDnktqlf7Ueqwh",
@@ -556,7 +909,10 @@
             ],
             "liked": 609890,
             "url": "",
-            "album": "32HzePZsOJ6gWR6MXB5gBQ"
+            "album": {
+                "albumId": "32HzePZsOJ6gWR6MXB5gBQ",
+                "albumName": "Phantom Pop"
+            }
         },
         {
             "id": "4u4eYJPiIN1y8RgdcA9H2G",
@@ -573,7 +929,10 @@
             ],
             "liked": 1609890,
             "url": "",
-            "album": "32HzePZsOJ6gWR6MXB5gBQ"
+            "album": {
+                "albumId": "32HzePZsOJ6gWR6MXB5gBQ",
+                "albumName": "Phantom Pop"
+            }
         },
         {
             "id": "08YvUaUsZktAG6zEMDwUqO",
@@ -593,7 +952,10 @@
             ],
             "liked": 16160,
             "url": "",
-            "album": "0On7uutIu9rZRvP9aJbMog"
+            "album": {
+                "albumId": "0On7uutIu9rZRvP9aJbMog",
+                "albumName": "Split Decision"
+            }
         },
         {
             "id": "2VjOTvl50tscmc0RDjPdr2",
@@ -613,7 +975,10 @@
             ],
             "liked": 42069,
             "url": "",
-            "album": "0On7uutIu9rZRvP9aJbMog"
+            "album": {
+                "albumId": "0On7uutIu9rZRvP9aJbMog",
+                "albumName": "Split Decision"
+            }
         },
         {
             "id": "2ZVSjes0VFYg9uJu4olsi4",
@@ -629,7 +994,10 @@
             ],
             "liked": 1224878,
             "url": "",
-            "album": "0SakL2ra5Cik5yQgKQBHGp"
+            "album": {
+                "albumId": "0SakL2ra5Cik5yQgKQBHGp",
+                "albumName": "23"
+            }
         },
         {
             "id": "709MdyUol3Qfgcowmd7KV4",
@@ -645,7 +1013,10 @@
             ],
             "liked": 965854,
             "url": "",
-            "album": "0SakL2ra5Cik5yQgKQBHGp"
+            "album": {
+                "albumId": "0SakL2ra5Cik5yQgKQBHGp",
+                "albumName": "23"
+            }
         },
         {
             "id": "2kSdFyyM9O7JqmmTBgVs6V",
@@ -661,7 +1032,10 @@
             ],
             "liked": 281559,
             "url": "",
-            "album": "6YlILpG7sdsgCODA8VO15d"
+            "album": {
+                "albumId": "6YlILpG7sdsgCODA8VO15d",
+                "albumName": "Utopia"
+            }
         },
         {
             "id": "6Ex1f0wNa3kkol50oTsvzC",
@@ -677,7 +1051,10 @@
             ],
             "liked": 184839,
             "url": "",
-            "album": "6YlILpG7sdsgCODA8VO15d"
+            "album": {
+                "albumId": "6YlILpG7sdsgCODA8VO15d",
+                "albumName": "Utopia"
+            }
         },
         {
             "id": "1h5Sb44FGJdYqkrfznnau7",
@@ -693,7 +1070,10 @@
             ],
             "liked": 337839,
             "url": "",
-            "album": "2tjspYARHteVufdXfLEkJa"
+            "album": {
+                "albumId": "2tjspYARHteVufdXfLEkJa",
+                "albumName": "Chasing Euphoria"
+            }
         },
         {
             "id": "4iRDtaQCDsGxUN2MbfV8Tl",
@@ -709,7 +1089,10 @@
             ],
             "liked": 77109,
             "url": "",
-            "album": "2tjspYARHteVufdXfLEkJa"
+            "album": {
+                "albumId": "2tjspYARHteVufdXfLEkJa",
+                "albumName": "Chasing Euphoria"
+            }
         },
         {
             "id": "0FWAIRd9Uz5uNek7cALYNC",
@@ -725,7 +1108,10 @@
             ],
             "liked": 5438589,
             "url": "",
-            "album": "4GrFuXwRmEBJec22p58fsD"
+            "album": {
+                "albumId": "4GrFuXwRmEBJec22p58fsD",
+                "albumName": "PSYCHODRAMA"
+            }
         },
         {
             "id": "59PUOc7B0WCNNx8Nr4qaA4",
@@ -741,7 +1127,10 @@
             ],
             "liked": 9344889,
             "url": "",
-            "album": "4GrFuXwRmEBJec22p58fsD"
+            "album": {
+                "albumId": "4GrFuXwRmEBJec22p58fsD",
+                "albumName": "PSYCHODRAMA"
+            }
         },
         {
             "id": "22agj1ppHejR41cUyf7k6v",
@@ -757,7 +1146,10 @@
             ],
             "liked": 228859,
             "url": "",
-            "album": "6HwzIlrCDq3WF9vMq8meqG"
+            "album": {
+                "albumId": "6HwzIlrCDq3WF9vMq8meqG",
+                "albumName": "We're All Alone In This Together"
+            }
         },
         {
             "id": "7IPKXYU2rTMnrLW5IZ7ZI5",
@@ -773,7 +1165,10 @@
             ],
             "liked": 5421559,
             "url": "",
-            "album": "6HwzIlrCDq3WF9vMq8meqG"
+            "album": {
+                "albumId": "6HwzIlrCDq3WF9vMq8meqG",
+                "albumName": "We're All Alone In This Together"
+            }
         },
         {
             "id": "5qP24CrDI0rmY5zwRvUfzU",
@@ -790,7 +1185,10 @@
             ],
             "liked": 3433525,
             "url": "",
-            "album": "156gxGFDxadwiIC3Bfwmj3"
+            "album": {
+                "albumId": "156gxGFDxadwiIC3Bfwmj3",
+                "albumName": "DONDE QUIERO ESTAR"
+            }
         },
         {
             "id": "0FirgnvrpCkkhdaq64Gfen",
@@ -807,7 +1205,10 @@
             ],
             "liked": 1523425,
             "url": "",
-            "album": "156gxGFDxadwiIC3Bfwmj3"
+            "album": {
+                "albumId": "156gxGFDxadwiIC3Bfwmj3",
+                "albumName": "DONDE QUIERO ESTAR"
+            }
         },
         {
             "id": "5q86iSKkBtOoNkdgEDY5WV",
@@ -824,7 +1225,10 @@
             ],
             "liked": 1225425,
             "url": "",
-            "album": "156gxGFDxadwiIC3Bfwmj3"
+            "album": {
+                "albumId": "156gxGFDxadwiIC3Bfwmj3",
+                "albumName": "DONDE QUIERO ESTAR"
+            }
         },
         {
             "id": "0Iozrbed8spxoBnmtBMshO",
@@ -841,7 +1245,10 @@
             ],
             "liked": 2225589,
             "url": "",
-            "album": "156gxGFDxadwiIC3Bfwmj3"
+            "album": {
+                "albumId": "156gxGFDxadwiIC3Bfwmj3",
+                "albumName": "DONDE QUIERO ESTAR"
+            }
         }
     ],
     "playlists": [
@@ -854,44 +1261,44 @@
             "description": "Top 10 Global",
             "tracks": [
                 {
-                    "SongId": "4fhz2FJzEkLDPl7W6waSdY",
-                    "SongName": "MK Ultra - El testimonio Libra titles"
+                    "trackId": "4fhz2FJzEkLDPl7W6waSdY",
+                    "trackName": "MK Ultra - El testimonio Libra titles"
                 },
                 {
-                    "SongId": "0Sfn2TYbpQtCGMBf6C0Y6T",
-                    "SongName": "PLAYA DEL INGLÉS"
+                    "trackId": "0Sfn2TYbpQtCGMBf6C0Y6T",
+                    "trackName": "PLAYA DEL INGLÉS"
                 },
                 {
-                    "SongId": "2BcnxwxBuar5wjCaLqm5N3",
-                    "SongName": "Until I Bleed Out"
+                    "trackId": "2BcnxwxBuar5wjCaLqm5N3",
+                    "trackName": "Until I Bleed Out"
                 },
                 {
-                    "SongId": "5qP24CrDI0rmY5zwRvUfzU",
-                    "SongName": "AHORA QUÉ"
+                    "trackId": "5qP24CrDI0rmY5zwRvUfzU",
+                    "trackName": "AHORA QUÉ"
                 },
                 {
-                    "SongId": "4u4eYJPiIN1y8RgdcA9H2G",
-                    "SongName": "1.000 Problemas"
+                    "trackId": "4u4eYJPiIN1y8RgdcA9H2G",
+                    "trackName": "1.000 Problemas"
                 },
                 {
-                    "SongId": "1NlK2NtpuUazpziLhnJwEV",
-                    "SongName": "Phantom Regret by Jim"
+                    "trackId": "1NlK2NtpuUazpziLhnJwEV",
+                    "trackName": "Phantom Regret by Jim"
                 },
                 {
-                    "SongId": "2vPCRs3g0vdLU8sHlAEytO",
-                    "SongName": "Outrageous"
+                    "trackId": "2vPCRs3g0vdLU8sHlAEytO",
+                    "trackName": "Outrageous"
                 },
                 {
-                    "SongId": "4WT92JeiPDnktqlf7Ueqwh",
-                    "SongName": "Sol de Sábado, Lluvia de domingo"
+                    "trackId": "4WT92JeiPDnktqlf7Ueqwh",
+                    "trackName": "Sol de Sábado, Lluvia de domingo"
                 },
                 {
-                    "SongId": "0dRhSF9LV0HR8Jwd3MMMKJ",
-                    "SongName": "Everytime"
+                    "trackId": "0dRhSF9LV0HR8Jwd3MMMKJ",
+                    "trackName": "Everytime"
                 },
                 {
-                    "SongId": "0FWAIRd9Uz5uNek7cALYNC",
-                    "SongName": "Psycho"
+                    "trackId": "0FWAIRd9Uz5uNek7cALYNC",
+                    "trackName": "Psycho"
                 }
             ]
         },
@@ -904,44 +1311,44 @@
             "description": "Top 10 Spain",
             "tracks": [
                 {
-                    "SongId": "709MdyUol3Qfgcowmd7KV4",
-                    "SongName": "Straight Back To It"
+                    "trackId": "709MdyUol3Qfgcowmd7KV4",
+                    "trackName": "Straight Back To It"
                 },
                 {
-                    "SongId": "1PcANFoqnDsexSHXpWrn8Q",
-                    "SongName": "Adderall"
+                    "trackId": "1PcANFoqnDsexSHXpWrn8Q",
+                    "trackName": "Adderall"
                 },
                 {
-                    "SongId": "1tLV0GD0WXQ1Z8BKOQscti",
-                    "SongName": "6 for 6"
+                    "trackId": "1tLV0GD0WXQ1Z8BKOQscti",
+                    "trackName": "6 for 6"
                 },
                 {
-                    "SongId": "40U8d12pC5UHqmHwXjHjjl",
-                    "SongName": "Repeat After Me (Interlude)"
+                    "trackId": "40U8d12pC5UHqmHwXjHjjl",
+                    "trackName": "Repeat After Me (Interlude)"
                 },
                 {
-                    "SongId": "2ZVSjes0VFYg9uJu4olsi4",
-                    "SongName": "Khabib"
+                    "trackId": "2ZVSjes0VFYg9uJu4olsi4",
+                    "trackName": "Khabib"
                 },
                 {
-                    "SongId": "3uB9vGygaCRzhwe8jhiQL4",
-                    "SongName": "Da New Age"
+                    "trackId": "3uB9vGygaCRzhwe8jhiQL4",
+                    "trackName": "Da New Age"
                 },
                 {
-                    "SongId": "22agj1ppHejR41cUyf7k6v",
-                    "SongName": "We're All Alone In This Thogether"
+                    "trackId": "22agj1ppHejR41cUyf7k6v",
+                    "trackName": "We're All Alone In This Thogether"
                 },
                 {
-                    "SongId": "0gGhCp7Ig7bQIEYKmsh5b1",
-                    "SongName": "Lose My Mind"
+                    "trackId": "0gGhCp7Ig7bQIEYKmsh5b1",
+                    "trackName": "Lose My Mind"
                 },
                 {
-                    "SongId": "5XbA7TAqsD0fj0dGBrbb0D",
-                    "SongName": "I Heard You’re Married (feat. Lil Wayne)"
+                    "trackId": "5XbA7TAqsD0fj0dGBrbb0D",
+                    "trackName": "I Heard You’re Married (feat. Lil Wayne)"
                 },
                 {
-                    "SongId": "0Y7exe8Yu2nbuIvGDRGXcz",
-                    "SongName": "Blur"
+                    "trackId": "0Y7exe8Yu2nbuIvGDRGXcz",
+                    "trackName": "Blur"
                 }
             ]
         },
@@ -954,24 +1361,24 @@
             "description": "Today's Top Hits",
             "tracks": [
                 {
-                    "SongId": "22agj1ppHejR41cUyf7k6v",
-                    "SongName": "We're All Alone In This Thogether"
+                    "trackId": "22agj1ppHejR41cUyf7k6v",
+                    "trackName": "We're All Alone In This Thogether"
                 },
                 {
-                    "SongId": "709MdyUol3Qfgcowmd7KV4",
-                    "SongName": "Straight Back To It"
+                    "trackId": "709MdyUol3Qfgcowmd7KV4",
+                    "trackName": "Straight Back To It"
                 },
                 {
-                    "SongId": "0Sfn2TYbpQtCGMBf6C0Y6T",
-                    "SongName": "PLAYA DEL INGLÉS"
+                    "trackId": "0Sfn2TYbpQtCGMBf6C0Y6T",
+                    "trackName": "PLAYA DEL INGLÉS"
                 },
                 {
-                    "SongId": "2vPCRs3g0vdLU8sHlAEytO",
-                    "SongName": "Outrageous"
+                    "trackId": "2vPCRs3g0vdLU8sHlAEytO",
+                    "trackName": "Outrageous"
                 },
                 {
-                    "SongId": "1NlK2NtpuUazpziLhnJwEV",
-                    "SongName": "Phantom Regret by Jim"
+                    "trackId": "1NlK2NtpuUazpziLhnJwEV",
+                    "trackName": "Phantom Regret by Jim"
                 }
             ]
         },
@@ -984,16 +1391,16 @@
             "description": "My Personal Fauvorites",
             "tracks": [
                 {
-                    "SongId": "22agj1ppHejR41cUyf7k6v",
-                    "SongName": "We're All Alone In This Thogether"
+                    "trackId": "22agj1ppHejR41cUyf7k6v",
+                    "trackName": "We're All Alone In This Thogether"
                 },
                 {
-                    "SongId": "709MdyUol3Qfgcowmd7KV4",
-                    "SongName": "Straight Back To It"
+                    "trackId": "709MdyUol3Qfgcowmd7KV4",
+                    "trackName": "Straight Back To It"
                 },
                 {
-                    "SongId": "0Sfn2TYbpQtCGMBf6C0Y6T",
-                    "SongName": "PLAYA DEL INGLÉS"
+                    "trackId": "0Sfn2TYbpQtCGMBf6C0Y6T",
+                    "trackName": "PLAYA DEL INGLÉS"
                 }
             ]
         }
