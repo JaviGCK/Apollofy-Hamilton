@@ -5,16 +5,16 @@ export interface ArtistType {
     genres: GenreTypes[],
     popularity: number,
     photoUrl: string,
-    albums: albumInfo[],
-    tracks: trackInfo[]
+    albums: AlbumInfo[],
+    tracks: TrackInfo[]
 }
 
-interface albumInfo {
+interface AlbumInfo {
     albumId: string,
     albumName: string
 }
 
-export interface trackInfo {
+export interface TrackInfo {
     trackId: string,
     trackName: string
 }

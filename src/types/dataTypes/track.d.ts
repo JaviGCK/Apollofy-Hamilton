@@ -1,17 +1,18 @@
-import { GenreTypes } from "./artist";
+import { ArtistInfo } from "./album";
+import { GenreTypes, AlbumInfo } from "./artist";
 interface TrackType {
     id: string,
     name: string,
-    artists: trackArtists[],
+    artists: ArtistInfo[],
     genre: GenreTypes[],
     liked: number,
     url: string,
     // It can be none or the albumId
-    album: string
+    album: AlbumInfo[]
 }
 
-interface trackArtists {
+export interface ArtistInfo {
     artistId: string,
-    astistName: string
+    artistName: string
 }
 

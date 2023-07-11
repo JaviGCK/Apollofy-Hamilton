@@ -1,5 +1,4 @@
-import { trackInfo } from "./artist";
-import { TrackType } from "./track";
+import { TrackInfo } from "./artist";
 
 export interface PlaylistsType {
     id: string,
@@ -10,5 +9,5 @@ export interface PlaylistsType {
     owner: string,
     thumbnail: string,
     description: string,
-    tracks: trackInfo[]
+    tracks: TrackInfo[]
 }

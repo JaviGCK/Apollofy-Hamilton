@@ -275,7 +275,7 @@
             "albums": [
                 {
                     "albumId": "4GrFuXwRmEBJec22p58fsD",
-                    "albumName": "PHYCHODRAMA"
+                    "albumName": "PSYCHODRAMA"
                 },
                 {
                     "albumId": "6HwzIlrCDq3WF9vMq8meqG",
@@ -1667,7 +1667,7 @@
         },
         {
             "id": "4GrFuXwRmEBJec22p58fsD",
-            "name": "PHYCHODRAMA",
+            "name": "PSYCHODRAMA",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e02c1c8d2889455db6d03d309ed",
             "tracks": [
                 "Psycho",

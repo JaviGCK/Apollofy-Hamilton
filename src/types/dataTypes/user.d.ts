@@ -1,4 +1,4 @@
-import { trackInfo } from "./artist"
+import { TrackInfo } from "./artist"
 
 export interface UserType {
     id: string,
@@ -7,11 +7,11 @@ export interface UserType {
     email: string,
     profilePicture: string,
     isLoggedIn: boolean,
-    playlists: playlistInfo[],
-    likedTracks: trackInfo[]
+    playlists: PlaylistInfo[],
+    likedTracks: TrackInfo[]
 }
 
-interface playlistInfo {
+interface PlaylistInfo {
     playlistId: string,
     playlistName: string
 }
