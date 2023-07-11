@@ -5,5 +5,8 @@ interface TrackType {
     artistId: string,
     genre: GenreTypes[],
     liked: string,
-    url: string
+    url: string,
+    // It can be none or the albumId
+    album: string
 }
+

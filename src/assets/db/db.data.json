@@ -5,29 +5,252 @@
             "name": "The Weeknd",
             "genres": [
                 "r&b",
-                "soul",
-                "dance",
-                "techno"
+                "pop"
             ],
-            "popularity": 99,
+            "popularity": 94,
             "photoUrl": "https://i.scdn.co/image/ab6761610000517401b9b4ec2a05d0805428acfa",
             "albums": [],
             "tracks": []
         },
         {
-            "id": "06HL4z0CvFAxyc27GXpf02",
-            "name": "Taylor Swift",
-            "genres": [],
-            "popularity": 99,
-            "photoUrl": "https://i.scdn.co/image/ab6761610000517401b9b4ec2a05d0805428acfa",
+            "id": "7w9jdhcgHNdiPeNPUoFSlx",
+            "name": "Dropkick Murphys",
+            "genres": [
+                "punk",
+                "rock"
+            ],
+            "popularity": 60,
+            "photoUrl": "https://i.scdn.co/image/ab676161000051742b3032f701dee12a10157f83",
+            "albums": [],
+            "tracks": []
+        },
+        {
+            "id": "5t9ChGEQOzEA3gxWtXEw48",
+            "name": "Elphomega",
+            "genres": [
+                "hip-hop",
+                "rap"
+            ],
+            "popularity": 33,
+            "photoUrl": "https://i.scdn.co/image/ab676161000051743dc69e75a2c86e2341c64064",
+            "albums": [],
+            "tracks": []
+        },
+        {
+            "id": "2bKySOuviZxzwqrxu7Xq0w",
+            "name": "Chivi",
+            "genres": [
+                "rock"
+            ],
+            "popularity": 28,
+            "photoUrl": "https://i.scdn.co/image/ab67616100005174cbb8c84d32df7f38cf103a2b",
+            "albums": [],
+            "tracks": []
+        },
+        {
+            "id": "2bKySOuviZxzwqrxu7Xq0w",
+            "name": "Britney Spears",
+            "genres": [
+                "dance",
+                "pop"
+            ],
+            "popularity": 78,
+            "photoUrl": "https://i.scdn.co/image/ab676161000051744e7e6ded87a4e0f65b5afcec",
+            "albums": [],
+            "tracks": []
+        },
+        {
+            "id": "05fG473iIaoy82BF1aGhL8",
+            "name": "Slipknot",
+            "genres": [
+                "rock",
+                "rap",
+                "metal"
+            ],
+            "popularity": 77,
+            "photoUrl": "https://i.scdn.co/image/ab67616100005174ec01c52d6030a1574070e308",
+            "albums": [],
+            "tracks": []
+        },
+        {
+            "id": "53XhwfbYqKCa1cC15pYq2q",
+            "name": "Imagine Dragons",
+            "genres": [
+                "rock",
+                "pop"
+            ],
+            "popularity": 86,
+            "photoUrl": "https://i.scdn.co/image/ab67616100005174920dc1f617550de8388f368e",
+            "albums": [],
+            "tracks": []
+        },
+        {
+            "id": "6Ip8FS7vWT1uKkJSweANQK",
+            "name": "Dave",
+            "genres": [
+                "hip-hop",
+                "rap"
+            ],
+            "popularity": 80,
+            "photoUrl": "https://i.scdn.co/image/ab67616100005174d03e9ecf77419871b96daee1",
+            "albums": [],
+            "tracks": []
+        },
+        {
+            "id": "491U1PrV1EoQuhM0aUCn9r",
+            "name": "M Huncho",
+            "genres": [
+                "hip-hop",
+                "rap"
+            ],
+            "popularity": 61,
+            "photoUrl": "https://i.scdn.co/image/ab676161000051742565e2b9a6311e6b80cf87f8",
+            "albums": [],
+            "tracks": []
+        },
+        {
+            "id": "5H4yInM5zmHqpKIoMNAx4r",
+            "name": "Central Cee",
+            "genres": [
+                "drill"
+            ],
+            "popularity": 82,
+            "photoUrl": "https://i.scdn.co/image/ab676161000051745fe7cabb8de1c0266cd2179c",
             "albums": [],
             "tracks": []
         }
     ],
     "users": [
-        {}
+        {
+            "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7",
+            "firstName": "Ali",
+            "lastName": "Hourag",
+            "email": "ali-hourag@gmail.com",
+            "profilePicture": "https://avatars.githubusercontent.com/u/131694498?v=4",
+            "isLoggedIn": false,
+            "playlists": [],
+            "likedTracks": []
+        },
+        {
+            "id": "af99a651-4118-48ab-933c-0f7927fe70d2",
+            "firstName": "Javier",
+            "lastName": "Cabello",
+            "email": "javier-cabello@gmail.com",
+            "profilePicture": "https://avatars.githubusercontent.com/u/131688101?v=4",
+            "isLoggedIn": false,
+            "playlists": [],
+            "likedTracks": []
+        },
+        {
+            "id": "e47291ca-f376-4456-bd60-e02319ee280d",
+            "firstName": "Luis",
+            "lastName": "Jover",
+            "email": "luis-jover@gmail.com",
+            "profilePicture": "SomeUrl",
+            "isLoggedIn": false,
+            "playlists": [],
+            "likedTracks": []
+        },
+        {
+            "id": "ad84c6f9-e695-456d-95ef-cf8a982e2e7d",
+            "firstName": "Ivan",
+            "lastName": "...",
+            "email": "ivan-...@gmail.com",
+            "profilePicture": "SomeUrl",
+            "isLoggedIn": false,
+            "playlists": [],
+            "likedTracks": []
+        },
+        {
+            "id": "9b1421f2-e2a5-4200-8321-2224fcdfaf5d",
+            "firstName": "Matias",
+            "lastName": "Alaimo",
+            "email": "matias-alaimo@gmail.com",
+            "profilePicture": "https://avatars.githubusercontent.com/u/98781462?v=4",
+            "isLoggedIn": false,
+            "playlists": [],
+            "likedTracks": []
+        }
     ],
     "tracks": [],
     "playlists": [],
-    "albums": []
+    "albums": [
+        {
+            "id": "94b2f7e0-b6bc-4759-a5e4-6a0c86dad46a",
+            "name": "After Hours",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e028863bc11d2aa12b54f5aeb36",
+            "tracks": [
+                "Repeat after me",
+                "Until I Bleed Out",
+                "Alone Again"
+            ],
+            "artistId": "1Xyo4u8uXC1ZmMpatF05PJ"
+        },
+        {
+            "id": "166afcd5-a965-46e3-9c18-5023cc1db662",
+            "name": "Dawn FM",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02ade87e5f9c3764f0a1e5df64",
+            "tracks": [
+                "I Heard You're Married",
+                "Phatom Regret by Jim",
+                "A Tale By Quincy"
+            ],
+            "artistId": "1Xyo4u8uXC1ZmMpatF05PJ"
+        },
+        {
+            "id": "f3a2a868-ad1b-48e0-80a9-0a4b8618d1ce",
+            "name": "In the Zone",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02efc6988972cb04105f002cd4",
+            "tracks": [
+                "Me Against the Music",
+                "Outrageous",
+                "Touch of My Hand"
+            ],
+            "artistId": "2bKySOuviZxzwqrxu7Xq0w"
+        },
+        {
+            "id": "08a0b6bf-7ec9-40ae-a249-404ac872c43e",
+            "name": "Circus",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e0254c6edd554935d73e159e199",
+            "tracks": [
+                "Mannequin",
+                "Blur",
+                "Circus"
+            ],
+            "artistId": "2bKySOuviZxzwqrxu7Xq0w"
+        },
+        {
+            "id": "3ba5580a-664c-41aa-974f-a11d6a5bc444",
+            "name": "The End, So Far",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02c3eedff14af24fdd988ed1a7",
+            "tracks": [
+                "Adderall",
+                "The Dying Song",
+                "The Chapeltown Rag"
+            ],
+            "artistId": "05fG473iIaoy82BF1aGhL8"
+        },
+        {
+            "id": "706d69d7-99ce-4b81-9b20-2b560d331995",
+            "name": "We Are Not Your Kind",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e0226f20b4d67c0c7b0f137ce4f",
+            "tracks": [
+                "Insert Coin",
+                "Unsainted",
+                "Birth Of The Cruel"
+            ],
+            "artistId": "05fG473iIaoy82BF1aGhL8"
+        },
+        {
+            "id": "6bdc89b5-15c8-4e31-9753-42b6c48f3e3b",
+            "name": "Night Visions",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e0281eeace38068e9444cb28a3e",
+            "tracks": [
+                "Radioactive",
+                "Tiptoe",
+                "It's Time"
+            ],
+            "artistId": "53XhwfbYqKCa1cC15pYq2q"
+        }
+    ]
 }
