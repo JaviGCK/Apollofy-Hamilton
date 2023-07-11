@@ -189,7 +189,7 @@
         {
             "id": "40U8d12pC5UHqmHwXjHjjl",
             "name": "Repeat After Me (Interlude)",
-            "artistId": [
+            "artists": [
                 {
                     "artistId": "1Xyo4u8uXC1ZmMpatF05PJ",
                     "artistName": "The Weeknd"
@@ -205,7 +205,7 @@
         {
             "id": "2BcnxwxBuar5wjCaLqm5N3",
             "name": "Until I Bleed Out",
-            "artistId": [
+            "artists": [
                 {
                     "artistId": "1Xyo4u8uXC1ZmMpatF05PJ",
                     "artistName": "The Weeknd"
@@ -241,8 +241,11 @@
         {
             "id": "1NlK2NtpuUazpziLhnJwEV",
             "name": "Phantom Regret by Jim",
-            "artistId": [
-                "1Xyo4u8uXC1ZmMpatF05PJ"
+            "artists": [
+                {
+                    "artistId": "1Xyo4u8uXC1ZmMpatF05PJ",
+                    "artistName": "The Weeknd"
+                }
             ],
             "genre": [
                 "pop"
@@ -254,8 +257,11 @@
         {
             "id": "0dRhSF9LV0HR8Jwd3MMMKJ",
             "name": "Everytime",
-            "artistId": [
-                "26dSoYclwsYLMAKD3tpOr4"
+            "artists": [
+                {
+                    "artistId": "26dSoYclwsYLMAKD3tpOr4",
+                    "artistName": "Britney Spears"
+                }
             ],
             "genre": [
                 "pop"
@@ -267,8 +273,11 @@
         {
             "id": "2vPCRs3g0vdLU8sHlAEytO",
             "name": "Outrageous",
-            "artistId": [
-                "26dSoYclwsYLMAKD3tpOr4"
+            "artists": [
+                {
+                    "artistId": "26dSoYclwsYLMAKD3tpOr4",
+                    "artistName": "Britney Spears"
+                }
             ],
             "genre": [
                 "pop"
@@ -280,8 +289,11 @@
         {
             "id": "3buxlp1m5TLONPem13GSpt",
             "name": "Mannequin",
-            "artistId": [
-                "26dSoYclwsYLMAKD3tpOr4"
+            "artists": [
+                {
+                    "artistId": "26dSoYclwsYLMAKD3tpOr4",
+                    "artistName": "Britney Spears"
+                }
             ],
             "genre": [
                 "dance"
@@ -293,8 +305,11 @@
         {
             "id": "0Y7exe8Yu2nbuIvGDRGXcz",
             "name": "Blur",
-            "artistId": [
-                "26dSoYclwsYLMAKD3tpOr4"
+            "artists": [
+                {
+                    "artistId": "26dSoYclwsYLMAKD3tpOr4",
+                    "artistName": "Britney Spears"
+                }
             ],
             "genre": [
                 "pop"
@@ -306,8 +321,11 @@
         {
             "id": "1PcANFoqnDsexSHXpWrn8Q",
             "name": "Adderall",
-            "artistId": [
-                "05fG473iIaoy82BF1aGhL8"
+            "artists": [
+                {
+                    "artistId": "05fG473iIaoy82BF1aGhL8",
+                    "artistName": "Slipknot"
+                }
             ],
             "genre": [
                 "rock"
@@ -335,8 +353,11 @@
         {
             "id": "5qP24CrDI0rmY5zwRvUfzU",
             "name": "AHORA QUÉ",
-            "artistId": [
-                "52iwsT98xCoGgiGntTiR7K"
+            "artists": [
+                {
+                    "artistId": "52iwsT98xCoGgiGntTiR7K",
+                    "artistName": "Quevedo"
+                }
             ],
             "genre": [
                 "rap"
@@ -349,7 +370,10 @@
             "id": "0FirgnvrpCkkhdaq64Gfen",
             "name": "YANKEE",
             "artistId": [
-                "52iwsT98xCoGgiGntTiR7K"
+                {
+                    "artistId": "52iwsT98xCoGgiGntTiR7K",
+                    "artistName": "Quevedo"
+                }
             ],
             "genre": [
                 "rap"
@@ -362,7 +386,10 @@
             "id": "5q86iSKkBtOoNkdgEDY5WV",
             "name": "VISTA AL MAR",
             "artistId": [
-                "52iwsT98xCoGgiGntTiR7K"
+                {
+                    "artistId": "52iwsT98xCoGgiGntTiR7K",
+                    "artistName": "Quevedo"
+                }
             ],
             "genre": [
                 "rap"
@@ -375,7 +402,10 @@
             "id": "0Sfn2TYbpQtCGMBf6C0Y6T",
             "name": "PLAYA DEL INGLÉS",
             "artistId": [
-                "52iwsT98xCoGgiGntTiR7K"
+                {
+                    "artistId": "52iwsT98xCoGgiGntTiR7K",
+                    "artistName": "Quevedo"
+                }
             ],
             "genre": [
                 "rap"
@@ -387,8 +417,11 @@
         {
             "id": "0FWAIRd9Uz5uNek7cALYNC",
             "name": "Psycho",
-            "artistId": [
-                "6Ip8FS7vWT1uKkJSweANQK"
+            "artists": [
+                {
+                    "artistId": "6Ip8FS7vWT1uKkJSweANQK",
+                    "artistName": "Dave"
+                }
             ],
             "genre": [
                 "rap"
@@ -400,8 +433,11 @@
         {
             "id": "59PUOc7B0WCNNx8Nr4qaA4",
             "name": "Streatham",
-            "artistId": [
-                "6Ip8FS7vWT1uKkJSweANQK"
+            "artists": [
+                {
+                    "artistId": "6Ip8FS7vWT1uKkJSweANQK",
+                    "artistName": "Dave"
+                }
             ],
             "genre": [
                 "rap"
@@ -413,8 +449,11 @@
         {
             "id": "22agj1ppHejR41cUyf7k6v",
             "name": "We're All Alone In This Thogether",
-            "artistId": [
-                "6Ip8FS7vWT1uKkJSweANQK"
+            "artists": [
+                {
+                    "artistId": "6Ip8FS7vWT1uKkJSweANQK",
+                    "artistName": "Dave"
+                }
             ],
             "genre": [
                 "rap"
@@ -426,8 +465,11 @@
         {
             "id": "7IPKXYU2rTMnrLW5IZ7ZI5",
             "name": "Verdansk",
-            "artistId": [
-                "6Ip8FS7vWT1uKkJSweANQK"
+            "artists": [
+                {
+                    "artistId": "6Ip8FS7vWT1uKkJSweANQK",
+                    "artistName": "Dave"
+                }
             ],
             "genre": [
                 "rap"
@@ -439,8 +481,11 @@
         {
             "id": "3uB9vGygaCRzhwe8jhiQL4",
             "name": "Da New Age",
-            "artistId": [
-                "491U1PrV1EoQuhM0aUCn9r"
+            "artists": [
+                {
+                    "artistId": "491U1PrV1EoQuhM0aUCn9r",
+                    "artistName": "M Huncho"
+                }
             ],
             "genre": [
                 "rap"
@@ -452,8 +497,11 @@
         {
             "id": "4lHVWC1WAWdic4jIK5DMNv",
             "name": "Heroes",
-            "artistId": [
-                "491U1PrV1EoQuhM0aUCn9r"
+            "artists": [
+                {
+                    "artistId": "491U1PrV1EoQuhM0aUCn9r",
+                    "artistName": "M Huncho"
+                }
             ],
             "genre": [
                 "rap"
@@ -465,8 +513,11 @@
         {
             "id": "1h5Sb44FGJdYqkrfznnau7",
             "name": "Unapreciated",
-            "artistId": [
-                "491U1PrV1EoQuhM0aUCn9r"
+            "artists": [
+                {
+                    "artistId": "491U1PrV1EoQuhM0aUCn9r",
+                    "artistName": "M Huncho"
+                }
             ],
             "genre": [
                 "rap"
@@ -478,8 +529,11 @@
         {
             "id": "4iRDtaQCDsGxUN2MbfV8Tl",
             "name": "Stainless",
-            "artistId": [
-                "491U1PrV1EoQuhM0aUCn9r"
+            "artists": [
+                {
+                    "artistId": "491U1PrV1EoQuhM0aUCn9r",
+                    "artistName": "M Huncho"
+                }
             ],
             "genre": [
                 "rap"
@@ -491,8 +545,11 @@
         {
             "id": "1tLV0GD0WXQ1Z8BKOQscti",
             "name": "6 for 6",
-            "artistId": [
-                "5H4yInM5zmHqpKIoMNAx4r"
+            "artists": [
+                {
+                    "artistId": "5H4yInM5zmHqpKIoMNAx4r",
+                    "artistName": "Central Cee"
+                }
             ],
             "genre": [
                 "rap"
@@ -504,8 +561,11 @@
         {
             "id": "5gSZoRy42TxBxyAdHs9wXO",
             "name": "Fraud",
-            "artistId": [
-                "5H4yInM5zmHqpKIoMNAx4r"
+            "artists": [
+                {
+                    "artistId": "5H4yInM5zmHqpKIoMNAx4r",
+                    "artistName": "Central Cee"
+                }
             ],
             "genre": [
                 "rap"
@@ -517,8 +577,11 @@
         {
             "id": "2ZVSjes0VFYg9uJu4olsi4",
             "name": "Khabib",
-            "artistId": [
-                "5H4yInM5zmHqpKIoMNAx4r"
+            "artists": [
+                {
+                    "artistId": "5H4yInM5zmHqpKIoMNAx4r",
+                    "artistName": "Central Cee"
+                }
             ],
             "genre": [
                 "rap"
@@ -530,8 +593,11 @@
         {
             "id": "709MdyUol3Qfgcowmd7KV4",
             "name": "Straight Back To It",
-            "artistId": [
-                "5H4yInM5zmHqpKIoMNAx4r"
+            "artists": [
+                {
+                    "artistId": "5H4yInM5zmHqpKIoMNAx4r",
+                    "artistName": "Central Cee"
+                }
             ],
             "genre": [
                 "rap"
@@ -543,8 +609,11 @@
         {
             "id": "4WT92JeiPDnktqlf7Ueqwh",
             "name": "Sol de Sábado, Lluvia de domingo",
-            "artistId": [
-                "5t9ChGEQOzEA3gxWtXEw48"
+            "artists": [
+                {
+                    "artistId": "5t9ChGEQOzEA3gxWtXEw48",
+                    "artistName": "Elphomega"
+                }
             ],
             "genre": [
                 "hip-hop",
@@ -557,22 +626,11 @@
         {
             "id": "4u4eYJPiIN1y8RgdcA9H2G",
             "name": "1.000 Problemas",
-            "artistId": [
-                "5t9ChGEQOzEA3gxWtXEw48"
-            ],
-            "genre": [
-                "hip-hop",
-                "rap"
-            ],
-            "liked": 19854,
-            "url": "",
-            "album": "59a36aa4-a976-41e9-b73d-53d6d677e681"
-        },
-        {
-            "id": "4u4eYJPiIN1y8RgdcA9H2G",
-            "name": "1.000 Problemas",
-            "artistId": [
-                "5t9ChGEQOzEA3gxWtXEw48"
+            "artists": [
+                {
+                    "artistId": "5t9ChGEQOzEA3gxWtXEw48",
+                    "artistName": "Elphomega"
+                }
             ],
             "genre": [
                 "hip-hop",
@@ -584,9 +642,12 @@
         },
         {
             "id": "4fhz2FJzEkLDPl7W6waSdY",
-            "name": "MK Ultra",
-            "artistId": [
-                "5t9ChGEQOzEA3gxWtXEw48"
+            "name": "MK Ultra - El testimonio Libra titles",
+            "artists": [
+                {
+                    "artistId": "5t9ChGEQOzEA3gxWtXEw48",
+                    "artistName": "Elphomega"
+                }
             ],
             "genre": [
                 "hip-hop",
@@ -599,8 +660,11 @@
         {
             "id": "7wf5IS43OXNh70ZX46UCoy",
             "name": "Gafas",
-            "artistId": [
-                "5t9ChGEQOzEA3gxWtXEw48"
+            "artists": [
+                {
+                    "artistId": "5t9ChGEQOzEA3gxWtXEw48",
+                    "artistName": "Elphomega"
+                }
             ],
             "genre": [
                 "hip-hop",
@@ -636,7 +700,7 @@
                 "I Heard You're Married",
                 "Phatom Regret by Jim"
             ],
-            "artistId": [
+            "artists": [
                 {
                     "artistId": "1Xyo4u8uXC1ZmMpatF05PJ",
                     "artistName": "The Weeknd"
@@ -651,7 +715,12 @@
                 "Everytime",
                 "Outrageous"
             ],
-            "artistId": "2bKySOuviZxzwqrxu7Xq0w"
+            "artists": [
+                {
+                    "artistId": "2bKySOuviZxzwqrxu7Xq0w",
+                    "artistName": "Britney Spears"
+                }
+            ]
         },
         {
             "id": "08a0b6bf-7ec9-40ae-a249-404ac872c43e",
@@ -661,7 +730,12 @@
                 "Mannequin",
                 "Blur"
             ],
-            "artistId": "2bKySOuviZxzwqrxu7Xq0w"
+            "artists": [
+                {
+                    "artistId": "2bKySOuviZxzwqrxu7Xq0w",
+                    "artistName": "Britney Spears"
+                }
+            ]
         },
         {
             "id": "3hWTXO0w02D6YpVRyLRmQz",
@@ -671,7 +745,12 @@
                 "Adderall",
                 "The Dying Song"
             ],
-            "artistId": "05fG473iIaoy82BF1aGhL8"
+            "artists": [
+                {
+                    "artistId": "05fG473iIaoy82BF1aGhL8",
+                    "artistName": "Slipknot"
+                }
+            ]
         },
         {
             "id": "754RY5WpZ2LTUZsk8kDBju",
@@ -681,7 +760,12 @@
                 "Insert Coin",
                 "Unsainted"
             ],
-            "artistId": "05fG473iIaoy82BF1aGhL8"
+            "artists": [
+                {
+                    "artistId": "05fG473iIaoy82BF1aGhL8",
+                    "artistName": "Slipknot"
+                }
+            ]
         },
         {
             "id": "6bdc89b5-15c8-4e31-9753-42b6c48f3e3b",
@@ -691,7 +775,12 @@
                 "Radioactive",
                 "Tiptoe"
             ],
-            "artistId": "53XhwfbYqKCa1cC15pYq2q"
+            "artists": [
+                {
+                    "artistId": "53XhwfbYqKCa1cC15pYq2q",
+                    "artistName": "Imagine Dragons"
+                }
+            ]
         },
         {
             "id": "6ce083e2-f4a9-4023-ad43-f1de2bc69e5e",
@@ -701,7 +790,12 @@
                 "Enemy",
                 "My Life"
             ],
-            "artistId": "53XhwfbYqKCa1cC15pYq2q"
+            "artists": [
+                {
+                    "artistId": "53XhwfbYqKCa1cC15pYq2q",
+                    "artistName": "Imagine Dragons"
+                }
+            ]
         },
         {
             "id": "b6f40db0-7c0f-4607-9f0e-6f946ae1f4ca",
@@ -711,7 +805,12 @@
                 "Two 6's Upside Down",
                 "Talking Jukebox"
             ],
-            "artistId": "7w9jdhcgHNdiPeNPUoFSlx"
+            "artists": [
+                {
+                    "artistId": "7w9jdhcgHNdiPeNPUoFSlx",
+                    "artistName": "Dropkick Murphys"
+                }
+            ]
         },
         {
             "id": "c5b5470e-3e07-47b1-b377-c8c4524936b2",
@@ -721,7 +820,12 @@
                 "My Eyes Are Gonna Shine",
                 "Gotta Get To Peekskill"
             ],
-            "artistId": "7w9jdhcgHNdiPeNPUoFSlx"
+            "artists": [
+                {
+                    "artistId": "7w9jdhcgHNdiPeNPUoFSlx",
+                    "artistName": "Dropkick Murphys"
+                }
+            ]
         },
         {
             "id": "5be7e234-aa04-47d5-8390-a543416a765f",
@@ -731,7 +835,12 @@
                 "MK Ultra",
                 "Gafas"
             ],
-            "artistId": "5t9ChGEQOzEA3gxWtXEw48"
+            "artists": [
+                {
+                    "artistId": "5t9ChGEQOzEA3gxWtXEw48",
+                    "artistName": "Elphomega"
+                }
+            ]
         },
         {
             "id": "59a36aa4-a976-41e9-b73d-53d6d677e681",
@@ -741,7 +850,12 @@
                 "Sol de Sábado, Lluvia de domingo",
                 "1.000 Problemas"
             ],
-            "artistId": "5t9ChGEQOzEA3gxWtXEw48"
+            "artists": [
+                {
+                    "artistId": "5t9ChGEQOzEA3gxWtXEw48",
+                    "artistName": "Elphomega"
+                }
+            ]
         },
         {
             "id": "22454c0c-8de1-4afd-9ddc-a0ce27d73560",
@@ -751,7 +865,12 @@
                 "Khabib",
                 "Straight Back to it"
             ],
-            "artistId": "5H4yInM5zmHqpKIoMNAx4r"
+            "artists": [
+                {
+                    "artistId": "5H4yInM5zmHqpKIoMNAx4r",
+                    "artistName": "Central Cee"
+                }
+            ]
         },
         {
             "id": "0c7f4bb7-aef8-4caa-82d7-56b3365fda10",
@@ -761,7 +880,12 @@
                 "6 for 6",
                 "Fraud"
             ],
-            "artistId": "5H4yInM5zmHqpKIoMNAx4r"
+            "artists": [
+                {
+                    "artistId": "5H4yInM5zmHqpKIoMNAx4r",
+                    "artistName": "Central Cee"
+                }
+            ]
         },
         {
             "id": "57372193-a9f1-496d-8064-a2886015f1d5",
@@ -771,7 +895,12 @@
                 "Unappreciated",
                 "Stainless"
             ],
-            "artistId": "491U1PrV1EoQuhM0aUCn9r"
+            "artists": [
+                {
+                    "artistId": "491U1PrV1EoQuhM0aUCn9r",
+                    "artistName": "M Huncho"
+                }
+            ]
         },
         {
             "id": "de1069f7-7c5b-41bc-a7aa-645f669a415c",
@@ -781,7 +910,12 @@
                 "Da New Age",
                 "Heroes"
             ],
-            "artistId": "491U1PrV1EoQuhM0aUCn9r"
+            "artists": [
+                {
+                    "artistId": "491U1PrV1EoQuhM0aUCn9r",
+                    "artistName": "M Huncho"
+                }
+            ]
         },
         {
             "id": "3ca1bb6f-74d9-4065-9c9f-a23bad5c670b",
@@ -791,7 +925,12 @@
                 "We're All Alone",
                 "Verdansk"
             ],
-            "artistId": "6Ip8FS7vWT1uKkJSweANQK"
+            "artists": [
+                {
+                    "artistId": "6Ip8FS7vWT1uKkJSweANQK",
+                    "artistName": "Dave"
+                }
+            ]
         },
         {
             "id": "f19cab3c-ae1f-4c67-b52d-84445e6c24d2",
@@ -801,7 +940,12 @@
                 "Psycho",
                 "Streatham"
             ],
-            "artistId": "6Ip8FS7vWT1uKkJSweANQK"
+            "artists": [
+                {
+                    "artistId": "6Ip8FS7vWT1uKkJSweANQK",
+                    "artistName": "Dave"
+                }
+            ]
         },
         {
             "id": "9f577af8-2562-467d-b6cb-c1cde31e1ccf",
@@ -813,7 +957,12 @@
                 "VISTA AL MAR",
                 "PLAYA DEL INGLÉS"
             ],
-            "artistId": "2bKySOuviZxzwqrxu7Xq0w"
+            "artists": [
+                {
+                    "artistId": "52iwsT98xCoGgiGntTiR7K",
+                    "artistName": "Quevedo"
+                }
+            ]
         }
     ]
 }
