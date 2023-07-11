@@ -1,3 +1,4 @@
+import { trackInfo } from "./artist";
 import { TrackType } from "./track";
 
 export interface PlaylistsType {
@@ -9,5 +10,5 @@ export interface PlaylistsType {
     owner: string,
     thumbnail: string,
     description: string,
-    tracks: TrackType[]
+    tracks: trackInfo[]
 }

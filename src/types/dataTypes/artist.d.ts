@@ -5,10 +5,19 @@ export interface ArtistType {
     genres: GenreTypes[],
     popularity: number,
     photoUrl: string,
-    albums: AlbumType[],
-    tracks: TrackType[]
+    albums: albumInfo[],
+    tracks: trackInfo[]
 }
 
+interface albumInfo {
+    albumId: string,
+    albumName: string
+}
+
+export interface trackInfo {
+    trackId: string,
+    trackName: string
+}
 
 enum GenreTypes {
     hipHop = "hip-hop",
