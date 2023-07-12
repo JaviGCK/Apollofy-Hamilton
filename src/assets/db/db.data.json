@@ -1379,23 +1379,38 @@
             "tracks": [
                 {
                     "trackId": "22agj1ppHejR41cUyf7k6v",
-                    "trackName": "We're All Alone In This Thogether"
+                    "trackName": "We're All Alone In This Thogether",
+                    "url": "",
+                    "artistName": "Dave",
+                    "albumName": "We Are All Alone"
                 },
                 {
                     "trackId": "709MdyUol3Qfgcowmd7KV4",
-                    "trackName": "Straight Back To It"
+                    "trackName": "Straight Back To It",
+                    "url": "",
+                    "artistName": "Dave",
+                    "albumName": "We Are All Alone"
                 },
                 {
                     "trackId": "0Sfn2TYbpQtCGMBf6C0Y6T",
-                    "trackName": "PLAYA DEL INGLÉS"
+                    "trackName": "PLAYA DEL INGLÉS",
+                    "url": "",
+                    "artistName": "Dave",
+                    "albumName": "We Are All Alone"
                 },
                 {
                     "trackId": "2vPCRs3g0vdLU8sHlAEytO",
-                    "trackName": "Outrageous"
+                    "trackName": "Outrageous",
+                    "url": "",
+                    "artistName": "Dave",
+                    "albumName": "We Are All Alone"
                 },
                 {
                     "trackId": "1NlK2NtpuUazpziLhnJwEV",
-                    "trackName": "Phantom Regret by Jim"
+                    "trackName": "Phantom Regret by Jim",
+                    "url": "",
+                    "artistName": "Dave",
+                    "albumName": "We Are All Alone"
                 }
             ]
         },

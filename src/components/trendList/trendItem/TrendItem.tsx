@@ -14,7 +14,7 @@ export const TrendItem = ({ ...props }) => {
                 </p>
 
                 <p>
-                    ICONO MUSIC<span>ARTISTA</span><span>ALBUM</span>
+                    ICONO MUSIC<span>ARTISTA: {item.tracks[0].artistName}</span><span>ALBUM: {item.tracks[0].albumName}</span>
                 </p>
 
                 <span>
