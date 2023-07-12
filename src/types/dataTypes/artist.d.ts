@@ -16,7 +16,10 @@ interface AlbumInfo {
 
 export interface TrackInfo {
     trackId: string,
-    trackName: string
+    trackName: string,
+    url: string,
+    albumName: string,
+    artistName: string
 }
 
 enum GenreTypes {

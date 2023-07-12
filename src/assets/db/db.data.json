@@ -1274,48 +1274,78 @@
             "name": "Top 10 Global",
             "isFollowed": true,
             "owner": "Apollofy",
-            "thumbnail": "https://i.scdn.co/image/ab67616d00001e02f570e90de9ca85b8ddc50ca1",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02f570e90de9ca85b8ddc50ca1",
             "description": "Top 10 Global",
             "tracks": [
                 {
                     "trackId": "4fhz2FJzEkLDPl7W6waSdY",
-                    "trackName": "MK Ultra - El testimonio Libra titles"
+                    "trackName": "MK Ultra",
+                    "url": "",
+                    "artistName": "Elphomega",
+                    "albumName": "El Testimonio Libra"
                 },
                 {
                     "trackId": "0Sfn2TYbpQtCGMBf6C0Y6T",
-                    "trackName": "PLAYA DEL INGLÉS"
+                    "trackName": "PLAYA DEL INGLÉS",
+                    "url": "",
+                    "artistName": "Quevedo",
+                    "albumName": "DONDE QUIERO ESTAR"
                 },
                 {
                     "trackId": "2BcnxwxBuar5wjCaLqm5N3",
-                    "trackName": "Until I Bleed Out"
+                    "trackName": "Until I Bleed Out",
+                    "url": "",
+                    "artistName": "The Weeknd",
+                    "albumName": "After Hours"
                 },
                 {
                     "trackId": "5qP24CrDI0rmY5zwRvUfzU",
-                    "trackName": "AHORA QUÉ"
+                    "trackName": "AHORA QUÉ",
+                    "url": "",
+                    "artistName": "Quevedo",
+                    "albumName": "DONDE QUIERO ESTAR"
                 },
                 {
                     "trackId": "4u4eYJPiIN1y8RgdcA9H2G",
-                    "trackName": "1.000 Problemas"
+                    "trackName": "1.000 Problemas",
+                    "url": "",
+                    "artistName": "Elphomega",
+                    "albumName": "Phantom Pop"
                 },
                 {
                     "trackId": "1NlK2NtpuUazpziLhnJwEV",
-                    "trackName": "Phantom Regret by Jim"
+                    "trackName": "Phantom Regret by Jim",
+                    "url": "",
+                    "artistName": "The Weeknd",
+                    "albumName": "Dawn FM"
                 },
                 {
                     "trackId": "2vPCRs3g0vdLU8sHlAEytO",
-                    "trackName": "Outrageous"
+                    "trackName": "Outrageous",
+                    "url": "",
+                    "artistName": "Britney Spears",
+                    "albumName": "In The Zone"
                 },
                 {
                     "trackId": "4WT92JeiPDnktqlf7Ueqwh",
-                    "trackName": "Sol de Sábado, Lluvia de domingo"
+                    "trackName": "Sol de Sábado, Lluvia de domingo",
+                    "url": "",
+                    "artistName": "Elphomega",
+                    "albumName": "Phantom Pop"
                 },
                 {
                     "trackId": "0dRhSF9LV0HR8Jwd3MMMKJ",
-                    "trackName": "Everytime"
+                    "trackName": "Everytime",
+                    "url": "",
+                    "artistName": "Britney Spears",
+                    "albumName": "In The Zone"
                 },
                 {
                     "trackId": "0FWAIRd9Uz5uNek7cALYNC",
-                    "trackName": "Psycho"
+                    "trackName": "Psycho",
+                    "url": "",
+                    "artistName": "Dave",
+                    "albumName": "PSYCHODRAMA"
                 }
             ]
         },
@@ -1324,48 +1354,78 @@
             "name": "Top 10 Spain",
             "isFollowed": true,
             "owner": "Apollofy",
-            "thumbnail": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_es_large.jpg",
+            "imageUrl": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_es_large.jpg",
             "description": "Top 10 Spain",
             "tracks": [
                 {
                     "trackId": "709MdyUol3Qfgcowmd7KV4",
-                    "trackName": "Straight Back To It"
+                    "trackName": "Straight Back To It",
+                    "url": "",
+                    "artistName": "Central Cee",
+                    "albumName": "23"
                 },
                 {
                     "trackId": "1PcANFoqnDsexSHXpWrn8Q",
-                    "trackName": "Adderall"
+                    "trackName": "Adderall",
+                    "url": "",
+                    "artistName": "Slipknot",
+                    "albumName": "The End, So Far"
                 },
                 {
                     "trackId": "1tLV0GD0WXQ1Z8BKOQscti",
-                    "trackName": "6 for 6"
+                    "trackName": "6 for 6",
+                    "url": "",
+                    "artistName": "Central Cee",
+                    "albumName": "Wild West"
                 },
                 {
                     "trackId": "40U8d12pC5UHqmHwXjHjjl",
-                    "trackName": "Repeat After Me (Interlude)"
+                    "trackName": "Repeat After Me (Interlude)",
+                    "url": "",
+                    "artistName": "The Weeknd",
+                    "albumName": "After Hours"
                 },
                 {
                     "trackId": "2ZVSjes0VFYg9uJu4olsi4",
-                    "trackName": "Khabib"
+                    "trackName": "Khabib",
+                    "url": "",
+                    "artistName": "Central Cee",
+                    "albumName": "23"
                 },
                 {
                     "trackId": "3uB9vGygaCRzhwe8jhiQL4",
-                    "trackName": "Da New Age"
+                    "trackName": "Da New Age",
+                    "url": "",
+                    "artistName": "M Huncho",
+                    "albumName": "DNA"
                 },
                 {
                     "trackId": "22agj1ppHejR41cUyf7k6v",
-                    "trackName": "We're All Alone In This Thogether"
+                    "trackName": "We're All Alone In This Thogether",
+                    "url": "",
+                    "artistName": "Dave",
+                    "albumName": "We Are All Alone"
                 },
                 {
-                    "trackId": "0gGhCp7Ig7bQIEYKmsh5b1",
-                    "trackName": "Lose My Mind"
+                    "trackId": "0aE2HXcm7eoEGZG5i6rPXK",
+                    "trackName": "Two 6's Upside Down",
+                    "url": "",
+                    "artistName": "Dropkick Murphys",
+                    "albumName": "This Machine Still Kills Fascists (Expanded Edition)"
                 },
                 {
                     "trackId": "5XbA7TAqsD0fj0dGBrbb0D",
-                    "trackName": "I Heard You’re Married (feat. Lil Wayne)"
+                    "trackName": "I Heard You’re Married (feat. Lil Wayne)",
+                    "url": "",
+                    "artistName": "The Weeknd",
+                    "albumName": "Dawn FM"
                 },
                 {
                     "trackId": "0Y7exe8Yu2nbuIvGDRGXcz",
-                    "trackName": "Blur"
+                    "trackName": "Blur",
+                    "url": "",
+                    "artistName": "Britney Spears",
+                    "albumName": "Circus"
                 }
             ]
         },
@@ -1374,28 +1434,43 @@
             "name": "Today's Top Hits",
             "isFollowed": true,
             "owner": "Apollofy",
-            "thumbnail": "https://i.scdn.co/image/ab67706f00000003b3823d06a3718d5dc082e91f",
+            "imageUrl": "https://i.scdn.co/image/ab67706f00000003b3823d06a3718d5dc082e91f",
             "description": "Today's Top Hits",
             "tracks": [
                 {
                     "trackId": "22agj1ppHejR41cUyf7k6v",
-                    "trackName": "We're All Alone In This Thogether"
+                    "trackName": "We're All Alone In This Thogether",
+                    "url": "",
+                    "artistName": "Dave",
+                    "albumName": "We Are All Alone"
                 },
                 {
                     "trackId": "709MdyUol3Qfgcowmd7KV4",
-                    "trackName": "Straight Back To It"
+                    "trackName": "Straight Back To It",
+                    "url": "",
+                    "artistName": "Central Cee",
+                    "albumName": "23"
                 },
                 {
                     "trackId": "0Sfn2TYbpQtCGMBf6C0Y6T",
-                    "trackName": "PLAYA DEL INGLÉS"
+                    "trackName": "PLAYA DEL INGLÉS",
+                    "url": "",
+                    "artistName": "Quevedo",
+                    "albumName": "DONDE QUIERO ESTAR"
                 },
                 {
                     "trackId": "2vPCRs3g0vdLU8sHlAEytO",
-                    "trackName": "Outrageous"
+                    "trackName": "Outrageous",
+                    "url": "",
+                    "artistName": "Britney Spears",
+                    "albumName": "In the Zone"
                 },
                 {
                     "trackId": "1NlK2NtpuUazpziLhnJwEV",
-                    "trackName": "Phantom Regret by Jim"
+                    "trackName": "Phantom Regret by Jim",
+                    "url": "",
+                    "artistName": "The Weeknd",
+                    "albumName": "Dawn FM"
                 }
             ]
         },
@@ -1404,20 +1479,29 @@
             "name": "My Personal Fauvorites",
             "isFollowed": false,
             "owner": "101117c9-e76e-4904-ad3d-1d9cd08835e7",
-            "thumbnail": "https://avatars.githubusercontent.com/u/131694498?v=4",
+            "imageUrl": "https://avatars.githubusercontent.com/u/131694498?v=4",
             "description": "My Personal Fauvorites",
             "tracks": [
                 {
                     "trackId": "22agj1ppHejR41cUyf7k6v",
-                    "trackName": "We're All Alone In This Thogether"
+                    "trackName": "We're All Alone In This Thogether",
+                    "url": "",
+                    "artistName": "Dave",
+                    "albumName": "We Are All Alone"
                 },
                 {
                     "trackId": "709MdyUol3Qfgcowmd7KV4",
-                    "trackName": "Straight Back To It"
+                    "trackName": "Straight Back To It",
+                    "url": "",
+                    "artistName": "Central Cee",
+                    "albumName": "23"
                 },
                 {
                     "trackId": "0Sfn2TYbpQtCGMBf6C0Y6T",
-                    "trackName": "PLAYA DEL INGLÉS"
+                    "trackName": "PLAYA DEL INGLÉS",
+                    "url": "",
+                    "artistName": "Quevedo",
+                    "albumName": "DONDE QUIERO ESTAR"
                 }
             ]
         }
@@ -1428,8 +1512,14 @@
             "name": "After Hours",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e028863bc11d2aa12b54f5aeb36",
             "tracks": [
-                "Repeat after me",
-                "Until I Bleed Out"
+                {
+                    "trackName": "Repeat after me",
+                    "url": ""
+                },
+                {
+                    "trackName": "Until I Bleed Out",
+                    "url": ""
+                }
             ],
             "artists": [
                 {
@@ -1443,8 +1533,15 @@
             "name": "Dawn FM",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e02ade87e5f9c3764f0a1e5df64",
             "tracks": [
-                "I Heard You're Married",
-                "Phatom Regret by Jim"
+                {
+                    "trackName": "I Heard You're Married",
+                    "url": ""
+                },
+                {
+                    "trackName": "Phatom Regret by Jim",
+                    "url": ""
+                }
+
             ],
             "artists": [
                 {
@@ -1458,8 +1555,16 @@
             "name": "In the Zone",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e02efc6988972cb04105f002cd4",
             "tracks": [
-                "Everytime",
-                "Outrageous"
+                {
+                    "trackName": "Everytime",
+                    "url": ""
+                },
+                {
+                    "trackName": "Outrageous",
+                    "url": ""
+                }
+
+
             ],
             "artists": [
                 {
@@ -1473,8 +1578,16 @@
             "name": "Circus",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e0254c6edd554935d73e159e199",
             "tracks": [
-                "Mannequin",
-                "Blur"
+                {
+                    "trackName": "Mannequin",
+                    "url": ""
+                },
+                {
+                    "trackName": "Blur",
+                    "url": ""
+                }
+
+
             ],
             "artists": [
                 {
@@ -1488,8 +1601,14 @@
             "name": "The End, So Far",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e02c3eedff14af24fdd988ed1a7",
             "tracks": [
-                "Adderall",
-                "The Dying Song"
+                {
+                    "trackName": "Adderall",
+                    "url": ""
+                },
+                {
+                    "trackName": "The Dying Song",
+                    "url": ""
+                }
             ],
             "artists": [
                 {
@@ -1503,8 +1622,16 @@
             "name": "We Are Not Your Kind",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e0226f20b4d67c0c7b0f137ce4f",
             "tracks": [
-                "Insert Coin",
-                "Unsainted"
+                {
+                    "trackName": "Insert Coin",
+                    "url": ""
+                },
+                {
+                    "trackName":  "Unsainted",
+                    "url": ""
+                }
+
+
             ],
             "artists": [
                 {
@@ -1518,8 +1645,14 @@
             "name": "Night Visions",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e0281eeace38068e9444cb28a3e",
             "tracks": [
-                "Radioactive",
-                "Tiptoe"
+                {
+                    "trackName": "Radioactive",
+                    "url": ""
+                },
+                {
+                    "trackName":   "Tiptoe",
+                    "url": ""
+                }
             ],
             "artists": [
                 {
@@ -1533,8 +1666,14 @@
             "name": "Mercury - Acts 1 & 2",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e02fc915b69600dce2991a61f13",
             "tracks": [
-                "Lonely",
-                "My Life"
+                {
+                    "trackName": "Lonely",
+                    "url": ""
+                },
+                {
+                    "trackName":   "My Life",
+                    "url": ""
+                }
             ],
             "artists": [
                 {
@@ -1548,8 +1687,14 @@
             "name": "This Machine Still Kills Fascists (Expanded Edition)",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e02e68cf651a94fb62172da266b",
             "tracks": [
-                "Two 6's Upside Down",
-                "Talking Jukebox"
+                {
+                    "trackName": "Lonely",
+                    "url": ""
+                },
+                {
+                    "trackName": "Talking Jukebox",
+                    "url": ""
+                }
             ],
             "artists": [
                 {
@@ -1563,8 +1708,16 @@
             "name": "Okemah Rising",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e02639ebb8e7a3eb1f03c8839d2",
             "tracks": [
-                "My Eyes Are Gonna Shine",
-                "Watching The World Go By"
+                {
+                    "trackName": "My Eyes Are Gonna Shine",
+                    "url": ""
+                },
+                {
+                    "trackName": "Watching The World Go By",
+                    "url": ""
+                }
+
+
             ],
             "artists": [
                 {
@@ -1578,8 +1731,16 @@
             "name": "El Testimonio Libra",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e02a7810ebe026261b68cb194c8",
             "tracks": [
-                "MK Ultra - El testimonio Libra titles",
-                "Gafas"
+                {
+                    "trackName": "MK Ultra - El testimonio Libra titles",
+                    "url": ""
+                },
+                {
+                    "trackName": "Gafas",
+                    "url": ""
+                }
+
+
             ],
             "artists": [
                 {
@@ -1593,8 +1754,16 @@
             "name": "Phantom Pop",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e02c7c678df37ad4d1cf0043947",
             "tracks": [
-                "Sol de Sábado, Lluvia de domingo",
-                "1.000 Problemas"
+                {
+                    "trackName": "Sol de Sábado, Lluvia de domingo",
+                    "url": ""
+                },
+                {
+                    "trackName":  "1.000 Problemas",
+                    "url": ""
+                }
+
+
             ],
             "artists": [
                 {
@@ -1608,8 +1777,17 @@
             "name": "23",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e02e1f05c994777b79bc5c87547",
             "tracks": [
-                "Khabib",
-                "Straight Back to it"
+                {
+                    "trackName": "Khabib",
+                    "url": ""
+                },
+                {
+                    "trackName":  "Straight Back to it",
+                    "url": ""
+                }
+
+
+
             ],
             "artists": [
                 {
@@ -1623,8 +1801,17 @@
             "name": "Split Decision",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e0226847a635b96c96fee81d838",
             "tracks": [
-                "Sprinter",
-                "UK Rap"
+                {
+                    "trackName":  "Sprinter",
+                    "url": ""
+                },
+                {
+                    "trackName":  "UK Rap",
+                    "url": ""
+                }
+
+
+
             ],
             "artists": [
                 {
@@ -1642,8 +1829,17 @@
             "name": "Chasing Euphoria",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e0256760083a7f21cf162ed1806",
             "tracks": [
-                "Unappreciated",
-                "Stainless"
+                {
+                    "trackName":  "Unappreciated",
+                    "url": ""
+                },
+                {
+                    "trackName":  "Stainless",
+                    "url": ""
+                }
+
+
+
             ],
             "artists": [
                 {
@@ -1657,8 +1853,17 @@
             "name": "Utopia",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e022ed6c99890ba67bd6c773c72",
             "tracks": [
-                "Tranquility",
-                "Birds"
+                {
+                    "trackName":   "Tranquility",
+                    "url": ""
+                },
+                {
+                    "trackName":  "Birds",
+                    "url": ""
+                }
+
+
+
             ],
             "artists": [
                 {
@@ -1672,8 +1877,17 @@
             "name": "We're All Alone In This Thogether",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e02da5b9c1eb275d48e14d25f3e",
             "tracks": [
-                "We're All Alone",
-                "Verdansk"
+                {
+                    "trackName":  "We're All Alone",
+                    "url": ""
+                },
+                {
+                    "trackName":   "Verdansk",
+                    "url": ""
+                }
+
+
+
             ],
             "artists": [
                 {
@@ -1687,8 +1901,17 @@
             "name": "PSYCHODRAMA",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e02c1c8d2889455db6d03d309ed",
             "tracks": [
-                "Psycho",
-                "Streatham"
+                {
+                    "trackName":   "Psycho",
+                    "url": ""
+                },
+                {
+                    "trackName":   "Streatham",
+                    "url": ""
+                }
+
+
+
             ],
             "artists": [
                 {
@@ -1702,10 +1925,22 @@
             "name": "DONDE QUIERO ESTAR",
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e02efc1b8f6beda4abe848a84e0",
             "tracks": [
-                "AHORA QUÉ",
-                "YANKEE",
-                "VISTA AL MAR",
-                "WANDA"
+                {
+                    "trackName":   "AHORA QUÉ",
+                    "url": ""
+                },
+                {
+                    "trackName":   "YANKEE",
+                    "url": ""
+                },
+                {
+                    "trackName":   "VISTA AL MAR",
+                    "url": ""
+                },
+                {
+                    "trackName":   "WANDA",
+                    "url": ""
+                }
             ],
             "artists": [
                 {
