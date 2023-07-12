@@ -1,11 +1,11 @@
-import { NavBar } from './components/navbar/NavBar'
+import { RouterPaths } from './routes/RouterPaths.routes'
 
 function App() {
 
   return (
-    <div>
-    <NavBar/>
-    </div>
+    <>
+      <RouterPaths />
+    </>
   )
 }
 
