@@ -5,7 +5,11 @@ export interface AlbumType {
     id: string,
     name: string,
     imageUrl: string,
-    tracks: TrackType[],
+    tracks: SimpleTrackType[],
     artistId: ArtistInfo[]
 }
 
+interface SimpleTrackType {
+    trackName: string,
+    url: string
+}
