@@ -1,4 +1,6 @@
 
+import { HiMusicNote } from "react-icons/hi";
+import { BiPlay } from "react-icons/bi";
 import "./trendItem.css"
 
 
@@ -6,21 +8,27 @@ export const TrendItem = ({ ...props }) => {
     const item = props.item;
     console.log(item)
     return (
-        <div>
-            <img src={item.imageUrl} alt={`Cover Image of ${item.name}`} />
-            <div>
-                <p>
-                    PRIMERA CANCION DE ESTA LISTA : {item.tracks[0].trackName}
-                </p>
+        <div className="trend-item-container">
+            <div className="trend-item-card">
+                <img className="trend-item-card-img" src={item.imageUrl} alt={`Cover Image of ${item.name}`} />
 
-                <p>
-                    ICONO MUSIC<span>ARTISTA</span><span>ALBUM</span>
-                </p>
+                <div className="trend-item-dashboard">
+                    <p className="dashboard-track-title">
+                        {item.tracks[0].trackName}
+                    </p>
 
-                <span>
-                    ICONO PLAY
-                </span>
+                    <p className="dashboard-track-info">
+                        <HiMusicNote className="dashboard-music-icon" /><span>{item.tracks[0].artistName}</span> - <span>{item.tracks[0].albumName}</span>
+                    </p>
+
+                    <span className="play-btn-container">
+                        <BiPlay className="dashboard-play-icon" />
+                    </span>
+                </div>
             </div>
+            <span className="trend-title">
+                TITULO DEL CONJUNTO
+            </span>
         </div>
     )
 }

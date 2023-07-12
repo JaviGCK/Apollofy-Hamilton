@@ -1,0 +1,13 @@
+.trendlist-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 18px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.trendlist-container::-webkit-scrollbar {
+    width: 0;
+}

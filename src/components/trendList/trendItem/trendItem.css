@@ -1,0 +1,76 @@
+.trend-item-container {
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trend-item-card {
+    background-color: lightgreen;
+    position: relative;
+}
+
+.trend-item-card-img {
+    width: 170px;
+    height: 145px;
+}
+
+.trend-item-dashboard {
+    position: absolute;
+    bottom: 15px;
+    left: 11px;
+    width: 146px;
+    height: 60px;
+    padding: 20px 5px 5px 5px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(167, 133, 254, 0.35);
+    box-shadow: 5px -5px 12px 0px rgba(255, 255, 255, 0.05) inset, -5px 5px 12px 0px rgba(255, 255, 255, 0.05) inset, 4px 7px 15px 0px rgba(0, 0, 0, 0.08), -1px 0px 2px 0px rgba(201, 201, 201, 0.10) inset;
+    backdrop-filter: blur(6px);
+}
+
+.dashboard-track-title {
+    font-size: 13px;
+    line-height: normal;
+    color: white;
+}
+
+.dashboard-track-info {
+    font-size: 10px;
+    color: white;
+}
+
+.dashboard-music-icon {
+    display: inline-block;
+}
+
+
+.play-btn-container {
+    position: absolute;
+    bottom: 21px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.dashboard-play-icon {
+    color: #12001E;
+    width: 26px;
+    height: 26px;
+    padding-left: 2px;
+}
+
+
+.trend-title {
+    text-align: center;
+}
