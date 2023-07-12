@@ -4,7 +4,7 @@ export interface ArtistType {
     name: string,
     genres: GenreTypes[],
     popularity: number,
-    photoUrl: string,
+    imageUrl: string,
     albums: AlbumInfo[],
     tracks: TrackInfo[]
 }

@@ -7,7 +7,7 @@ export interface PlaylistsType {
     // If owner is app, then owner = "Apollofy"
     // If owner is user, then owner = userName
     owner: string,
-    thumbnail: string,
+    imageUrl: string,
     description: string,
     tracks: TrackInfo[]
 }

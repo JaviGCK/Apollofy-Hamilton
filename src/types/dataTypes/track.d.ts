@@ -8,7 +8,8 @@ interface TrackType {
     liked: number,
     url: string,
     // It can be none or the albumId
-    album: AlbumInfo[]
+    album: AlbumInfo[],
+    imageUrl?: string
 }
 
 export interface ArtistInfo {
