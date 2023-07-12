@@ -2,15 +2,18 @@ import { PossibleItems } from "../../types/dataTypes/enums"
 import { TrendItem } from "./trendItem/TrendItem"
 import "./trendList.css"
 
-
-export const TrendList = (conjunto: any) => {
+export const TrendList = (props: any) => {
+    const trendItemArray = props.conjunto
     return (
         <>
-            {conjunto.map((element: PossibleItems) => {
+            {
+
+            trendItemArray.map((element: PossibleItems) => {
                 return (
-                    <TrendItem item={element} />
+                    <TrendItem key={element.id} item={element} />
                 )
-            })}
+            })
+            }
         </>
     )
 }

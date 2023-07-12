@@ -1,15 +1,16 @@
 
-import { PossibleItems } from "../../../types/dataTypes/enums"
 import "./trendItem.css"
 
 
 export const TrendItem = ({ ...props }) => {
+    const item = props.item;
+    console.log(item)
     return (
         <div>
-            <img src={props.item.imageUrl} alt={`Cover Image of ${props.item.name}`} />
+            <img src={item.imageUrl} alt={`Cover Image of ${item.name}`} />
             <div>
                 <p>
-                    PRIMERA CANCION DE ESTA LISTA
+                    PRIMERA CANCION DE ESTA LISTA : {item.tracks[0].trackName}
                 </p>
 
                 <p>
