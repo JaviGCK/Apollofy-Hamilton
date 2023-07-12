@@ -25,15 +25,12 @@ enum GenreTypes {
     pop = "pop",
     rB = "r&b",
     metal = "metal",
+    punk = "punk",
     techno = "techno",
     funk = "funk",
-    reggae = "reggae",
-    country = "country",
-    classical = "classical",
-    soul = "soul",
     dance = "dance",
     rap = "rap",
     drill = "drill",
-    urabn = "urban"
+    urban = "urban"
 
 }
