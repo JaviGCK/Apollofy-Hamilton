@@ -1,5 +1,5 @@
 
-import { HiMusicNote } from "react-icons/hi";
+import { FaMusic } from "react-icons/fa";
 import { BiPlay } from "react-icons/bi";
 import "./trendItem.css"
 
@@ -18,7 +18,7 @@ export const TrendItem = ({ ...props }) => {
                     </p>
 
                     <p className="dashboard-track-info">
-                        <HiMusicNote className="dashboard-music-icon" /><span>{item.tracks[0].artistName}</span> - <span>{item.tracks[0].albumName}</span>
+                        <FaMusic className="dashboard-music-icon" /> <span>{item.tracks[0].artistName}</span> - <span>{item.tracks[0].albumName}</span>
                     </p>
 
                     <span className="play-btn-container">
