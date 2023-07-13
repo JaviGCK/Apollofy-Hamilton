@@ -1,0 +1,15 @@
+.home-heading-container{
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 25px;
+}
+
+.home-setting-icon{
+    width: 40px;
+    height: 40px;
+}
+
+.home-setting-icon :active{
+    color: #00ffa3;
+}

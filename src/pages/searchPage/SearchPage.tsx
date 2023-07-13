@@ -1,5 +1,5 @@
-import { GenresList } from "./genresList/GenresList"
-import { SearchBar } from "./searchBar/SearchBar"
+import { GenresList } from "../../components/lists/genresList/GenresList"
+import { SearchBar } from "../../components/searchBar/SearchBar"
 import "./searchPage.css"
 export const SearchPage = () => {
     return (

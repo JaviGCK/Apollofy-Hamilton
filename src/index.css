@@ -79,3 +79,8 @@ h6 {
 *:focus {
   outline: none;
 }
+
+.white-space{
+
+  height: 100px;
+}

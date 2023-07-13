@@ -1,12 +1,12 @@
 import './libraryPage.css'
 import { BiSearch, BiPlus } from 'react-icons/bi'
 import { useAuth0 } from '@auth0/auth0-react'
-import { Filter } from '../components/filter'
-import { listsFilterCategories } from '../assets/globalVariables'
+import { Filter } from '../../components/filter'
+import { listsFilterCategories } from '../../assets/globalVariables'
 import { useEffect, useState } from 'react'
-import { GroupItem } from '../components/lists/groupItem/GroupItem'
-import { PossibleItems } from '../types/dataTypes/enums'
-import { GroupButton } from '../components/lists/groupButtons/GroupButton'
+import { GroupItem } from '../../components/lists/groupItem/GroupItem'
+import { PossibleItems } from '../../types/dataTypes/enums'
+import { GroupButton } from '../../components/lists/groupButtons/GroupButton'
 
 
 export const LibraryPage = () => {
@@ -29,7 +29,7 @@ export const LibraryPage = () => {
     console.log(result)
 
     return (
-        <>
+        <section className='library-page-container'>
             <div className='library-heading'>
                 <div className='heading-user'>
                     <figure className='library-user-img'>
@@ -52,6 +52,8 @@ export const LibraryPage = () => {
 
             <GroupButton buttonType="Artist" />
             <GroupButton buttonType="Album" />
-        </>
+            <div className="white-space"></div>
+        </section>
+        
     )
 }

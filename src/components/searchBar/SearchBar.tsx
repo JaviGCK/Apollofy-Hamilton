@@ -1,7 +1,7 @@
 import { BiSearch } from 'react-icons/bi'
 import "./searchBar.css"
 import { useEffect } from 'react';
-import { eventListenerSearchbar } from '../../../utils/functions/eventListenerSearchbar';
+import { eventListenerSearchbar } from '../../utils/functions/eventListenerSearchbar';
 
 
 
