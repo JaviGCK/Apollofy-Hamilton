@@ -13,9 +13,5 @@ export interface PlaylistsType {
     imageUrl: string,
     description: string,
     tracks: TrackInfo[],
-<<<<<<< HEAD
-    type: ListType
-=======
     // type: LISTTYPE     !!!!!
->>>>>>> 1998ca02a1f001249782bf983c5cfe8c724ef9da
 }

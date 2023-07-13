@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { ListType } from "./enums"
-=======
 import { GenreTypes } from "./genre";
 
 // ARTISTS: cambiar y en tracks meter el objeto entero.
@@ -15,7 +12,6 @@ import { GenreTypes } from "./genre";
  * PLAYLIST: en la parte de tracks, pasar el track entero, o al menos, meter la img
  * ALBUM: pasar el track entero igual que antes
  */
->>>>>>> 1998ca02a1f001249782bf983c5cfe8c724ef9da
 
 export interface ArtistType {
     id: string,
@@ -23,15 +19,9 @@ export interface ArtistType {
     genres: GenreTypes[],
     popularity: number,
     imageUrl: string,
-<<<<<<< HEAD
-    albums: AlbumInfo[],
-    tracks: TrackInfo[],
-    type: ListType
-=======
     albums: AlbumInfo[],  // AÑADIMOS LA IMAGEN?!!??!
     tracks: TrackInfo[]  //TRACK ENTERO ?!?!!?!?!?
     // type: LISTTYPE     !!!!!
->>>>>>> 1998ca02a1f001249782bf983c5cfe8c724ef9da
 }
 
 interface AlbumInfo {
