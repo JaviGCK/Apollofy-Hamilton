@@ -1,0 +1,50 @@
+.group-button {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.rounded-span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: #282828;
+}
+
+.square-span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+    background-color: #282828;
+}
+
+.group-button-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.square-span:active >.group-button-icon {
+    color: #00ffa3;
+}
+
+.rounded-span:active >.group-button-icon {
+    color: #00ffa3;
+}
+
+.group-button-text {
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
