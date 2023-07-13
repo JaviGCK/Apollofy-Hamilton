@@ -1,5 +1,7 @@
 import { TrackInfo } from "./artist";
 
+
+// PARECE QUE PERFECTO, ES ASÍ ??
 export interface PlaylistsType {
     id: string,
     name: string,

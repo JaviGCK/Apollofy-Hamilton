@@ -1,4 +1,6 @@
 
+
+// LE AÑADIMOS BTN COLORSSS !!!
 export interface GenreType {
     id: string,
     name: GenreTypes,
@@ -7,14 +9,14 @@ export interface GenreType {
 }
 
 export enum GenreTypes {
-    hipHop = "hip-hop",
-    rock = "rock",
-    pop = "pop",
-    rB = "r&b",
-    metal = "metal",
-    punk = "punk",
-    dance = "dance",
-    rap = "rap",
-    drill = "drill",
-    urban = "urban"
+    HIPHOP = "hip-hop",
+    ROCK = "rock",
+    POP = "pop",
+    RB = "r&b",
+    METAL = "metal",
+    PUNK = "punk",
+    DANCE = "dance",
+    RAP = "rap",
+    DRILL = "drill",
+    URBAN = "urban"
 }

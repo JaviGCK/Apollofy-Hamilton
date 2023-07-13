@@ -5,9 +5,11 @@ export interface AlbumType {
     id: string,
     name: string,
     imageUrl: string,
-    tracks: SimpleTrackType[],
-    artistId: ArtistInfo[]
+    tracks: SimpleTrackType[],  // DEBERÍAMOS DE PASARLE EL OBBJETO ENTERO ??!!!!
+    artistId: ArtistInfo[],
+    // type: LISTTYPE     !!!!!
 }
+
 
 interface SimpleTrackType {
     trackName: string,
