@@ -5,7 +5,7 @@
     height: 10vh;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     border: 1px solid rgba(255, 255, 255, 0.08);
     background: rgba(0, 0, 0, 0.86);
@@ -24,7 +24,7 @@
     display: none;
 }
 
-.input-navbar-bottom:checked + .label-navbar-bottom > .icons-navbar {
+.input-navbar-bottom:checked+.label-navbar-bottom>.icons-navbar {
     color: #00ffa3;
 }
 

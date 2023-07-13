@@ -9,7 +9,7 @@ interface TrackType {
     url: string,
     // It can be none or the albumId
     album: AlbumInfo[],
-    imageUrl?: string
+    imageUrl: string
 }
 
 export interface ArtistInfo {
