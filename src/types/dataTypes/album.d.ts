@@ -10,7 +10,8 @@ export interface AlbumType {
     // type: LISTTYPE     !!!!!
 }
 
-
+// DEBERÍAMOS DE PASARLE EL OBBJETO ENTERO ??!!!!
+// ASÍ COMO LA IMAGEN !!!
 interface SimpleTrackType {
     trackName: string,
     url: string

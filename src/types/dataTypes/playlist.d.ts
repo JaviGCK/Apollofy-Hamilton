@@ -11,5 +11,6 @@ export interface PlaylistsType {
     owner: string,
     imageUrl: string,
     description: string,
-    tracks: TrackInfo[]
+    tracks: TrackInfo[],
+    // type: LISTTYPE     !!!!!
 }

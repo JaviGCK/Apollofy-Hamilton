@@ -16,9 +16,11 @@
     display: grid;
     grid-template-columns: 1fr 5fr;
     align-self: center;
+    justify-content: center;
+    align-items: center;
     background-color: #E2D7FF;
     width: 90%;
-    height: 35%;
+    height: 45%;
     border: 4px solid transparent;
     border-radius: 20px;
     -webkit-border-radius: 20px;

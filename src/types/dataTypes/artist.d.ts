@@ -1,4 +1,18 @@
 import { GenreTypes } from "./genre";
+
+// ARTISTS: cambiar y en tracks meter el objeto entero.
+// porque vamos a necesitar la img y puede ser de más de un artista
+// entonces para eso, le pasamos el objeto enetero y evitamos request inncesarias
+// Meterle también una imágen al álbum!!!
+/**
+ * USERS: quitamos playlist y likedtracks y añadimos libraryItems, biblioteca
+ * con playlist favoritas, artistas, plasylist con tracks favoritos etc. Puede ser de
+ * 3 tipos que son libraryTypes
+ * TRACKS: el álbum debe tener una img as well
+ * PLAYLIST: en la parte de tracks, pasar el track entero, o al menos, meter la img
+ * ALBUM: pasar el track entero igual que antes
+ */
+
 export interface ArtistType {
     id: string,
     name: string,
@@ -24,7 +38,9 @@ export interface TrackInfo {
     trackName: string,
     url: string,
     albumName: string,
-    artistName: string
+    // Es array de string por si hay más de un artista!!
+    // cambiar en artista y en playlist
+    artistName: string[]
 }
 
 

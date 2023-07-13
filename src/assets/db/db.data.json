@@ -1247,7 +1247,7 @@
         {
             "id": "0FirgnvrpCkkhdaq64Gfen",
             "name": "YANKEE",
-            "artistId": [
+            "artists": [
                 {
                     "artistId": "52iwsT98xCoGgiGntTiR7K",
                     "artistName": "Quevedo"
@@ -1268,7 +1268,7 @@
         {
             "id": "5q86iSKkBtOoNkdgEDY5WV",
             "name": "VISTA AL MAR",
-            "artistId": [
+            "artists": [
                 {
                     "artistId": "52iwsT98xCoGgiGntTiR7K",
                     "artistName": "Quevedo"
@@ -1289,7 +1289,7 @@
         {
             "id": "0Iozrbed8spxoBnmtBMshO",
             "name": "WANDA",
-            "artistId": [
+            "artists": [
                 {
                     "artistId": "52iwsT98xCoGgiGntTiR7K",
                     "artistName": "Quevedo"

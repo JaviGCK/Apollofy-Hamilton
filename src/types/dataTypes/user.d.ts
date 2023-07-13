@@ -21,8 +21,10 @@ export interface UserType {
     isLoggedIn: boolean,
     playlists: PlaylistInfo[],
     libraryList: PossibleItems[],
+    // AÑADIR POR DEFECTO LA PLAYLIST DE ME GUSTA!!
 }
 
+// AÑADIR IMAGEN DE LA PLAYLIST!!!!!
 interface PlaylistInfo {
     playlistId: string,
     playlistName: string
