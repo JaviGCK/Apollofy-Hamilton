@@ -25,6 +25,8 @@
 */
 body {
   font-family: 'Nunito Sans', sans-serif;
+  width: 100vw;
+  height: 100vh;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }

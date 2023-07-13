@@ -1,0 +1,35 @@
+.navBar-bottom-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100vw;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.86);
+    box-shadow: 5px -5px 12px 0px rgba(255, 255, 255, 0.05) inset, -5px 5px 12px 0px rgba(255, 255, 255, 0.05) inset,
+        4px 7px 15px 0px rgba(0, 0, 0, 0.08), -1px 0px 2px 0px rgba(201, 201, 201, 0.1) inset;
+    backdrop-filter: blur(6px);
+}
+
+.icon-navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-navbar-bottom {
+    display: none;
+}
+
+.input-navbar-bottom:checked + .label-navbar-bottom > .icons-navbar {
+    color: #00ffa3;
+}
+
+.icons-navbar {
+    width: 2.87rem;
+    height: 2.87rem;
+    color: #f1f1f1;
+}
