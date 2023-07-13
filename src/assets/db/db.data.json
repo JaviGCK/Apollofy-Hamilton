@@ -1268,6 +1268,13 @@
             }
         }
     ],
+    "genres": [
+        {
+            "id": "",
+            "name": "The End, So Far",
+            "imageUrl": ""
+        }
+    ],
     "playlists": [
         {
             "id": "262ad7d6-959c-43b9-a557-259adf26cb3e",
@@ -1541,7 +1548,6 @@
                     "trackName": "Phatom Regret by Jim",
                     "url": ""
                 }
-
             ],
             "artists": [
                 {
@@ -1563,8 +1569,6 @@
                     "trackName": "Outrageous",
                     "url": ""
                 }
-
-
             ],
             "artists": [
                 {
@@ -1586,8 +1590,6 @@
                     "trackName": "Blur",
                     "url": ""
                 }
-
-
             ],
             "artists": [
                 {
@@ -1627,11 +1629,9 @@
                     "url": ""
                 },
                 {
-                    "trackName":  "Unsainted",
+                    "trackName": "Unsainted",
                     "url": ""
                 }
-
-
             ],
             "artists": [
                 {
@@ -1650,7 +1650,7 @@
                     "url": ""
                 },
                 {
-                    "trackName":   "Tiptoe",
+                    "trackName": "Tiptoe",
                     "url": ""
                 }
             ],
@@ -1671,7 +1671,7 @@
                     "url": ""
                 },
                 {
-                    "trackName":   "My Life",
+                    "trackName": "My Life",
                     "url": ""
                 }
             ],
@@ -1716,8 +1716,6 @@
                     "trackName": "Watching The World Go By",
                     "url": ""
                 }
-
-
             ],
             "artists": [
                 {
@@ -1739,8 +1737,6 @@
                     "trackName": "Gafas",
                     "url": ""
                 }
-
-
             ],
             "artists": [
                 {
@@ -1759,11 +1755,9 @@
                     "url": ""
                 },
                 {
-                    "trackName":  "1.000 Problemas",
+                    "trackName": "1.000 Problemas",
                     "url": ""
                 }
-
-
             ],
             "artists": [
                 {
@@ -1782,12 +1776,9 @@
                     "url": ""
                 },
                 {
-                    "trackName":  "Straight Back to it",
+                    "trackName": "Straight Back to it",
                     "url": ""
                 }
-
-
-
             ],
             "artists": [
                 {
@@ -1802,16 +1793,13 @@
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e0226847a635b96c96fee81d838",
             "tracks": [
                 {
-                    "trackName":  "Sprinter",
+                    "trackName": "Sprinter",
                     "url": ""
                 },
                 {
-                    "trackName":  "UK Rap",
+                    "trackName": "UK Rap",
                     "url": ""
                 }
-
-
-
             ],
             "artists": [
                 {
@@ -1830,16 +1818,13 @@
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e0256760083a7f21cf162ed1806",
             "tracks": [
                 {
-                    "trackName":  "Unappreciated",
+                    "trackName": "Unappreciated",
                     "url": ""
                 },
                 {
-                    "trackName":  "Stainless",
+                    "trackName": "Stainless",
                     "url": ""
                 }
-
-
-
             ],
             "artists": [
                 {
@@ -1854,16 +1839,13 @@
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e022ed6c99890ba67bd6c773c72",
             "tracks": [
                 {
-                    "trackName":   "Tranquility",
+                    "trackName": "Tranquility",
                     "url": ""
                 },
                 {
-                    "trackName":  "Birds",
+                    "trackName": "Birds",
                     "url": ""
                 }
-
-
-
             ],
             "artists": [
                 {
@@ -1878,16 +1860,13 @@
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e02da5b9c1eb275d48e14d25f3e",
             "tracks": [
                 {
-                    "trackName":  "We're All Alone",
+                    "trackName": "We're All Alone",
                     "url": ""
                 },
                 {
-                    "trackName":   "Verdansk",
+                    "trackName": "Verdansk",
                     "url": ""
                 }
-
-
-
             ],
             "artists": [
                 {
@@ -1902,16 +1881,13 @@
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e02c1c8d2889455db6d03d309ed",
             "tracks": [
                 {
-                    "trackName":   "Psycho",
+                    "trackName": "Psycho",
                     "url": ""
                 },
                 {
-                    "trackName":   "Streatham",
+                    "trackName": "Streatham",
                     "url": ""
                 }
-
-
-
             ],
             "artists": [
                 {
@@ -1926,19 +1902,19 @@
             "imageUrl": "https://i.scdn.co/image/ab67616d00001e02efc1b8f6beda4abe848a84e0",
             "tracks": [
                 {
-                    "trackName":   "AHORA QUÉ",
+                    "trackName": "AHORA QUÉ",
                     "url": ""
                 },
                 {
-                    "trackName":   "YANKEE",
+                    "trackName": "YANKEE",
                     "url": ""
                 },
                 {
-                    "trackName":   "VISTA AL MAR",
+                    "trackName": "VISTA AL MAR",
                     "url": ""
                 },
                 {
-                    "trackName":   "WANDA",
+                    "trackName": "WANDA",
                     "url": ""
                 }
             ],
