@@ -8,4 +8,9 @@ export type PossibleItems =
     | AlbumType
     | ArtistType
     | PlaylistsType
-    | TrackType
+
+export enum ListType {
+    ALBUM = "album",
+    ARTIST = "artist",
+    PLAYLIST = "playlist"
+}

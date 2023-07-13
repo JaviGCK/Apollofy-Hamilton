@@ -1,0 +1,15 @@
+.home-filter {
+
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px 0;
+    padding-right: 8px;
+}
+
+.access-filter {
+    display: flex;
+    justify-content: space-around;
+    padding-right: 50px;
+    margin: 20px 0 40px;
+
+}

@@ -1,0 +1,30 @@
+.filter-input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+/* .filter-input:focus+label {
+    box-shadow: 0 0 0 4px green
+} */
+
+.filter-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+    border: 1px solid #00ffa3;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.filter-input:checked+label {
+    /* border: solid 3px greenyellow; */
+    box-shadow: 0 0 0 2px #00ffa3;
+    color: white;
+
+
+}

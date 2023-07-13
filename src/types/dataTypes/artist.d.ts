@@ -1,3 +1,4 @@
+import { ListType } from "./enums"
 
 export interface ArtistType {
     id: string,
@@ -6,7 +7,8 @@ export interface ArtistType {
     popularity: number,
     imageUrl: string,
     albums: AlbumInfo[],
-    tracks: TrackInfo[]
+    tracks: TrackInfo[],
+    type: ListType
 }
 
 interface AlbumInfo {

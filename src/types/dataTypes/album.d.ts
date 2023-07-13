@@ -1,3 +1,4 @@
+import { ListType } from "./enums";
 import { TrackType } from "./track";
 import { ArtistInfo } from "./track";
 
@@ -6,7 +7,8 @@ export interface AlbumType {
     name: string,
     imageUrl: string,
     tracks: SimpleTrackType[],
-    artistId: ArtistInfo[]
+    artistId: ArtistInfo[],
+    type: ListType
 }
 
 interface SimpleTrackType {
