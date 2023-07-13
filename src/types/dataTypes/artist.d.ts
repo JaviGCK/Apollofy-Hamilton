@@ -1,4 +1,4 @@
-
+import { GenreTypes } from "./genre";
 export interface ArtistType {
     id: string,
     name: string,
@@ -22,18 +22,4 @@ export interface TrackInfo {
     artistName: string
 }
 
-enum GenreTypes {
-    hipHop = "hip-hop",
-    rock = "rock",
-    pop = "pop",
-    rB = "r&b",
-    metal = "metal",
-    punk = "punk",
-    techno = "techno",
-    funk = "funk",
-    dance = "dance",
-    rap = "rap",
-    drill = "drill",
-    urban = "urban"
 
-}
