@@ -1,4 +1,5 @@
 import { TrackInfo } from "./artist"
+import { PossibleItems } from "./enums"
 
 export interface UserType {
     id: string,
@@ -8,7 +9,7 @@ export interface UserType {
     profilePicture: string,
     isLoggedIn: boolean,
     playlists: PlaylistInfo[],
-    likedTracks: TrackInfo[]
+    libraryList: PossibleItems[],
 }
 
 interface PlaylistInfo {

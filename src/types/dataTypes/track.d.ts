@@ -7,7 +7,7 @@ interface TrackType {
     genre: GenreTypes[],
     liked: number,
     url: string,
-    // It can be none or the albumId
+    // It can be none or the albumId and name
     album: AlbumInfo[],
     imageUrl: string
 }
