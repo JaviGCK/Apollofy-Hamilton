@@ -1,11 +1,12 @@
-import { Outlet } from 'react-router-dom'
+
 import { NavBar } from '../components/navbar/NavBar'
+import { SearchPage } from '../components/searchPage/SearchPage'
 
 export const Layout = () => {
   return (
     <>
-        <Outlet/>
-        <NavBar/>
+      <SearchPage />
+      <NavBar />
     </>
   )
 }
