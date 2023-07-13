@@ -1,5 +1,6 @@
 .search-page-container {
     width: 100vw;
     height: 100vh;
-    background-color: aquamarine;
+    background-color: rgb(21, 21, 21, .8);
+    padding: 1rem;
 }
