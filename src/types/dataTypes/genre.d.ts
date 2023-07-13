@@ -1,11 +1,12 @@
 
-interface GenreType {
+export interface GenreType {
     id: string,
     name: GenreTypes,
-    imageUrl: string
+    imageUrl: string,
+    btnColor: string
 }
 
-enum GenreTypes {
+export enum GenreTypes {
     hipHop = "hip-hop",
     rock = "rock",
     pop = "pop",
