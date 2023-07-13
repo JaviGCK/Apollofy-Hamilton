@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import { Auth0Provider } from '@auth0/auth0-react'
-// import App from './App.tsx'
+import App from './App.tsx'
 import './index.css'
 import { LibraryPage } from './pages/LibraryPage.tsx'
 // import { Profile } from './components/profile/Profile.tsx'
@@ -15,7 +15,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     authorizationParams={{
       redirect_uri: window.location.origin
     }}>
-    {/* <LibraryPage /> */}
+    {/* <App /> */}
+    <LibraryPage />
     {/* <Profile />
     <LoginButton />
     <LogoutButton /> */}

@@ -16,7 +16,7 @@ export const LibraryPage = () => {
 
     useEffect(() => {
         const api = async () => {
-            const data = await fetch("http://localhost:3000/albums")
+            const data = await fetch("http://localhost:3001/albums")
             const result = await data.json()
             setResult(result)
 
@@ -50,8 +50,8 @@ export const LibraryPage = () => {
                 )
             })}
 
-            <GroupButton buttonType="Artist"/>
-            <GroupButton buttonType="Album"/>
+            <GroupButton buttonType="Artist" />
+            <GroupButton buttonType="Album" />
         </>
     )
 }
