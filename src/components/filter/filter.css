@@ -1,15 +1,8 @@
-.home-filter {
+.library-filter {
 
     display: flex;
-    justify-content: space-between;
-    margin: 10px 10px 0;
-    padding-right: 8px;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 10px 0 50px 16px;
 }
 
-.access-filter {
-    display: flex;
-    justify-content: space-around;
-    padding-right: 50px;
-    margin: 20px 0 40px;
-
-}

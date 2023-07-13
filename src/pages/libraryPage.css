@@ -1,0 +1,33 @@
+.library-heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 65px 20px 20px 20px;
+}
+
+.heading-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.library-user-img {
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.heading-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.library-button-icon {
+    width: 22px;
+    height: 22px;
+}

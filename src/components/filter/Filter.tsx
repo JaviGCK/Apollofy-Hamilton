@@ -10,7 +10,7 @@ export const Filter = ({ ...props }) => {
 
 
     return (
-        <nav >
+        <nav className="library-filter" >
             {props.filters.map((category: FilterCategories) => (
                 <FilterButton
                     name={category.name}

@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
     padding: 0 5px;
-    border: 1px solid #00ffa3;
+    border: 1px solid #f1f1f1;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -23,6 +23,7 @@
 
 .filter-input:checked+label {
     /* border: solid 3px greenyellow; */
+    border: 1px solid #00ffa3;
     box-shadow: 0 0 0 2px #00ffa3;
     color: white;
 
