@@ -1,0 +1,16 @@
+.share-button-container{
+    height: 7%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.share-button-container button {
+    background: none;
+    border: none;
+}
+.share-icon{
+    color: #86808A;
+    margin: 0 5px;
+    font-size: 30px;
+}
