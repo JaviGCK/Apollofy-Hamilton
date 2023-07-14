@@ -1,0 +1,52 @@
+.login-page-img-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.login-page-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.login-page-glass {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.login-page-title {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    width: 100vw;
+    background-color: #000000;
+}
+
+.login-page-logo {
+    width: 81.159px;
+    height: 74px;
+    flex-shrink: 0;
+    margin: 20px;
+}
+
+.login-page-h1 {
+    color: #eaeaea;
+    font-size: 54px;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.login-page-span {
+    color: #a785fe;
+    font-size: 54px;
+    font-weight: 900;
+    line-height: normal;
+    padding-left: 10px;
+}
