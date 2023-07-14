@@ -16,14 +16,17 @@ export const RouterPaths = () => {
             <Routes>
               <Route path='/login' element = {<LoginPage/>}/>
               <Route path='/*' element = {
-                <ProtectedRoutes>
+                // <ProtectedRoutes>
+                <Routes>
+
                 <Route path='/*' element={<Layout/>}>
                   <Route index element = {<HomePage/>}/>
                   <Route path='search' element = {<SearchPage/>}/>
                   <Route path='library' element = {<LibraryPage/>}/>
                   
                 </Route>
-              </ProtectedRoutes>
+                </Routes>
+              //  </ProtectedRoutes>
               }/>
                   
             </Routes>
