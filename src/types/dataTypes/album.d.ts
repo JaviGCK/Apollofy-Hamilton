@@ -15,7 +15,7 @@ export interface AlbumType {
     imageUrl: string,
     tracks: TrackType[],
     artists: ArtistType[],
-    type: ListType
+    type?: ListType
 }
 // Si está compuesto por un solo track cuyo titulo es igual al deb album
 // entonces se considera como single.
