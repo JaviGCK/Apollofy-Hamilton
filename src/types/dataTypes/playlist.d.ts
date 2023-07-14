@@ -1,8 +1,5 @@
-import { TrackInfo } from "./artist";
 import { ListType } from "./enums";
-
-
-// PARECE QUE PERFECTO, ES ASÍ ??
+import { TrackType } from "./track";
 export interface PlaylistsType {
     id: string,
     name: string,
@@ -12,6 +9,6 @@ export interface PlaylistsType {
     owner: string,
     imageUrl: string,
     description: string,
-    tracks: TrackInfo[],
-    // type: LISTTYPE     !!!!!
+    tracks: TrackType[],
+    type: ListType
 }

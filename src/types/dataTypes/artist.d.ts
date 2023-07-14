@@ -1,46 +1,22 @@
-import { GenreTypes } from "./genre";
+import { GenreTypes } from "./enums";
+import { AlbumType } from "./album";
+import { TrackType } from "./track";
+import { ListType } from "./enums";
 
-// ARTISTS: cambiar y en tracks meter el objeto entero.
-// porque vamos a necesitar la img y puede ser de más de un artista
-// entonces para eso, le pasamos el objeto enetero y evitamos request inncesarias
-// Meterle también una imágen al álbum!!!
-/**
- * USERS: quitamos playlist y likedtracks y añadimos libraryItems, biblioteca
- * con playlist favoritas, artistas, plasylist con tracks favoritos etc. Puede ser de
- * 3 tipos que son libraryTypes
- * TRACKS: el álbum debe tener una img as well
- * PLAYLIST: en la parte de tracks, pasar el track entero, o al menos, meter la img
- * ALBUM: pasar el track entero igual que antes
- */
 
+// Quito los tracks porque sino se vuelve todo muy circular.
+// Si pongo el objeto entero para artistas y encima albumes tiene
+// los mismos tracks de nuevo. Esto va a generar que se repitan tracks
+// y que se llene la db de cosas innecesarias.
+// cuando un álbum este compuesto por un solo track y el titulo del album
+// sea igual al track se considera como single!!
 export interface ArtistType {
     id: string,
     name: string,
     genres: GenreTypes[],
     popularity: number,
     imageUrl: string,
-    albums: AlbumInfo[],  // AÑADIMOS LA IMAGEN?!!??!
-    tracks: TrackInfo[]  //TRACK ENTERO ?!?!!?!?!?
-    // type: LISTTYPE     !!!!!
+    albums: AlbumType[],
+    type: ListType;
 }
-
-interface AlbumInfo {
-    //img del album
-    albumId: string,
-    albumName: string
-}
-
-
-// VER SI PONEMOS EL TRACK ENTERO!!!!!!!
-// Y QUITAR ESTA COSA ?!?!?
-export interface TrackInfo {
-    trackId: string,
-    trackName: string,
-    url: string,
-    albumName: string,
-    // Es array de string por si hay más de un artista!!
-    // cambiar en artista y en playlist
-    artistName: string[]
-}
-
 
