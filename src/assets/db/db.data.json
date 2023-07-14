@@ -1163,20 +1163,285 @@
             "email": "ali-hourag@gmail.com",
             "profilePicture": "https://avatars.githubusercontent.com/u/131694498?v=4",
             "isLoggedIn": false,
-            "playlists": [
+            "libraryList": [
                 {
-                    "playlistId": "7960b357-dc43-4939-832d-b2115f163bc3",
-                    "playlistName": "My Personal Favourites"
-                }
-            ],
-            "likedTracks": [
-                {
-                    "trackId": "08YvUaUsZktAG6zEMDwUqO",
-                    "trackName": "Sprinter"
+                    "id": "7960b357-bj43-0021-832d-b2115f163bc3",
+                    "name": "My Personal Fauvorites",
+                    "isFollowed": false,
+                    "owner": "101117c9-e76e-4904-ad3d-1d9cd08835e7",
+                    "imageUrl": "https://avatars.githubusercontent.com/u/131694498?v=4",
+                    "description": "My Personal Fauvorites",
+                    "tracks": [
+                        {
+                            "id": "22agj1ppHejR41cUyf7k6v",
+                            "name": "We're All Alone",
+                            "artists": [
+                                {
+                                    "artistId": "6Ip8FS7vWT1uKkJSweANQK",
+                                    "artistName": "Dave"
+                                }
+                            ],
+                            "genre": [
+                                "hip-hop",
+                                "rap"
+                            ],
+                            "liked": 228859,
+                            "url": "",
+                            "album": {
+                                "albumId": "6HwzIlrCDq3WF9vMq8meqG",
+                                "albumName": "We're All Alone In This Together"
+                            },
+                            "imageUrl": "https://i.scdn.co/image/ab67616d00004851da5b9c1eb275d48e14d25f3e"
+                        },
+                        {
+                            "id": "0FirgnvrpCkkhdaq64Gfen",
+                            "name": "YANKEE",
+                            "artists": [
+                                {
+                                    "artistId": "52iwsT98xCoGgiGntTiR7K",
+                                    "artistName": "Quevedo"
+                                }
+                            ],
+                            "genre": [
+                                "rap",
+                                "urban"
+                            ],
+                            "liked": 1523425,
+                            "url": "",
+                            "album": {
+                                "albumId": "156gxGFDxadwiIC3Bfwmj3",
+                                "albumName": "DONDE QUIERO ESTAR"
+                            },
+                            "imageUrl": "https://i.scdn.co/image/ab67616d00004851efc1b8f6beda4abe848a84e0"
+                        }
+                    ],
+                    "type": "playlist"
                 },
                 {
-                    "trackId": "2ZVSjes0VFYg9uJu4olsi4",
-                    "trackName": "Khabib"
+                    "id": "6Ip8FS7vWT1uKkJSweANQK",
+                    "name": "Dave",
+                    "genres": [
+                        "hip-hop",
+                        "rap"
+                    ],
+                    "popularity": 80,
+                    "imageUrl": "https://i.scdn.co/image/ab67616100005174d03e9ecf77419871b96daee1",
+                    "albums": [
+                        {
+                            "id": "6HwzIlrCDq3WF9vMq8meqG",
+                            "name": "We're All Alone In This Thogether",
+                            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02da5b9c1eb275d48e14d25f3e",
+                            "tracks": [
+                                {
+                                    "id": "22agj1ppHejR41cUyf7k6v",
+                                    "name": "We're All Alone",
+                                    "artists": [
+                                        {
+                                            "id": "6Ip8FS7vWT1uKkJSweANQK",
+                                            "name": "Dave"
+                                        }
+                                    ],
+                                    "genre": [
+                                        "hip-hop",
+                                        "rap"
+                                    ],
+                                    "liked": 228859,
+                                    "url": "",
+                                    "imageUrl": "https://i.scdn.co/image/ab67616d00004851da5b9c1eb275d48e14d25f3e"
+                                },
+                                {
+                                    "id": "7IPKXYU2rTMnrLW5IZ7ZI5",
+                                    "name": "Verdansk",
+                                    "artists": [
+                                        {
+                                            "id": "6Ip8FS7vWT1uKkJSweANQK",
+                                            "name": "Dave"
+                                        }
+                                    ],
+                                    "genre": [
+                                        "hip-hop",
+                                        "rap"
+                                    ],
+                                    "liked": 5421559,
+                                    "url": "",
+                                    "imageUrl": "https://i.scdn.co/image/ab67616d00004851da5b9c1eb275d48e14d25f3e"
+                                }
+                            ],
+                            "artists": [
+                                {
+                                    "id": "6Ip8FS7vWT1uKkJSweANQK",
+                                    "name": "Dave"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4GrFuXwRmEBJec22p58fsD",
+                            "name": "PSYCHODRAMA",
+                            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02c1c8d2889455db6d03d309ed",
+                            "tracks": [
+                                {
+                                    "id": "0FWAIRd9Uz5uNek7cALYNC",
+                                    "name": "Psycho",
+                                    "artists": [
+                                        {
+                                            "id": "6Ip8FS7vWT1uKkJSweANQK",
+                                            "name": "Dave"
+                                        }
+                                    ],
+                                    "genre": [
+                                        "hip-hop",
+                                        "rap"
+                                    ],
+                                    "liked": 5438589,
+                                    "url": "",
+                                    "imageUrl": "https://i.scdn.co/image/ab67616d00004851c1c8d2889455db6d03d309ed"
+                                },
+                                {
+                                    "id": "59PUOc7B0WCNNx8Nr4qaA4",
+                                    "name": "Streatham",
+                                    "artists": [
+                                        {
+                                            "id": "6Ip8FS7vWT1uKkJSweANQK",
+                                            "name": "Dave"
+                                        }
+                                    ],
+                                    "genre": [
+                                        "hip-hop",
+                                        "rap"
+                                    ],
+                                    "liked": 9344889,
+                                    "url": "",
+                                    "imageUrl": "https://i.scdn.co/image/ab67616d00004851c1c8d2889455db6d03d309ed"
+                                }
+                            ],
+                            "artists": [
+                                {
+                                    "id": "6Ip8FS7vWT1uKkJSweANQK",
+                                    "name": "Dave"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "0On7uutIu9rZRvP9aJbMog",
+                            "name": "Split Decision",
+                            "imageUrl": "https://i.scdn.co/image/ab67616d00001e0226847a635b96c96fee81d838",
+                            "tracks": [
+                                {
+                                    "id": "08YvUaUsZktAG6zEMDwUqO",
+                                    "name": "Sprinter",
+                                    "artists": [
+                                        {
+                                            "id": "5H4yInM5zmHqpKIoMNAx4r",
+                                            "name": "Central Cee"
+                                        },
+                                        {
+                                            "id": "6Ip8FS7vWT1uKkJSweANQK",
+                                            "name": "Dave"
+                                        }
+                                    ],
+                                    "genre": [
+                                        "rap",
+                                        "hip-hop"
+                                    ],
+                                    "liked": 16160,
+                                    "url": "",
+                                    "imageUrl": "https://i.scdn.co/image/ab67616d0000485126847a635b96c96fee81d838"
+                                },
+                                {
+                                    "id": "2VjOTvl50tscmc0RDjPdr2",
+                                    "name": "UK Rap",
+                                    "artists": [
+                                        {
+                                            "id": "5H4yInM5zmHqpKIoMNAx4r",
+                                            "name": "Central Cee"
+                                        },
+                                        {
+                                            "id": "6Ip8FS7vWT1uKkJSweANQK",
+                                            "name": "Dave"
+                                        }
+                                    ],
+                                    "genre": [
+                                        "rap",
+                                        "drill"
+                                    ],
+                                    "liked": 42069,
+                                    "url": "",
+                                    "imageUrl": "https://i.scdn.co/image/ab67616d0000485126847a635b96c96fee81d838"
+                                }
+                            ],
+                            "artists": [
+                                {
+                                    "id": "5H4yInM5zmHqpKIoMNAx4r",
+                                    "name": "Central Cee"
+                                },
+                                {
+                                    "id": "6Ip8FS7vWT1uKkJSweANQK",
+                                    "name": "Dave"
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "artist"
+                },
+                {
+                    "id": "0On7uutIu9rZRvP9aJbMog",
+                    "name": "Split Decision",
+                    "imageUrl": "https://i.scdn.co/image/ab67616d00001e0226847a635b96c96fee81d838",
+                    "tracks": [
+                        {
+                            "id": "08YvUaUsZktAG6zEMDwUqO",
+                            "name": "Sprinter",
+                            "artists": [
+                                {
+                                    "id": "5H4yInM5zmHqpKIoMNAx4r",
+                                    "name": "Central Cee"
+                                },
+                                {
+                                    "id": "6Ip8FS7vWT1uKkJSweANQK",
+                                    "name": "Dave"
+                                }
+                            ],
+                            "genre": [
+                                "rap",
+                                "hip-hop"
+                            ],
+                            "liked": 16160,
+                            "url": "",
+                            "imageUrl": "https://i.scdn.co/image/ab67616d0000485126847a635b96c96fee81d838"
+                        },
+                        {
+                            "id": "2VjOTvl50tscmc0RDjPdr2",
+                            "name": "UK Rap",
+                            "artists": [
+                                {
+                                    "id": "5H4yInM5zmHqpKIoMNAx4r",
+                                    "name": "Central Cee"
+                                },
+                                {
+                                    "id": "6Ip8FS7vWT1uKkJSweANQK",
+                                    "name": "Dave"
+                                }
+                            ],
+                            "genre": [
+                                "rap",
+                                "drill"
+                            ],
+                            "liked": 42069,
+                            "url": "",
+                            "imageUrl": "https://i.scdn.co/image/ab67616d0000485126847a635b96c96fee81d838"
+                        }
+                    ],
+                    "artists": [
+                        {
+                            "id": "5H4yInM5zmHqpKIoMNAx4r",
+                            "name": "Central Cee"
+                        },
+                        {
+                            "id": "6Ip8FS7vWT1uKkJSweANQK",
+                            "name": "Dave"
+                        }
+                    ],
+                    "type": "album"
                 }
             ]
         },
@@ -1187,8 +1452,154 @@
             "email": "javier-cabello@gmail.com",
             "profilePicture": "https://avatars.githubusercontent.com/u/131688101?v=4",
             "isLoggedIn": false,
-            "playlists": [],
-            "likedTracks": []
+            "libraryList": [
+                {
+                    "id": "70867tg-kctc65e-vi67rc-b769rcgh",
+                    "name": "My Personal Fauvorites",
+                    "isFollowed": false,
+                    "owner": "af99a651-4118-48ab-933c-0f7927fe70d2",
+                    "imageUrl": "https://avatars.githubusercontent.com/u/131694498?v=4",
+                    "description": "My Personal Fauvorites",
+                    "tracks": [
+                        {
+                            "id": "0FirgnvrpCkkhdaq64Gfen",
+                            "name": "YANKEE",
+                            "artists": [
+                                {
+                                    "artistId": "52iwsT98xCoGgiGntTiR7K",
+                                    "artistName": "Quevedo"
+                                }
+                            ],
+                            "genre": [
+                                "rap",
+                                "urban"
+                            ],
+                            "liked": 1523425,
+                            "url": "",
+                            "album": {
+                                "albumId": "156gxGFDxadwiIC3Bfwmj3",
+                                "albumName": "DONDE QUIERO ESTAR"
+                            },
+                            "imageUrl": "https://i.scdn.co/image/ab67616d00004851efc1b8f6beda4abe848a84e0"
+                        },
+                        {
+                            "id": "7wf5IS43OXNh70ZX46UCoy",
+                            "name": "Gafas",
+                            "artists": [
+                                {
+                                    "artistId": "5t9ChGEQOzEA3gxWtXEw48",
+                                    "artistName": "Elphomega"
+                                }
+                            ],
+                            "genre": [
+                                "rap",
+                                "hip-hop"
+                            ],
+                            "liked": 409890,
+                            "url": "",
+                            "album": {
+                                "albumId": "2Ppv8YROLkQ2IcmjMCytS0",
+                                "albumName": "El testimonio Libra"
+                            },
+                            "imageUrl": "https://i.scdn.co/image/ab67616d00004851a7810ebe026261b68cb194c8"
+                        }
+                    ],
+                    "type": "playlist"
+                },
+                {
+                    "id": "7960b357-dc43-4939-832d-b2115f163bc3",
+                    "name": "Today's Top Hits",
+                    "isFollowed": true,
+                    "owner": "Apollofy",
+                    "imageUrl": "https://i.scdn.co/image/ab67706f00000003b3823d06a3718d5dc082e91f",
+                    "description": "Today's Top Hits",
+                    "tracks": [
+                        {
+                            "id": "22agj1ppHejR41cUyf7k6v",
+                            "name": "We're All Alone",
+                            "artists": [
+                                {
+                                    "artistId": "6Ip8FS7vWT1uKkJSweANQK",
+                                    "artistName": "Dave"
+                                }
+                            ],
+                            "genre": [
+                                "hip-hop",
+                                "rap"
+                            ],
+                            "liked": 228859,
+                            "url": "",
+                            "album": {
+                                "albumId": "6HwzIlrCDq3WF9vMq8meqG",
+                                "albumName": "We're All Alone In This Together"
+                            },
+                            "imageUrl": "https://i.scdn.co/image/ab67616d00004851da5b9c1eb275d48e14d25f3e"
+                        },
+                        {
+                            "id": "709MdyUol3Qfgcowmd7KV4",
+                            "name": "Straight Back To It",
+                            "artists": [
+                                {
+                                    "artistId": "5H4yInM5zmHqpKIoMNAx4r",
+                                    "artistName": "Central Cee"
+                                }
+                            ],
+                            "genre": [
+                                "drill"
+                            ],
+                            "liked": 965854,
+                            "url": "",
+                            "album": {
+                                "albumId": "0SakL2ra5Cik5yQgKQBHGp",
+                                "albumName": "23"
+                            },
+                            "imageUrl": "https://i.scdn.co/image/ab67616d00004851e1f05c994777b79bc5c87547"
+                        },
+                        {
+                            "id": "62yJjFtgkhUrXktIoSjgP2",
+                            "name": "Radioactive",
+                            "artists": [
+                                {
+                                    "artistId": "53XhwfbYqKCa1cC15pYq2q",
+                                    "artistName": "Imagine Dragons"
+                                }
+                            ],
+                            "genre": [
+                                "rock",
+                                "pop"
+                            ],
+                            "liked": 45987675,
+                            "url": "",
+                            "album": {
+                                "albumId": "6nxDQi0FeEwccEPJeNySoS",
+                                "albumName": "Night Visions"
+                            },
+                            "imageUrl": "https://i.scdn.co/image/ab67616d00004851407bd04707c463bbb3410737"
+                        },
+                        {
+                            "id": "0Y7exe8Yu2nbuIvGDRGXcz",
+                            "name": "Blur",
+                            "artists": [
+                                {
+                                    "artistId": "26dSoYclwsYLMAKD3tpOr4",
+                                    "artistName": "Britney Spears"
+                                }
+                            ],
+                            "genre": [
+                                "pop"
+                            ],
+                            "liked": 5567980,
+                            "url": "",
+                            "album": {
+                                "albumId": "2tve5DGwub1TtbX1khPX5j",
+                                "albumName": "Circus (Deluxe Version)"
+                            },
+                            "imageUrl": "https://i.scdn.co/image/ab67616d0000485154c6edd554935d73e159e199"
+                        }
+                    ],
+                    "type": "playlist"
+                }
+            ]
         },
         {
             "id": "e47291ca-f376-4456-bd60-e02319ee280d",
@@ -1197,8 +1608,7 @@
             "email": "luis-jover@gmail.com",
             "profilePicture": "SomeUrl",
             "isLoggedIn": false,
-            "playlists": [],
-            "likedTracks": []
+            "libraryList": []
         },
         {
             "id": "ad84c6f9-e695-456d-95ef-cf8a982e2e7d",
@@ -1207,8 +1617,7 @@
             "email": "ivan-...@gmail.com",
             "profilePicture": "SomeUrl",
             "isLoggedIn": false,
-            "playlists": [],
-            "likedTracks": []
+            "libraryList": []
         },
         {
             "id": "9b1421f2-e2a5-4200-8321-2224fcdfaf5d",
@@ -1217,8 +1626,7 @@
             "email": "matias-alaimo@gmail.com",
             "profilePicture": "https://avatars.githubusercontent.com/u/98781462?v=4",
             "isLoggedIn": false,
-            "playlists": [],
-            "likedTracks": []
+            "libraryList": []
         }
     ],
     "tracks": [
