@@ -5,6 +5,8 @@ import { BiSolidHeart, BiPlay } from "react-icons/bi"
 import { useEffect, useState } from "react"
 import { PossibleItems } from "../../types/dataTypes/enums"
 import { GroupItem } from "../../components/lists/groupItem/GroupItem"
+import { fetchData } from '../../api/fetchApi'
+import { AlbumType } from '../../types/dataTypes/album'
 
 
 export const ListDetailPage = () => {
@@ -14,23 +16,20 @@ export const ListDetailPage = () => {
         name: "Not Depresing music",
         type: "Emotional Damage - Album"
     }
-    const [result, setResult] = useState([])
+    const [result, setResult] = useState<AlbumType[]>([])
 
     useEffect(() => {
-        const api = async () => {
-            const data = await fetch("http://localhost:3001/albums")
-            const result = await data.json()
-            setResult(result)
-        }
-        api()
-
+        (async function fetchAlbums() {
+            const albumsFetched = await fetchData("albums") as AlbumType[];
+            setResult(albumsFetched)
+        }());
     }, [])
 
     return (
         <div className="list-detail-page-container">
             <div className="list-detail-heading">
                 <FaAngleLeft className="list-detail-angle-btn" />
-                <img className="list-detail-img"src={test.imageUrl} alt={`Image or Cover of ${test.name}`} />
+                <img className="list-detail-img" src={test.imageUrl} alt={`Image or Cover of ${test.name}`} />
                 <div className="list-detail-dashboard">
                     <AiOutlinePlusCircle className="list-detail-add-btn" />
                     <BiSolidHeart className="list-detail-heart-btn" />
@@ -41,11 +40,11 @@ export const ListDetailPage = () => {
 
             </div>
             <div className='list-detail-container-items'>
-            {result.map((group: PossibleItems) => {
-                return (
-                    <GroupItem list={group} key={group.id} />
-                )
-            })}
+                {result.map((group: PossibleItems) => {
+                    return (
+                        <GroupItem list={group} key={group.id} />
+                    )
+                })}
             </div>
         </div>
     )

@@ -6,7 +6,7 @@ import { ListType } from "./enums";
 
 export interface ArtistType {
     id: string,
-    name: string,
+    name?: string,
     genres?: GenreTypes[],
     popularity?: number,
     imageUrl?: string,

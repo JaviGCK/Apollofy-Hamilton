@@ -3,12 +3,12 @@ import { PossibleItems } from "./enums";
 
 export interface UserType {
     id: string,
-    firstName: string,
-    lastName: string,
-    email: string,
-    profilePicture: string,
-    isLoggedIn: boolean,
-    libraryList: PossibleItems[],
+    firstName?: string,
+    lastName?: string,
+    email?: string,
+    profilePicture?: string,
+    isLoggedIn?: boolean,
+    libraryList?: PossibleItems[],
 }
 
 /**

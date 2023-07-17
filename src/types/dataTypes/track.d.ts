@@ -5,11 +5,11 @@ import { AlbumType } from "./album";
 
 export interface TrackType {
     id: string,
-    name: string,
-    artists: ArtistType[],
-    genre: GenreTypes[],
-    liked: number,
-    url: string,
+    name?: string,
+    artists?: ArtistType[],
+    genre?: GenreTypes[],
+    liked?: number,
+    url?: string,
     album?: AlbumType, //when is inside of an album this property is not needed
     imageUrl: string
 }
