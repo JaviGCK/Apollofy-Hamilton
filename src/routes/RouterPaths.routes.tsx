@@ -6,6 +6,7 @@ import { LibraryPage } from '../pages/libraryPage/LibraryPage'
 import { LoginPage } from '../pages/loginPage/LoginPage'
 import { UserPage } from '../pages/userPage/UserPage'
 import { ProtectedRoutes } from './ProtectedRoutes.routes'
+import { ListDetailPage } from '../pages/listDetailPage/ListDetailPage'
 
 
 export const RouterPaths = () => {
@@ -22,6 +23,7 @@ export const RouterPaths = () => {
             <Route path='search' element={<SearchPage />} />
             <Route path='library' element={<LibraryPage />} />
             <Route path='user' element={<UserPage />} />
+            <Route path='detail' element={<ListDetailPage />} />
           </Route>
 
 

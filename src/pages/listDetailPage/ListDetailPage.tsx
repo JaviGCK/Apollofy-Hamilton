@@ -3,17 +3,22 @@ import { FaAngleLeft } from "react-icons/fa"
 import { AiOutlinePlusCircle } from "react-icons/ai"
 import { BiSolidHeart, BiPlay } from "react-icons/bi"
 import { useEffect, useState } from "react"
-import { PossibleItems } from "../types/dataTypes/enums"
-import { GroupItem } from "../components/lists/groupItem/GroupItem"
+import { PossibleItems } from "../../types/dataTypes/enums"
+import { GroupItem } from "../../components/lists/groupItem/GroupItem"
 
 
-export const ListDetailPage = ({...props}) => {
+export const ListDetailPage = () => {
 
+    const test = {
+        imageUrl: "https://play-lh.googleusercontent.com/rKLMwthaxMG2wXoSRI7gyuoZWkuIUagkFhRh4pFWqKquwzXx5R8w7aS148LzgeDlqWZs",
+        name: "Not Depresing music",
+        type: "Emotional Damage - Album"
+    }
     const [result, setResult] = useState([])
 
     useEffect(() => {
         const api = async () => {
-            const data = await fetch("http://localhost:3001/tracks")
+            const data = await fetch("http://localhost:3001/albums")
             const result = await data.json()
             setResult(result)
         }
@@ -25,7 +30,7 @@ export const ListDetailPage = ({...props}) => {
         <div className="list-detail-page-container">
             <div className="list-detail-heading">
                 <FaAngleLeft className="list-detail-angle-btn" />
-                <img className="list-detail-img"src={props.imageUrl} alt={`Image or Cover of ${props.name}`} />
+                <img className="list-detail-img"src={test.imageUrl} alt={`Image or Cover of ${test.name}`} />
                 <div className="list-detail-dashboard">
                     <AiOutlinePlusCircle className="list-detail-add-btn" />
                     <BiSolidHeart className="list-detail-heart-btn" />
