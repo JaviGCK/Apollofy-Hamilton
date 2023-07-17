@@ -3,6 +3,7 @@ import { Auth0Provider } from '@auth0/auth0-react'
 import App from './App.tsx'
 import './index.css'
 import { LibraryPage } from './pages/LibraryPage.tsx'
+import { ListDetailPage } from './pages/ListDetailPage.tsx'
 // import { Profile } from './components/profile/Profile.tsx'
 // import { LoginButton } from './components/login/Login.tsx'
 // import { LogoutButton } from './components/logout/Logout.tsx'
@@ -16,7 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       redirect_uri: window.location.origin
     }}>
     {/* <App /> */}
-    <LibraryPage />
+    <ListDetailPage />
     {/* <Profile />
     <LoginButton />
     <LogoutButton /> */}

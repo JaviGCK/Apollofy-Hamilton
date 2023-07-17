@@ -1,0 +1,84 @@
+.list-detail-page-container {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.list-detail-heading {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 40vh;
+    z-index: 1;
+}
+
+.list-detail-angle-btn {
+    position: relative;
+    top: 7%;
+    left: 5%;
+    width: 20px;
+    height: 35px;
+}
+
+.list-detail-img {
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+    width: 13.375rem;
+    height: 13.0625rem;
+}
+
+.list-detail-dashboard {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0%;
+    width: 100vw;
+}
+
+.list-detail-add-btn {
+    position: relative;
+    left: 3.5vh;
+    width: 30px;
+    height: 30px;
+}
+
+.list-detail-heart-btn {
+    position: absolute;
+    right: 10vh;
+    width: 45px;
+    height: 42px;
+}
+
+.list-detail-container-play-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 3.5vh;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: #f1f1f1;
+}
+
+.list-detail-play-btn {
+    width: 34px;
+    height: 34px;
+    color: #12001e;
+}
+
+.list-detail-container-items {
+    position: relative;
+    top: 43%;
+    overflow: scroll;
+    height: calc(100vh - 50px);
+}
