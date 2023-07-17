@@ -1,3 +1,4 @@
+import { SoundBar } from "./components/soundBar/soundBar"
 import { RouterPaths } from "./routes/RouterPaths.routes"
 
 function App() {
@@ -5,7 +6,8 @@ function App() {
 
   return (
     <>
-      <RouterPaths />
+      {/* <RouterPaths /> */}
+      <SoundBar />
     </>
   )
 }
