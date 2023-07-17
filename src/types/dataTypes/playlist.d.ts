@@ -1,6 +1,6 @@
 import { ListType } from "./enums";
 import { TrackType } from "./track";
-export interface PlaylistsType {
+export interface PlaylistType {
     id: string,
     name: string,
     isFollowed: boolean,

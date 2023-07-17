@@ -2,10 +2,6 @@ import { ArtistType } from "./artist";
 import { GenreTypes } from "./enums";
 import { AlbumType } from "./album";
 
-/**
- * album hacerlo ?, ya que cuando tracks está dentro de álbum
- * no queremos que se vea, ya esta contenido en éste
- */
 
 export interface TrackType {
     id: string,
@@ -14,12 +10,11 @@ export interface TrackType {
     genre: GenreTypes[],
     liked: number,
     url: string,
-    // It can be none or different albums
-    album?: AlbumType[], //when is inside of an album this property is not needed
+    album?: AlbumType, //when is inside of an album this property is not needed
     imageUrl: string
 }
 
 /**
- * No le pasamos el objeto entero del artista, ya que dentro del artista,
- * en la variable de album ya están todos los tracks como objeto y se vuelve circular todo.
+ * If the album name is the same as the track,
+ * and the album's length is 1, then it is a single
  */
