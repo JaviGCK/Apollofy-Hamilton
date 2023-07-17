@@ -15,7 +15,7 @@ export interface TrackType {
     liked: number,
     url: string,
     // It can be none or different albums
-    album: AlbumType[],
+    album?: AlbumType[], //when is inside of an album this property is not needed
     imageUrl: string
 }
 

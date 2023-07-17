@@ -107,7 +107,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "type": "artist"
         },
         {
             "id": "7w9jdhcgHNdiPeNPUoFSlx",
@@ -209,7 +210,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "type": "artist"
         },
         {
             "id": "5t9ChGEQOzEA3gxWtXEw48",
@@ -313,7 +315,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "type": "artist"
         },
         {
             "id": "52iwsT98xCoGgiGntTiR7K",
@@ -406,7 +409,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "type": "artist"
         },
         {
             "id": "26dSoYclwsYLMAKD3tpOr4",
@@ -510,7 +514,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "type": "artist"
         },
         {
             "id": "05fG473iIaoy82BF1aGhL8",
@@ -615,7 +620,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "type": "artist"
         },
         {
             "id": "53XhwfbYqKCa1cC15pYq2q",
@@ -719,7 +725,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "type": "artist"
         },
         {
             "id": "6Ip8FS7vWT1uKkJSweANQK",
@@ -884,7 +891,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "type": "artist"
         },
         {
             "id": "491U1PrV1EoQuhM0aUCn9r",
@@ -987,7 +995,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "type": "artist"
         },
         {
             "id": "5H4yInM5zmHqpKIoMNAx4r",
@@ -1102,7 +1111,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "type": "artist"
         },
         {
             "id": "55Aa2cqylxrFIXC767Z865",
@@ -1152,7 +1162,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "type": "artist"
         }
     ],
     "users": [
@@ -1177,8 +1188,8 @@
                             "name": "We're All Alone",
                             "artists": [
                                 {
-                                    "artistId": "6Ip8FS7vWT1uKkJSweANQK",
-                                    "artistName": "Dave"
+                                    "id": "6Ip8FS7vWT1uKkJSweANQK",
+                                    "name": "Dave"
                                 }
                             ],
                             "genre": [
@@ -1188,8 +1199,8 @@
                             "liked": 228859,
                             "url": "",
                             "album": {
-                                "albumId": "6HwzIlrCDq3WF9vMq8meqG",
-                                "albumName": "We're All Alone In This Together"
+                                "id": "6HwzIlrCDq3WF9vMq8meqG",
+                                "name": "We're All Alone In This Together"
                             },
                             "imageUrl": "https://i.scdn.co/image/ab67616d00004851da5b9c1eb275d48e14d25f3e"
                         },
@@ -1198,8 +1209,8 @@
                             "name": "YANKEE",
                             "artists": [
                                 {
-                                    "artistId": "52iwsT98xCoGgiGntTiR7K",
-                                    "artistName": "Quevedo"
+                                    "id": "52iwsT98xCoGgiGntTiR7K",
+                                    "name": "Quevedo"
                                 }
                             ],
                             "genre": [
@@ -1209,8 +1220,8 @@
                             "liked": 1523425,
                             "url": "",
                             "album": {
-                                "albumId": "156gxGFDxadwiIC3Bfwmj3",
-                                "albumName": "DONDE QUIERO ESTAR"
+                                "id": "156gxGFDxadwiIC3Bfwmj3",
+                                "name": "DONDE QUIERO ESTAR"
                             },
                             "imageUrl": "https://i.scdn.co/image/ab67616d00004851efc1b8f6beda4abe848a84e0"
                         }
@@ -1466,8 +1477,8 @@
                             "name": "YANKEE",
                             "artists": [
                                 {
-                                    "artistId": "52iwsT98xCoGgiGntTiR7K",
-                                    "artistName": "Quevedo"
+                                    "id": "52iwsT98xCoGgiGntTiR7K",
+                                    "name": "Quevedo"
                                 }
                             ],
                             "genre": [
@@ -1477,8 +1488,8 @@
                             "liked": 1523425,
                             "url": "",
                             "album": {
-                                "albumId": "156gxGFDxadwiIC3Bfwmj3",
-                                "albumName": "DONDE QUIERO ESTAR"
+                                "id": "156gxGFDxadwiIC3Bfwmj3",
+                                "ame": "DONDE QUIERO ESTAR"
                             },
                             "imageUrl": "https://i.scdn.co/image/ab67616d00004851efc1b8f6beda4abe848a84e0"
                         },
@@ -1487,8 +1498,8 @@
                             "name": "Gafas",
                             "artists": [
                                 {
-                                    "artistId": "5t9ChGEQOzEA3gxWtXEw48",
-                                    "artistName": "Elphomega"
+                                    "id": "5t9ChGEQOzEA3gxWtXEw48",
+                                    "name": "Elphomega"
                                 }
                             ],
                             "genre": [
@@ -1498,8 +1509,8 @@
                             "liked": 409890,
                             "url": "",
                             "album": {
-                                "albumId": "2Ppv8YROLkQ2IcmjMCytS0",
-                                "albumName": "El testimonio Libra"
+                                "id": "2Ppv8YROLkQ2IcmjMCytS0",
+                                "name": "El testimonio Libra"
                             },
                             "imageUrl": "https://i.scdn.co/image/ab67616d00004851a7810ebe026261b68cb194c8"
                         }
@@ -1519,8 +1530,8 @@
                             "name": "We're All Alone",
                             "artists": [
                                 {
-                                    "artistId": "6Ip8FS7vWT1uKkJSweANQK",
-                                    "artistName": "Dave"
+                                    "id": "6Ip8FS7vWT1uKkJSweANQK",
+                                    "name": "Dave"
                                 }
                             ],
                             "genre": [
@@ -1530,8 +1541,8 @@
                             "liked": 228859,
                             "url": "",
                             "album": {
-                                "albumId": "6HwzIlrCDq3WF9vMq8meqG",
-                                "albumName": "We're All Alone In This Together"
+                                "id": "6HwzIlrCDq3WF9vMq8meqG",
+                                "name": "We're All Alone In This Together"
                             },
                             "imageUrl": "https://i.scdn.co/image/ab67616d00004851da5b9c1eb275d48e14d25f3e"
                         },
@@ -1540,8 +1551,8 @@
                             "name": "Straight Back To It",
                             "artists": [
                                 {
-                                    "artistId": "5H4yInM5zmHqpKIoMNAx4r",
-                                    "artistName": "Central Cee"
+                                    "id": "5H4yInM5zmHqpKIoMNAx4r",
+                                    "name": "Central Cee"
                                 }
                             ],
                             "genre": [
@@ -1550,8 +1561,8 @@
                             "liked": 965854,
                             "url": "",
                             "album": {
-                                "albumId": "0SakL2ra5Cik5yQgKQBHGp",
-                                "albumName": "23"
+                                "id": "0SakL2ra5Cik5yQgKQBHGp",
+                                "name": "23"
                             },
                             "imageUrl": "https://i.scdn.co/image/ab67616d00004851e1f05c994777b79bc5c87547"
                         },
@@ -1560,8 +1571,8 @@
                             "name": "Radioactive",
                             "artists": [
                                 {
-                                    "artistId": "53XhwfbYqKCa1cC15pYq2q",
-                                    "artistName": "Imagine Dragons"
+                                    "id": "53XhwfbYqKCa1cC15pYq2q",
+                                    "name": "Imagine Dragons"
                                 }
                             ],
                             "genre": [
@@ -1571,8 +1582,8 @@
                             "liked": 45987675,
                             "url": "",
                             "album": {
-                                "albumId": "6nxDQi0FeEwccEPJeNySoS",
-                                "albumName": "Night Visions"
+                                "id": "6nxDQi0FeEwccEPJeNySoS",
+                                "name": "Night Visions"
                             },
                             "imageUrl": "https://i.scdn.co/image/ab67616d00004851407bd04707c463bbb3410737"
                         },
@@ -1581,8 +1592,8 @@
                             "name": "Blur",
                             "artists": [
                                 {
-                                    "artistId": "26dSoYclwsYLMAKD3tpOr4",
-                                    "artistName": "Britney Spears"
+                                    "id": "26dSoYclwsYLMAKD3tpOr4",
+                                    "name": "Britney Spears"
                                 }
                             ],
                             "genre": [
@@ -1591,8 +1602,8 @@
                             "liked": 5567980,
                             "url": "",
                             "album": {
-                                "albumId": "2tve5DGwub1TtbX1khPX5j",
-                                "albumName": "Circus (Deluxe Version)"
+                                "id": "2tve5DGwub1TtbX1khPX5j",
+                                "name": "Circus (Deluxe Version)"
                             },
                             "imageUrl": "https://i.scdn.co/image/ab67616d0000485154c6edd554935d73e159e199"
                         }
@@ -1608,7 +1619,18 @@
             "email": "luis-jover@gmail.com",
             "profilePicture": "SomeUrl",
             "isLoggedIn": false,
-            "libraryList": []
+            "libraryList": [
+                {
+                    "id": "uiebg7834tg-54y245htrwey-4h5h5wr-g-w45g4h45",
+                    "name": "My Personal Fauvorites",
+                    "isFollowed": false,
+                    "owner": "e47291ca-f376-4456-bd60-e02319ee280d",
+                    "imageUrl": "https://avatars.githubusercontent.com/u/131694498?v=4",
+                    "description": "My Personal Fauvorites",
+                    "tracks": [],
+                    "type": "playlist"
+                }
+            ]
         },
         {
             "id": "ad84c6f9-e695-456d-95ef-cf8a982e2e7d",
@@ -1617,7 +1639,18 @@
             "email": "ivan-...@gmail.com",
             "profilePicture": "SomeUrl",
             "isLoggedIn": false,
-            "libraryList": []
+            "libraryList": [
+                {
+                    "id": "erhy54hw45h-rhrwthh45-454hqerwh-43h43345",
+                    "name": "My Personal Fauvorites",
+                    "isFollowed": false,
+                    "owner": "ad84c6f9-e695-456d-95ef-cf8a982e2e7d",
+                    "imageUrl": "https://avatars.githubusercontent.com/u/131694498?v=4",
+                    "description": "My Personal Fauvorites",
+                    "tracks": [],
+                    "type": "playlist"
+                }
+            ]
         },
         {
             "id": "9b1421f2-e2a5-4200-8321-2224fcdfaf5d",
@@ -1626,7 +1659,18 @@
             "email": "matias-alaimo@gmail.com",
             "profilePicture": "https://avatars.githubusercontent.com/u/98781462?v=4",
             "isLoggedIn": false,
-            "libraryList": []
+            "libraryList": [
+                {
+                    "id": "lhabsfa3-425y4g-45h24--45g4qeavddas",
+                    "name": "My Personal Fauvorites",
+                    "isFollowed": false,
+                    "owner": "9b1421f2-e2a5-4200-8321-2224fcdfaf5d",
+                    "imageUrl": "https://avatars.githubusercontent.com/u/131694498?v=4",
+                    "description": "My Personal Fauvorites",
+                    "tracks": [],
+                    "type": "playlist"
+                }
+            ]
         }
     ],
     "tracks": [

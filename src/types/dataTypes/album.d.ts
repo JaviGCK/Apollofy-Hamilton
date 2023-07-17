@@ -14,7 +14,7 @@ export interface AlbumType {
     name: string,
     imageUrl: string,
     tracks: TrackType[],
-    artists: ArtistType[],
+    artists: ArtistType[], //just the id and name of the artists
     type?: ListType
 }
 // Si está compuesto por un solo track cuyo titulo es igual al deb album
