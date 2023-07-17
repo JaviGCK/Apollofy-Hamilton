@@ -1,13 +1,13 @@
 import { AlbumType } from "./album";
 import { ArtistType } from "./artist";
-import { PlaylistsType } from "./playlist";
+import { PlaylistType } from "./playlist";
 
 
 
 export type PossibleItems =
     | AlbumType
     | ArtistType
-    | PlaylistsType
+    | PlaylistType
 
 export enum ListType {
     ALBUM = "album",

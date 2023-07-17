@@ -2,26 +2,28 @@ import './loginPage.css'
 import { useAuth0 } from "@auth0/auth0-react";
 import { LoginButton } from "../../components/login/Login"
 import { LogoutButton } from "../../components/logout/Logout"
-import Logo from '../../assets/img/apollofy-logo.webp'
-import background from '../../assets/img/bg-image.png'
 
 export const LoginPage = () => {
 
     const { isAuthenticated } = useAuth0();
     console.log(isAuthenticated)
-    return (
-        <section>
-            <div className="login-page-img-container">
-            <img className="login-page-img" src={background} alt="background ovni"/>
 
-            <div className='login-page-glass'></div>
-            </div>
-            <div className="login-page-title">
-                <img className="login-page-logo" src={Logo} alt='App Logo' />
-                <h1 className="login-page-h1">apollo<span className="login-page-span">fy</span></h1>
-            </div>
+    var x = document.getElementById("myAudio") as HTMLAudioElement;
+
+    function playAudio() {
+        console.log("entro");
+        x.play();
+    }
+
+    return (
+        <>
+            <audio id="myAudio">
+                <source src="https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335220/APOLLOFY/apollofy_adderall-slipknot.mp3" type="audio/mp3" />
+                Your browser does not support the audio element.
+            </audio>
+            <button onClick={playAudio} type="button">Play Audio</button>
             <LoginButton />
             <LogoutButton />
-        </section>
+        </>
     )
 }
