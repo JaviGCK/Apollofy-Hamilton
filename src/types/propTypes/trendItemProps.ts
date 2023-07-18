@@ -1,6 +1,7 @@
-import { PossibleItems } from "../dataTypes/enums";
+import { ListType } from "../dataTypes/enums";
 
 
 export interface TrendItemProps {
-    "topTrendItem": PossibleItems
+    "id": string,
+    "type": ListType | undefined
 }
