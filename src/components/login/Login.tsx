@@ -1,4 +1,5 @@
 
+import './login.css'
 import { useAuth0 } from "@auth0/auth0-react";
 import { useEffect } from "react";
 
@@ -11,8 +12,7 @@ export const LoginButton = () => {
 
     return (
     <>
-    <h1>LoginPage</h1>
-    <button onClick={() => loginWithRedirect()}>Log In</button>;)
+    <button className="login-btn" onClick={() => loginWithRedirect()}>Login</button>
     </>
     )
 };

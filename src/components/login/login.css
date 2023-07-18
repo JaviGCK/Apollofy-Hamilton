@@ -1,0 +1,15 @@
+.login-btn {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 19.75rem;
+    height: 3.9375rem;
+    border-radius: 0.9375rem;
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    background: #a785fe;
+    color: #000;
+}
