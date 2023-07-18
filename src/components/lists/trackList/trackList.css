@@ -1,6 +1,6 @@
 .list-detail-track {
     display: flex;
-    margin: 3vh 0 5vh 3.5vh;
+    margin: 3vh 3.5vh 3vh 3.5vh;
 }
 
 .list-detail-track-img {
@@ -10,6 +10,5 @@
 
 .list-detail-track-info {
     display: inline-block;
-    padding-left: 3vw;
-    
+    padding-left: 3vw; 
 }
