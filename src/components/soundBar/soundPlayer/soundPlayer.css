@@ -11,8 +11,6 @@
     backdrop-filter: blur(6px);
 }
 
-
-
 .player-heading {
     display: flex;
     justify-content: space-between;
@@ -74,12 +72,13 @@
 }
 
 
-/* *************************** EXPANDED MENU ******************* */
+/* *************************** EXPANDED MENU **************************** */
 
 .expanded {
     top: 0;
     height: 100vh;
     padding-top: 10px;
+    z-index: 1;
 }
 
 .close-player-icon {
