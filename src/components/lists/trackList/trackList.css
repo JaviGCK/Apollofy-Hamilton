@@ -1,0 +1,15 @@
+.list-detail-track {
+    display: flex;
+    margin: 3vh 0 5vh 3.5vh;
+}
+
+.list-detail-track-img {
+    width: 70px;
+    height: 70px;
+}
+
+.list-detail-track-info {
+    display: inline-block;
+    padding-left: 3vw;
+    
+}
