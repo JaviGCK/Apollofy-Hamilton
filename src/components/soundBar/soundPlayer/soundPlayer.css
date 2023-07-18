@@ -1,11 +1,134 @@
-.player-container {}
+.player-container {
+    position: absolute;
+    width: 100%;
+    bottom: 10vh;
+    padding: 0 5px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.86);
+    box-shadow: 5px -5px 12px 0px rgba(255, 255, 255, 0.05) inset, -5px 5px 12px 0px rgba(255, 255, 255, 0.05) inset, 4px 7px 15px 0px rgba(0, 0, 0, 0.08), -1px 0px 2px 0px rgba(201, 201, 201, 0.10) inset;
+    backdrop-filter: blur(6px);
+}
 
-.player-title {}
+.player-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+}
 
-.content-bar {}
+.player-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.track-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.track-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.controls-icon {
+    height: 50px;
+    width: 50px;
+}
+
+.content-bar {
+    background: #9e9e9e;
+    height: 4px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
 
 .navigation-content-bar {}
 
-.progress-bar {}
+.progress-bar {
+    background: #00FFA3;
+    height: 4px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
 
-.controls-container {}
+}
+
+
+/* *************************** EXPANDED MENU ******************* */
+
+.expanded {
+    top: 0;
+    height: 100vh;
+}
+
+.heading-expanded {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.info-expanded {
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.image-big {
+    height: 300px;
+    width: 300px;
+}
+
+.expanded-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.expanded-subtitle {
+    font-size: 18px;
+}
+
+.track-progress-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.expanded-content-bar {
+    width: 100%;
+    background: #9e9e9e;
+}
+
+.numeric-progress-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.expanded-controls-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.expanded-control-icon {
+    height: 80px;
+    width: 80px;
+
+}
