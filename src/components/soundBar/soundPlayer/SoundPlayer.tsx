@@ -1,5 +1,7 @@
 
 import { BsFillPlayCircleFill, BsFillPauseCircleFill, BsFillSkipStartCircleFill, BsFillSkipEndCircleFill } from 'react-icons/bs';
+import { ImLoop } from "react-icons/im";
+import { IoIosArrowDown } from "react-icons/io";
 import "./soundPlayer.css"
 import { useRef, useState } from 'react';
 
@@ -36,35 +38,11 @@ export const SoundPlayer = ({ ...props }) => {
         setExpandedMenu(!expandedMenu)
     }
 
-    const handlePrevTrack = () => {
-
-        const index = props.trackList.findIndex((x: any) => x.name === props.currentTrack.name)
-
-        console.log(index)
-        if (index === 0) {
-            props.setCurrentTrack(props.trackList[props.trackList.length - 1])
-        }
-        else {
-            props.setCurrentTrack(props.trackList[index - 1])
-        }
-
-        props.audioElement.current.currentTime = 0
+    const handleLoopState = () => {
+        props.setloopActive(!props.loopActive)
     }
 
-    const handleNextTrack = () => {
-        const index = props.trackList.findIndex((x: any) => x.name === props.currentTrack.name)
 
-        console.log(index)
-        if (index === props.trackList.length - 1) {
-            props.setCurrentTrack(props.trackList[0])
-        }
-        else {
-            console.log("entra el el else")
-            props.setCurrentTrack(props.trackList[index + 1])
-        }
-
-        props.audioElement.current.currentTime = 0
-    }
 
     const formatTime = (seconds: number): string => {
         const minutes = Math.floor(seconds / 60);
@@ -111,6 +89,7 @@ export const SoundPlayer = ({ ...props }) => {
                 :
 
                 <div ref={playerContainer} className="player-container expanded">
+                    <IoIosArrowDown className="close-player-icon" onClick={handleToggleMenu} />
                     <div className="player-heading heading-expanded">
                         <img className="track-image image-big" src={props.currentTrack.imageUrl} alt="" />
                         <div className="player-info info-expanded">
@@ -125,6 +104,9 @@ export const SoundPlayer = ({ ...props }) => {
 
 
                         <div className='track-progress-bar'>
+                            <div className="loop-icon-container">
+                                <ImLoop onClick={handleLoopState} className={props.loopActive ? "loop-active" : ""} />
+                            </div>
                             <div className="expanded-content-bar">
                                 <div className="navigation-content-bar" ref={soundBarClickRef} onClick={handleClickNavigation}>
                                     <div className="progress-bar" style={{ width: `${props.currentTrack.progress}%` }}>
@@ -140,9 +122,9 @@ export const SoundPlayer = ({ ...props }) => {
 
 
                         <div className="expanded-controls-container">
-                            <BsFillSkipStartCircleFill className="expanded-control-icon" onClick={handlePrevTrack} />
+                            <BsFillSkipStartCircleFill className="expanded-control-icon" onClick={props.handlePrevTrack} />
                             {props.isPlaying ? <BsFillPauseCircleFill className="expanded-control-icon" onClick={handlePlayPause} /> : <BsFillPlayCircleFill className="expanded-control-icon" onClick={handlePlayPause} />}
-                            <BsFillSkipEndCircleFill className="expanded-control-icon" onClick={handleNextTrack} />
+                            <BsFillSkipEndCircleFill className="expanded-control-icon" onClick={props.handleNextTrack} />
 
                         </div>
                     </div>
