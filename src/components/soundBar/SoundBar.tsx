@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useLayoutEffect } from "react"
+import { useState, useRef, useEffect } from "react"
 import "./soundBar.css"
 import { SoundPlayer } from "./soundPlayer/SoundPlayer"
 import { CurrentTrack } from "../../types/propTypes/soundBarTypes"

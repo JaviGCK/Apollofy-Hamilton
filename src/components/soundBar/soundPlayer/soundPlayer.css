@@ -43,7 +43,7 @@
     justify-content: center;
 }
 
-.controls-container {}
+
 
 .controls-icon {
     height: 50px;
@@ -60,7 +60,7 @@
     -o-border-radius: 2px;
 }
 
-.navigation-content-bar {}
+
 
 .progress-bar {
     background: #00FFA3;
