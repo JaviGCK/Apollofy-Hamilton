@@ -7,26 +7,21 @@ import { useEffect, useState } from 'react'
 import { GroupItem } from '../../components/lists/groupItem/GroupItem'
 import { PossibleItems } from '../../types/dataTypes/enums'
 import { GroupButton } from '../../components/lists/groupButtons/GroupButton'
+import { fetchData } from '../../api/fetchApi'
+import { AlbumType } from '../../types/dataTypes/album'
 
 
 export const LibraryPage = () => {
 
     const { user } = useAuth0()
-    const [result, setResult] = useState([])
+    const [result, setResult] = useState<AlbumType[]>([])
 
     useEffect(() => {
-        const api = async () => {
-            const data = await fetch("http://localhost:3001/albums")
-            const result = await data.json()
-            setResult(result)
-
-        }
-        api()
-
-
+        (async function fetchAlbums() {
+            const albumsFetched = await fetchData("albums") as AlbumType[];
+            setResult(albumsFetched)
+        }());
     }, [])
-
-    console.log(result)
 
     return (
         <section className='library-page-container'>
@@ -54,6 +49,6 @@ export const LibraryPage = () => {
             <GroupButton buttonType="Album" />
             <div className="white-space"></div>
         </section>
-        
+
     )
 }

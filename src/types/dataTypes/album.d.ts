@@ -6,7 +6,7 @@ import { TrackType } from "./track";
 
 export interface AlbumType {
     id: string,
-    name: string,
+    name?: string,
     imageUrl?: string,
     tracks?: TrackType[],
     artists?: ArtistType[], //just the id and name of the artists

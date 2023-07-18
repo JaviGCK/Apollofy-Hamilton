@@ -1,19 +1,19 @@
 import { GenreButton } from "../genreButton/genreButton";
-import { fetchGenres } from "../../../api/fetchApi";
 import { GenreType } from "../../../types/dataTypes/genre";
 import { useState } from "react";
 import "./genresList.css"
+import { fetchData } from "../../../api/fetchApi";
 
 
 export const GenresList = () => {
-    const [genres, setGenres] = useState([]);
+    const [genres, setGenres] = useState<GenreType[]>([]);
 
     if (genres.length === 0) {
-        const fetchData = async () => {
-            const data = await fetchGenres();
+        const fetchGenres = async () => {
+            const data: GenreType[] = await fetchData("genres") as GenreType[];
             setGenres(data);
         }
-        fetchData();
+        fetchGenres();
     }
 
     return (

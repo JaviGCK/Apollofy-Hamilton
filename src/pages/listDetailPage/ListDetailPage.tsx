@@ -10,7 +10,7 @@ import { ListDetailProps } from '../../types/propTypes/listDetailProps';
 export const ListDetailPage: FC<ListDetailProps> = ({ ...props }) => {
 
     const [album, setAlbum] = useState<AlbumType | null>(null);
-/**${props.albumId} */
+    /**${props.albumId} */
     useEffect(() => {
         const api = async () => {
             const data = await fetch(`http://localhost:3001/albums?id=4yP0hdKOZPNshxUOjY0cZj`);
@@ -39,7 +39,7 @@ export const ListDetailPage: FC<ListDetailProps> = ({ ...props }) => {
                             <BiPlay className="list-detail-play-btn" />
                         </span>
                     </div>
-                    
+
                 </div>
                 <div className="list-detail-container-items">
                     {album.tracks?.map((track) => (

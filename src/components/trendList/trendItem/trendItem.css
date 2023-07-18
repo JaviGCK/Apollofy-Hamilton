@@ -1,5 +1,5 @@
 .trend-item-container {
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,11 +33,21 @@
 
 .dashboard-track-title {
     font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 6rem;
+    height: 1rem;
     line-height: normal;
     color: white;
 }
 
 .dashboard-track-info {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 8rem;
+    height: 1rem;
     font-size: 10px;
     color: white;
 }
