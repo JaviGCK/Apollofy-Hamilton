@@ -5,6 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react"
 import { GenreTypes } from "../../../types/dataTypes/enums"
 import { getUniqueId } from "../../../utils/functions/randomId"
 import "./addMusicForm.css"
+import toast, { Toaster } from "react-hot-toast"
 
 
 export const AddMusicForm = () => {
@@ -24,12 +25,12 @@ export const AddMusicForm = () => {
 
     const submitForm = async () => {
 
-        const email = "ali.hourag@gmail.com"; //este sería el usuario que se logea!!
+        const email = user?.email as string; //este sería el usuario que se logea!!
         const trackTitle = watch("title");
         const trackPrivacy = privacityState;
         const trackId = getUniqueId();
         const trackGenre = watch("genre") as GenreTypes;
-        console.log(trackId);
+        toast.success('Track is uploading...')
 
         const trackAudioFileList = watch("audio");
         const trackAudioFile = trackAudioFileList[0];
@@ -48,6 +49,7 @@ export const AddMusicForm = () => {
         const audioUrl = await postDataCloud(formTrackData);
         const imageUrl = await postDataCloud(formTrackImgData);
 
+        toast.success('Track uploaded successfully...')
 
         postTrackServer(email, audioUrl, trackId, trackTitle, imageUrl, trackPrivacy, trackGenre);
 
@@ -63,6 +65,10 @@ export const AddMusicForm = () => {
 
     return (
         <div>
+            <Toaster
+                position="top-center"
+                reverseOrder={false}
+            />
             <form className="add-music-form" onSubmit={handleSubmit(submitForm)}>
                 <input className="track-img-input add-music-input" type="file" accept="image/jpeg, image/jpg, image/webp" placeholder="Select track image..."
                     {...register("image", {
