@@ -6,77 +6,55 @@ import { listsFilterCategories } from '../../assets/globalVariables'
 import { useEffect, useState } from 'react'
 import { GroupItem } from '../../components/lists/groupItem/GroupItem'
 import { GroupButton } from '../../components/lists/groupButtons/GroupButton'
-import { fetchData } from '../../api/fetchApi'
-import { UserType } from '../../types/dataTypes/user'
+import { getUserListsReferences, getListByReference } from '../../api/fetchApi'
 import { useFilterContext } from '../../utils/hooks/useFilterProvider'
-import { ArtistType } from '../../types/dataTypes/artist'
-import { PlaylistType } from '../../types/dataTypes/playlist'
-import { AlbumType } from '../../types/dataTypes/album'
+import { PossibleItems } from '../../types/dataTypes/enums'
 
 
 export const LibraryPage = () => {
+
     const { user } = useAuth0();
-    const [users, setUsers] = useState<UserType[]>([]);
-    const [albums, setAlbums] = useState<AlbumType[]>([]);
-    const [playlists, setPlaylist] = useState<PlaylistType[]>([]);
-    const [artists, setArtists] = useState<ArtistType[]>([]);
+
+    const [userLists, setUserLists] = useState<PossibleItems[] | null>(null)
+    const [filteredLists, setFilteredLists] = useState<PossibleItems[] | null>(null)
+
     const { currentFilter } = useFilterContext();
 
-    let allLists: any;
+
+
+    if (userLists === null) {
+
+        const allLists: PossibleItems[] = []
+        //BUG when first chargin page, sometimes render all items, sometimes no-.
+
+        const getFetch = async () => {
+            if (user?.email === undefined) return
+            const allUserLists = await getUserListsReferences(user?.email)
+            const libraryLists = allUserLists[0].libraryList
+            await libraryLists.map(async (list: any) => {
+                const result = await getListByReference(list.type, list.id)
+                allLists.push(result)
+                setUserLists(allLists)
+            })
+        }
+        getFetch()
+    }
+
 
     useEffect(() => {
-        
-        (async function fetchUsers() {
-            const usersFetched = await fetchData("users") as UserType[];
-            setUsers(usersFetched);
-        })();
-        (async function fetchAlbums() {
-            const albumsFetched = await fetchData("albums") as AlbumType[];
-            setAlbums(albumsFetched);
-            allLists.push(albumsFetched)
-        })();
-        (async function fetchPlaylists() {
-            const playlistsFetched = await fetchData("playlists") as PlaylistType[];
-            setPlaylist(playlistsFetched);
-            allLists.push(playlistsFetched)
-        })();
-        (async function fetchArtists() {
-            const artistsFetched = await fetchData("artists") as ArtistType[];
-            setArtists(artistsFetched);
-            allLists.push(artistsFetched)
-        })();
 
-    }, []);
+        if (currentFilter === "all") {
+            if (userLists === null) return
+            setFilteredLists(userLists)
 
+        } else {
+            if (userLists === null) return
+            const newFilteredLists = userLists?.filter((list: PossibleItems) => list.type?.includes(currentFilter))
+            setFilteredLists(newFilteredLists)
+        }
 
-    const filterByType = (users: UserType[], currentFilter: string): UserType[] => {
-        const filteredUsers: UserType[] = [];
+    }, [currentFilter, userLists]);
 
-        users.map((loggedUser) => {
-            if (loggedUser.email === user?.email) {
-
-                loggedUser.libraryList?.forEach((listType) => {
-                    if (listType.type === currentFilter) {
-                        filteredUsers.push(listType)
-                    } else {
-                        filteredUsers.push(listType)
-                    }
-                })
-
-            }
-        })
-
-        return filteredUsers;
-
-    };
-    const filteredUsers = filterByType(users, currentFilter)
-console.log(filteredUsers);
-    const dataFetched = (() => {
-        const dataArr:any [] = []
-        return dataArr.push(playlists, albums, artists);
-        
-    })
-    dataFetched()    
 
     return (
         <section className='library-page-container'>
@@ -95,14 +73,18 @@ console.log(filteredUsers);
             </div>
             <Filter filters={listsFilterCategories} />
             <div>
-                {/*filteredList.map(() => )*/}
-            </div>
-            {filteredUsers.map((list) => {
+                {filteredLists?.map((list) => {
 
-                return (
-                    <GroupItem listId={list.id} listType={currentFilter} key={list.id} />
-                )
-            })}
+                    return (
+                        <GroupItem
+                            key={list.id}
+                            imageUrl={list.imageUrl}
+                            name={list.name}
+                            type={list.type}
+                        />
+                    )
+                })}
+            </div>
 
             <GroupButton buttonType="Artist" />
             <GroupButton buttonType="Album" />

@@ -252,12 +252,16 @@
             "id": "e47291ca-f376-4456-bd60-e02319ee280d",
             "firstName": "Luis",
             "lastName": "Jover",
-            "email": "luis-jover@gmail.com",
+            "email": "luisjoverdev@gmail.com",
             "profilePicture": "https://avatars.githubusercontent.com/u/129792624?v=4",
             "isLoggedIn": false,
             "libraryList": [
                 {
                     "id": "uiebg7834tg-54y245htrwey-4h5h5wr-g-w45g4h45",
+                    "type": "playlist"
+                },
+                {
+                    "id": "7960b357-dc43-4939-832d-b2115f163bc3",
                     "type": "playlist"
                 }
             ]
