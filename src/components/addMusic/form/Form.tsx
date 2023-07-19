@@ -1,11 +1,14 @@
 import { useForm } from "react-hook-form"
 import "./form.css"
-import { useState } from "react"
-import { postTrack } from "../../../api/fetchApi"
+import { useEffect, useId, useState } from "react"
+import { postDataCloud, postTrackServer } from "../../../api/fetchApi"
+import { useAuth0 } from "@auth0/auth0-react"
+import { GenreTypes } from "../../../types/dataTypes/enums"
 
 export const Form = () => {
 
     const [privacityState, setPrivacityState] = useState(false)
+    const { user } = useAuth0()
 
     const { register, handleSubmit, formState: { errors }, reset, watch } = useForm({
         defaultValues: {
@@ -17,22 +20,37 @@ export const Form = () => {
     })
 
 
-    const submitForm = () => {
-        // console.log(process.env.CLOUD_NAME);
-        const fileList = watch("audio");
-        const file = fileList[0]
+    const submitForm = async () => {
 
-        const formData = new FormData();
-        formData.append("upload_preset", "apollofy-track-addition")
-        formData.append("file", file);
+        const email = "ali.hourag@gmail.com";
+        const trackTitle = watch("title");
+        const trackPrivacy = privacityState;
+        const trackGenre = watch("genre") as GenreTypes;
+        console.log(trackGenre);
 
-        console.log(formData);
+        const trackAudioFileList = watch("audio");
+        const trackAudioFile = trackAudioFileList[0];
 
-        // const audioInput = document.querySelector(".track-audio-input") as HTMLInputElement;
-        // console.log(audioInput.files)
+        const trackImgFileList = watch("image");
+        const trackImgFile = trackImgFileList[0];
 
-        postTrack(formData);
+        const formTrackData = new FormData();
+        formTrackData.append("upload_preset", "apollofy-track-addition")
+        formTrackData.append("file", trackAudioFile);
+
+        const formTrackImgData = new FormData();
+        formTrackImgData.append("upload_preset", "apollofy_tracks-img")
+        formTrackImgData.append("file", trackImgFile);
+
+        const audioUrl = await postDataCloud(formTrackData);
+        const imageUrl = await postDataCloud(formTrackImgData);
+
+
+        postTrackServer(email, audioUrl, trackTitle, imageUrl, trackPrivacy, trackGenre);
+
+
     }
+
 
     const handlePrivacity = () => {
         setPrivacityState(!privacityState)

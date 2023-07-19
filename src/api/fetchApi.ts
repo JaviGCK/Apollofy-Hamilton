@@ -1,9 +1,14 @@
+import { User } from "@auth0/auth0-react";
 import { AlbumType } from "../types/dataTypes/album";
 import { ArtistType } from "../types/dataTypes/artist";
+import { GenreTypes } from "../types/dataTypes/enums";
 import { GenreType } from "../types/dataTypes/genre";
 import { PlaylistType } from "../types/dataTypes/playlist";
 import { TopTrends } from "../types/dataTypes/topTrends";
+import { TrackType } from "../types/dataTypes/track";
 import { UserType } from "../types/dataTypes/user";
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
 
 export const fetchData = async (data: string): Promise<GenreType[] | UserType[] | TopTrends | AlbumType[] | PlaylistType[] | ArtistType[] | AlbumType | PlaylistType | ArtistType> => {
     const response = await fetch(`http://localhost:3001/${data}`);
@@ -11,18 +16,86 @@ export const fetchData = async (data: string): Promise<GenreType[] | UserType[] 
     return dataFetched;
 }
 
+//--------------------------------------------------------------------------------------------------------------------------------------------
 
-
-export const postTrack = async (trackFile: any): Promise<string> => {
-    let url = ""
-    fetch(`https://api.cloudinary.com/v1_1/dqdysl9ep/auto/upload`, {
+export const postDataCloud = async (dataForm: FormData) => {
+    const response = await fetch(`https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLOUD_NAME}/auto/upload`, {
         method: 'POST',
-        body: trackFile
+        body: dataForm
     })
-        .then((response) => response.json())
-        .then(data => {
-            url = data.url;
-            //Hacer un POST en los tracks
-        })
-    return url
+    const dataFetched = await response.json();
+    return dataFetched.url;
 }
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
+export const postTrackServer = async (userEmail: string, trackUrl: string, trackTitle: string, trackImg: string, trackPrivacy: boolean, trackGenre: GenreTypes): Promise<void> => {
+    const users = await fetchData("users") as UserType[];
+    //hacerlo haciendo fetch al email y si no existe que no haga nada y si
+    // existe que siga con try y catch
+    const user = users.find(({ email }) => email === userEmail) as UserType;
+
+    const userTracks = user.tracks as TrackType[];
+    const userArtist: ArtistType = {
+        id: user.id
+    }
+
+    /**
+     * GUARDAR EL NOMBRE DEL USUARIO COMO ARTISTA
+     * AÑADIR UN TIPADO MÁS EN TRACKS QUE DIFERENCIE
+     * A ARTISTAS VERIFICADOS Y A ARTISTAS NO VERIFICADOS
+     * YA QUE LOS NO VERIFICADOS LA REFERENCIA DE USUARIO SE HARÁ
+     * AL ID DEL USUARIO
+     */
+
+    const newTrack: TrackType = {
+        id: `${user.id}${users.length}-${user.email}/${trackTitle}`,
+        name: trackTitle,
+        imageUrl: trackImg,
+        url: trackUrl,
+        liked: 0,
+        // album: [
+        //     id: 
+        // ]
+        genre: [trackGenre],
+        artists: [userArtist]
+    }
+    updateUser(user, userTracks, newTrack)
+
+    if (!trackPrivacy) {
+        postTrack(newTrack);
+    }
+}
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
+export const updateUser = async (user: UserType, userTracks: TrackType[], newTrack: TrackType) => {
+    const response = await fetch(`http://localhost:3001/users/${user.id}`, {
+        method: "PATCH",
+        body: JSON.stringify({
+            ...user,
+            tracks: [...userTracks, newTrack]
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+    const dataFetched = await response.json();
+    console.log(dataFetched);
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
+export const postTrack = async (track: TrackType) => {
+    const response = await fetch("http://localhost:3001/tracks", {
+        method: "POST",
+        body: JSON.stringify(track),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    });
+    const dataFetched = await response.json();
+    console.log(dataFetched);
+}
+
+
