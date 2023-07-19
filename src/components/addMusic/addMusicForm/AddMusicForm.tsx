@@ -1,13 +1,13 @@
 import { useForm } from "react-hook-form"
-import "./form.css"
 import { useState } from "react"
 import { postDataCloud, postTrackServer } from "../../../api/fetchApi"
 import { useAuth0 } from "@auth0/auth0-react"
 import { GenreTypes } from "../../../types/dataTypes/enums"
 import { getUniqueId } from "../../../utils/functions/randomId"
+import "./addMusicForm.css"
 
 
-export const Form = () => {
+export const AddMusicForm = () => {
 
     const [privacityState, setPrivacityState] = useState(false)
     const { user } = useAuth0()
@@ -137,3 +137,5 @@ export const Form = () => {
         </div>
     )
 }
+
+
