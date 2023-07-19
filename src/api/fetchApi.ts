@@ -10,3 +10,19 @@ export const fetchData = async (data: string): Promise<GenreType[] | UserType[] 
     const dataFetched = await response.json();
     return dataFetched;
 }
+
+
+
+export const postTrack = async (trackFile: any): Promise<string> => {
+    let url = ""
+    fetch(`https://api.cloudinary.com/v1_1/dqdysl9ep/auto/upload`, {
+        method: 'POST',
+        body: trackFile
+    })
+        .then((response) => response.json())
+        .then(data => {
+            url = data.url;
+            //Hacer un POST en los tracks
+        })
+    return url
+}

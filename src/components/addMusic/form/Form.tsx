@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form"
 import "./form.css"
 import { useState } from "react"
+import { postTrack } from "../../../api/fetchApi"
 
 export const Form = () => {
 
@@ -17,7 +18,20 @@ export const Form = () => {
 
 
     const submitForm = () => {
+        // console.log(process.env.CLOUD_NAME);
+        const fileList = watch("audio");
+        const file = fileList[0]
 
+        const formData = new FormData();
+        formData.append("upload_preset", "apollofy-track-addition")
+        formData.append("file", file);
+
+        console.log(formData);
+
+        // const audioInput = document.querySelector(".track-audio-input") as HTMLInputElement;
+        // console.log(audioInput.files)
+
+        postTrack(formData);
     }
 
     const handlePrivacity = () => {
