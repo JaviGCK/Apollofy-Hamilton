@@ -7,6 +7,7 @@ import { LoginPage } from '../pages/loginPage/LoginPage'
 import { UserPage } from '../pages/userPage/UserPage'
 import { AuthenticationGuard } from '../components/login/AuthenticationGuard'
 import { Auth0ProviderWithNavigate } from '../context/Auth0ProviderWithNavigate'
+import { FilterProvider } from '../context/FilterContext'
 
 
 export const RouterPaths = () => {
@@ -16,19 +17,24 @@ export const RouterPaths = () => {
     <>
       <BrowserRouter>
         <Auth0ProviderWithNavigate>
+          <FilterProvider>
           <Routes>
 
-            <Route path='/login'>
+          <Route path='/'>
               <Route index element={<LoginPage />} />
             </Route>
-            <Route path='/*' element={AuthenticationGuard(Layout)}>
-              <Route index element={<HomePage />} />
+            <Route path='' element={AuthenticationGuard(Layout)}>
+              <Route path='home' element={<HomePage />} />
               <Route path='search' element={<SearchPage />} />
               <Route path='library' element={<LibraryPage />} />
               <Route path='user' element={<UserPage />} />
             </Route>
+            
+          
+
 
           </Routes>
+          </FilterProvider>
         </Auth0ProviderWithNavigate>
       </BrowserRouter>
     </>

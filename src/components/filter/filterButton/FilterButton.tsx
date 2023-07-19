@@ -12,7 +12,9 @@ export const FilterButton = ({ ...props }) => {
 
         <>
             <input id={props.id} name="filter" type="radio" className="filter-input" value={props.id}
-                onChange={() => changeFilter(props.filter)} defaultChecked={props.filter === "topsales"} />
+                onChange={() => changeFilter(props.filter)}
+                defaultChecked={props.filter === "all"}
+            />
             <label htmlFor={props.id} className="filter-label">
                 {props.name}
             </label>

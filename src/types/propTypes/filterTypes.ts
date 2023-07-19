@@ -7,7 +7,7 @@ export type FilterCategories = {
 
 export enum CollectionFilters {
     ALL = "all",
-    PLAYLISTS = "playlists",
-    ALBUMS = "albums",
-    ARTISTS = "artists"
+    PLAYLISTS = "playlist",
+    ALBUMS = "album",
+    ARTISTS = "artist"
 }
