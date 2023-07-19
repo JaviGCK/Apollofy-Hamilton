@@ -10,6 +10,7 @@ export interface TrackType {
     genre?: GenreTypes[],
     liked?: number,
     url?: string,
+    verified?: boolean,
     album?: AlbumType, //when is inside of an album this property is not needed
     imageUrl: string
 }

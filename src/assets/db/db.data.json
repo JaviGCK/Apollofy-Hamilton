@@ -212,7 +212,7 @@
             "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7",
             "firstName": "Ali",
             "lastName": "Hourag",
-            "email": "ali-hourag@gmail.com",
+            "email": "ali.hourag@gmail.com",
             "profilePicture": "https://avatars.githubusercontent.com/u/131694498?v=4",
             "isLoggedIn": false,
             "libraryList": [
@@ -228,7 +228,9 @@
                     "id": "0On7uutIu9rZRvP9aJbMog",
                     "type": "album"
                 }
-            ]
+            ],
+            "type": "user",
+            "tracks": []
         },
         {
             "id": "af99a651-4118-48ab-933c-0f7927fe70d2",
@@ -246,7 +248,9 @@
                     "id": "7960b357-dc43-4939-832d-b2115f163bc3",
                     "type": "playlist"
                 }
-            ]
+            ],
+            "type": "user",
+            "tracks": []
         },
         {
             "id": "e47291ca-f376-4456-bd60-e02319ee280d",
@@ -264,7 +268,9 @@
                     "id": "7960b357-dc43-4939-832d-b2115f163bc3",
                     "type": "playlist"
                 }
-            ]
+            ],
+            "type": "user",
+            "tracks": []
         },
         {
             "id": "ad84c6f9-e695-456d-95ef-cf8a982e2e7d",
@@ -278,7 +284,9 @@
                     "id": "erhy54hw45h-rhrwthh45-454hqerwh-43h43345",
                     "type": "playlist"
                 }
-            ]
+            ],
+            "type": "user",
+            "tracks": []
         },
         {
             "id": "9b1421f2-e2a5-4200-8321-2224fcdfaf5d",
@@ -292,7 +300,9 @@
                     "id": "9b1421-ssee-b43gr78-frmomdfaf5d-ag33444",
                     "type": "playlist"
                 }
-            ]
+            ],
+            "type": "user",
+            "tracks": []
         }
     ],
     "tracks": [
@@ -310,6 +320,7 @@
             ],
             "liked": 545679,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689331273/APOLLOFY/apollofy_repeat-after-me-The-weeknd.mp3",
+            "verified": true,
             "album": {
                 "id": "4yP0hdKOZPNshxUOjY0cZj",
                 "name": "After Hours"
@@ -331,6 +342,7 @@
             ],
             "liked": 2545679,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689332239/APOLLOFY/apollofy_until-i-bleed-out-the-weeknd.mp3",
+            "verified": true,
             "album": {
                 "id": "4yP0hdKOZPNshxUOjY0cZj",
                 "name": "After Hours"
@@ -356,6 +368,7 @@
             ],
             "liked": 1567980,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689334049/APOLLOFY/apollofy_i-heard-you-are-married-the-weeknd-lil-wayne.mp3",
+            "verified": true,
             "album": {
                 "id": "2nLOHgzXzwFEpl62zAgCEC",
                 "name": "Dawn FM"
@@ -377,6 +390,7 @@
             ],
             "liked": 1567980,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689334299/APOLLOFY/apollofy_phantom-regret-by-jim-the-weeknd.mp3",
+            "verified": true,
             "album": {
                 "id": "2nLOHgzXzwFEpl62zAgCEC",
                 "name": "Dawn FM"
@@ -397,6 +411,7 @@
             ],
             "liked": 10567980,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689334415/APOLLOFY/apollofy_everytime-britney-spears.mp3",
+            "verified": true,
             "album": {
                 "id": "0z7pVBGOD7HCIB7S8eLkLI",
                 "name": "In the Zone"
@@ -418,6 +433,7 @@
             ],
             "liked": 8567980,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689334560/APOLLOFY/apollofy_outrsgeous-britney-spears.mp3",
+            "verified": true,
             "album": {
                 "id": "0z7pVBGOD7HCIB7S8eLkLI",
                 "name": "In the Zone"
@@ -439,6 +455,7 @@
             ],
             "liked": 11567980,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689334968/APOLLOFY/apollofy_mannequin-britney-spears.mp3",
+            "verified": true,
             "album": {
                 "id": "2tve5DGwub1TtbX1khPX5j",
                 "name": "Circus"
@@ -459,6 +476,7 @@
             ],
             "liked": 5567980,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335068/APOLLOFY/apollofy_blur_britney-spears.mp3",
+            "verified": true,
             "album": {
                 "id": "2tve5DGwub1TtbX1khPX5j",
                 "name": "Circus"
@@ -480,6 +498,7 @@
             ],
             "liked": 447980,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335220/APOLLOFY/apollofy_adderall-slipknot.mp3",
+            "verified": true,
             "album": {
                 "id": "3hWTXO0w02D6YpVRyLRmQz",
                 "name": "The End, So Far"
@@ -500,6 +519,7 @@
             ],
             "liked": 747980,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335312/APOLLOFY/apollofy_the-dying-song-slipknot.mp3",
+            "verified": true,
             "album": {
                 "id": "3hWTXO0w02D6YpVRyLRmQz",
                 "name": "The End, So Far"
@@ -521,6 +541,7 @@
             ],
             "liked": 947980,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335405/APOLLOFY/apollofy_insert-coin-slipknot.mp3",
+            "verified": true,
             "album": {
                 "id": "754RY5WpZ2LTUZsk8kDBju",
                 "name": "We Are Not Your Kind"
@@ -541,6 +562,7 @@
             ],
             "liked": 1123768,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335567/APOLLOFY/apollofy_unsainted-slipknot.mp3",
+            "verified": true,
             "album": {
                 "id": "754RY5WpZ2LTUZsk8kDBju",
                 "name": "We Are Not Your Kind"
@@ -562,6 +584,7 @@
             ],
             "liked": 45987675,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335767/APOLLOFY/apollofy_radioactive-imagine-dragons.mp3",
+            "verified": true,
             "album": {
                 "id": "6nxDQi0FeEwccEPJeNySoS",
                 "name": "Night Visions"
@@ -582,6 +605,7 @@
             ],
             "liked": 22987675,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335833/APOLLOFY/apollofy_tiptoe-imagine-dragons.mp3",
+            "verified": true,
             "album": {
                 "id": "6nxDQi0FeEwccEPJeNySoS",
                 "name": "Night Visions"
@@ -602,6 +626,7 @@
             ],
             "liked": 18009890,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335885/APOLLOFY/apollofy_lonely-imagine-dragons.mp3",
+            "verified": true,
             "album": {
                 "id": "6yiXkzHvC0OTmhfDQOEWtS",
                 "name": "Mercury - Acts 1 & 2"
@@ -623,6 +648,7 @@
             ],
             "liked": 28009890,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335926/APOLLOFY/apollofy_my-life-imagine-dragons.mp3",
+            "verified": true,
             "album": {
                 "id": "6yiXkzHvC0OTmhfDQOEWtS",
                 "name": "Mercury - Acts 1 & 2"
@@ -643,6 +669,7 @@
             ],
             "liked": 8009890,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553249/APOLLOFY/Apollofy-Two-6%27s-Upside-Down-Dropkick_Murphys.mp3",
+            "verified": true,
             "album": {
                 "id": "3WK3HkX9lTZIhnHdehjEGB",
                 "name": "This Machine Still Kills Fascists (Expanded Edition)"
@@ -663,6 +690,7 @@
             ],
             "liked": 4009890,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553333/APOLLOFY/Apollofy_Talkiing-Jukebox-Dropkick_Murphys.mp3",
+            "verified": true,
             "album": {
                 "id": "3WK3HkX9lTZIhnHdehjEGB",
                 "name": "This Machine Still Kills Fascists (Expanded Edition)"
@@ -683,6 +711,7 @@
             ],
             "liked": 12009890,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553485/APOLLOFY/Apollofy_My-Eyes-Are-Gonna-Shine_Dropkick-Murphys.mp3",
+            "verified": true,
             "album": {
                 "id": "40SrskkBlg2KUdW4zhG2hK",
                 "name": "Okemah Rising"
@@ -703,6 +732,7 @@
             ],
             "liked": 1009890,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553538/APOLLOFY/Apollofy_Watching-The-World-Go-By.mp3",
+            "verified": true,
             "album": {
                 "id": "40SrskkBlg2KUdW4zhG2hK",
                 "name": "Okemah Rising"
@@ -723,6 +753,7 @@
             ],
             "liked": 109890,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553769/APOLLOFY/Apollofy_MK_Ultra_-_El_testimonio_Libra_titles_Elphomega.mp3",
+            "verified": true,
             "album": {
                 "id": "2Ppv8YROLkQ2IcmjMCytS0",
                 "name": "El Testimonio Libra"
@@ -744,6 +775,7 @@
             ],
             "liked": 409890,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553778/APOLLOFY/Apollofy_Gafas_Elphomega.mp3",
+            "verified": true,
             "album": {
                 "id": "2Ppv8YROLkQ2IcmjMCytS0",
                 "name": "El Testimonio Libra"
@@ -764,6 +796,7 @@
             ],
             "liked": 609890,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553786/APOLLOFY/Apollofy_Sol_de_Sa%CC%81bado_Lluvia_de_Domingo_Elphomega.mp3",
+            "verified": true,
             "album": {
                 "id": "32HzePZsOJ6gWR6MXB5gBQ",
                 "name": "Phantom Pop"
@@ -785,6 +818,7 @@
             ],
             "liked": 1609890,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553791/APOLLOFY/Apollofy_1.000_Problemas_Elphomega.mp3",
+            "verified": true,
             "album": {
                 "id": "32HzePZsOJ6gWR6MXB5gBQ",
                 "name": "Phantom Pop"
@@ -810,6 +844,7 @@
             ],
             "liked": 16160,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554001/APOLLOFY/Apollofy_Sprinter_Central-cee_Dave.mp3",
+            "verified": true,
             "album": {
                 "id": "0On7uutIu9rZRvP9aJbMog",
                 "name": "Split Decision"
@@ -835,6 +870,7 @@
             ],
             "liked": 42069,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554011/APOLLOFY/Apollofy_UK_Rap_Central-cee_Dave.mp3",
+            "verified": true,
             "album": {
                 "id": "0On7uutIu9rZRvP9aJbMog",
                 "name": "Split Decision"
@@ -855,6 +891,7 @@
             ],
             "liked": 1224878,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554019/APOLLOFY/Apollofy_Khabib_Central-cee.mp3",
+            "verified": true,
             "album": {
                 "id": "0SakL2ra5Cik5yQgKQBHGp",
                 "name": "23"
@@ -875,6 +912,7 @@
             ],
             "liked": 965854,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554025/APOLLOFY/Apollofy_Straight_Back_to_It_Central-cee.mp3",
+            "verified": true,
             "album": {
                 "id": "0SakL2ra5Cik5yQgKQBHGp",
                 "name": "23"
@@ -895,6 +933,7 @@
             ],
             "liked": 281559,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554227/APOLLOFY/Apollofy_Birds_M-Huncho.mp3",
+            "verified": true,
             "album": {
                 "albumId": "6YlILpG7sdsgCODA8VO15d",
                 "name": "Utopia"
@@ -916,6 +955,7 @@
             ],
             "liked": 184839,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554234/APOLLOFY/Apollofy_Tranquility_M-huncho.mp3",
+            "verified": true,
             "album": {
                 "albumId": "6YlILpG7sdsgCODA8VO15d",
                 "name": "Utopia"
@@ -936,6 +976,7 @@
             ],
             "liked": 337839,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554244/APOLLOFY/Apollofy_Unappreciated_M-Huncho.mp3",
+            "verified": true,
             "album": {
                 "id": "2tjspYARHteVufdXfLEkJa",
                 "name": "Chasing Euphoria"
@@ -956,6 +997,7 @@
             ],
             "liked": 77109,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554248/APOLLOFY/Apollofy_Stainless_M-Huncho.mp3",
+            "verified": true,
             "album": {
                 "id": "2tjspYARHteVufdXfLEkJa",
                 "name": "Chasing Euphoria"
@@ -977,6 +1019,7 @@
             ],
             "liked": 5438589,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554435/APOLLOFY/Apollofy_Psycho_Dave.mp3",
+            "verified": true,
             "album": {
                 "id": "4GrFuXwRmEBJec22p58fsD",
                 "name": "PSYCHODRAMA"
@@ -998,6 +1041,7 @@
             ],
             "liked": 9344889,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554442/APOLLOFY/Apollofy_Streatham_Dave.mp3",
+            "verified": true,
             "album": {
                 "id": "4GrFuXwRmEBJec22p58fsD",
                 "name": "PSYCHODRAMA"
@@ -1019,6 +1063,7 @@
             ],
             "liked": 228859,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554451/APOLLOFY/Apollofy_We_re_All_Alone_Dave.mp3",
+            "verified": true,
             "album": {
                 "id": "6HwzIlrCDq3WF9vMq8meqG",
                 "name": "We're All Alone In This Thogether"
@@ -1040,6 +1085,7 @@
             ],
             "liked": 5421559,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554456/APOLLOFY/Apollofy_Verdansk_Dave.mp3",
+            "verified": true,
             "album": {
                 "id": "6HwzIlrCDq3WF9vMq8meqG",
                 "name": "We're All Alone In This Thogether"
@@ -1061,6 +1107,7 @@
             ],
             "liked": 3433525,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554601/APOLLOFY/Apollofy_AHORA_QUE%CC%81_Quevedo.mp3",
+            "verified": true,
             "album": {
                 "id": "156gxGFDxadwiIC3Bfwmj3",
                 "name": "DONDE QUIERO ESTAR"
@@ -1082,6 +1129,7 @@
             ],
             "liked": 1523425,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554610/APOLLOFY/Apollofy_YANKEE_Quevedo.mp3",
+            "verified": true,
             "album": {
                 "id": "156gxGFDxadwiIC3Bfwmj3",
                 "name": "DONDE QUIERO ESTAR"
@@ -1103,6 +1151,7 @@
             ],
             "liked": 1225425,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554616/APOLLOFY/Apollofy_VISTA_AL_MAR_Quevedo.mp3",
+            "verified": true,
             "album": {
                 "id": "156gxGFDxadwiIC3Bfwmj3",
                 "name": "DONDE QUIERO ESTAR"
@@ -1124,6 +1173,7 @@
             ],
             "liked": 2225589,
             "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554623/APOLLOFY/Apollofy_WANDA_Quevedo.mp3",
+            "verified": true,
             "album": {
                 "id": "156gxGFDxadwiIC3Bfwmj3",
                 "name": "DONDE QUIERO ESTAR"

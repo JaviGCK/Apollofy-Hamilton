@@ -1,4 +1,5 @@
-import { PossibleItems } from "./enums";
+import { ListType, PossibleItems } from "./enums";
+import { TrackType } from "./track";
 
 
 export interface UserType {
@@ -9,6 +10,8 @@ export interface UserType {
     profilePicture?: string,
     isLoggedIn?: boolean,
     libraryList?: PossibleItems[],
+    type: ListType,
+    tracks?: TrackType[]
 }
 
 /**

@@ -7,7 +7,9 @@ import { LoginPage } from '../pages/loginPage/LoginPage'
 import { UserPage } from '../pages/userPage/UserPage'
 import { AuthenticationGuard } from '../components/login/AuthenticationGuard'
 import { Auth0ProviderWithNavigate } from '../context/Auth0ProviderWithNavigate'
+import { AddMusic } from '../components/addMusic/AddMusic'
 import { FilterProvider } from '../context/FilterContext'
+
 
 
 export const RouterPaths = () => {
@@ -18,22 +20,20 @@ export const RouterPaths = () => {
       <BrowserRouter>
         <Auth0ProviderWithNavigate>
           <FilterProvider>
-          <Routes>
+            <Routes>
 
-          <Route path='/'>
-              <Route index element={<LoginPage />} />
-            </Route>
-            <Route path='' element={AuthenticationGuard(Layout)}>
-              <Route path='home' element={<HomePage />} />
-              <Route path='search' element={<SearchPage />} />
-              <Route path='library' element={<LibraryPage />} />
-              <Route path='user' element={<UserPage />} />
-            </Route>
-            
-          
+              <Route path='/'>
+                <Route index element={<LoginPage />} />
+              </Route>
+              <Route path='' element={AuthenticationGuard(Layout)}>
+                <Route path='home' element={<HomePage />} />
+                <Route path='search' element={<SearchPage />} />
+                <Route path='library' element={<LibraryPage />} />
+                <Route path='user' element={<UserPage />} />
+                <Route path='form' element={<AddMusic />} />
+              </Route>
 
-
-          </Routes>
+            </Routes>
           </FilterProvider>
         </Auth0ProviderWithNavigate>
       </BrowserRouter>
