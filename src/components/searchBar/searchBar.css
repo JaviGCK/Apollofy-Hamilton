@@ -28,7 +28,23 @@
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
 }
-
+.searchbar-label-focused{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #E2D7FF;
+    width: 90%;
+    height: 40px;
+    border: 4px solid transparent;
+    border: 4px solid #00FFA3;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
 .active-label-searchbar {
     border: 4px solid #00FFA3;
 }
@@ -39,11 +55,30 @@
     justify-self: center;
     color: #572364;
 }
-
+.searchbar-icon-search-focus{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: auto;
+    justify-self: center;
+    color: #572364;
+}
 .searchbar-input {
     border: 0;
     background-color: transparent;
     padding: .5rem;
+    width: 100%;
+    height: 100%;
+    color: #572364;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.searchbar-input-focus{
+    border: 0;
+    background-color: transparent;
+    padding: .2rem;
     width: 100%;
     height: 100%;
     color: #572364;
