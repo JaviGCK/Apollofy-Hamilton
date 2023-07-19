@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
+.searchlist-container {
+    height: 85%;
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+.searchlist-container::-webkit-scrollbar {
+    width: 0;
+}
+.sl-awaiting-input {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sl-awaiting-input p {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+}
+.ufo-ico{
+    font-size: 45px;
+    margin-top: 25px;
+}
+.sl-filter-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    height: 10vh;
+    border-top: 2px solid #0E0016;
+    padding: 0;
+    top: -2px;
+    background-color: #0E0016;
+    justify-content: center;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+.slf-btn {
+    border: 1px solid #f1f1f1;
+    margin: auto 5px;
+    border-radius: 25px;
+    font-size: 12px;
+    background: transparent;
+    color: #f1f1f1;
+    padding: 1vh;
+}
+.slf-btn-selected{
+    border: 1px solid #00F79F;
+    color: #00F79F;
+}
+.white-space {
+    height: 35vh;
+
+}
+.artist-image {
+    border-radius: 50px;
+  }

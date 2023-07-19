@@ -9,7 +9,7 @@ export const LoginButton = () => {
     const handleLogin = async () => {
       await loginWithRedirect({
         appState: {
-          returnTo: "/",
+          returnTo: "/home",
         },
       });
     };
@@ -20,5 +20,5 @@ export const LoginButton = () => {
         <button onClick={handleLogin}>Log In</button>;)
         </>
     )
-  
+
 };
