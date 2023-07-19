@@ -1,9 +1,11 @@
 import { useForm } from "react-hook-form"
 import "./form.css"
-import { useEffect, useId, useState } from "react"
+import { useState } from "react"
 import { postDataCloud, postTrackServer } from "../../../api/fetchApi"
 import { useAuth0 } from "@auth0/auth0-react"
 import { GenreTypes } from "../../../types/dataTypes/enums"
+import { getUniqueId } from "../../../utils/functions/randomId"
+
 
 export const Form = () => {
 
@@ -22,11 +24,12 @@ export const Form = () => {
 
     const submitForm = async () => {
 
-        const email = "ali.hourag@gmail.com";
+        const email = "ali.hourag@gmail.com"; //este sería el usuario que se logea!!
         const trackTitle = watch("title");
         const trackPrivacy = privacityState;
+        const trackId = getUniqueId();
         const trackGenre = watch("genre") as GenreTypes;
-        console.log(trackGenre);
+        console.log(trackId);
 
         const trackAudioFileList = watch("audio");
         const trackAudioFile = trackAudioFileList[0];
@@ -46,8 +49,9 @@ export const Form = () => {
         const imageUrl = await postDataCloud(formTrackImgData);
 
 
-        postTrackServer(email, audioUrl, trackTitle, imageUrl, trackPrivacy, trackGenre);
+        postTrackServer(email, audioUrl, trackId, trackTitle, imageUrl, trackPrivacy, trackGenre);
 
+        reset();
 
     }
 

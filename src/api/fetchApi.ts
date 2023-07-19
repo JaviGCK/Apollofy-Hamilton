@@ -1,4 +1,3 @@
-import { User } from "@auth0/auth0-react";
 import { AlbumType } from "../types/dataTypes/album";
 import { ArtistType } from "../types/dataTypes/artist";
 import { GenreTypes } from "../types/dataTypes/enums";
@@ -30,34 +29,24 @@ export const postDataCloud = async (dataForm: FormData) => {
 
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
-export const postTrackServer = async (userEmail: string, trackUrl: string, trackTitle: string, trackImg: string, trackPrivacy: boolean, trackGenre: GenreTypes): Promise<void> => {
-    const users = await fetchData("users") as UserType[];
-    //hacerlo haciendo fetch al email y si no existe que no haga nada y si
-    // existe que siga con try y catch
-    const user = users.find(({ email }) => email === userEmail) as UserType;
+export const postTrackServer = async (userEmail: string, trackUrl: string, trackId: string, trackTitle: string, trackImg: string, trackPrivacy: boolean, trackGenre: GenreTypes): Promise<void> => {
+    // const users = await fetchData("users") as UserType[];
+    // const user = users.find(({ email }) => email === userEmail) as UserType;
+    const userFetched = await fetchData(`users?email=${userEmail}`) as UserType[];
+    const user = userFetched[0];
 
     const userTracks = user.tracks as TrackType[];
     const userArtist: ArtistType = {
         id: user.id
     }
 
-    /**
-     * GUARDAR EL NOMBRE DEL USUARIO COMO ARTISTA
-     * AÑADIR UN TIPADO MÁS EN TRACKS QUE DIFERENCIE
-     * A ARTISTAS VERIFICADOS Y A ARTISTAS NO VERIFICADOS
-     * YA QUE LOS NO VERIFICADOS LA REFERENCIA DE USUARIO SE HARÁ
-     * AL ID DEL USUARIO
-     */
-
     const newTrack: TrackType = {
-        id: `${user.id}${users.length}-${user.email}/${trackTitle}`,
+        id: trackId,
         name: trackTitle,
         imageUrl: trackImg,
         url: trackUrl,
         liked: 0,
-        // album: [
-        //     id: 
-        // ]
+        verified: false,
         genre: [trackGenre],
         artists: [userArtist]
     }
@@ -67,6 +56,7 @@ export const postTrackServer = async (userEmail: string, trackUrl: string, track
         postTrack(newTrack);
     }
 }
+
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
 export const updateUser = async (user: UserType, userTracks: TrackType[], newTrack: TrackType) => {

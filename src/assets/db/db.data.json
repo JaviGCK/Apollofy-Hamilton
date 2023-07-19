@@ -1,2059 +1,1915 @@
 {
-  "artists": [
-    {
-      "id": "1Xyo4u8uXC1ZmMpatF05PJ",
-      "name": "The Weeknd",
-      "genres": [
-        "r&b",
-        "pop"
-      ],
-      "popularity": 94,
-      "imageUrl": "https://i.scdn.co/image/ab6761610000517401b9b4ec2a05d0805428acfa",
-      "albums": [
-        {
-          "id": "4yP0hdKOZPNshxUOjY0cZj"
-        },
-        {
-          "id": "2nLOHgzXzwFEpl62zAgCEC"
-        }
-      ],
-      "type": "artist"
-    },
-    {
-      "id": "7w9jdhcgHNdiPeNPUoFSlx",
-      "name": "Dropkick Murphys",
-      "genres": [
-        "punk",
-        "rock"
-      ],
-      "popularity": 60,
-      "imageUrl": "https://i.scdn.co/image/ab676161000051742b3032f701dee12a10157f83",
-      "albums": [
-        {
-          "id": "3WK3HkX9lTZIhnHdehjEGB"
-        },
-        {
-          "id": "40SrskkBlg2KUdW4zhG2hK"
-        }
-      ],
-      "type": "artist"
-    },
-    {
-      "id": "5t9ChGEQOzEA3gxWtXEw48",
-      "name": "Elphomega",
-      "genres": [
-        "hip-hop",
-        "rap"
-      ],
-      "popularity": 33,
-      "imageUrl": "https://i.scdn.co/image/ab676161000051743dc69e75a2c86e2341c64064",
-      "albums": [
-        {
-          "id": "2Ppv8YROLkQ2IcmjMCytS0"
-        },
-        {
-          "id": "32HzePZsOJ6gWR6MXB5gBQ"
-        }
-      ],
-      "type": "artist"
-    },
-    {
-      "id": "52iwsT98xCoGgiGntTiR7K",
-      "name": "Quevedo",
-      "genres": [
-        "rap",
-        "urban"
-      ],
-      "popularity": 84,
-      "imageUrl": "https://i.scdn.co/image/ab6761610000517497848feb6af104e4562841ac",
-      "albums": [
-        {
-          "id": "156gxGFDxadwiIC3Bfwmj3"
-        }
-      ],
-      "type": "artist"
-    },
-    {
-      "id": "26dSoYclwsYLMAKD3tpOr4",
-      "name": "Britney Spears",
-      "genres": [
-        "dance",
-        "pop"
-      ],
-      "popularity": 78,
-      "imageUrl": "https://i.scdn.co/image/ab676161000051744e7e6ded87a4e0f65b5afcec",
-      "albums": [
-        {
-          "id": "2tve5DGwub1TtbX1khPX5j"
-        },
-        {
-          "id": "0z7pVBGOD7HCIB7S8eLkLI"
-        }
-      ],
-      "type": "artist"
-    },
-    {
-      "id": "05fG473iIaoy82BF1aGhL8",
-      "name": "Slipknot",
-      "genres": [
-        "rock",
-        "rap",
-        "metal"
-      ],
-      "popularity": 77,
-      "imageUrl": "https://i.scdn.co/image/ab67616100005174ec01c52d6030a1574070e308",
-      "albums": [
-        {
-          "id": "3hWTXO0w02D6YpVRyLRmQz"
-        },
-        {
-          "id": "754RY5WpZ2LTUZsk8kDBju"
-        }
-      ],
-      "type": "artist"
-    },
-    {
-      "id": "53XhwfbYqKCa1cC15pYq2q",
-      "name": "Imagine Dragons",
-      "genres": [
-        "rock",
-        "pop"
-      ],
-      "popularity": 86,
-      "imageUrl": "https://i.scdn.co/image/ab67616100005174920dc1f617550de8388f368e",
-      "albums": [
-        {
-          "id": "6yiXkzHvC0OTmhfDQOEWtS"
-        },
-        {
-          "id": "6nxDQi0FeEwccEPJeNySoS"
-        }
-      ],
-      "type": "artist"
-    },
-    {
-      "id": "6Ip8FS7vWT1uKkJSweANQK",
-      "name": "Dave",
-      "genres": [
-        "hip-hop",
-        "rap"
-      ],
-      "popularity": 80,
-      "imageUrl": "https://i.scdn.co/image/ab67616100005174d03e9ecf77419871b96daee1",
-      "albums": [
-        {
-          "id": "6HwzIlrCDq3WF9vMq8meqG"
-        },
-        {
-          "id": "4GrFuXwRmEBJec22p58fsD"
-        },
-        {
-          "id": "0On7uutIu9rZRvP9aJbMog"
-        }
-      ],
-      "type": "artist"
-    },
-    {
-      "id": "491U1PrV1EoQuhM0aUCn9r",
-      "name": "M Huncho",
-      "genres": [
-        "hip-hop",
-        "rap"
-      ],
-      "popularity": 61,
-      "imageUrl": "https://i.scdn.co/image/ab676161000051742565e2b9a6311e6b80cf87f8",
-      "albums": [
-        {
-          "id": "2tjspYARHteVufdXfLEkJa"
-        },
-        {
-          "id": "6YlILpG7sdsgCODA8VO15d"
-        }
-      ],
-      "type": "artist"
-    },
-    {
-      "id": "5H4yInM5zmHqpKIoMNAx4r",
-      "name": "Central Cee",
-      "genres": [
-        "drill"
-      ],
-      "popularity": 82,
-      "imageUrl": "https://i.scdn.co/image/ab676161000051745fe7cabb8de1c0266cd2179c",
-      "albums": [
-        {
-          "id": "0On7uutIu9rZRvP9aJbMog"
-        },
-        {
-          "id": "0SakL2ra5Cik5yQgKQBHGp"
-        }
-      ],
-      "type": "artist"
-    },
-    {
-      "id": "55Aa2cqylxrFIXC767Z865",
-      "name": "Lil Wayne",
-      "genres": [
-        "rap",
-        "hip-hop"
-      ],
-      "popularity": 84,
-      "imageUrl": "https://i.scdn.co/image/ab67616100005174c63aded6f4bf4d06d1377106",
-      "albums": [
-        {
-          "id": "5XbA7TAqsD0fj0dGBrbb0D"
-        }
-      ],
-      "type": "artist"
-    }
-  ],
-  "users": [
-    {
-      "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7",
-      "firstName": "Ali",
-      "lastName": "Hourag",
-      "email": "ali.hourag@gmail.com",
-      "profilePicture": "https://avatars.githubusercontent.com/u/131694498?v=4",
-      "isLoggedIn": false,
-      "libraryList": [
-        {
-          "id": "7960b357-bj43-0021-832d-b2115f163bc3",
-          "type": "playlist"
-        },
-        {
-          "id": "6Ip8FS7vWT1uKkJSweANQK",
-          "type": "artist"
-        },
-        {
-          "id": "0On7uutIu9rZRvP9aJbMog",
-          "type": "album"
-        }
-      ],
-      "tracks": [
-        {
-          "id": "101117c9-e76e-4904-ad3d-1d9cd08835e75-ali.hourag@gmail.com/erthtr",
-          "name": "erthtr",
-          "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1689782699/images/gwaho7bbvbdvfqhkutu0.jpg",
-          "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1689782698/tracks/qc2irs461xb33hukea7u.mp3",
-          "genre": [
-            "metal"
-          ],
-          "artists": [
-            {
-              "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7"
-            }
-          ]
-        },
-        {
-          "id": "101117c9-e76e-4904-ad3d-1d9cd08835e75-ali.hourag@gmail.com/4y245",
-          "name": "4y245",
-          "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1689782758/images/s8vboiwfxy7r7w5unwgz.jpg",
-          "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1689782757/tracks/tknvk16ildee1u1jjc3a.mp3",
-          "genre": [
-            "metal"
-          ],
-          "artists": [
-            {
-              "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7"
-            }
-          ]
-        },
-        {
-          "id": "101117c9-e76e-4904-ad3d-1d9cd08835e75-ali.hourag@gmail.com/La mejor",
-          "name": "La mejor",
-          "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1689782889/images/ykdrvcwxcl5delx1ynjt.jpg",
-          "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1689782887/tracks/j7wtezinu8ir84dn2903.mp3",
-          "genre": [
-            "drill"
-          ],
-          "artists": [
-            {
-              "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7"
-            }
-          ]
-        },
-        {
-          "id": "101117c9-e76e-4904-ad3d-1d9cd08835e75-ali.hourag@gmail.com/ilagbi",
-          "name": "ilagbi",
-          "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1689783295/images/ohujysmdgcvoqxgyg5nb.jpg",
-          "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1689783289/tracks/phzqwhaim6fwvvpjumdp.mp3",
-          "liked": 0,
-          "genre": [
-            "metal"
-          ],
-          "artists": [
-            {
-              "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7"
-            }
-          ]
-        },
-        {
-          "id": "101117c9-e76e-4904-ad3d-1d9cd08835e75-ali.hourag@gmail.com/liugiiul",
-          "name": "liugiiul",
-          "liked": 0,
-          "genre": [
-            "dance"
-          ],
-          "artists": [
-            {
-              "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7"
-            }
-          ]
-        },
-        {
-          "id": "101117c9-e76e-4904-ad3d-1d9cd08835e75-ali.hourag@gmail.com/env test",
-          "name": "env test",
-          "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1689794829/images/o9pxcyqkisaddbwpoyyj.jpg",
-          "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1689794827/tracks/hhat3tusn0v374zsrdz2.mp3",
-          "liked": 0,
-          "genre": [
-            "punk"
-          ],
-          "artists": [
-            {
-              "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7"
-            }
-          ]
-        },
-        {
-          "id": "101117c9-e76e-4904-ad3d-1d9cd08835e75-ali.hourag@gmail.com/env teverdansk",
-          "name": "env teverdansk",
-          "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1689794939/images/ftvjmarmu5tekktj5byk.webp",
-          "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1689794938/tracks/xrtvrkx0thxfhgldo50p.mp3",
-          "liked": 0,
-          "genre": [
-            "drill"
-          ],
-          "artists": [
-            {
-              "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7"
-            }
-          ]
-        },
-        {
-          "id": "101117c9-e76e-4904-ad3d-1d9cd08835e75-ali.hourag@gmail.com/uk rap test",
-          "name": "uk rap test",
-          "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1689795085/images/vg3goryl9qbixgaejscr.jpg",
-          "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1689795083/tracks/gtenoqk2rnfrjdhol4vd.mp3",
-          "liked": 0,
-          "genre": [
-            "drill"
-          ],
-          "artists": [
-            {
-              "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "af99a651-4118-48ab-933c-0f7927fe70d2",
-      "firstName": "Javier",
-      "lastName": "Cabello",
-      "email": "javier-cabello@gmail.com",
-      "profilePicture": "https://avatars.githubusercontent.com/u/131688101?v=4",
-      "isLoggedIn": false,
-      "libraryList": [
-        {
-          "id": "70867tg-kctc65e-vi67rc-b769rcgh",
-          "type": "playlist"
-        },
-        {
-          "id": "7960b357-dc43-4939-832d-b2115f163bc3",
-          "type": "playlist"
-        }
-      ],
-      "tracks": []
-    },
-    {
-      "id": "e47291ca-f376-4456-bd60-e02319ee280d",
-      "firstName": "Luis",
-      "lastName": "Jover",
-      "email": "luis-jover@gmail.com",
-      "profilePicture": "https://avatars.githubusercontent.com/u/129792624?v=4",
-      "isLoggedIn": false,
-      "libraryList": [
-        {
-          "id": "uiebg7834tg-54y245htrwey-4h5h5wr-g-w45g4h45",
-          "type": "playlist"
-        }
-      ],
-      "tracks": []
-    },
-    {
-      "id": "ad84c6f9-e695-456d-95ef-cf8a982e2e7d",
-      "firstName": "Ivan",
-      "lastName": "...",
-      "email": "ivan-fdezluperena@gmail.com",
-      "profilePicture": "https://avatars.githubusercontent.com/u/56582444?v=4",
-      "isLoggedIn": false,
-      "libraryList": [
-        {
-          "id": "erhy54hw45h-rhrwthh45-454hqerwh-43h43345",
-          "type": "playlist"
-        }
-      ],
-      "tracks": []
-    },
-    {
-      "id": "9b1421f2-e2a5-4200-8321-2224fcdfaf5d",
-      "firstName": "Matias",
-      "lastName": "Alaimo",
-      "email": "matias-alaimo@gmail.com",
-      "profilePicture": "https://avatars.githubusercontent.com/u/98781462?v=4",
-      "isLoggedIn": false,
-      "libraryList": [
-        {
-          "id": "9b1421-ssee-b43gr78-frmomdfaf5d-ag33444",
-          "type": "playlist"
-        }
-      ],
-      "tracks": []
-    }
-  ],
-  "tracks": [
-    {
-      "id": "40U8d12pC5UHqmHwXjHjjl",
-      "name": "Repeat After Me (Interlude)",
-      "artists": [
-        {
-          "id": "1Xyo4u8uXC1ZmMpatF05PJ",
-          "name": "The Weeknd"
-        }
-      ],
-      "genre": [
-        "pop"
-      ],
-      "liked": 545679,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689331273/APOLLOFY/apollofy_repeat-after-me-The-weeknd.mp3",
-      "album": {
-        "id": "4yP0hdKOZPNshxUOjY0cZj",
-        "name": "After Hours"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d000048518863bc11d2aa12b54f5aeb36"
-    },
-    {
-      "id": "2BcnxwxBuar5wjCaLqm5N3",
-      "name": "Until I Bleed Out",
-      "artists": [
-        {
-          "id": "1Xyo4u8uXC1ZmMpatF05PJ",
-          "name": "The Weeknd"
-        }
-      ],
-      "genre": [
-        "r&b",
-        "pop"
-      ],
-      "liked": 2545679,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689332239/APOLLOFY/apollofy_until-i-bleed-out-the-weeknd.mp3",
-      "album": {
-        "id": "4yP0hdKOZPNshxUOjY0cZj",
-        "name": "After Hours"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d000048518863bc11d2aa12b54f5aeb36"
-    },
-    {
-      "id": "5XbA7TAqsD0fj0dGBrbb0D",
-      "name": "I Heard You’re Married (feat. Lil Wayne)",
-      "artists": [
-        {
-          "id": "1Xyo4u8uXC1ZmMpatF05PJ",
-          "name": "The Weeknd"
-        },
-        {
-          "id": "55Aa2cqylxrFIXC767Z865",
-          "name": "Lil Wayne"
-        }
-      ],
-      "genre": [
-        "r&b",
-        "rap"
-      ],
-      "liked": 1567980,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689334049/APOLLOFY/apollofy_i-heard-you-are-married-the-weeknd-lil-wayne.mp3",
-      "album": {
-        "id": "2nLOHgzXzwFEpl62zAgCEC",
-        "name": "Dawn FM"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d000048514ab2520c2c77a1d66b9ee21d"
-    },
-    {
-      "id": "1NlK2NtpuUazpziLhnJwEV",
-      "name": "Phantom Regret by Jim",
-      "artists": [
-        {
-          "id": "1Xyo4u8uXC1ZmMpatF05PJ",
-          "name": "The Weeknd"
-        }
-      ],
-      "genre": [
-        "pop",
-        "r&b"
-      ],
-      "liked": 1567980,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689334299/APOLLOFY/apollofy_phantom-regret-by-jim-the-weeknd.mp3",
-      "album": {
-        "id": "2nLOHgzXzwFEpl62zAgCEC",
-        "name": "Dawn FM"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d000048514ab2520c2c77a1d66b9ee21d"
-    },
-    {
-      "id": "0dRhSF9LV0HR8Jwd3MMMKJ",
-      "name": "Everytime",
-      "artists": [
-        {
-          "id": "26dSoYclwsYLMAKD3tpOr4",
-          "name": "Britney Spears"
-        }
-      ],
-      "genre": [
-        "pop"
-      ],
-      "liked": 10567980,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689334415/APOLLOFY/apollofy_everytime-britney-spears.mp3",
-      "album": {
-        "id": "0z7pVBGOD7HCIB7S8eLkLI",
-        "name": "In the Zone"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851efc6988972cb04105f002cd4"
-    },
-    {
-      "id": "2vPCRs3g0vdLU8sHlAEytO",
-      "name": "Outrageous",
-      "artists": [
-        {
-          "id": "26dSoYclwsYLMAKD3tpOr4",
-          "name": "Britney Spears"
-        }
-      ],
-      "genre": [
-        "pop",
-        "dance"
-      ],
-      "liked": 8567980,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689334560/APOLLOFY/apollofy_outrsgeous-britney-spears.mp3",
-      "album": {
-        "id": "0z7pVBGOD7HCIB7S8eLkLI",
-        "name": "In the Zone"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851efc6988972cb04105f002cd4"
-    },
-    {
-      "id": "3buxlp1m5TLONPem13GSpt",
-      "name": "Mannequin",
-      "artists": [
-        {
-          "id": "26dSoYclwsYLMAKD3tpOr4",
-          "name": "Britney Spears"
-        }
-      ],
-      "genre": [
-        "dance",
-        "pop"
-      ],
-      "liked": 11567980,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689334968/APOLLOFY/apollofy_mannequin-britney-spears.mp3",
-      "album": {
-        "id": "2tve5DGwub1TtbX1khPX5j",
-        "name": "Circus"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000485154c6edd554935d73e159e199"
-    },
-    {
-      "id": "0Y7exe8Yu2nbuIvGDRGXcz",
-      "name": "Blur",
-      "artists": [
-        {
-          "id": "26dSoYclwsYLMAKD3tpOr4",
-          "name": "Britney Spears"
-        }
-      ],
-      "genre": [
-        "pop"
-      ],
-      "liked": 5567980,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335068/APOLLOFY/apollofy_blur_britney-spears.mp3",
-      "album": {
-        "id": "2tve5DGwub1TtbX1khPX5j",
-        "name": "Circus"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000485154c6edd554935d73e159e199"
-    },
-    {
-      "id": "1PcANFoqnDsexSHXpWrn8Q",
-      "name": "Adderall",
-      "artists": [
-        {
-          "id": "05fG473iIaoy82BF1aGhL8",
-          "name": "Slipknot"
-        }
-      ],
-      "genre": [
-        "rock",
-        "metal"
-      ],
-      "liked": 447980,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335220/APOLLOFY/apollofy_adderall-slipknot.mp3",
-      "album": {
-        "id": "3hWTXO0w02D6YpVRyLRmQz",
-        "name": "The End, So Far"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851c3eedff14af24fdd988ed1a7"
-    },
-    {
-      "id": "6rsoBvxrlxdmqJyGPPciyq",
-      "name": "The Dying Song (Time To Sing)",
-      "artists": [
-        {
-          "id": "05fG473iIaoy82BF1aGhL8",
-          "name": "Slipknot"
-        }
-      ],
-      "genre": [
-        "metal"
-      ],
-      "liked": 747980,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335312/APOLLOFY/apollofy_the-dying-song-slipknot.mp3",
-      "album": {
-        "id": "3hWTXO0w02D6YpVRyLRmQz",
-        "name": "The End, So Far"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851c3eedff14af24fdd988ed1a7"
-    },
-    {
-      "id": "5Oca13ac6cZ0hwZAs1SXse",
-      "name": "Insert Coin",
-      "artists": [
-        {
-          "id": "05fG473iIaoy82BF1aGhL8",
-          "name": "Slipknot"
-        }
-      ],
-      "genre": [
-        "metal",
-        "rap"
-      ],
-      "liked": 947980,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335405/APOLLOFY/apollofy_insert-coin-slipknot.mp3",
-      "album": {
-        "id": "754RY5WpZ2LTUZsk8kDBju",
-        "name": "We Are Not Your Kind"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000485126f20b4d67c0c7b0f137ce4f"
-    },
-    {
-      "id": "5mpUKTdskZea0gStWzeHUZ",
-      "name": "Unsainted",
-      "artists": [
-        {
-          "id": "05fG473iIaoy82BF1aGhL8",
-          "name": "Slipknot"
-        }
-      ],
-      "genre": [
-        "metal"
-      ],
-      "liked": 1123768,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335567/APOLLOFY/apollofy_unsainted-slipknot.mp3",
-      "album": {
-        "id": "754RY5WpZ2LTUZsk8kDBju",
-        "name": "We Are Not Your Kind"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000485126f20b4d67c0c7b0f137ce4f"
-    },
-    {
-      "id": "62yJjFtgkhUrXktIoSjgP2",
-      "name": "Radioactive",
-      "artists": [
-        {
-          "id": "53XhwfbYqKCa1cC15pYq2q",
-          "name": "Imagine Dragons"
-        }
-      ],
-      "genre": [
-        "rock",
-        "pop"
-      ],
-      "liked": 45987675,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335767/APOLLOFY/apollofy_radioactive-imagine-dragons.mp3",
-      "album": {
-        "id": "6nxDQi0FeEwccEPJeNySoS",
-        "name": "Night Visions"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851407bd04707c463bbb3410737"
-    },
-    {
-      "id": "7lBPn6LpIvbvAihTRvBMig",
-      "name": "TipToe",
-      "artists": [
-        {
-          "id": "53XhwfbYqKCa1cC15pYq2q",
-          "name": "Imagine Dragons"
-        }
-      ],
-      "genre": [
-        "pop"
-      ],
-      "liked": 22987675,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335833/APOLLOFY/apollofy_tiptoe-imagine-dragons.mp3",
-      "album": {
-        "id": "6nxDQi0FeEwccEPJeNySoS",
-        "name": "Night Visions"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851407bd04707c463bbb3410737"
-    },
-    {
-      "id": "1VMBapbhHidf6ALFszT7w1",
-      "name": "Lonely",
-      "artists": [
-        {
-          "id": "53XhwfbYqKCa1cC15pYq2q",
-          "name": "Imagine Dragons"
-        }
-      ],
-      "genre": [
-        "pop"
-      ],
-      "liked": 18009890,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335885/APOLLOFY/apollofy_lonely-imagine-dragons.mp3",
-      "album": {
-        "id": "6yiXkzHvC0OTmhfDQOEWtS",
-        "name": "Mercury - Acts 1 & 2"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851fc915b69600dce2991a61f13"
-    },
-    {
-      "id": "0E0kxko3i9b5JxxMoGH3At",
-      "name": "My Life",
-      "artists": [
-        {
-          "id": "53XhwfbYqKCa1cC15pYq2q",
-          "name": "Imagine Dragons"
-        }
-      ],
-      "genre": [
-        "rock",
-        "pop"
-      ],
-      "liked": 28009890,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335926/APOLLOFY/apollofy_my-life-imagine-dragons.mp3",
-      "album": {
-        "id": "6yiXkzHvC0OTmhfDQOEWtS",
-        "name": "Mercury - Acts 1 & 2"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851fc915b69600dce2991a61f13"
-    },
-    {
-      "id": "0aE2HXcm7eoEGZG5i6rPXK",
-      "name": "Two 6's Upside Down",
-      "artists": [
-        {
-          "id": "7w9jdhcgHNdiPeNPUoFSlx",
-          "name": "Dropkick Murphys"
-        }
-      ],
-      "genre": [
-        "punk"
-      ],
-      "liked": 8009890,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553249/APOLLOFY/Apollofy-Two-6%27s-Upside-Down-Dropkick_Murphys.mp3",
-      "album": {
-        "id": "3WK3HkX9lTZIhnHdehjEGB",
-        "name": "This Machine Still Kills Fascists (Expanded Edition)"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851e68cf651a94fb62172da266b"
-    },
-    {
-      "id": "4qF2ncOvyw04e8Cbe5WvO2",
-      "name": "Talking Jukebox",
-      "artists": [
-        {
-          "id": "7w9jdhcgHNdiPeNPUoFSlx",
-          "name": "Dropkick Murphys"
-        }
-      ],
-      "genre": [
-        "punk"
-      ],
-      "liked": 4009890,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553333/APOLLOFY/Apollofy_Talkiing-Jukebox-Dropkick_Murphys.mp3",
-      "album": {
-        "id": "3WK3HkX9lTZIhnHdehjEGB",
-        "name": "This Machine Still Kills Fascists (Expanded Edition)"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851e68cf651a94fb62172da266b"
-    },
-    {
-      "id": "0rCu0jiqoJHsqaarwraeRA",
-      "name": "My Eyes Are Gonna Shine",
-      "artists": [
-        {
-          "id": "7w9jdhcgHNdiPeNPUoFSlx",
-          "name": "Dropkick Murphys"
-        }
-      ],
-      "genre": [
-        "rock"
-      ],
-      "liked": 12009890,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553485/APOLLOFY/Apollofy_My-Eyes-Are-Gonna-Shine_Dropkick-Murphys.mp3",
-      "album": {
-        "id": "40SrskkBlg2KUdW4zhG2hK",
-        "name": "Okemah Rising"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851639ebb8e7a3eb1f03c8839d2"
-    },
-    {
-      "id": "3H23O1qOJa99E7wFpPT6Ln",
-      "name": "Watching The World Go By",
-      "artists": [
-        {
-          "id": "7w9jdhcgHNdiPeNPUoFSlx",
-          "name": "Dropkick Murphys"
-        }
-      ],
-      "genre": [
-        "rock"
-      ],
-      "liked": 1009890,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553538/APOLLOFY/Apollofy_Watching-The-World-Go-By.mp3",
-      "album": {
-        "id": "40SrskkBlg2KUdW4zhG2hK",
-        "name": "Okemah Rising"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851639ebb8e7a3eb1f03c8839d2"
-    },
-    {
-      "id": "4fhz2FJzEkLDPl7W6waSdY",
-      "name": "MK Ultra - El testimonio Libra titles",
-      "artists": [
-        {
-          "id": "5t9ChGEQOzEA3gxWtXEw48",
-          "name": "Elphomega"
-        }
-      ],
-      "genre": [
-        "hip-hop"
-      ],
-      "liked": 109890,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553769/APOLLOFY/Apollofy_MK_Ultra_-_El_testimonio_Libra_titles_Elphomega.mp3",
-      "album": {
-        "id": "2Ppv8YROLkQ2IcmjMCytS0",
-        "name": "El Testimonio Libra"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851a7810ebe026261b68cb194c8"
-    },
-    {
-      "id": "7wf5IS43OXNh70ZX46UCoy",
-      "name": "Gafas",
-      "artists": [
-        {
-          "id": "5t9ChGEQOzEA3gxWtXEw48",
-          "name": "Elphomega"
-        }
-      ],
-      "genre": [
-        "rap",
-        "hip-hop"
-      ],
-      "liked": 409890,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553778/APOLLOFY/Apollofy_Gafas_Elphomega.mp3",
-      "album": {
-        "id": "2Ppv8YROLkQ2IcmjMCytS0",
-        "name": "El Testimonio Libra"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851a7810ebe026261b68cb194c8"
-    },
-    {
-      "id": "4WT92JeiPDnktqlf7Ueqwh",
-      "name": "Sol de Sábado, Lluvia de domingo",
-      "artists": [
-        {
-          "id": "5t9ChGEQOzEA3gxWtXEw48",
-          "name": "Elphomega"
-        }
-      ],
-      "genre": [
-        "rap"
-      ],
-      "liked": 609890,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553786/APOLLOFY/Apollofy_Sol_de_Sa%CC%81bado_Lluvia_de_Domingo_Elphomega.mp3",
-      "album": {
-        "id": "32HzePZsOJ6gWR6MXB5gBQ",
-        "name": "Phantom Pop"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851c7c678df37ad4d1cf0043947"
-    },
-    {
-      "id": "4u4eYJPiIN1y8RgdcA9H2G",
-      "name": "1.000 Problemas",
-      "artists": [
-        {
-          "id": "5t9ChGEQOzEA3gxWtXEw48",
-          "name": "Elphomega"
-        }
-      ],
-      "genre": [
-        "hip-hop",
-        "rap"
-      ],
-      "liked": 1609890,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553791/APOLLOFY/Apollofy_1.000_Problemas_Elphomega.mp3",
-      "album": {
-        "id": "32HzePZsOJ6gWR6MXB5gBQ",
-        "name": "Phantom Pop"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851c7c678df37ad4d1cf0043947"
-    },
-    {
-      "id": "08YvUaUsZktAG6zEMDwUqO",
-      "name": "Sprinter",
-      "artists": [
-        {
-          "id": "5H4yInM5zmHqpKIoMNAx4r",
-          "name": "Central Cee"
-        },
-        {
-          "id": "6Ip8FS7vWT1uKkJSweANQK",
-          "name": "Dave"
-        }
-      ],
-      "genre": [
-        "rap",
-        "hip-hop"
-      ],
-      "liked": 16160,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554001/APOLLOFY/Apollofy_Sprinter_Central-cee_Dave.mp3",
-      "album": {
-        "id": "0On7uutIu9rZRvP9aJbMog",
-        "name": "Split Decision"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000485126847a635b96c96fee81d838"
-    },
-    {
-      "id": "2VjOTvl50tscmc0RDjPdr2",
-      "name": "UK Rap",
-      "artists": [
-        {
-          "id": "5H4yInM5zmHqpKIoMNAx4r",
-          "name": "Central Cee"
-        },
-        {
-          "id": "6Ip8FS7vWT1uKkJSweANQK",
-          "name": "Dave"
-        }
-      ],
-      "genre": [
-        "rap",
-        "drill"
-      ],
-      "liked": 42069,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554011/APOLLOFY/Apollofy_UK_Rap_Central-cee_Dave.mp3",
-      "album": {
-        "id": "0On7uutIu9rZRvP9aJbMog",
-        "name": "Split Decision"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000485126847a635b96c96fee81d838"
-    },
-    {
-      "id": "2ZVSjes0VFYg9uJu4olsi4",
-      "name": "Khabib",
-      "artists": [
-        {
-          "id": "5H4yInM5zmHqpKIoMNAx4r",
-          "name": "Central Cee"
-        }
-      ],
-      "genre": [
-        "drill"
-      ],
-      "liked": 1224878,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554019/APOLLOFY/Apollofy_Khabib_Central-cee.mp3",
-      "album": {
-        "id": "0SakL2ra5Cik5yQgKQBHGp",
-        "name": "23"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851e1f05c994777b79bc5c87547"
-    },
-    {
-      "id": "709MdyUol3Qfgcowmd7KV4",
-      "name": "Straight Back To It",
-      "artists": [
-        {
-          "id": "5H4yInM5zmHqpKIoMNAx4r",
-          "name": "Central Cee"
-        }
-      ],
-      "genre": [
-        "drill"
-      ],
-      "liked": 965854,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554025/APOLLOFY/Apollofy_Straight_Back_to_It_Central-cee.mp3",
-      "album": {
-        "id": "0SakL2ra5Cik5yQgKQBHGp",
-        "name": "23"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851e1f05c994777b79bc5c87547"
-    },
-    {
-      "id": "2kSdFyyM9O7JqmmTBgVs6V",
-      "name": "Birds",
-      "artists": [
-        {
-          "id": "491U1PrV1EoQuhM0aUCn9r",
-          "name": "M Huncho"
-        }
-      ],
-      "genre": [
-        "hip-hop"
-      ],
-      "liked": 281559,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554227/APOLLOFY/Apollofy_Birds_M-Huncho.mp3",
-      "album": {
-        "albumId": "6YlILpG7sdsgCODA8VO15d",
-        "name": "Utopia"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d000048512ed6c99890ba67bd6c773c72"
-    },
-    {
-      "id": "6Ex1f0wNa3kkol50oTsvzC",
-      "name": "Tranquility",
-      "artists": [
-        {
-          "id": "491U1PrV1EoQuhM0aUCn9r",
-          "name": "M Huncho"
-        }
-      ],
-      "genre": [
-        "hip-hop",
-        "rap"
-      ],
-      "liked": 184839,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554234/APOLLOFY/Apollofy_Tranquility_M-huncho.mp3",
-      "album": {
-        "albumId": "6YlILpG7sdsgCODA8VO15d",
-        "name": "Utopia"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d000048512ed6c99890ba67bd6c773c72"
-    },
-    {
-      "id": "1h5Sb44FGJdYqkrfznnau7",
-      "name": "Unapreciated",
-      "artists": [
-        {
-          "id": "491U1PrV1EoQuhM0aUCn9r",
-          "name": "M Huncho"
-        }
-      ],
-      "genre": [
-        "hip-hop"
-      ],
-      "liked": 337839,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554244/APOLLOFY/Apollofy_Unappreciated_M-Huncho.mp3",
-      "album": {
-        "id": "2tjspYARHteVufdXfLEkJa",
-        "name": "Chasing Euphoria"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000485156760083a7f21cf162ed1806"
-    },
-    {
-      "id": "4iRDtaQCDsGxUN2MbfV8Tl",
-      "name": "Stainless",
-      "artists": [
-        {
-          "id": "491U1PrV1EoQuhM0aUCn9r",
-          "name": "M Huncho"
-        }
-      ],
-      "genre": [
-        "hip-hop"
-      ],
-      "liked": 77109,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554248/APOLLOFY/Apollofy_Stainless_M-Huncho.mp3",
-      "album": {
-        "id": "2tjspYARHteVufdXfLEkJa",
-        "name": "Chasing Euphoria"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000485156760083a7f21cf162ed1806"
-    },
-    {
-      "id": "0FWAIRd9Uz5uNek7cALYNC",
-      "name": "Psycho",
-      "artists": [
-        {
-          "id": "6Ip8FS7vWT1uKkJSweANQK",
-          "name": "Dave"
-        }
-      ],
-      "genre": [
-        "hip-hop",
-        "rap"
-      ],
-      "liked": 5438589,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554435/APOLLOFY/Apollofy_Psycho_Dave.mp3",
-      "album": {
-        "id": "4GrFuXwRmEBJec22p58fsD",
-        "name": "PSYCHODRAMA"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851c1c8d2889455db6d03d309ed"
-    },
-    {
-      "id": "59PUOc7B0WCNNx8Nr4qaA4",
-      "name": "Streatham",
-      "artists": [
-        {
-          "id": "6Ip8FS7vWT1uKkJSweANQK",
-          "name": "Dave"
-        }
-      ],
-      "genre": [
-        "hip-hop",
-        "rap"
-      ],
-      "liked": 9344889,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554442/APOLLOFY/Apollofy_Streatham_Dave.mp3",
-      "album": {
-        "id": "4GrFuXwRmEBJec22p58fsD",
-        "name": "PSYCHODRAMA"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851c1c8d2889455db6d03d309ed"
-    },
-    {
-      "id": "22agj1ppHejR41cUyf7k6v",
-      "name": "We're All Alone",
-      "artists": [
-        {
-          "id": "6Ip8FS7vWT1uKkJSweANQK",
-          "name": "Dave"
-        }
-      ],
-      "genre": [
-        "hip-hop",
-        "rap"
-      ],
-      "liked": 228859,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554451/APOLLOFY/Apollofy_We_re_All_Alone_Dave.mp3",
-      "album": {
-        "id": "6HwzIlrCDq3WF9vMq8meqG",
-        "name": "We're All Alone In This Thogether"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851da5b9c1eb275d48e14d25f3e"
-    },
-    {
-      "id": "7IPKXYU2rTMnrLW5IZ7ZI5",
-      "name": "Verdansk",
-      "artists": [
-        {
-          "id": "6Ip8FS7vWT1uKkJSweANQK",
-          "name": "Dave"
-        }
-      ],
-      "genre": [
-        "hip-hop",
-        "rap"
-      ],
-      "liked": 5421559,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554456/APOLLOFY/Apollofy_Verdansk_Dave.mp3",
-      "album": {
-        "id": "6HwzIlrCDq3WF9vMq8meqG",
-        "name": "We're All Alone In This Thogether"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851da5b9c1eb275d48e14d25f3e"
-    },
-    {
-      "id": "5qP24CrDI0rmY5zwRvUfzU",
-      "name": "AHORA QUÉ",
-      "artists": [
-        {
-          "id": "52iwsT98xCoGgiGntTiR7K",
-          "name": "Quevedo"
-        }
-      ],
-      "genre": [
-        "rap",
-        "urban"
-      ],
-      "liked": 3433525,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554601/APOLLOFY/Apollofy_AHORA_QUE%CC%81_Quevedo.mp3",
-      "album": {
-        "id": "156gxGFDxadwiIC3Bfwmj3",
-        "name": "DONDE QUIERO ESTAR"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851efc1b8f6beda4abe848a84e0"
-    },
-    {
-      "id": "0FirgnvrpCkkhdaq64Gfen",
-      "name": "YANKEE",
-      "artists": [
-        {
-          "id": "52iwsT98xCoGgiGntTiR7K",
-          "name": "Quevedo"
-        }
-      ],
-      "genre": [
-        "rap",
-        "urban"
-      ],
-      "liked": 1523425,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554610/APOLLOFY/Apollofy_YANKEE_Quevedo.mp3",
-      "album": {
-        "id": "156gxGFDxadwiIC3Bfwmj3",
-        "name": "DONDE QUIERO ESTAR"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851efc1b8f6beda4abe848a84e0"
-    },
-    {
-      "id": "5q86iSKkBtOoNkdgEDY5WV",
-      "name": "VISTA AL MAR",
-      "artists": [
-        {
-          "id": "52iwsT98xCoGgiGntTiR7K",
-          "name": "Quevedo"
-        }
-      ],
-      "genre": [
-        "rap",
-        "urban"
-      ],
-      "liked": 1225425,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554616/APOLLOFY/Apollofy_VISTA_AL_MAR_Quevedo.mp3",
-      "album": {
-        "id": "156gxGFDxadwiIC3Bfwmj3",
-        "name": "DONDE QUIERO ESTAR"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851efc1b8f6beda4abe848a84e0"
-    },
-    {
-      "id": "0Iozrbed8spxoBnmtBMshO",
-      "name": "WANDA",
-      "artists": [
-        {
-          "id": "52iwsT98xCoGgiGntTiR7K",
-          "name": "Quevedo"
-        }
-      ],
-      "genre": [
-        "rap",
-        "urban"
-      ],
-      "liked": 2225589,
-      "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554623/APOLLOFY/Apollofy_WANDA_Quevedo.mp3",
-      "album": {
-        "id": "156gxGFDxadwiIC3Bfwmj3",
-        "name": "DONDE QUIERO ESTAR"
-      },
-      "imageUrl": "https://i.scdn.co/image/ab67616d00004851efc1b8f6beda4abe848a84e0"
-    },
-    {
-      "id": "101117c9-e76e-4904-ad3d-1d9cd08835e75-ali.hourag@gmail.com/ilagbi",
-      "name": "ilagbi",
-      "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1689783295/images/ohujysmdgcvoqxgyg5nb.jpg",
-      "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1689783289/tracks/phzqwhaim6fwvvpjumdp.mp3",
-      "liked": 0,
-      "genre": [
-        "metal"
-      ],
-      "artists": [
-        {
-          "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7"
-        }
-      ]
-    },
-    {
-      "id": "101117c9-e76e-4904-ad3d-1d9cd08835e75-ali.hourag@gmail.com/liugiiul",
-      "name": "liugiiul",
-      "liked": 0,
-      "genre": [
-        "dance"
-      ],
-      "artists": [
-        {
-          "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7"
-        }
-      ]
-    },
-    {
-      "id": "101117c9-e76e-4904-ad3d-1d9cd08835e75-ali.hourag@gmail.com/env test",
-      "name": "env test",
-      "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1689794829/images/o9pxcyqkisaddbwpoyyj.jpg",
-      "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1689794827/tracks/hhat3tusn0v374zsrdz2.mp3",
-      "liked": 0,
-      "genre": [
-        "punk"
-      ],
-      "artists": [
-        {
-          "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7"
-        }
-      ]
-    },
-    {
-      "id": "101117c9-e76e-4904-ad3d-1d9cd08835e75-ali.hourag@gmail.com/env teverdansk",
-      "name": "env teverdansk",
-      "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1689794939/images/ftvjmarmu5tekktj5byk.webp",
-      "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1689794938/tracks/xrtvrkx0thxfhgldo50p.mp3",
-      "liked": 0,
-      "genre": [
-        "drill"
-      ],
-      "artists": [
-        {
-          "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7"
-        }
-      ]
-    },
-    {
-      "id": "101117c9-e76e-4904-ad3d-1d9cd08835e75-ali.hourag@gmail.com/uk rap test",
-      "name": "uk rap test",
-      "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1689795085/images/vg3goryl9qbixgaejscr.jpg",
-      "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1689795083/tracks/gtenoqk2rnfrjdhol4vd.mp3",
-      "liked": 0,
-      "genre": [
-        "drill"
-      ],
-      "artists": [
-        {
-          "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7"
-        }
-      ]
-    }
-  ],
-  "genres": [
-    {
-      "id": "87af4c23-4b5e-41d2-b6fc-8e8649a1a3d8",
-      "name": "Hip-hop",
-      "imageUrl": "https://us.123rf.com/450wm/ylivdesign/ylivdesign1909/ylivdesign190900135/129338457-icono-de-hip-hop-estilo-simple.jpg?ver=6",
-      "btnColor": "#8E66AC"
-    },
-    {
-      "id": "a2c8b941-716f-4b19-9eae-cc2078418b99",
-      "name": "Rock",
-      "imageUrl": "https://vignette1.wikia.nocookie.net/es.music/images/a/a5/Rock-Music-Logo-Decor-Vinyl-Wall-Art-c2f2785e-18b2-471e-a471-fc994c2a74fb_600.jpg/revision/latest?cb=20150625211537",
-      "btnColor": "#5F8108"
-    },
-    {
-      "id": "e9f675de-8db6-492e-91fe-1e546f24f73b",
-      "name": "Pop",
-      "imageUrl": "https://static.vecteezy.com/system/resources/previews/004/224/154/original/pop-music-handwritten-stock-lettering-typography-calligraphy-for-logotype-badge-icon-card-postcard-logo-banner-tag-illustration-eps10-free-vector.jpg",
-      "btnColor": "#E51E31"
-    },
-    {
-      "id": "3bd5c81a-1d7a-4b5f-8c29-2cfe3c17e42a",
-      "name": "R&B",
-      "imageUrl": "https://t4.ftcdn.net/jpg/03/08/18/99/360_F_308189978_CtvYsmilaUzUBIR0jJF0irSX5aE16g69.jpg",
-      "btnColor": "#E13300"
-    },
-    {
-      "id": "d0e32f96-6be5-41e8-9db2-8a1f9d032d4f",
-      "name": "Metal",
-      "imageUrl": "https://render.fineartamerica.com/images/rendered/default/flat/blanket/images/artworkimages/medium/3/metal-hand-sign-metalcore-heavy-metal-hard-rock-music-lovers-blues-funk-band-gift-thomas-larch-transparent.png?&targetx=180&targety=0&imagewidth=616&imageheight=740&modelwidth=977&modelheight=740&backgroundcolor=000000&orientation=1&producttype=blanket-sherpa-60-80",
-      "btnColor": "#8E66AC"
-    },
-    {
-      "id": "f4b3e9c7-7f8d-456c-bc3c-6d4686a9d3aa",
-      "name": "Punk",
-      "imageUrl": "https://res.cloudinary.com/teepublic/image/private/s--qBTKSUU2--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffa,e_outline:48/co_fffffa,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1625898873/production/designs/22988283_8.jpg",
-      "btnColor": "#0C73EC"
-    },
-    {
-      "id": "9a5c0e21-3dbf-4297-a8f6-df48ae4abeb0",
-      "name": "Dance",
-      "imageUrl": "https://st.depositphotos.com/1027431/4657/v/600/depositphotos_46573749-stock-illustration-abstract-vector-logo-design-template.jpg",
-      "btnColor": "#E51E31"
-    },
-    {
-      "id": "c16f9b42-5437-4a75-90c9-8d883f11f3a5",
-      "name": "Rap",
-      "imageUrl": "https://img.freepik.com/vecteurs-premium/graffiti-rap-splash-grunge-forme-coeur-lettres-connectees-seule-bande-points-demi-teinte-cool-embleme-expressif-amour-pour-style-musique-hip-hop_177819-4.jpg?w=2000",
-      "btnColor": "#8E66AC"
-    },
-    {
-      "id": "562e8bfa-4b57-47a9-8f7b-d97d72a9f21c",
-      "name": "Drill",
-      "imageUrl": "https://hiphopsince1987.com/wp-content/uploads/2021/06/mwuZ8jp6xmQe.jpg",
-      "btnColor": "#E13300"
-    },
-    {
-      "id": "207cf87e-1b62-4328-8b68-6dc2993f8e77",
-      "name": "Urban",
-      "imageUrl": "https://i.fbcd.co/products/original/3dc41c20140e225f3a8fa7fa177dd88258714746f4b1b3e398343f31f6266070.jpg",
-      "btnColor": "#203264"
-    }
-  ],
-  "playlists": [
-    {
-      "id": "262ad7d6-959c-43b9-a557-259adf26cb3e",
-      "name": "Top 10 Global",
-      "isFollowed": true,
-      "owner": "Apollofy",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e02f570e90de9ca85b8ddc50ca1",
-      "description": "Top 10 Global",
-      "tracks": [
-        {
-          "id": "62yJjFtgkhUrXktIoSjgP2"
-        },
-        {
-          "id": "5Oca13ac6cZ0hwZAs1SXse"
-        },
-        {
-          "id": "2BcnxwxBuar5wjCaLqm5N3"
-        },
-        {
-          "id": "0FirgnvrpCkkhdaq64Gfen"
-        },
-        {
-          "id": "0E0kxko3i9b5JxxMoGH3At"
-        },
-        {
-          "id": "5qP24CrDI0rmY5zwRvUfzU"
-        },
-        {
-          "id": "2vPCRs3g0vdLU8sHlAEytO"
-        },
-        {
-          "id": "4WT92JeiPDnktqlf7Ueqwh"
-        },
-        {
-          "id": "0dRhSF9LV0HR8Jwd3MMMKJ"
-        },
-        {
-          "id": "08YvUaUsZktAG6zEMDwUqO"
-        }
-      ],
-      "type": "playlist"
-    },
-    {
-      "id": "63ecd9be-e311-47ce-822e-5d969d37cb49",
-      "name": "Top 10 Spain",
-      "isFollowed": true,
-      "owner": "Apollofy",
-      "imageUrl": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_es_large.jpg",
-      "description": "Top 10 Spain",
-      "tracks": [
-        {
-          "id": "5qP24CrDI0rmY5zwRvUfzU"
-        },
-        {
-          "id": "0FirgnvrpCkkhdaq64Gfen"
-        },
-        {
-          "id": "709MdyUol3Qfgcowmd7KV4"
-        },
-        {
-          "id": "1PcANFoqnDsexSHXpWrn8Q"
-        },
-        {
-          "id": "40U8d12pC5UHqmHwXjHjjl"
-        },
-        {
-          "id": "2ZVSjes0VFYg9uJu4olsi4"
-        },
-        {
-          "id": "22agj1ppHejR41cUyf7k6v"
-        },
-        {
-          "id": "0aE2HXcm7eoEGZG5i6rPXK"
-        },
-        {
-          "id": "5XbA7TAqsD0fj0dGBrbb0D"
-        },
-        {
-          "id": "0Y7exe8Yu2nbuIvGDRGXcz"
-        }
-      ],
-      "type": "playlist"
-    },
-    {
-      "id": "7960b357-dc43-4939-832d-b2115f163bc3",
-      "name": "Today's Top Hits",
-      "isFollowed": true,
-      "owner": "Apollofy",
-      "imageUrl": "https://i.scdn.co/image/ab67706f00000003b3823d06a3718d5dc082e91f",
-      "description": "Today's Top Hits",
-      "tracks": [
-        {
-          "id": "22agj1ppHejR41cUyf7k6v"
-        },
-        {
-          "id": "709MdyUol3Qfgcowmd7KV4"
-        },
-        {
-          "id": "62yJjFtgkhUrXktIoSjgP2"
-        },
-        {
-          "id": "0Y7exe8Yu2nbuIvGDRGXcz"
-        }
-      ],
-      "type": "playlist"
-    },
-    {
-      "id": "7960b357-bj43-0021-832d-b2115f163bc3",
-      "name": "My Personal Fauvorites",
-      "isFollowed": false,
-      "owner": "101117c9-e76e-4904-ad3d-1d9cd08835e7",
-      "imageUrl": "https://avatars.githubusercontent.com/u/131694498?v=4",
-      "description": "My Personal Fauvorites",
-      "tracks": [
-        {
-          "id": "22agj1ppHejR41cUyf7k6v"
-        },
-        {
-          "id": "0FirgnvrpCkkhdaq64Gfen"
-        }
-      ],
-      "type": "playlist"
-    },
-    {
-      "id": "70867tg-kctc65e-vi67rc-b769rcgh",
-      "name": "My Personal Fauvorites",
-      "isFollowed": false,
-      "owner": "af99a651-4118-48ab-933c-0f7927fe70d2",
-      "imageUrl": "https://avatars.githubusercontent.com/u/131694498?v=4",
-      "description": "My Personal Fauvorites",
-      "tracks": [
-        {
-          "id": "0FirgnvrpCkkhdaq64Gfen"
-        },
-        {
-          "id": "7wf5IS43OXNh70ZX46UCoy"
-        }
-      ],
-      "type": "playlist"
-    },
-    {
-      "id": "uiebg7834tg-54y245htrwey-4h5h5wr-g-w45g4h45",
-      "name": "My Personal Fauvorites",
-      "isFollowed": false,
-      "owner": "e47291ca-f376-4456-bd60-e02319ee280d",
-      "imageUrl": "https://avatars.githubusercontent.com/u/131694498?v=4",
-      "description": "My Personal Fauvorites",
-      "tracks": [],
-      "type": "playlist"
-    },
-    {
-      "id": "erhy54hw45h-rhrwthh45-454hqerwh-43h43345",
-      "name": "My Personal Fauvorites",
-      "isFollowed": false,
-      "owner": "ad84c6f9-e695-456d-95ef-cf8a982e2e7d",
-      "imageUrl": "https://avatars.githubusercontent.com/u/131694498?v=4",
-      "description": "My Personal Fauvorites",
-      "tracks": [],
-      "type": "playlist"
-    },
-    {
-      "id": "9b1421-ssee-b43gr78-frmomdfaf5d-ag33444",
-      "name": "My Personal Fauvorites",
-      "isFollowed": false,
-      "owner": "9b1421f2-e2a5-4200-8321-2224fcdfaf5d",
-      "imageUrl": "https://avatars.githubusercontent.com/u/131694498?v=4",
-      "description": "My Personal Fauvorites",
-      "tracks": [],
-      "type": "playlist"
-    }
-  ],
-  "albums": [
-    {
-      "id": "4yP0hdKOZPNshxUOjY0cZj",
-      "name": "After Hours",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e028863bc11d2aa12b54f5aeb36",
-      "tracks": [
-        {
-          "id": "40U8d12pC5UHqmHwXjHjjl",
-          "name": "Repeat After Me (Interlude)"
-        },
-        {
-          "id": "2BcnxwxBuar5wjCaLqm5N3",
-          "name": "Until I Bleed Out"
-        }
-      ],
-      "artists": [
-        {
-          "id": "1Xyo4u8uXC1ZmMpatF05PJ",
-          "name": "The Weeknd"
-        }
-      ],
-      "type": "album"
-    },
-    {
-      "id": "2nLOHgzXzwFEpl62zAgCEC",
-      "name": "Dawn FM",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e02ade87e5f9c3764f0a1e5df64",
-      "tracks": [
-        {
-          "id": "5XbA7TAqsD0fj0dGBrbb0D",
-          "name": "I Heard You’re Married (feat. Lil Wayne)"
-        },
-        {
-          "id": "1NlK2NtpuUazpziLhnJwEV",
-          "name": "Phantom Regret by Jim"
-        }
-      ],
-      "artists": [
-        {
-          "id": "1Xyo4u8uXC1ZmMpatF05PJ",
-          "name": "The Weeknd"
-        }
-      ],
-      "type": "album"
-    },
-    {
-      "id": "0z7pVBGOD7HCIB7S8eLkLI",
-      "name": "In the Zone",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e02efc6988972cb04105f002cd4",
-      "tracks": [
-        {
-          "id": "0dRhSF9LV0HR8Jwd3MMMKJ",
-          "name": "Everytime"
-        },
-        {
-          "id": "2vPCRs3g0vdLU8sHlAEytO",
-          "name": "Outrageous"
-        }
-      ],
-      "artists": [
-        {
-          "id": "26dSoYclwsYLMAKD3tpOr4",
-          "name": "Britney Spears"
-        }
-      ],
-      "type": "album"
-    },
-    {
-      "id": "2tve5DGwub1TtbX1khPX5j",
-      "name": "Circus",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e0254c6edd554935d73e159e199",
-      "tracks": [
-        {
-          "id": "3buxlp1m5TLONPem13GSpt",
-          "name": "Mannequin"
-        },
-        {
-          "id": "0Y7exe8Yu2nbuIvGDRGXcz",
-          "name": "Blur"
-        }
-      ],
-      "artists": [
-        {
-          "id": "26dSoYclwsYLMAKD3tpOr4",
-          "name": "Britney Spears"
-        }
-      ],
-      "type": "album"
-    },
-    {
-      "id": "3hWTXO0w02D6YpVRyLRmQz",
-      "name": "The End, So Far",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e02c3eedff14af24fdd988ed1a7",
-      "tracks": [
-        {
-          "id": "1PcANFoqnDsexSHXpWrn8Q",
-          "name": "Adderall"
-        },
-        {
-          "id": "6rsoBvxrlxdmqJyGPPciyq",
-          "name": "The Dying Song (Time To Sing)"
-        }
-      ],
-      "artists": [
-        {
-          "id": "05fG473iIaoy82BF1aGhL8",
-          "name": "Slipknot"
-        }
-      ],
-      "type": "album"
-    },
-    {
-      "id": "754RY5WpZ2LTUZsk8kDBju",
-      "name": "We Are Not Your Kind",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e0226f20b4d67c0c7b0f137ce4f",
-      "tracks": [
-        {
-          "id": "5Oca13ac6cZ0hwZAs1SXse",
-          "name": "Insert Coin"
-        },
-        {
-          "id": "5mpUKTdskZea0gStWzeHUZ",
-          "name": "Unsainted"
-        }
-      ],
-      "artists": [
-        {
-          "id": "05fG473iIaoy82BF1aGhL8",
-          "name": "Slipknot"
-        }
-      ],
-      "type": "album"
-    },
-    {
-      "id": "6nxDQi0FeEwccEPJeNySoS",
-      "name": "Night Visions",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e0281eeace38068e9444cb28a3e",
-      "tracks": [
-        {
-          "id": "62yJjFtgkhUrXktIoSjgP2",
-          "name": "Radioactive"
-        },
-        {
-          "id": "7lBPn6LpIvbvAihTRvBMig",
-          "name": "TipToe"
-        }
-      ],
-      "artists": [
-        {
-          "id": "53XhwfbYqKCa1cC15pYq2q",
-          "name": "Imagine Dragons"
-        }
-      ],
-      "type": "album"
-    },
-    {
-      "id": "6yiXkzHvC0OTmhfDQOEWtS",
-      "name": "Mercury - Acts 1 & 2",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e02fc915b69600dce2991a61f13",
-      "tracks": [
-        {
-          "id": "1VMBapbhHidf6ALFszT7w1",
-          "name": "Lonely"
-        },
-        {
-          "id": "0E0kxko3i9b5JxxMoGH3At",
-          "name": "My Life"
-        }
-      ],
-      "artists": [
-        {
-          "id": "53XhwfbYqKCa1cC15pYq2q",
-          "name": "Imagine Dragons"
-        }
-      ],
-      "type": "album"
-    },
-    {
-      "id": "3WK3HkX9lTZIhnHdehjEGB",
-      "name": "This Machine Still Kills Fascists (Expanded Edition)",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e02e68cf651a94fb62172da266b",
-      "tracks": [
-        {
-          "id": "0aE2HXcm7eoEGZG5i6rPXK",
-          "name": "Two 6's Upside Down"
-        },
-        {
-          "id": "4qF2ncOvyw04e8Cbe5WvO2",
-          "name": "Talking Jukebox"
-        }
-      ],
-      "artists": [
-        {
-          "id": "7w9jdhcgHNdiPeNPUoFSlx",
-          "name": "Dropkick Murphys"
-        }
-      ],
-      "type": "album"
-    },
-    {
-      "id": "40SrskkBlg2KUdW4zhG2hK",
-      "name": "Okemah Rising",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e02639ebb8e7a3eb1f03c8839d2",
-      "tracks": [
-        {
-          "id": "0rCu0jiqoJHsqaarwraeRA",
-          "name": "My Eyes Are Gonna Shine"
-        },
-        {
-          "id": "3H23O1qOJa99E7wFpPT6Ln",
-          "name": "Watching The World Go By"
-        }
-      ],
-      "artists": [
-        {
-          "id": "7w9jdhcgHNdiPeNPUoFSlx",
-          "name": "Dropkick Murphys"
-        }
-      ],
-      "type": "album"
-    },
-    {
-      "id": "2Ppv8YROLkQ2IcmjMCytS0",
-      "name": "El Testimonio Libra",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e02a7810ebe026261b68cb194c8",
-      "tracks": [
-        {
-          "id": "4fhz2FJzEkLDPl7W6waSdY",
-          "name": "MK Ultra - El testimonio Libra titles"
-        },
-        {
-          "id": "7wf5IS43OXNh70ZX46UCoy",
-          "name": "Gafas"
-        }
-      ],
-      "artists": [
-        {
-          "id": "5t9ChGEQOzEA3gxWtXEw48",
-          "name": "Elphomega"
-        }
-      ],
-      "type": "album"
-    },
-    {
-      "id": "32HzePZsOJ6gWR6MXB5gBQ",
-      "name": "Phantom Pop",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e02c7c678df37ad4d1cf0043947",
-      "tracks": [
-        {
-          "id": "4WT92JeiPDnktqlf7Ueqwh",
-          "name": "Sol de Sábado, Lluvia de domingo"
-        },
-        {
-          "id": "4u4eYJPiIN1y8RgdcA9H2G",
-          "name": "1.000 Problemas"
-        }
-      ],
-      "artists": [
-        {
-          "id": "5t9ChGEQOzEA3gxWtXEw48",
-          "name": "Elphomega"
-        }
-      ],
-      "type": "album"
-    },
-    {
-      "id": "0SakL2ra5Cik5yQgKQBHGp",
-      "name": "23",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e02e1f05c994777b79bc5c87547",
-      "tracks": [
-        {
-          "id": "2ZVSjes0VFYg9uJu4olsi4",
-          "name": "Khabib"
-        },
-        {
-          "id": "709MdyUol3Qfgcowmd7KV4",
-          "name": "Straight Back To It"
-        }
-      ],
-      "artists": [
-        {
-          "id": "5H4yInM5zmHqpKIoMNAx4r",
-          "name": "Central Cee"
-        }
-      ],
-      "type": "album"
-    },
-    {
-      "id": "0On7uutIu9rZRvP9aJbMog",
-      "name": "Split Decision",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e0226847a635b96c96fee81d838",
-      "tracks": [
-        {
-          "id": "08YvUaUsZktAG6zEMDwUqO",
-          "name": "Sprinter"
-        },
-        {
-          "id": "2VjOTvl50tscmc0RDjPdr2",
-          "name": "UK Rap"
-        }
-      ],
-      "artists": [
-        {
-          "id": "5H4yInM5zmHqpKIoMNAx4r",
-          "name": "Central Cee"
-        },
-        {
-          "id": "6Ip8FS7vWT1uKkJSweANQK",
-          "name": "Dave"
-        }
-      ],
-      "type": "album"
-    },
-    {
-      "id": "2tjspYARHteVufdXfLEkJa",
-      "name": "Chasing Euphoria",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e0256760083a7f21cf162ed1806",
-      "tracks": [
-        {
-          "id": "1h5Sb44FGJdYqkrfznnau7",
-          "name": "Unapreciated"
-        },
-        {
-          "id": "4iRDtaQCDsGxUN2MbfV8Tl",
-          "name": "Stainless"
-        }
-      ],
-      "artists": [
-        {
-          "id": "491U1PrV1EoQuhM0aUCn9r",
-          "name": "M Huncho"
-        }
-      ],
-      "type": "album"
-    },
-    {
-      "id": "6YlILpG7sdsgCODA8VO15d",
-      "name": "Utopia",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e022ed6c99890ba67bd6c773c72",
-      "tracks": [
-        {
-          "id": "2kSdFyyM9O7JqmmTBgVs6V",
-          "name": "Birds"
-        },
-        {
-          "id": "6Ex1f0wNa3kkol50oTsvzC",
-          "name": "Tranquility"
-        }
-      ],
-      "artists": [
-        {
-          "id": "491U1PrV1EoQuhM0aUCn9r",
-          "name": "M Huncho"
-        }
-      ],
-      "type": "album"
-    },
-    {
-      "id": "6HwzIlrCDq3WF9vMq8meqG",
-      "name": "We're All Alone In This Thogether",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e02da5b9c1eb275d48e14d25f3e",
-      "tracks": [
-        {
-          "id": "22agj1ppHejR41cUyf7k6v",
-          "name": "We're All Alone"
-        },
-        {
-          "id": "7IPKXYU2rTMnrLW5IZ7ZI5",
-          "name": "Verdansk"
-        }
-      ],
-      "artists": [
-        {
-          "id": "6Ip8FS7vWT1uKkJSweANQK",
-          "name": "Dave"
-        }
-      ],
-      "type": "album"
-    },
-    {
-      "id": "4GrFuXwRmEBJec22p58fsD",
-      "name": "PSYCHODRAMA",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e02c1c8d2889455db6d03d309ed",
-      "tracks": [
-        {
-          "id": "0FWAIRd9Uz5uNek7cALYNC",
-          "name": "Psycho"
-        },
-        {
-          "id": "59PUOc7B0WCNNx8Nr4qaA4",
-          "name": "Streatham"
-        }
-      ],
-      "artists": [
-        {
-          "id": "6Ip8FS7vWT1uKkJSweANQK",
-          "name": "Dave"
-        }
-      ],
-      "type": "album"
-    },
-    {
-      "id": "156gxGFDxadwiIC3Bfwmj3",
-      "name": "DONDE QUIERO ESTAR",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e02efc1b8f6beda4abe848a84e0",
-      "tracks": [
-        {
-          "id": "5qP24CrDI0rmY5zwRvUfzU",
-          "name": "AHORA QUÉ"
-        },
-        {
-          "id": "0FirgnvrpCkkhdaq64Gfen",
-          "name": "YANKEE"
-        },
-        {
-          "id": "5q86iSKkBtOoNkdgEDY5WV",
-          "name": "VISTA AL MAR"
-        },
-        {
-          "id": "0Iozrbed8spxoBnmtBMshO",
-          "name": "WANDA"
-        }
-      ],
-      "artists": [
-        {
-          "id": "52iwsT98xCoGgiGntTiR7K",
-          "name": "Quevedo"
-        }
-      ],
-      "type": "album"
-    },
-    {
-      "id": "5XbA7TAqsD0fj0dGBrbb0D",
-      "name": "I Heard You’re Married (feat. Lil Wayne)",
-      "imageUrl": "https://i.scdn.co/image/ab67616d00001e02efc1b8f6beda4abe848a84e0",
-      "tracks": [
-        {
-          "id": "5XbA7TAqsD0fj0dGBrbb0D",
-          "name": "I Heard You’re Married (feat. Lil Wayne)"
-        }
-      ],
-      "artists": [
-        {
-          "id": "55Aa2cqylxrFIXC767Z865",
-          "name": "Lil Wayne"
-        },
-        {
-          "id": "1Xyo4u8uXC1ZmMpatF05PJ",
-          "name": "The Weeknd"
+    "artists": [
+        {
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ",
+            "name": "The Weeknd",
+            "genres": [
+                "r&b",
+                "pop"
+            ],
+            "popularity": 94,
+            "imageUrl": "https://i.scdn.co/image/ab6761610000517401b9b4ec2a05d0805428acfa",
+            "albums": [
+                {
+                    "id": "4yP0hdKOZPNshxUOjY0cZj"
+                },
+                {
+                    "id": "2nLOHgzXzwFEpl62zAgCEC"
+                }
+            ],
+            "type": "artist"
+        },
+        {
+            "id": "7w9jdhcgHNdiPeNPUoFSlx",
+            "name": "Dropkick Murphys",
+            "genres": [
+                "punk",
+                "rock"
+            ],
+            "popularity": 60,
+            "imageUrl": "https://i.scdn.co/image/ab676161000051742b3032f701dee12a10157f83",
+            "albums": [
+                {
+                    "id": "3WK3HkX9lTZIhnHdehjEGB"
+                },
+                {
+                    "id": "40SrskkBlg2KUdW4zhG2hK"
+                }
+            ],
+            "type": "artist"
+        },
+        {
+            "id": "5t9ChGEQOzEA3gxWtXEw48",
+            "name": "Elphomega",
+            "genres": [
+                "hip-hop",
+                "rap"
+            ],
+            "popularity": 33,
+            "imageUrl": "https://i.scdn.co/image/ab676161000051743dc69e75a2c86e2341c64064",
+            "albums": [
+                {
+                    "id": "2Ppv8YROLkQ2IcmjMCytS0"
+                },
+                {
+                    "id": "32HzePZsOJ6gWR6MXB5gBQ"
+                }
+            ],
+            "type": "artist"
+        },
+        {
+            "id": "52iwsT98xCoGgiGntTiR7K",
+            "name": "Quevedo",
+            "genres": [
+                "rap",
+                "urban"
+            ],
+            "popularity": 84,
+            "imageUrl": "https://i.scdn.co/image/ab6761610000517497848feb6af104e4562841ac",
+            "albums": [
+                {
+                    "id": "156gxGFDxadwiIC3Bfwmj3"
+                }
+            ],
+            "type": "artist"
+        },
+        {
+            "id": "26dSoYclwsYLMAKD3tpOr4",
+            "name": "Britney Spears",
+            "genres": [
+                "dance",
+                "pop"
+            ],
+            "popularity": 78,
+            "imageUrl": "https://i.scdn.co/image/ab676161000051744e7e6ded87a4e0f65b5afcec",
+            "albums": [
+                {
+                    "id": "2tve5DGwub1TtbX1khPX5j"
+                },
+                {
+                    "id": "0z7pVBGOD7HCIB7S8eLkLI"
+                }
+            ],
+            "type": "artist"
+        },
+        {
+            "id": "05fG473iIaoy82BF1aGhL8",
+            "name": "Slipknot",
+            "genres": [
+                "rock",
+                "rap",
+                "metal"
+            ],
+            "popularity": 77,
+            "imageUrl": "https://i.scdn.co/image/ab67616100005174ec01c52d6030a1574070e308",
+            "albums": [
+                {
+                    "id": "3hWTXO0w02D6YpVRyLRmQz"
+                },
+                {
+                    "id": "754RY5WpZ2LTUZsk8kDBju"
+                }
+            ],
+            "type": "artist"
+        },
+        {
+            "id": "53XhwfbYqKCa1cC15pYq2q",
+            "name": "Imagine Dragons",
+            "genres": [
+                "rock",
+                "pop"
+            ],
+            "popularity": 86,
+            "imageUrl": "https://i.scdn.co/image/ab67616100005174920dc1f617550de8388f368e",
+            "albums": [
+                {
+                    "id": "6yiXkzHvC0OTmhfDQOEWtS"
+                },
+                {
+                    "id": "6nxDQi0FeEwccEPJeNySoS"
+                }
+            ],
+            "type": "artist"
+        },
+        {
+            "id": "6Ip8FS7vWT1uKkJSweANQK",
+            "name": "Dave",
+            "genres": [
+                "hip-hop",
+                "rap"
+            ],
+            "popularity": 80,
+            "imageUrl": "https://i.scdn.co/image/ab67616100005174d03e9ecf77419871b96daee1",
+            "albums": [
+                {
+                    "id": "6HwzIlrCDq3WF9vMq8meqG"
+                },
+                {
+                    "id": "4GrFuXwRmEBJec22p58fsD"
+                },
+                {
+                    "id": "0On7uutIu9rZRvP9aJbMog"
+                }
+            ],
+            "type": "artist"
+        },
+        {
+            "id": "491U1PrV1EoQuhM0aUCn9r",
+            "name": "M Huncho",
+            "genres": [
+                "hip-hop",
+                "rap"
+            ],
+            "popularity": 61,
+            "imageUrl": "https://i.scdn.co/image/ab676161000051742565e2b9a6311e6b80cf87f8",
+            "albums": [
+                {
+                    "id": "2tjspYARHteVufdXfLEkJa"
+                },
+                {
+                    "id": "6YlILpG7sdsgCODA8VO15d"
+                }
+            ],
+            "type": "artist"
+        },
+        {
+            "id": "5H4yInM5zmHqpKIoMNAx4r",
+            "name": "Central Cee",
+            "genres": [
+                "drill"
+            ],
+            "popularity": 82,
+            "imageUrl": "https://i.scdn.co/image/ab676161000051745fe7cabb8de1c0266cd2179c",
+            "albums": [
+                {
+                    "id": "0On7uutIu9rZRvP9aJbMog"
+                },
+                {
+                    "id": "0SakL2ra5Cik5yQgKQBHGp"
+                }
+            ],
+            "type": "artist"
+        },
+        {
+            "id": "55Aa2cqylxrFIXC767Z865",
+            "name": "Lil Wayne",
+            "genres": [
+                "rap",
+                "hip-hop"
+            ],
+            "popularity": 84,
+            "imageUrl": "https://i.scdn.co/image/ab67616100005174c63aded6f4bf4d06d1377106",
+            "albums": [
+                {
+                    "id": "5XbA7TAqsD0fj0dGBrbb0D"
+                }
+            ],
+            "type": "artist"
         }
-      ],
-      "type": "album"
-    }
-  ],
-  "topTrends": {
-    "topArtists": [
-      {
-        "id": "52iwsT98xCoGgiGntTiR7K",
-        "type": "artist"
-      },
-      {
-        "id": "5t9ChGEQOzEA3gxWtXEw48",
-        "type": "artist"
-      },
-      {
-        "id": "53XhwfbYqKCa1cC15pYq2q",
-        "type": "artist"
-      },
-      {
-        "id": "6Ip8FS7vWT1uKkJSweANQK",
-        "type": "artist"
-      }
     ],
-    "topAlbums": [
-      {
-        "id": "6nxDQi0FeEwccEPJeNySoS",
-        "type": "album"
-      },
-      {
-        "id": "0On7uutIu9rZRvP9aJbMog",
-        "type": "album"
-      },
-      {
-        "id": "156gxGFDxadwiIC3Bfwmj3",
-        "type": "album"
-      },
-      {
-        "id": "2Ppv8YROLkQ2IcmjMCytS0",
-        "type": "album"
-      }
+    "users": [
+        {
+            "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7",
+            "firstName": "Ali",
+            "lastName": "Hourag",
+            "email": "ali.hourag@gmail.com",
+            "profilePicture": "https://avatars.githubusercontent.com/u/131694498?v=4",
+            "isLoggedIn": false,
+            "libraryList": [
+                {
+                    "id": "7960b357-bj43-0021-832d-b2115f163bc3",
+                    "type": "playlist"
+                },
+                {
+                    "id": "6Ip8FS7vWT1uKkJSweANQK",
+                    "type": "artist"
+                },
+                {
+                    "id": "0On7uutIu9rZRvP9aJbMog",
+                    "type": "album"
+                }
+            ],
+            "type": "user",
+            "tracks": []
+        },
+        {
+            "id": "af99a651-4118-48ab-933c-0f7927fe70d2",
+            "firstName": "Javier",
+            "lastName": "Cabello",
+            "email": "javier-cabello@gmail.com",
+            "profilePicture": "https://avatars.githubusercontent.com/u/131688101?v=4",
+            "isLoggedIn": false,
+            "libraryList": [
+                {
+                    "id": "70867tg-kctc65e-vi67rc-b769rcgh",
+                    "type": "playlist"
+                },
+                {
+                    "id": "7960b357-dc43-4939-832d-b2115f163bc3",
+                    "type": "playlist"
+                }
+            ],
+            "type": "user",
+            "tracks": []
+        },
+        {
+            "id": "e47291ca-f376-4456-bd60-e02319ee280d",
+            "firstName": "Luis",
+            "lastName": "Jover",
+            "email": "luis-jover@gmail.com",
+            "profilePicture": "https://avatars.githubusercontent.com/u/129792624?v=4",
+            "isLoggedIn": false,
+            "libraryList": [
+                {
+                    "id": "uiebg7834tg-54y245htrwey-4h5h5wr-g-w45g4h45",
+                    "type": "playlist"
+                }
+            ],
+            "type": "user",
+            "tracks": []
+        },
+        {
+            "id": "ad84c6f9-e695-456d-95ef-cf8a982e2e7d",
+            "firstName": "Ivan",
+            "lastName": "...",
+            "email": "ivan-fdezluperena@gmail.com",
+            "profilePicture": "https://avatars.githubusercontent.com/u/56582444?v=4",
+            "isLoggedIn": false,
+            "libraryList": [
+                {
+                    "id": "erhy54hw45h-rhrwthh45-454hqerwh-43h43345",
+                    "type": "playlist"
+                }
+            ],
+            "type": "user",
+            "tracks": []
+        },
+        {
+            "id": "9b1421f2-e2a5-4200-8321-2224fcdfaf5d",
+            "firstName": "Matias",
+            "lastName": "Alaimo",
+            "email": "matias-alaimo@gmail.com",
+            "profilePicture": "https://avatars.githubusercontent.com/u/98781462?v=4",
+            "isLoggedIn": false,
+            "libraryList": [
+                {
+                    "id": "9b1421-ssee-b43gr78-frmomdfaf5d-ag33444",
+                    "type": "playlist"
+                }
+            ],
+            "type": "user",
+            "tracks": []
+        }
     ],
-    "topPlaylists": [
-      {
-        "id": "262ad7d6-959c-43b9-a557-259adf26cb3e",
-        "type": "playlist"
-      },
-      {
-        "id": "7960b357-dc43-4939-832d-b2115f163bc3",
-        "type": "playlist"
-      }
-    ]
-  }
+    "tracks": [
+        {
+            "id": "40U8d12pC5UHqmHwXjHjjl",
+            "name": "Repeat After Me (Interlude)",
+            "artists": [
+                {
+                    "id": "1Xyo4u8uXC1ZmMpatF05PJ",
+                    "name": "The Weeknd"
+                }
+            ],
+            "genre": [
+                "pop"
+            ],
+            "liked": 545679,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689331273/APOLLOFY/apollofy_repeat-after-me-The-weeknd.mp3",
+            "verified": true,
+            "album": {
+                "id": "4yP0hdKOZPNshxUOjY0cZj",
+                "name": "After Hours"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d000048518863bc11d2aa12b54f5aeb36"
+        },
+        {
+            "id": "2BcnxwxBuar5wjCaLqm5N3",
+            "name": "Until I Bleed Out",
+            "artists": [
+                {
+                    "id": "1Xyo4u8uXC1ZmMpatF05PJ",
+                    "name": "The Weeknd"
+                }
+            ],
+            "genre": [
+                "r&b",
+                "pop"
+            ],
+            "liked": 2545679,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689332239/APOLLOFY/apollofy_until-i-bleed-out-the-weeknd.mp3",
+            "verified": true,
+            "album": {
+                "id": "4yP0hdKOZPNshxUOjY0cZj",
+                "name": "After Hours"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d000048518863bc11d2aa12b54f5aeb36"
+        },
+        {
+            "id": "5XbA7TAqsD0fj0dGBrbb0D",
+            "name": "I Heard You’re Married (feat. Lil Wayne)",
+            "artists": [
+                {
+                    "id": "1Xyo4u8uXC1ZmMpatF05PJ",
+                    "name": "The Weeknd"
+                },
+                {
+                    "id": "55Aa2cqylxrFIXC767Z865",
+                    "name": "Lil Wayne"
+                }
+            ],
+            "genre": [
+                "r&b",
+                "rap"
+            ],
+            "liked": 1567980,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689334049/APOLLOFY/apollofy_i-heard-you-are-married-the-weeknd-lil-wayne.mp3",
+            "verified": true,
+            "album": {
+                "id": "2nLOHgzXzwFEpl62zAgCEC",
+                "name": "Dawn FM"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d000048514ab2520c2c77a1d66b9ee21d"
+        },
+        {
+            "id": "1NlK2NtpuUazpziLhnJwEV",
+            "name": "Phantom Regret by Jim",
+            "artists": [
+                {
+                    "id": "1Xyo4u8uXC1ZmMpatF05PJ",
+                    "name": "The Weeknd"
+                }
+            ],
+            "genre": [
+                "pop",
+                "r&b"
+            ],
+            "liked": 1567980,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689334299/APOLLOFY/apollofy_phantom-regret-by-jim-the-weeknd.mp3",
+            "verified": true,
+            "album": {
+                "id": "2nLOHgzXzwFEpl62zAgCEC",
+                "name": "Dawn FM"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d000048514ab2520c2c77a1d66b9ee21d"
+        },
+        {
+            "id": "0dRhSF9LV0HR8Jwd3MMMKJ",
+            "name": "Everytime",
+            "artists": [
+                {
+                    "id": "26dSoYclwsYLMAKD3tpOr4",
+                    "name": "Britney Spears"
+                }
+            ],
+            "genre": [
+                "pop"
+            ],
+            "liked": 10567980,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689334415/APOLLOFY/apollofy_everytime-britney-spears.mp3",
+            "verified": true,
+            "album": {
+                "id": "0z7pVBGOD7HCIB7S8eLkLI",
+                "name": "In the Zone"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851efc6988972cb04105f002cd4"
+        },
+        {
+            "id": "2vPCRs3g0vdLU8sHlAEytO",
+            "name": "Outrageous",
+            "artists": [
+                {
+                    "id": "26dSoYclwsYLMAKD3tpOr4",
+                    "name": "Britney Spears"
+                }
+            ],
+            "genre": [
+                "pop",
+                "dance"
+            ],
+            "liked": 8567980,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689334560/APOLLOFY/apollofy_outrsgeous-britney-spears.mp3",
+            "verified": true,
+            "album": {
+                "id": "0z7pVBGOD7HCIB7S8eLkLI",
+                "name": "In the Zone"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851efc6988972cb04105f002cd4"
+        },
+        {
+            "id": "3buxlp1m5TLONPem13GSpt",
+            "name": "Mannequin",
+            "artists": [
+                {
+                    "id": "26dSoYclwsYLMAKD3tpOr4",
+                    "name": "Britney Spears"
+                }
+            ],
+            "genre": [
+                "dance",
+                "pop"
+            ],
+            "liked": 11567980,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689334968/APOLLOFY/apollofy_mannequin-britney-spears.mp3",
+            "verified": true,
+            "album": {
+                "id": "2tve5DGwub1TtbX1khPX5j",
+                "name": "Circus"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d0000485154c6edd554935d73e159e199"
+        },
+        {
+            "id": "0Y7exe8Yu2nbuIvGDRGXcz",
+            "name": "Blur",
+            "artists": [
+                {
+                    "id": "26dSoYclwsYLMAKD3tpOr4",
+                    "name": "Britney Spears"
+                }
+            ],
+            "genre": [
+                "pop"
+            ],
+            "liked": 5567980,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335068/APOLLOFY/apollofy_blur_britney-spears.mp3",
+            "verified": true,
+            "album": {
+                "id": "2tve5DGwub1TtbX1khPX5j",
+                "name": "Circus"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d0000485154c6edd554935d73e159e199"
+        },
+        {
+            "id": "1PcANFoqnDsexSHXpWrn8Q",
+            "name": "Adderall",
+            "artists": [
+                {
+                    "id": "05fG473iIaoy82BF1aGhL8",
+                    "name": "Slipknot"
+                }
+            ],
+            "genre": [
+                "rock",
+                "metal"
+            ],
+            "liked": 447980,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335220/APOLLOFY/apollofy_adderall-slipknot.mp3",
+            "verified": true,
+            "album": {
+                "id": "3hWTXO0w02D6YpVRyLRmQz",
+                "name": "The End, So Far"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851c3eedff14af24fdd988ed1a7"
+        },
+        {
+            "id": "6rsoBvxrlxdmqJyGPPciyq",
+            "name": "The Dying Song (Time To Sing)",
+            "artists": [
+                {
+                    "id": "05fG473iIaoy82BF1aGhL8",
+                    "name": "Slipknot"
+                }
+            ],
+            "genre": [
+                "metal"
+            ],
+            "liked": 747980,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335312/APOLLOFY/apollofy_the-dying-song-slipknot.mp3",
+            "verified": true,
+            "album": {
+                "id": "3hWTXO0w02D6YpVRyLRmQz",
+                "name": "The End, So Far"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851c3eedff14af24fdd988ed1a7"
+        },
+        {
+            "id": "5Oca13ac6cZ0hwZAs1SXse",
+            "name": "Insert Coin",
+            "artists": [
+                {
+                    "id": "05fG473iIaoy82BF1aGhL8",
+                    "name": "Slipknot"
+                }
+            ],
+            "genre": [
+                "metal",
+                "rap"
+            ],
+            "liked": 947980,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335405/APOLLOFY/apollofy_insert-coin-slipknot.mp3",
+            "verified": true,
+            "album": {
+                "id": "754RY5WpZ2LTUZsk8kDBju",
+                "name": "We Are Not Your Kind"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d0000485126f20b4d67c0c7b0f137ce4f"
+        },
+        {
+            "id": "5mpUKTdskZea0gStWzeHUZ",
+            "name": "Unsainted",
+            "artists": [
+                {
+                    "id": "05fG473iIaoy82BF1aGhL8",
+                    "name": "Slipknot"
+                }
+            ],
+            "genre": [
+                "metal"
+            ],
+            "liked": 1123768,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335567/APOLLOFY/apollofy_unsainted-slipknot.mp3",
+            "verified": true,
+            "album": {
+                "id": "754RY5WpZ2LTUZsk8kDBju",
+                "name": "We Are Not Your Kind"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d0000485126f20b4d67c0c7b0f137ce4f"
+        },
+        {
+            "id": "62yJjFtgkhUrXktIoSjgP2",
+            "name": "Radioactive",
+            "artists": [
+                {
+                    "id": "53XhwfbYqKCa1cC15pYq2q",
+                    "name": "Imagine Dragons"
+                }
+            ],
+            "genre": [
+                "rock",
+                "pop"
+            ],
+            "liked": 45987675,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335767/APOLLOFY/apollofy_radioactive-imagine-dragons.mp3",
+            "verified": true,
+            "album": {
+                "id": "6nxDQi0FeEwccEPJeNySoS",
+                "name": "Night Visions"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851407bd04707c463bbb3410737"
+        },
+        {
+            "id": "7lBPn6LpIvbvAihTRvBMig",
+            "name": "TipToe",
+            "artists": [
+                {
+                    "id": "53XhwfbYqKCa1cC15pYq2q",
+                    "name": "Imagine Dragons"
+                }
+            ],
+            "genre": [
+                "pop"
+            ],
+            "liked": 22987675,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335833/APOLLOFY/apollofy_tiptoe-imagine-dragons.mp3",
+            "verified": true,
+            "album": {
+                "id": "6nxDQi0FeEwccEPJeNySoS",
+                "name": "Night Visions"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851407bd04707c463bbb3410737"
+        },
+        {
+            "id": "1VMBapbhHidf6ALFszT7w1",
+            "name": "Lonely",
+            "artists": [
+                {
+                    "id": "53XhwfbYqKCa1cC15pYq2q",
+                    "name": "Imagine Dragons"
+                }
+            ],
+            "genre": [
+                "pop"
+            ],
+            "liked": 18009890,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335885/APOLLOFY/apollofy_lonely-imagine-dragons.mp3",
+            "verified": true,
+            "album": {
+                "id": "6yiXkzHvC0OTmhfDQOEWtS",
+                "name": "Mercury - Acts 1 & 2"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851fc915b69600dce2991a61f13"
+        },
+        {
+            "id": "0E0kxko3i9b5JxxMoGH3At",
+            "name": "My Life",
+            "artists": [
+                {
+                    "id": "53XhwfbYqKCa1cC15pYq2q",
+                    "name": "Imagine Dragons"
+                }
+            ],
+            "genre": [
+                "rock",
+                "pop"
+            ],
+            "liked": 28009890,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689335926/APOLLOFY/apollofy_my-life-imagine-dragons.mp3",
+            "verified": true,
+            "album": {
+                "id": "6yiXkzHvC0OTmhfDQOEWtS",
+                "name": "Mercury - Acts 1 & 2"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851fc915b69600dce2991a61f13"
+        },
+        {
+            "id": "0aE2HXcm7eoEGZG5i6rPXK",
+            "name": "Two 6's Upside Down",
+            "artists": [
+                {
+                    "id": "7w9jdhcgHNdiPeNPUoFSlx",
+                    "name": "Dropkick Murphys"
+                }
+            ],
+            "genre": [
+                "punk"
+            ],
+            "liked": 8009890,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553249/APOLLOFY/Apollofy-Two-6%27s-Upside-Down-Dropkick_Murphys.mp3",
+            "verified": true,
+            "album": {
+                "id": "3WK3HkX9lTZIhnHdehjEGB",
+                "name": "This Machine Still Kills Fascists (Expanded Edition)"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851e68cf651a94fb62172da266b"
+        },
+        {
+            "id": "4qF2ncOvyw04e8Cbe5WvO2",
+            "name": "Talking Jukebox",
+            "artists": [
+                {
+                    "id": "7w9jdhcgHNdiPeNPUoFSlx",
+                    "name": "Dropkick Murphys"
+                }
+            ],
+            "genre": [
+                "punk"
+            ],
+            "liked": 4009890,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553333/APOLLOFY/Apollofy_Talkiing-Jukebox-Dropkick_Murphys.mp3",
+            "verified": true,
+            "album": {
+                "id": "3WK3HkX9lTZIhnHdehjEGB",
+                "name": "This Machine Still Kills Fascists (Expanded Edition)"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851e68cf651a94fb62172da266b"
+        },
+        {
+            "id": "0rCu0jiqoJHsqaarwraeRA",
+            "name": "My Eyes Are Gonna Shine",
+            "artists": [
+                {
+                    "id": "7w9jdhcgHNdiPeNPUoFSlx",
+                    "name": "Dropkick Murphys"
+                }
+            ],
+            "genre": [
+                "rock"
+            ],
+            "liked": 12009890,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553485/APOLLOFY/Apollofy_My-Eyes-Are-Gonna-Shine_Dropkick-Murphys.mp3",
+            "verified": true,
+            "album": {
+                "id": "40SrskkBlg2KUdW4zhG2hK",
+                "name": "Okemah Rising"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851639ebb8e7a3eb1f03c8839d2"
+        },
+        {
+            "id": "3H23O1qOJa99E7wFpPT6Ln",
+            "name": "Watching The World Go By",
+            "artists": [
+                {
+                    "id": "7w9jdhcgHNdiPeNPUoFSlx",
+                    "name": "Dropkick Murphys"
+                }
+            ],
+            "genre": [
+                "rock"
+            ],
+            "liked": 1009890,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553538/APOLLOFY/Apollofy_Watching-The-World-Go-By.mp3",
+            "verified": true,
+            "album": {
+                "id": "40SrskkBlg2KUdW4zhG2hK",
+                "name": "Okemah Rising"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851639ebb8e7a3eb1f03c8839d2"
+        },
+        {
+            "id": "4fhz2FJzEkLDPl7W6waSdY",
+            "name": "MK Ultra - El testimonio Libra titles",
+            "artists": [
+                {
+                    "id": "5t9ChGEQOzEA3gxWtXEw48",
+                    "name": "Elphomega"
+                }
+            ],
+            "genre": [
+                "hip-hop"
+            ],
+            "liked": 109890,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553769/APOLLOFY/Apollofy_MK_Ultra_-_El_testimonio_Libra_titles_Elphomega.mp3",
+            "verified": true,
+            "album": {
+                "id": "2Ppv8YROLkQ2IcmjMCytS0",
+                "name": "El Testimonio Libra"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851a7810ebe026261b68cb194c8"
+        },
+        {
+            "id": "7wf5IS43OXNh70ZX46UCoy",
+            "name": "Gafas",
+            "artists": [
+                {
+                    "id": "5t9ChGEQOzEA3gxWtXEw48",
+                    "name": "Elphomega"
+                }
+            ],
+            "genre": [
+                "rap",
+                "hip-hop"
+            ],
+            "liked": 409890,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553778/APOLLOFY/Apollofy_Gafas_Elphomega.mp3",
+            "verified": true,
+            "album": {
+                "id": "2Ppv8YROLkQ2IcmjMCytS0",
+                "name": "El Testimonio Libra"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851a7810ebe026261b68cb194c8"
+        },
+        {
+            "id": "4WT92JeiPDnktqlf7Ueqwh",
+            "name": "Sol de Sábado, Lluvia de domingo",
+            "artists": [
+                {
+                    "id": "5t9ChGEQOzEA3gxWtXEw48",
+                    "name": "Elphomega"
+                }
+            ],
+            "genre": [
+                "rap"
+            ],
+            "liked": 609890,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553786/APOLLOFY/Apollofy_Sol_de_Sa%CC%81bado_Lluvia_de_Domingo_Elphomega.mp3",
+            "verified": true,
+            "album": {
+                "id": "32HzePZsOJ6gWR6MXB5gBQ",
+                "name": "Phantom Pop"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851c7c678df37ad4d1cf0043947"
+        },
+        {
+            "id": "4u4eYJPiIN1y8RgdcA9H2G",
+            "name": "1.000 Problemas",
+            "artists": [
+                {
+                    "id": "5t9ChGEQOzEA3gxWtXEw48",
+                    "name": "Elphomega"
+                }
+            ],
+            "genre": [
+                "hip-hop",
+                "rap"
+            ],
+            "liked": 1609890,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689553791/APOLLOFY/Apollofy_1.000_Problemas_Elphomega.mp3",
+            "verified": true,
+            "album": {
+                "id": "32HzePZsOJ6gWR6MXB5gBQ",
+                "name": "Phantom Pop"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851c7c678df37ad4d1cf0043947"
+        },
+        {
+            "id": "08YvUaUsZktAG6zEMDwUqO",
+            "name": "Sprinter",
+            "artists": [
+                {
+                    "id": "5H4yInM5zmHqpKIoMNAx4r",
+                    "name": "Central Cee"
+                },
+                {
+                    "id": "6Ip8FS7vWT1uKkJSweANQK",
+                    "name": "Dave"
+                }
+            ],
+            "genre": [
+                "rap",
+                "hip-hop"
+            ],
+            "liked": 16160,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554001/APOLLOFY/Apollofy_Sprinter_Central-cee_Dave.mp3",
+            "verified": true,
+            "album": {
+                "id": "0On7uutIu9rZRvP9aJbMog",
+                "name": "Split Decision"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d0000485126847a635b96c96fee81d838"
+        },
+        {
+            "id": "2VjOTvl50tscmc0RDjPdr2",
+            "name": "UK Rap",
+            "artists": [
+                {
+                    "id": "5H4yInM5zmHqpKIoMNAx4r",
+                    "name": "Central Cee"
+                },
+                {
+                    "id": "6Ip8FS7vWT1uKkJSweANQK",
+                    "name": "Dave"
+                }
+            ],
+            "genre": [
+                "rap",
+                "drill"
+            ],
+            "liked": 42069,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554011/APOLLOFY/Apollofy_UK_Rap_Central-cee_Dave.mp3",
+            "verified": true,
+            "album": {
+                "id": "0On7uutIu9rZRvP9aJbMog",
+                "name": "Split Decision"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d0000485126847a635b96c96fee81d838"
+        },
+        {
+            "id": "2ZVSjes0VFYg9uJu4olsi4",
+            "name": "Khabib",
+            "artists": [
+                {
+                    "id": "5H4yInM5zmHqpKIoMNAx4r",
+                    "name": "Central Cee"
+                }
+            ],
+            "genre": [
+                "drill"
+            ],
+            "liked": 1224878,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554019/APOLLOFY/Apollofy_Khabib_Central-cee.mp3",
+            "verified": true,
+            "album": {
+                "id": "0SakL2ra5Cik5yQgKQBHGp",
+                "name": "23"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851e1f05c994777b79bc5c87547"
+        },
+        {
+            "id": "709MdyUol3Qfgcowmd7KV4",
+            "name": "Straight Back To It",
+            "artists": [
+                {
+                    "id": "5H4yInM5zmHqpKIoMNAx4r",
+                    "name": "Central Cee"
+                }
+            ],
+            "genre": [
+                "drill"
+            ],
+            "liked": 965854,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554025/APOLLOFY/Apollofy_Straight_Back_to_It_Central-cee.mp3",
+            "verified": true,
+            "album": {
+                "id": "0SakL2ra5Cik5yQgKQBHGp",
+                "name": "23"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851e1f05c994777b79bc5c87547"
+        },
+        {
+            "id": "2kSdFyyM9O7JqmmTBgVs6V",
+            "name": "Birds",
+            "artists": [
+                {
+                    "id": "491U1PrV1EoQuhM0aUCn9r",
+                    "name": "M Huncho"
+                }
+            ],
+            "genre": [
+                "hip-hop"
+            ],
+            "liked": 281559,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554227/APOLLOFY/Apollofy_Birds_M-Huncho.mp3",
+            "verified": true,
+            "album": {
+                "albumId": "6YlILpG7sdsgCODA8VO15d",
+                "name": "Utopia"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d000048512ed6c99890ba67bd6c773c72"
+        },
+        {
+            "id": "6Ex1f0wNa3kkol50oTsvzC",
+            "name": "Tranquility",
+            "artists": [
+                {
+                    "id": "491U1PrV1EoQuhM0aUCn9r",
+                    "name": "M Huncho"
+                }
+            ],
+            "genre": [
+                "hip-hop",
+                "rap"
+            ],
+            "liked": 184839,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554234/APOLLOFY/Apollofy_Tranquility_M-huncho.mp3",
+            "verified": true,
+            "album": {
+                "albumId": "6YlILpG7sdsgCODA8VO15d",
+                "name": "Utopia"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d000048512ed6c99890ba67bd6c773c72"
+        },
+        {
+            "id": "1h5Sb44FGJdYqkrfznnau7",
+            "name": "Unapreciated",
+            "artists": [
+                {
+                    "id": "491U1PrV1EoQuhM0aUCn9r",
+                    "name": "M Huncho"
+                }
+            ],
+            "genre": [
+                "hip-hop"
+            ],
+            "liked": 337839,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554244/APOLLOFY/Apollofy_Unappreciated_M-Huncho.mp3",
+            "verified": true,
+            "album": {
+                "id": "2tjspYARHteVufdXfLEkJa",
+                "name": "Chasing Euphoria"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d0000485156760083a7f21cf162ed1806"
+        },
+        {
+            "id": "4iRDtaQCDsGxUN2MbfV8Tl",
+            "name": "Stainless",
+            "artists": [
+                {
+                    "id": "491U1PrV1EoQuhM0aUCn9r",
+                    "name": "M Huncho"
+                }
+            ],
+            "genre": [
+                "hip-hop"
+            ],
+            "liked": 77109,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554248/APOLLOFY/Apollofy_Stainless_M-Huncho.mp3",
+            "verified": true,
+            "album": {
+                "id": "2tjspYARHteVufdXfLEkJa",
+                "name": "Chasing Euphoria"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d0000485156760083a7f21cf162ed1806"
+        },
+        {
+            "id": "0FWAIRd9Uz5uNek7cALYNC",
+            "name": "Psycho",
+            "artists": [
+                {
+                    "id": "6Ip8FS7vWT1uKkJSweANQK",
+                    "name": "Dave"
+                }
+            ],
+            "genre": [
+                "hip-hop",
+                "rap"
+            ],
+            "liked": 5438589,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554435/APOLLOFY/Apollofy_Psycho_Dave.mp3",
+            "verified": true,
+            "album": {
+                "id": "4GrFuXwRmEBJec22p58fsD",
+                "name": "PSYCHODRAMA"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851c1c8d2889455db6d03d309ed"
+        },
+        {
+            "id": "59PUOc7B0WCNNx8Nr4qaA4",
+            "name": "Streatham",
+            "artists": [
+                {
+                    "id": "6Ip8FS7vWT1uKkJSweANQK",
+                    "name": "Dave"
+                }
+            ],
+            "genre": [
+                "hip-hop",
+                "rap"
+            ],
+            "liked": 9344889,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554442/APOLLOFY/Apollofy_Streatham_Dave.mp3",
+            "verified": true,
+            "album": {
+                "id": "4GrFuXwRmEBJec22p58fsD",
+                "name": "PSYCHODRAMA"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851c1c8d2889455db6d03d309ed"
+        },
+        {
+            "id": "22agj1ppHejR41cUyf7k6v",
+            "name": "We're All Alone",
+            "artists": [
+                {
+                    "id": "6Ip8FS7vWT1uKkJSweANQK",
+                    "name": "Dave"
+                }
+            ],
+            "genre": [
+                "hip-hop",
+                "rap"
+            ],
+            "liked": 228859,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554451/APOLLOFY/Apollofy_We_re_All_Alone_Dave.mp3",
+            "verified": true,
+            "album": {
+                "id": "6HwzIlrCDq3WF9vMq8meqG",
+                "name": "We're All Alone In This Thogether"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851da5b9c1eb275d48e14d25f3e"
+        },
+        {
+            "id": "7IPKXYU2rTMnrLW5IZ7ZI5",
+            "name": "Verdansk",
+            "artists": [
+                {
+                    "id": "6Ip8FS7vWT1uKkJSweANQK",
+                    "name": "Dave"
+                }
+            ],
+            "genre": [
+                "hip-hop",
+                "rap"
+            ],
+            "liked": 5421559,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554456/APOLLOFY/Apollofy_Verdansk_Dave.mp3",
+            "verified": true,
+            "album": {
+                "id": "6HwzIlrCDq3WF9vMq8meqG",
+                "name": "We're All Alone In This Thogether"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851da5b9c1eb275d48e14d25f3e"
+        },
+        {
+            "id": "5qP24CrDI0rmY5zwRvUfzU",
+            "name": "AHORA QUÉ",
+            "artists": [
+                {
+                    "id": "52iwsT98xCoGgiGntTiR7K",
+                    "name": "Quevedo"
+                }
+            ],
+            "genre": [
+                "rap",
+                "urban"
+            ],
+            "liked": 3433525,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554601/APOLLOFY/Apollofy_AHORA_QUE%CC%81_Quevedo.mp3",
+            "verified": true,
+            "album": {
+                "id": "156gxGFDxadwiIC3Bfwmj3",
+                "name": "DONDE QUIERO ESTAR"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851efc1b8f6beda4abe848a84e0"
+        },
+        {
+            "id": "0FirgnvrpCkkhdaq64Gfen",
+            "name": "YANKEE",
+            "artists": [
+                {
+                    "id": "52iwsT98xCoGgiGntTiR7K",
+                    "name": "Quevedo"
+                }
+            ],
+            "genre": [
+                "rap",
+                "urban"
+            ],
+            "liked": 1523425,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554610/APOLLOFY/Apollofy_YANKEE_Quevedo.mp3",
+            "verified": true,
+            "album": {
+                "id": "156gxGFDxadwiIC3Bfwmj3",
+                "name": "DONDE QUIERO ESTAR"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851efc1b8f6beda4abe848a84e0"
+        },
+        {
+            "id": "5q86iSKkBtOoNkdgEDY5WV",
+            "name": "VISTA AL MAR",
+            "artists": [
+                {
+                    "id": "52iwsT98xCoGgiGntTiR7K",
+                    "name": "Quevedo"
+                }
+            ],
+            "genre": [
+                "rap",
+                "urban"
+            ],
+            "liked": 1225425,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554616/APOLLOFY/Apollofy_VISTA_AL_MAR_Quevedo.mp3",
+            "verified": true,
+            "album": {
+                "id": "156gxGFDxadwiIC3Bfwmj3",
+                "name": "DONDE QUIERO ESTAR"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851efc1b8f6beda4abe848a84e0"
+        },
+        {
+            "id": "0Iozrbed8spxoBnmtBMshO",
+            "name": "WANDA",
+            "artists": [
+                {
+                    "id": "52iwsT98xCoGgiGntTiR7K",
+                    "name": "Quevedo"
+                }
+            ],
+            "genre": [
+                "rap",
+                "urban"
+            ],
+            "liked": 2225589,
+            "url": "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689554623/APOLLOFY/Apollofy_WANDA_Quevedo.mp3",
+            "verified": true,
+            "album": {
+                "id": "156gxGFDxadwiIC3Bfwmj3",
+                "name": "DONDE QUIERO ESTAR"
+            },
+            "imageUrl": "https://i.scdn.co/image/ab67616d00004851efc1b8f6beda4abe848a84e0"
+        }
+    ],
+    "genres": [
+        {
+            "id": "87af4c23-4b5e-41d2-b6fc-8e8649a1a3d8",
+            "name": "Hip-hop",
+            "imageUrl": "https://us.123rf.com/450wm/ylivdesign/ylivdesign1909/ylivdesign190900135/129338457-icono-de-hip-hop-estilo-simple.jpg?ver=6",
+            "btnColor": "#8E66AC"
+        },
+        {
+            "id": "a2c8b941-716f-4b19-9eae-cc2078418b99",
+            "name": "Rock",
+            "imageUrl": "https://vignette1.wikia.nocookie.net/es.music/images/a/a5/Rock-Music-Logo-Decor-Vinyl-Wall-Art-c2f2785e-18b2-471e-a471-fc994c2a74fb_600.jpg/revision/latest?cb=20150625211537",
+            "btnColor": "#5F8108"
+        },
+        {
+            "id": "e9f675de-8db6-492e-91fe-1e546f24f73b",
+            "name": "Pop",
+            "imageUrl": "https://static.vecteezy.com/system/resources/previews/004/224/154/original/pop-music-handwritten-stock-lettering-typography-calligraphy-for-logotype-badge-icon-card-postcard-logo-banner-tag-illustration-eps10-free-vector.jpg",
+            "btnColor": "#E51E31"
+        },
+        {
+            "id": "3bd5c81a-1d7a-4b5f-8c29-2cfe3c17e42a",
+            "name": "R&B",
+            "imageUrl": "https://t4.ftcdn.net/jpg/03/08/18/99/360_F_308189978_CtvYsmilaUzUBIR0jJF0irSX5aE16g69.jpg",
+            "btnColor": "#E13300"
+        },
+        {
+            "id": "d0e32f96-6be5-41e8-9db2-8a1f9d032d4f",
+            "name": "Metal",
+            "imageUrl": "https://render.fineartamerica.com/images/rendered/default/flat/blanket/images/artworkimages/medium/3/metal-hand-sign-metalcore-heavy-metal-hard-rock-music-lovers-blues-funk-band-gift-thomas-larch-transparent.png?&targetx=180&targety=0&imagewidth=616&imageheight=740&modelwidth=977&modelheight=740&backgroundcolor=000000&orientation=1&producttype=blanket-sherpa-60-80",
+            "btnColor": "#8E66AC"
+        },
+        {
+            "id": "f4b3e9c7-7f8d-456c-bc3c-6d4686a9d3aa",
+            "name": "Punk",
+            "imageUrl": "https://res.cloudinary.com/teepublic/image/private/s--qBTKSUU2--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffa,e_outline:48/co_fffffa,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1625898873/production/designs/22988283_8.jpg",
+            "btnColor": "#0C73EC"
+        },
+        {
+            "id": "9a5c0e21-3dbf-4297-a8f6-df48ae4abeb0",
+            "name": "Dance",
+            "imageUrl": "https://st.depositphotos.com/1027431/4657/v/600/depositphotos_46573749-stock-illustration-abstract-vector-logo-design-template.jpg",
+            "btnColor": "#E51E31"
+        },
+        {
+            "id": "c16f9b42-5437-4a75-90c9-8d883f11f3a5",
+            "name": "Rap",
+            "imageUrl": "https://img.freepik.com/vecteurs-premium/graffiti-rap-splash-grunge-forme-coeur-lettres-connectees-seule-bande-points-demi-teinte-cool-embleme-expressif-amour-pour-style-musique-hip-hop_177819-4.jpg?w=2000",
+            "btnColor": "#8E66AC"
+        },
+        {
+            "id": "562e8bfa-4b57-47a9-8f7b-d97d72a9f21c",
+            "name": "Drill",
+            "imageUrl": "https://hiphopsince1987.com/wp-content/uploads/2021/06/mwuZ8jp6xmQe.jpg",
+            "btnColor": "#E13300"
+        },
+        {
+            "id": "207cf87e-1b62-4328-8b68-6dc2993f8e77",
+            "name": "Urban",
+            "imageUrl": "https://i.fbcd.co/products/original/3dc41c20140e225f3a8fa7fa177dd88258714746f4b1b3e398343f31f6266070.jpg",
+            "btnColor": "#203264"
+        }
+    ],
+    "playlists": [
+        {
+            "id": "262ad7d6-959c-43b9-a557-259adf26cb3e",
+            "name": "Top 10 Global",
+            "isFollowed": true,
+            "owner": "Apollofy",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02f570e90de9ca85b8ddc50ca1",
+            "description": "Top 10 Global",
+            "tracks": [
+                {
+                    "id": "62yJjFtgkhUrXktIoSjgP2"
+                },
+                {
+                    "id": "5Oca13ac6cZ0hwZAs1SXse"
+                },
+                {
+                    "id": "2BcnxwxBuar5wjCaLqm5N3"
+                },
+                {
+                    "id": "0FirgnvrpCkkhdaq64Gfen"
+                },
+                {
+                    "id": "0E0kxko3i9b5JxxMoGH3At"
+                },
+                {
+                    "id": "5qP24CrDI0rmY5zwRvUfzU"
+                },
+                {
+                    "id": "2vPCRs3g0vdLU8sHlAEytO"
+                },
+                {
+                    "id": "4WT92JeiPDnktqlf7Ueqwh"
+                },
+                {
+                    "id": "0dRhSF9LV0HR8Jwd3MMMKJ"
+                },
+                {
+                    "id": "08YvUaUsZktAG6zEMDwUqO"
+                }
+            ],
+            "type": "playlist"
+        },
+        {
+            "id": "63ecd9be-e311-47ce-822e-5d969d37cb49",
+            "name": "Top 10 Spain",
+            "isFollowed": true,
+            "owner": "Apollofy",
+            "imageUrl": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_es_large.jpg",
+            "description": "Top 10 Spain",
+            "tracks": [
+                {
+                    "id": "5qP24CrDI0rmY5zwRvUfzU"
+                },
+                {
+                    "id": "0FirgnvrpCkkhdaq64Gfen"
+                },
+                {
+                    "id": "709MdyUol3Qfgcowmd7KV4"
+                },
+                {
+                    "id": "1PcANFoqnDsexSHXpWrn8Q"
+                },
+                {
+                    "id": "40U8d12pC5UHqmHwXjHjjl"
+                },
+                {
+                    "id": "2ZVSjes0VFYg9uJu4olsi4"
+                },
+                {
+                    "id": "22agj1ppHejR41cUyf7k6v"
+                },
+                {
+                    "id": "0aE2HXcm7eoEGZG5i6rPXK"
+                },
+                {
+                    "id": "5XbA7TAqsD0fj0dGBrbb0D"
+                },
+                {
+                    "id": "0Y7exe8Yu2nbuIvGDRGXcz"
+                }
+            ],
+            "type": "playlist"
+        },
+        {
+            "id": "7960b357-dc43-4939-832d-b2115f163bc3",
+            "name": "Today's Top Hits",
+            "isFollowed": true,
+            "owner": "Apollofy",
+            "imageUrl": "https://i.scdn.co/image/ab67706f00000003b3823d06a3718d5dc082e91f",
+            "description": "Today's Top Hits",
+            "tracks": [
+                {
+                    "id": "22agj1ppHejR41cUyf7k6v"
+                },
+                {
+                    "id": "709MdyUol3Qfgcowmd7KV4"
+                },
+                {
+                    "id": "62yJjFtgkhUrXktIoSjgP2"
+                },
+                {
+                    "id": "0Y7exe8Yu2nbuIvGDRGXcz"
+                }
+            ],
+            "type": "playlist"
+        },
+        {
+            "id": "7960b357-bj43-0021-832d-b2115f163bc3",
+            "name": "My Personal Fauvorites",
+            "isFollowed": false,
+            "owner": "101117c9-e76e-4904-ad3d-1d9cd08835e7",
+            "imageUrl": "https://avatars.githubusercontent.com/u/131694498?v=4",
+            "description": "My Personal Fauvorites",
+            "tracks": [
+                {
+                    "id": "22agj1ppHejR41cUyf7k6v"
+                },
+                {
+                    "id": "0FirgnvrpCkkhdaq64Gfen"
+                }
+            ],
+            "type": "playlist"
+        },
+        {
+            "id": "70867tg-kctc65e-vi67rc-b769rcgh",
+            "name": "My Personal Fauvorites",
+            "isFollowed": false,
+            "owner": "af99a651-4118-48ab-933c-0f7927fe70d2",
+            "imageUrl": "https://avatars.githubusercontent.com/u/131694498?v=4",
+            "description": "My Personal Fauvorites",
+            "tracks": [
+                {
+                    "id": "0FirgnvrpCkkhdaq64Gfen"
+                },
+                {
+                    "id": "7wf5IS43OXNh70ZX46UCoy"
+                }
+            ],
+            "type": "playlist"
+        },
+        {
+            "id": "uiebg7834tg-54y245htrwey-4h5h5wr-g-w45g4h45",
+            "name": "My Personal Fauvorites",
+            "isFollowed": false,
+            "owner": "e47291ca-f376-4456-bd60-e02319ee280d",
+            "imageUrl": "https://avatars.githubusercontent.com/u/131694498?v=4",
+            "description": "My Personal Fauvorites",
+            "tracks": [],
+            "type": "playlist"
+        },
+        {
+            "id": "erhy54hw45h-rhrwthh45-454hqerwh-43h43345",
+            "name": "My Personal Fauvorites",
+            "isFollowed": false,
+            "owner": "ad84c6f9-e695-456d-95ef-cf8a982e2e7d",
+            "imageUrl": "https://avatars.githubusercontent.com/u/131694498?v=4",
+            "description": "My Personal Fauvorites",
+            "tracks": [],
+            "type": "playlist"
+        },
+        {
+            "id": "9b1421-ssee-b43gr78-frmomdfaf5d-ag33444",
+            "name": "My Personal Fauvorites",
+            "isFollowed": false,
+            "owner": "9b1421f2-e2a5-4200-8321-2224fcdfaf5d",
+            "imageUrl": "https://avatars.githubusercontent.com/u/131694498?v=4",
+            "description": "My Personal Fauvorites",
+            "tracks": [],
+            "type": "playlist"
+        }
+    ],
+    "albums": [
+        {
+            "id": "4yP0hdKOZPNshxUOjY0cZj",
+            "name": "After Hours",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e028863bc11d2aa12b54f5aeb36",
+            "tracks": [
+                {
+                    "id": "40U8d12pC5UHqmHwXjHjjl",
+                    "name": "Repeat After Me (Interlude)"
+                },
+                {
+                    "id": "2BcnxwxBuar5wjCaLqm5N3",
+                    "name": "Until I Bleed Out"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "1Xyo4u8uXC1ZmMpatF05PJ",
+                    "name": "The Weeknd"
+                }
+            ],
+            "type": "album"
+        },
+        {
+            "id": "2nLOHgzXzwFEpl62zAgCEC",
+            "name": "Dawn FM",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02ade87e5f9c3764f0a1e5df64",
+            "tracks": [
+                {
+                    "id": "5XbA7TAqsD0fj0dGBrbb0D",
+                    "name": "I Heard You’re Married (feat. Lil Wayne)"
+                },
+                {
+                    "id": "1NlK2NtpuUazpziLhnJwEV",
+                    "name": "Phantom Regret by Jim"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "1Xyo4u8uXC1ZmMpatF05PJ",
+                    "name": "The Weeknd"
+                }
+            ],
+            "type": "album"
+        },
+        {
+            "id": "0z7pVBGOD7HCIB7S8eLkLI",
+            "name": "In the Zone",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02efc6988972cb04105f002cd4",
+            "tracks": [
+                {
+                    "id": "0dRhSF9LV0HR8Jwd3MMMKJ",
+                    "name": "Everytime"
+                },
+                {
+                    "id": "2vPCRs3g0vdLU8sHlAEytO",
+                    "name": "Outrageous"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "26dSoYclwsYLMAKD3tpOr4",
+                    "name": "Britney Spears"
+                }
+            ],
+            "type": "album"
+        },
+        {
+            "id": "2tve5DGwub1TtbX1khPX5j",
+            "name": "Circus",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e0254c6edd554935d73e159e199",
+            "tracks": [
+                {
+                    "id": "3buxlp1m5TLONPem13GSpt",
+                    "name": "Mannequin"
+                },
+                {
+                    "id": "0Y7exe8Yu2nbuIvGDRGXcz",
+                    "name": "Blur"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "26dSoYclwsYLMAKD3tpOr4",
+                    "name": "Britney Spears"
+                }
+            ],
+            "type": "album"
+        },
+        {
+            "id": "3hWTXO0w02D6YpVRyLRmQz",
+            "name": "The End, So Far",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02c3eedff14af24fdd988ed1a7",
+            "tracks": [
+                {
+                    "id": "1PcANFoqnDsexSHXpWrn8Q",
+                    "name": "Adderall"
+                },
+                {
+                    "id": "6rsoBvxrlxdmqJyGPPciyq",
+                    "name": "The Dying Song (Time To Sing)"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "05fG473iIaoy82BF1aGhL8",
+                    "name": "Slipknot"
+                }
+            ],
+            "type": "album"
+        },
+        {
+            "id": "754RY5WpZ2LTUZsk8kDBju",
+            "name": "We Are Not Your Kind",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e0226f20b4d67c0c7b0f137ce4f",
+            "tracks": [
+                {
+                    "id": "5Oca13ac6cZ0hwZAs1SXse",
+                    "name": "Insert Coin"
+                },
+                {
+                    "id": "5mpUKTdskZea0gStWzeHUZ",
+                    "name": "Unsainted"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "05fG473iIaoy82BF1aGhL8",
+                    "name": "Slipknot"
+                }
+            ],
+            "type": "album"
+        },
+        {
+            "id": "6nxDQi0FeEwccEPJeNySoS",
+            "name": "Night Visions",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e0281eeace38068e9444cb28a3e",
+            "tracks": [
+                {
+                    "id": "62yJjFtgkhUrXktIoSjgP2",
+                    "name": "Radioactive"
+                },
+                {
+                    "id": "7lBPn6LpIvbvAihTRvBMig",
+                    "name": "TipToe"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "53XhwfbYqKCa1cC15pYq2q",
+                    "name": "Imagine Dragons"
+                }
+            ],
+            "type": "album"
+        },
+        {
+            "id": "6yiXkzHvC0OTmhfDQOEWtS",
+            "name": "Mercury - Acts 1 & 2",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02fc915b69600dce2991a61f13",
+            "tracks": [
+                {
+                    "id": "1VMBapbhHidf6ALFszT7w1",
+                    "name": "Lonely"
+                },
+                {
+                    "id": "0E0kxko3i9b5JxxMoGH3At",
+                    "name": "My Life"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "53XhwfbYqKCa1cC15pYq2q",
+                    "name": "Imagine Dragons"
+                }
+            ],
+            "type": "album"
+        },
+        {
+            "id": "3WK3HkX9lTZIhnHdehjEGB",
+            "name": "This Machine Still Kills Fascists (Expanded Edition)",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02e68cf651a94fb62172da266b",
+            "tracks": [
+                {
+                    "id": "0aE2HXcm7eoEGZG5i6rPXK",
+                    "name": "Two 6's Upside Down"
+                },
+                {
+                    "id": "4qF2ncOvyw04e8Cbe5WvO2",
+                    "name": "Talking Jukebox"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "7w9jdhcgHNdiPeNPUoFSlx",
+                    "name": "Dropkick Murphys"
+                }
+            ],
+            "type": "album"
+        },
+        {
+            "id": "40SrskkBlg2KUdW4zhG2hK",
+            "name": "Okemah Rising",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02639ebb8e7a3eb1f03c8839d2",
+            "tracks": [
+                {
+                    "id": "0rCu0jiqoJHsqaarwraeRA",
+                    "name": "My Eyes Are Gonna Shine"
+                },
+                {
+                    "id": "3H23O1qOJa99E7wFpPT6Ln",
+                    "name": "Watching The World Go By"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "7w9jdhcgHNdiPeNPUoFSlx",
+                    "name": "Dropkick Murphys"
+                }
+            ],
+            "type": "album"
+        },
+        {
+            "id": "2Ppv8YROLkQ2IcmjMCytS0",
+            "name": "El Testimonio Libra",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02a7810ebe026261b68cb194c8",
+            "tracks": [
+                {
+                    "id": "4fhz2FJzEkLDPl7W6waSdY",
+                    "name": "MK Ultra - El testimonio Libra titles"
+                },
+                {
+                    "id": "7wf5IS43OXNh70ZX46UCoy",
+                    "name": "Gafas"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "5t9ChGEQOzEA3gxWtXEw48",
+                    "name": "Elphomega"
+                }
+            ],
+            "type": "album"
+        },
+        {
+            "id": "32HzePZsOJ6gWR6MXB5gBQ",
+            "name": "Phantom Pop",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02c7c678df37ad4d1cf0043947",
+            "tracks": [
+                {
+                    "id": "4WT92JeiPDnktqlf7Ueqwh",
+                    "name": "Sol de Sábado, Lluvia de domingo"
+                },
+                {
+                    "id": "4u4eYJPiIN1y8RgdcA9H2G",
+                    "name": "1.000 Problemas"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "5t9ChGEQOzEA3gxWtXEw48",
+                    "name": "Elphomega"
+                }
+            ],
+            "type": "album"
+        },
+        {
+            "id": "0SakL2ra5Cik5yQgKQBHGp",
+            "name": "23",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02e1f05c994777b79bc5c87547",
+            "tracks": [
+                {
+                    "id": "2ZVSjes0VFYg9uJu4olsi4",
+                    "name": "Khabib"
+                },
+                {
+                    "id": "709MdyUol3Qfgcowmd7KV4",
+                    "name": "Straight Back To It"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "5H4yInM5zmHqpKIoMNAx4r",
+                    "name": "Central Cee"
+                }
+            ],
+            "type": "album"
+        },
+        {
+            "id": "0On7uutIu9rZRvP9aJbMog",
+            "name": "Split Decision",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e0226847a635b96c96fee81d838",
+            "tracks": [
+                {
+                    "id": "08YvUaUsZktAG6zEMDwUqO",
+                    "name": "Sprinter"
+                },
+                {
+                    "id": "2VjOTvl50tscmc0RDjPdr2",
+                    "name": "UK Rap"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "5H4yInM5zmHqpKIoMNAx4r",
+                    "name": "Central Cee"
+                },
+                {
+                    "id": "6Ip8FS7vWT1uKkJSweANQK",
+                    "name": "Dave"
+                }
+            ],
+            "type": "album"
+        },
+        {
+            "id": "2tjspYARHteVufdXfLEkJa",
+            "name": "Chasing Euphoria",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e0256760083a7f21cf162ed1806",
+            "tracks": [
+                {
+                    "id": "1h5Sb44FGJdYqkrfznnau7",
+                    "name": "Unapreciated"
+                },
+                {
+                    "id": "4iRDtaQCDsGxUN2MbfV8Tl",
+                    "name": "Stainless"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "491U1PrV1EoQuhM0aUCn9r",
+                    "name": "M Huncho"
+                }
+            ],
+            "type": "album"
+        },
+        {
+            "id": "6YlILpG7sdsgCODA8VO15d",
+            "name": "Utopia",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e022ed6c99890ba67bd6c773c72",
+            "tracks": [
+                {
+                    "id": "2kSdFyyM9O7JqmmTBgVs6V",
+                    "name": "Birds"
+                },
+                {
+                    "id": "6Ex1f0wNa3kkol50oTsvzC",
+                    "name": "Tranquility"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "491U1PrV1EoQuhM0aUCn9r",
+                    "name": "M Huncho"
+                }
+            ],
+            "type": "album"
+        },
+        {
+            "id": "6HwzIlrCDq3WF9vMq8meqG",
+            "name": "We're All Alone In This Thogether",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02da5b9c1eb275d48e14d25f3e",
+            "tracks": [
+                {
+                    "id": "22agj1ppHejR41cUyf7k6v",
+                    "name": "We're All Alone"
+                },
+                {
+                    "id": "7IPKXYU2rTMnrLW5IZ7ZI5",
+                    "name": "Verdansk"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "6Ip8FS7vWT1uKkJSweANQK",
+                    "name": "Dave"
+                }
+            ],
+            "type": "album"
+        },
+        {
+            "id": "4GrFuXwRmEBJec22p58fsD",
+            "name": "PSYCHODRAMA",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02c1c8d2889455db6d03d309ed",
+            "tracks": [
+                {
+                    "id": "0FWAIRd9Uz5uNek7cALYNC",
+                    "name": "Psycho"
+                },
+                {
+                    "id": "59PUOc7B0WCNNx8Nr4qaA4",
+                    "name": "Streatham"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "6Ip8FS7vWT1uKkJSweANQK",
+                    "name": "Dave"
+                }
+            ],
+            "type": "album"
+        },
+        {
+            "id": "156gxGFDxadwiIC3Bfwmj3",
+            "name": "DONDE QUIERO ESTAR",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02efc1b8f6beda4abe848a84e0",
+            "tracks": [
+                {
+                    "id": "5qP24CrDI0rmY5zwRvUfzU",
+                    "name": "AHORA QUÉ"
+                },
+                {
+                    "id": "0FirgnvrpCkkhdaq64Gfen",
+                    "name": "YANKEE"
+                },
+                {
+                    "id": "5q86iSKkBtOoNkdgEDY5WV",
+                    "name": "VISTA AL MAR"
+                },
+                {
+                    "id": "0Iozrbed8spxoBnmtBMshO",
+                    "name": "WANDA"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "52iwsT98xCoGgiGntTiR7K",
+                    "name": "Quevedo"
+                }
+            ],
+            "type": "album"
+        },
+        {
+            "id": "5XbA7TAqsD0fj0dGBrbb0D",
+            "name": "I Heard You’re Married (feat. Lil Wayne)",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e02efc1b8f6beda4abe848a84e0",
+            "tracks": [
+                {
+                    "id": "5XbA7TAqsD0fj0dGBrbb0D",
+                    "name": "I Heard You’re Married (feat. Lil Wayne)"
+                }
+            ],
+            "artists": [
+                {
+                    "id": "55Aa2cqylxrFIXC767Z865",
+                    "name": "Lil Wayne"
+                },
+                {
+                    "id": "1Xyo4u8uXC1ZmMpatF05PJ",
+                    "name": "The Weeknd"
+                }
+            ],
+            "type": "album"
+        }
+    ],
+    "topTrends": {
+        "topArtists": [
+            {
+                "id": "52iwsT98xCoGgiGntTiR7K",
+                "type": "artist"
+            },
+            {
+                "id": "5t9ChGEQOzEA3gxWtXEw48",
+                "type": "artist"
+            },
+            {
+                "id": "53XhwfbYqKCa1cC15pYq2q",
+                "type": "artist"
+            },
+            {
+                "id": "6Ip8FS7vWT1uKkJSweANQK",
+                "type": "artist"
+            }
+        ],
+        "topAlbums": [
+            {
+                "id": "6nxDQi0FeEwccEPJeNySoS",
+                "type": "album"
+            },
+            {
+                "id": "0On7uutIu9rZRvP9aJbMog",
+                "type": "album"
+            },
+            {
+                "id": "156gxGFDxadwiIC3Bfwmj3",
+                "type": "album"
+            },
+            {
+                "id": "2Ppv8YROLkQ2IcmjMCytS0",
+                "type": "album"
+            }
+        ],
+        "topPlaylists": [
+            {
+                "id": "262ad7d6-959c-43b9-a557-259adf26cb3e",
+                "type": "playlist"
+            },
+            {
+                "id": "7960b357-dc43-4939-832d-b2115f163bc3",
+                "type": "playlist"
+            }
+        ]
+    }
 }

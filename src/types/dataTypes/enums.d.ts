@@ -12,7 +12,8 @@ export type PossibleItems =
 export enum ListType {
     ALBUM = "album",
     ARTIST = "artist",
-    PLAYLIST = "playlist"
+    PLAYLIST = "playlist",
+    USER = "user"
 }
 
 export enum GenreTypes {
