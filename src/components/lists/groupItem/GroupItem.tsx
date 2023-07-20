@@ -15,7 +15,13 @@ export const GroupItem = ({ ...props }) => {
                     {(track.hasOwnProperty('artists')) ? <p>{track.artists[0].name}</p>: <></>}
                     <p>{track.type}</p>
                 </div>
-                {track.hasOwnProperty('liked') ? <button className="gi-playBtn" onClick={() => {onItemClicked(); setNewTrackList([track]);}}><BsFillPlayCircleFill className="gi-playBtn-ico" style={{ color: isActive ? '#00F79F' : '#f1f1f1' }}/></button> : <></>}
+                {track.hasOwnProperty('liked') ?
+                <button className="gi-playBtn"
+                onClick={() => {onItemClicked(); setNewTrackList([track]);}}>
+                    <BsFillPlayCircleFill
+                    className="gi-playBtn-ico"
+                    style={{ color: isActive ? '#00F79F' : '#f1f1f1' }}/>
+                </button> : <></>}
             </div>
 
 
