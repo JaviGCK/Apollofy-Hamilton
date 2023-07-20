@@ -1,41 +1,32 @@
 import { useState, useRef, useEffect } from "react"
 import "./soundBar.css"
 import { SoundPlayer } from "./soundPlayer/SoundPlayer"
-import { CurrentTrack } from "../../types/propTypes/soundBarTypes"
+import { useTrackListContext } from "../../hooks/useTrackListContext"
+import { TrackType } from "../../types/dataTypes/track"
 
 
-const testMusic = [
-    {
-        name: "Repeat After Me (Interlude)",
-        url: "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689331273/APOLLOFY/apollofy_repeat-after-me-The-weeknd.mp3",
-        artistName: "Matias LaPara",
-        imageUrl: "https://i.scdn.co/image/ab67616100005174920dc1f617550de8388f368e"
-    },
-    {
-        name: "SECOND TRACK",
-        url: "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689331273/APOLLOFY/apollofy_repeat-after-me-The-weeknd.mp3",
-        artistName: "Matias LaPara",
-        imageUrl: "https://i.scdn.co/image/ab67616100005174920dc1f617550de8388f368e"
-    },
-    {
-        name: "THIRD TRACK",
-        url: "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689331273/APOLLOFY/apollofy_repeat-after-me-The-weeknd.mp3",
-        artistName: "Matias LaPara",
-        imageUrl: "https://i.scdn.co/image/ab67616100005174920dc1f617550de8388f368e"
-    }
-]
+
 
 export const SoundBar = () => {
+    const { trackList } = useTrackListContext();
+    // const [trackList, setTrackList] = useState(testMusic)
 
-    const [trackList, setTrackList] = useState(testMusic)
+    // const [newTrackList, setNewTrackList] = useState<TrackType[]>([])
+
+
+
     const [isPlaying, setIsPlaying] = useState(false)
-    const [currentTrack, setCurrentTrack] = useState<CurrentTrack>(testMusic[0])
+    const [currentTrack, setCurrentTrack] = useState<TrackType | null>(null)
     const [loopActive, setLoopActive] = useState(false)
+
+    useEffect(() => {
+        if (trackList !== null) setCurrentTrack(trackList[0])
+    }, [trackList])
 
     const audioElement = useRef<HTMLAudioElement | null>(null)
 
     const getTrackProgress = () => {
-        if (audioElement.current) {
+        if (audioElement.current && trackList !== null && currentTrack !== null) {
 
             const trackDuration = audioElement.current.duration
             const currentTrackProgress = audioElement.current.currentTime
@@ -63,12 +54,12 @@ export const SoundBar = () => {
 
     const handlePrevTrack = () => {
 
-        if (audioElement.current === null) return
+        if (audioElement.current === null || trackList === null || currentTrack === null) return
 
         const index = trackList.findIndex((x: any) => x.name === currentTrack.name)
 
         // console.log(index)
-        if (index === 0) {
+        if (index === 0 && trackList !== null) {
             setCurrentTrack(trackList[trackList.length - 1])
         }
         else {
@@ -80,7 +71,7 @@ export const SoundBar = () => {
 
     const handleNextTrack = () => {
 
-        if (audioElement.current === null) return
+        if (audioElement.current === null || currentTrack === null || trackList === null) return
 
         const index = trackList.findIndex((x: any) => x.name === currentTrack.name)
 
@@ -97,6 +88,7 @@ export const SoundBar = () => {
     }
 
     const handleMetaDataLoad = () => {
+        if (currentTrack === null) return;
         const trackDuration = audioElement.current?.duration
         setCurrentTrack({
             ...currentTrack,
@@ -113,7 +105,7 @@ export const SoundBar = () => {
     }, [isPlaying])
 
     useEffect(() => {
-        setTrackList(testMusic)
+        // setTrackList(testMusic)
         audioElement.current?.addEventListener("loadedmetadata", handleMetaDataLoad)
         return () => { audioElement.current?.removeEventListener("loadedmetadata", handleMetaDataLoad) }
     }, [])
@@ -121,10 +113,10 @@ export const SoundBar = () => {
 
     return (
         <div>
-            <audio src={currentTrack.url} ref={audioElement} onTimeUpdate={() => getTrackProgress()} />
+            <audio src={currentTrack ? currentTrack.url : ""} ref={audioElement} onTimeUpdate={() => getTrackProgress()} />
             <SoundPlayer
                 trackList={trackList}
-                setTrackList={setTrackList}
+                // setTrackList={setTrackList}
                 isPlaying={isPlaying}
                 setIsPlaying={setIsPlaying}
                 currentTrack={currentTrack}
@@ -138,3 +130,40 @@ export const SoundBar = () => {
         </div>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const testMusic = [
+//     {
+//         name: "Repeat After Me (Interlude)",
+//         url: "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689331273/APOLLOFY/apollofy_repeat-after-me-The-weeknd.mp3",
+//         artistName: "Matias LaPara",
+//         imageUrl: "https://i.scdn.co/image/ab67616100005174920dc1f617550de8388f368e"
+//     },
+//     {
+//         name: "SECOND TRACK",
+//         url: "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689331273/APOLLOFY/apollofy_repeat-after-me-The-weeknd.mp3",
+//         artistName: "Matias LaPara",
+//         imageUrl: "https://i.scdn.co/image/ab67616100005174920dc1f617550de8388f368e"
+//     },
+//     {
+//         name: "THIRD TRACK",
+//         url: "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689331273/APOLLOFY/apollofy_repeat-after-me-The-weeknd.mp3",
+//         artistName: "Matias LaPara",
+//         imageUrl: "https://i.scdn.co/image/ab67616100005174920dc1f617550de8388f368e"
+//     }
+// ]

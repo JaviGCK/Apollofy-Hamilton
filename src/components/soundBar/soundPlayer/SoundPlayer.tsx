@@ -63,10 +63,10 @@ export const SoundPlayer = ({ ...props }) => {
                     <div className="player-heading" onClick={handleToggleMenu}>
                         <div className="player-info">
 
-                            <img className="track-image" src={props.currentTrack.imageUrl} alt="" />
+                            <img className="track-image" src={props.currentTrack?.imageUrl} alt="" />
                             <div className='track-info'>
-                                <p>{props.currentTrack.name}</p>
-                                <p>{props.currentTrack.artistName}</p>
+                                <p>{props.currentTrack?.name}</p>
+                                <p>{props.currentTrack?.artists[0].name}</p>
                             </div>
 
                         </div>
@@ -78,7 +78,7 @@ export const SoundPlayer = ({ ...props }) => {
                     </div>
                     <div className="content-bar">
                         <div className="navigation-content-bar" ref={soundBarClickRef} onClick={handleClickNavigation}>
-                            <div className="progress-bar" style={{ width: `${props.currentTrack.progress}%` }}>
+                            <div className="progress-bar" style={{ width: `${props.currentTrack?.progress}%` }}>
 
                             </div>
                         </div>
@@ -91,13 +91,13 @@ export const SoundPlayer = ({ ...props }) => {
                 <div ref={playerContainer} className="player-container expanded">
                     <IoIosArrowDown className="close-player-icon" onClick={handleToggleMenu} />
                     <div className="player-heading heading-expanded">
-                        <img className="track-image image-big" src={props.currentTrack.imageUrl} alt="" />
+                        <img className="track-image image-big" src={props.currentTrack?.imageUrl} alt="" />
                         <div className="player-info info-expanded">
 
 
                             <div className='track-info'>
-                                <p className='expanded-title'>{props.currentTrack.name}</p>
-                                <p className='expanded-subtitle'>{props.currentTrack.artistName}</p>
+                                <p className='expanded-title'>{props.currentTrack?.name}</p>
+                                <p className='expanded-subtitle'>{props.currentTrack?.artists[0].name}</p>
                             </div>
 
                         </div>
@@ -109,14 +109,14 @@ export const SoundPlayer = ({ ...props }) => {
                             </div>
                             <div className="expanded-content-bar">
                                 <div className="navigation-content-bar" ref={soundBarClickRef} onClick={handleClickNavigation}>
-                                    <div className="progress-bar" style={{ width: `${props.currentTrack.progress}%` }}>
+                                    <div className="progress-bar" style={{ width: `${props.currentTrack?.progress}%` }}>
 
                                     </div>
                                 </div>
                             </div>
                             <div className='numeric-progress-container'>
-                                <span>{formatTime(props.currentTrack.progress / 100 * props.currentTrack.duration)}</span>
-                                <span>{formatTime(props.currentTrack.duration)}</span>
+                                <span>{formatTime(props.currentTrack?.progress / 100 * props.currentTrack?.duration)}</span>
+                                <span>{formatTime(props.currentTrack?.duration)}</span>
                             </div>
                         </div>
 

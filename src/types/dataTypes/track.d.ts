@@ -12,7 +12,9 @@ export interface TrackType {
     url?: string,
     verified?: boolean,
     album?: AlbumType, //when is inside of an album this property is not needed
-    imageUrl: string
+    imageUrl: string,
+    progress?: number,
+    duration?: number
 }
 
 /**

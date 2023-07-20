@@ -6,12 +6,14 @@ import { GenreTypes } from "../../types/dataTypes/enums"
 import { getUniqueId } from "../../utils/functions/randomId"
 import "./addMusicForm.css"
 import toast, { Toaster } from "react-hot-toast"
+import { useUserContext } from "../../hooks/useUserContext"
 
 
 export const AddMusicForm = () => {
 
     const [privacityState, setPrivacityState] = useState(false)
     const { user } = useAuth0()
+    const { setCurrentLoggedUser } = useUserContext();
 
     const { register, handleSubmit, formState: { errors }, reset, watch } = useForm({
         defaultValues: {
@@ -51,7 +53,15 @@ export const AddMusicForm = () => {
 
         toast.success('Track uploaded successfully...')
 
-        postTrackServer(email, audioUrl, trackId, trackTitle, imageUrl, trackPrivacy, trackGenre);
+
+        const dataToUpdate = await postTrackServer(email, audioUrl, trackId, trackTitle, imageUrl, trackPrivacy, trackGenre);
+        const { userLogged, userLoggedTracks, newTrack } = dataToUpdate;
+        const newTracksList = [...userLoggedTracks, newTrack];
+        const userLoggedNewObject = {
+            ...userLogged,
+            tracks: newTracksList
+        }
+        setCurrentLoggedUser(userLoggedNewObject);
 
         reset();
 

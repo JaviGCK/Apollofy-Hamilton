@@ -9,6 +9,8 @@ import { fetchData, postNewData } from '../../api/fetchApi'
 import { useAuth0 } from '@auth0/auth0-react'
 import { getUniqueId } from '../../utils/functions/randomId'
 import { ListType } from '../../types/dataTypes/enums.d'
+import { useTrackListContext } from '../../hooks/useTrackListContext'
+import { TrackType } from '../../types/dataTypes/track.d'
 
 
 export const NavBar = () => {
@@ -16,6 +18,7 @@ export const NavBar = () => {
     const navigate = useNavigate();
     const { user } = useAuth0();
     const { currentUser, setCurrentLoggedUser } = useUserContext();
+    const { trackList, setNewTrackList } = useTrackListContext();
 
     if (currentUser === null) {
         (async function fetchUser() {
@@ -23,7 +26,7 @@ export const NavBar = () => {
             const loggedUserObject = usersFetched.find(({ email }) => email === user?.email);
 
             if (loggedUserObject !== undefined) {
-                setCurrentLoggedUser(loggedUserObject)
+                setCurrentLoggedUser(loggedUserObject);
             } else {
                 const newUser: UserType = {
                     id: getUniqueId(),
@@ -34,8 +37,19 @@ export const NavBar = () => {
                     libraryList: [],
                     tracks: []
                 }
+                setCurrentLoggedUser(newUser);
                 postNewData(newUser, "users");
             }
+        }());
+    }
+
+    if (trackList === null) {
+        // let tracks: TrackType[] = [];
+        (async function fetchTracks() {
+            const tracksFetched = await fetchData("tracks") as TrackType[];
+            console.log("fetch tracks");
+            setNewTrackList(tracksFetched);
+
         }());
     }
 
