@@ -39,7 +39,6 @@ export const ListDetailPage = () => {
                     playlistOrAlbum.tracks.forEach((track) => {
                         newTracksIds.push(track.id);
                     })
-
                 }
                 setTrackIds(newTracksIds)
             } else if (listDetail?.type === ListType.ARTIST) {

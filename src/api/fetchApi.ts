@@ -123,4 +123,13 @@ export const postNewData = async (newData: TrackType | UserType, newDataType: st
 }
 
 
+//---------------------------------------------------------------------------------------------------------------------------------------------
 
+export const getFullTrack = async (tracksById: string[]): Promise<TrackType[]> => {
+    const tracks: TrackType[] = [];
+    for (const trackId of tracksById) {
+        const fullTrack = await fetchData(`tracks?id=${trackId}`) as TrackType[];
+        tracks.push(fullTrack[0])
+    }
+    return tracks;
+}
