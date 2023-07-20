@@ -1,7 +1,7 @@
 
 import { AlbumType } from "../types/dataTypes/album";
 import { ArtistType } from "../types/dataTypes/artist";
-import { GenreTypes } from "../types/dataTypes/enums";
+import { GenreTypes, PossibleItems } from "../types/dataTypes/enums";
 import { GenreType } from "../types/dataTypes/genre";
 import { PlaylistType } from "../types/dataTypes/playlist";
 import { TopTrends } from "../types/dataTypes/topTrends";
@@ -105,7 +105,6 @@ export const updateUser = async (user: UserType, userTracks: TrackType[], newTra
         }
     })
     // const dataFetched = await response.json();
-
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------
@@ -132,4 +131,19 @@ export const getFullTrack = async (tracksById: string[]): Promise<TrackType[]> =
         tracks.push(fullTrack[0])
     }
     return tracks;
+}
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
+export const updateUserLList = async (user: UserType, libraryList: PossibleItems[], newItem: PossibleItems) => {
+    await fetch(`http://localhost:3001/users/${user.id}`, {
+        method: "PATCH",
+        body: JSON.stringify({
+            ...user,
+            libraryList: [...libraryList, newItem]
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+    // const dataFetched = await response.json();
 }

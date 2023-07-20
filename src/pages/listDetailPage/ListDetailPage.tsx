@@ -1,7 +1,6 @@
 import './listDetailPage.css'
 import { useEffect, useState } from "react";
 import { FaAngleLeft } from "react-icons/fa";
-import { AiOutlinePlusCircle } from "react-icons/ai";
 import { BiSolidHeart, BiPlay } from "react-icons/bi";
 import { TrackList } from "../../components/lists/trackList/TrackList";
 import { useListDetailContext } from '../../hooks/useListDetailContext';
@@ -9,16 +8,20 @@ import { ListType } from '../../types/dataTypes/enums.d';
 import { PlaylistType } from '../../types/dataTypes/playlist';
 import { AlbumType } from '../../types/dataTypes/album';
 import { ArtistType } from '../../types/dataTypes/artist';
-import { fetchData, getFullTrack } from '../../api/fetchApi';
+import { fetchData, getFullTrack, updateUserLList } from '../../api/fetchApi';
 import { useNavigate } from 'react-router-dom';
 import { getUniqueId } from '../../utils/functions/randomId';
 import { TrackType } from '../../types/dataTypes/track';
 import { GenreType } from '../../types/dataTypes/genre';
 import { useTrackListContext } from '../../hooks/useTrackListContext';
+import { useUserContext } from '../../hooks/useUserContext';
+import toast, { Toaster } from 'react-hot-toast';
 
 export const ListDetailPage = () => {
 
     const { listDetail } = useListDetailContext();
+
+    const { currentUser } = useUserContext();
 
     const [trackIds, setTrackIds] = useState<string[] | null>(null);
 
@@ -95,6 +98,19 @@ export const ListDetailPage = () => {
         }());
     }
 
+    const heartIconClicked = () => {
+        const libraryListUser = currentUser?.libraryList;
+        const itemSearched = libraryListUser?.find((item) => {
+            if (item.id === listDetail?.id) return true;
+        })
+        if (itemSearched === undefined && currentUser && currentUser?.libraryList && listDetail) {
+            updateUserLList(currentUser, currentUser.libraryList, listDetail);
+            toast.success('Successfully added!')
+        } else {
+            toast.success('Already exists!')
+        }
+    }
+
     useEffect(() => {
         if (listDetail === null) navigate("/home")
     }, [])
@@ -102,6 +118,10 @@ export const ListDetailPage = () => {
     return (
         <>
             {listDetail && <div className="list-detail-page-container">
+                <Toaster
+                    position="top-center"
+                    reverseOrder={false}
+                />
                 <div className="list-detail-heading">
                     <FaAngleLeft className="list-detail-angle-btn" onClick={handleBackIconClicked} />
 
@@ -113,7 +133,7 @@ export const ListDetailPage = () => {
 
                     <div className="list-detail-dashboard">
                         {/* <AiOutlinePlusCircle className="list-detail-add-btn" /> */}
-                        <BiSolidHeart className="list-detail-heart-btn" />
+                        <BiSolidHeart className="list-detail-heart-btn" onClick={heartIconClicked} />
                         <span className="list-detail-container-play-btn" onClick={playBtnClicked}>
                             <BiPlay className="list-detail-play-btn" />
                         </span>
