@@ -14,9 +14,10 @@ export const SoundBar = () => {
     const [loopActive, setLoopActive] = useState(false)
 
     useEffect(() => {
-        if (trackList !== null) {setCurrentTrack(trackList[0])
-        console.log(trackList)
-    }
+        if (trackList !== null) {
+            setCurrentTrack(trackList[0])
+            console.log(trackList)
+        }
     }, [trackList])
 
     const audioElement = useRef<HTMLAudioElement | null>(null)
@@ -66,7 +67,9 @@ export const SoundBar = () => {
     }
 
     const handleMetaDataLoad = () => {
+
         if (currentTrack === null) return;
+
         const trackDuration = audioElement.current?.duration
         setCurrentTrack({
             ...currentTrack,

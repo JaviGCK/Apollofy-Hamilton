@@ -1364,22 +1364,6 @@
       ]
     },
     {
-      "id": "i7jcqvo7wi",
-      "name": "sprinter bmw",
-      "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1689813738/images/relxojcvsafj2tvfzhr7.jpg",
-      "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1689813737/tracks/bpo1xjq87c7iqfmbd93v.mp3",
-      "liked": 0,
-      "verified": false,
-      "genre": [
-        "punk"
-      ],
-      "artists": [
-        {
-          "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7"
-        }
-      ]
-    },
-    {
       "id": "loolz8aeu6f",
       "name": "ldgg",
       "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1689814902/images/bfqri7lvy6c66yqyaz8l.jpg",
@@ -1486,61 +1470,71 @@
       "id": "87af4c23-4b5e-41d2-b6fc-8e8649a1a3d8",
       "name": "Hip-hop",
       "imageUrl": "https://us.123rf.com/450wm/ylivdesign/ylivdesign1909/ylivdesign190900135/129338457-icono-de-hip-hop-estilo-simple.jpg?ver=6",
-      "btnColor": "#8E66AC"
+      "btnColor": "#8E66AC",
+      "type": "genre"
     },
     {
       "id": "a2c8b941-716f-4b19-9eae-cc2078418b99",
       "name": "Rock",
       "imageUrl": "https://vignette1.wikia.nocookie.net/es.music/images/a/a5/Rock-Music-Logo-Decor-Vinyl-Wall-Art-c2f2785e-18b2-471e-a471-fc994c2a74fb_600.jpg/revision/latest?cb=20150625211537",
-      "btnColor": "#5F8108"
+      "btnColor": "#5F8108",
+      "type": "genre"
     },
     {
       "id": "e9f675de-8db6-492e-91fe-1e546f24f73b",
       "name": "Pop",
       "imageUrl": "https://static.vecteezy.com/system/resources/previews/004/224/154/original/pop-music-handwritten-stock-lettering-typography-calligraphy-for-logotype-badge-icon-card-postcard-logo-banner-tag-illustration-eps10-free-vector.jpg",
-      "btnColor": "#E51E31"
+      "btnColor": "#E51E31",
+      "type": "genre"
     },
     {
       "id": "3bd5c81a-1d7a-4b5f-8c29-2cfe3c17e42a",
       "name": "R&B",
       "imageUrl": "https://t4.ftcdn.net/jpg/03/08/18/99/360_F_308189978_CtvYsmilaUzUBIR0jJF0irSX5aE16g69.jpg",
-      "btnColor": "#E13300"
+      "btnColor": "#E13300",
+      "type": "genre"
     },
     {
       "id": "d0e32f96-6be5-41e8-9db2-8a1f9d032d4f",
       "name": "Metal",
       "imageUrl": "https://render.fineartamerica.com/images/rendered/default/flat/blanket/images/artworkimages/medium/3/metal-hand-sign-metalcore-heavy-metal-hard-rock-music-lovers-blues-funk-band-gift-thomas-larch-transparent.png?&targetx=180&targety=0&imagewidth=616&imageheight=740&modelwidth=977&modelheight=740&backgroundcolor=000000&orientation=1&producttype=blanket-sherpa-60-80",
-      "btnColor": "#8E66AC"
+      "btnColor": "#8E66AC",
+      "type": "genre"
     },
     {
       "id": "f4b3e9c7-7f8d-456c-bc3c-6d4686a9d3aa",
       "name": "Punk",
       "imageUrl": "https://res.cloudinary.com/teepublic/image/private/s--qBTKSUU2--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffa,e_outline:48/co_fffffa,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1625898873/production/designs/22988283_8.jpg",
-      "btnColor": "#0C73EC"
+      "btnColor": "#0C73EC",
+      "type": "genre"
     },
     {
       "id": "9a5c0e21-3dbf-4297-a8f6-df48ae4abeb0",
       "name": "Dance",
       "imageUrl": "https://st.depositphotos.com/1027431/4657/v/600/depositphotos_46573749-stock-illustration-abstract-vector-logo-design-template.jpg",
-      "btnColor": "#E51E31"
+      "btnColor": "#E51E31",
+      "type": "genre"
     },
     {
       "id": "c16f9b42-5437-4a75-90c9-8d883f11f3a5",
       "name": "Rap",
       "imageUrl": "https://img.freepik.com/vecteurs-premium/graffiti-rap-splash-grunge-forme-coeur-lettres-connectees-seule-bande-points-demi-teinte-cool-embleme-expressif-amour-pour-style-musique-hip-hop_177819-4.jpg?w=2000",
-      "btnColor": "#8E66AC"
+      "btnColor": "#8E66AC",
+      "type": "genre"
     },
     {
       "id": "562e8bfa-4b57-47a9-8f7b-d97d72a9f21c",
       "name": "Drill",
       "imageUrl": "https://hiphopsince1987.com/wp-content/uploads/2021/06/mwuZ8jp6xmQe.jpg",
-      "btnColor": "#E13300"
+      "btnColor": "#E13300",
+      "type": "genre"
     },
     {
       "id": "207cf87e-1b62-4328-8b68-6dc2993f8e77",
       "name": "Urban",
       "imageUrl": "https://i.fbcd.co/products/original/3dc41c20140e225f3a8fa7fa177dd88258714746f4b1b3e398343f31f6266070.jpg",
-      "btnColor": "#203264"
+      "btnColor": "#203264",
+      "type": "genre"
     }
   ],
   "playlists": [
