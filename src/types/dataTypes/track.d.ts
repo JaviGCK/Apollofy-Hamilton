@@ -9,10 +9,13 @@ export interface TrackType {
     artists?: ArtistType[],
     genre?: GenreTypes[],
     liked?: number,
+    tracks?: any,
     url?: string,
     verified?: boolean,
     album?: AlbumType, //when is inside of an album this property is not needed
-    imageUrl: string
+    imageUrl: string,
+    progress?: number,
+    duration?: number
 }
 
 /**

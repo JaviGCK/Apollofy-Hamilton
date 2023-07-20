@@ -46,6 +46,8 @@ const SearchList = (props: SearchProps) => {
     const initialState = 'All';
     const [filter, dispatch] = useReducer(reducer, initialState);
 
+    const [activeIndex, setActiveIndex] = useState(null);
+
     const scrollRef = useRef<HTMLElement | null>(null)
 
     const retrieveData = async () => {
@@ -106,6 +108,10 @@ const SearchList = (props: SearchProps) => {
         adjustScrollBar()
     }
         , [filter]);
+
+        const handleItemClick = (index: any) => {
+            setActiveIndex(index);
+          };
     return (
         <>
             <section className='searchlist-container' ref={scrollRef}>
@@ -133,14 +139,16 @@ const SearchList = (props: SearchProps) => {
                                 <>
                                     {filteredTrack.length == 0 ? <></> : <h3>Tracks</h3>}
                                     <div className='sl-result'>
-                                        {filteredTrack.map((track) => {
+                                        {filteredTrack.map((track, index) => {
                                             return (
                                                 <GroupItem
                                                     key={track.url}
-                                                    imageUrl={track.imageUrl}
-                                                    name={track.name}
-                                                    artist={track.artists![0].name}
-                                                    type={"Track"} />
+                                                    track={track}
+                                                    isActive={activeIndex === index}
+                                                    onItemClicked={() => handleItemClick(index)}
+
+                                                    />
+
                                             )
                                         }
                                         )}
@@ -155,10 +163,8 @@ const SearchList = (props: SearchProps) => {
                                     <div className='sl-result'>
                                         {filteredAlbum.map((album) => (
                                             <GroupItem
-                                                imageUrl={album.imageUrl}
-                                                name={album.name}
-                                                artist={album.artists![0].name}
-                                                type={'Album'}
+                                                key={album.id}
+                                                track={album}
                                             />
                                         ))}
                                     </div>
@@ -172,9 +178,8 @@ const SearchList = (props: SearchProps) => {
                                         {filteredArtist.map((artist) => {
                                             return (
                                                 <GroupItem
-                                                    imageUrl={artist.imageUrl}
-                                                    name={artist.name}
-                                                    type={"Artist"} />
+                                                    key={artist.imageUrl}
+                                                    track={artist} />
                                             )
                                         }
                                         )}
@@ -189,10 +194,8 @@ const SearchList = (props: SearchProps) => {
                                         {filteredPlaylist.map((playlist) => {
                                             return (
                                                 <GroupItem
-                                                    imageUrl={playlist.imageUrl}
-                                                    name={playlist.name}
-                                                    artist={playlist.description}
-                                                    type={"Playlist"} />
+                                                    key={playlist.id}
+                                                    track={playlist}/>
                                             )
                                         }
                                         )}

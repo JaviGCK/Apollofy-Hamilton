@@ -1,11 +1,9 @@
-import { GenreTypes } from "./enums"
+import { GenreTypes, ListType } from "./enums"
 
 export interface GenreType {
     id: string,
     name: GenreTypes,
     imageUrl: string,
     btnColor: string,
-    setFocus: (value: boolean) => boolean
-    setCustomFilter: (value: boolean) => boolean
-    setSearchInput: (value: string) => any
+    type?: ListType.GENRE
 }

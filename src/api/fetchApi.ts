@@ -1,3 +1,4 @@
+
 import { AlbumType } from "../types/dataTypes/album";
 import { ArtistType } from "../types/dataTypes/artist";
 import { GenreTypes } from "../types/dataTypes/enums";
@@ -47,20 +48,22 @@ export const postDataCloud = async (dataForm: FormData): Promise<string> => {
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------------
-export const postTrackServer = async (userEmail: string, trackUrl: string, trackId: string, trackTitle: string, trackImg: string, trackPrivacy: boolean, trackGenre: GenreTypes): Promise<void> => {
+export const postTrackServer = async (userEmail: string, trackUrl: string, trackId: string, trackTitle: string, trackImg: string, trackPrivacy: boolean, trackGenre: GenreTypes): Promise<{ userLogged: UserType, userLoggedTracks: TrackType[], newTrack: TrackType }> => {
     // const users = await fetchData("users") as UserType[];
     // const user = users.find(({ email }) => email === userEmail) as UserType;
 
-    const user = await getUserByEmail(userEmail);
+    const userLogged = await getUserByEmail(userEmail);
+    const userName = userLogged.name as string;
+    const userLoggedTracks = userLogged.tracks as TrackType[];
+    const newTrack = getNewTrack(userName, userLogged.id, trackUrl, trackId, trackTitle, trackImg, trackGenre);
 
-    const userTracks = user.tracks as TrackType[];
-    const newTrack = getNewTrack(user.id, trackUrl, trackId, trackTitle, trackImg, trackGenre);
-
-    updateUser(user, userTracks, newTrack)
+    await updateUser(userLogged, userLoggedTracks, newTrack)
 
     if (!trackPrivacy) {
-        postNewData(newTrack, "tracks");
+        await postNewData(newTrack, "tracks");
     }
+
+    return { userLogged, userLoggedTracks, newTrack }
 }
 //--------------------------------------------------------------------------------------------------------------------------------------------
 export const getUserByEmail = async (userEmail: string): Promise<UserType> => {
@@ -69,9 +72,10 @@ export const getUserByEmail = async (userEmail: string): Promise<UserType> => {
     return user;
 }
 //--------------------------------------------------------------------------------------------------------------------------------------------
-export const getNewTrack = (userId: string, trackUrl: string, trackId: string, trackTitle: string, trackImg: string, trackGenre: GenreTypes): TrackType => {
+export const getNewTrack = (userName: string, userId: string, trackUrl: string, trackId: string, trackTitle: string, trackImg: string, trackGenre: GenreTypes): TrackType => {
     const userArtist: ArtistType = {
-        id: userId
+        id: userId,
+        name: userName
     }
 
     const newTrack: TrackType = {

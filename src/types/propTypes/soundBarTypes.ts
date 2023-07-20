@@ -1,8 +1,8 @@
 
 
 export type CurrentTrack = {
-    name: string,
     url: string,
+    name?: string,
     progress?: number,
     duration?: number
 }

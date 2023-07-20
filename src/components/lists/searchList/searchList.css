@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
+
 .searchlist-container {
     height: 85%;
     width: 100%;
@@ -8,38 +9,45 @@
     overflow-y: scroll;
     scroll-behavior: smooth;
 }
+
 .searchlist-container::-webkit-scrollbar {
     width: 0;
 }
+
 .sl-awaiting-input {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 .sl-awaiting-input p {
     font-family: 'Noto Sans', sans-serif;
     font-size: 14px;
     font-weight: 200;
 }
-.ufo-ico{
+
+.ufo-ico {
     font-size: 45px;
     margin-top: 25px;
 }
-.sl-filter-buttons{
+
+.sl-filter-buttons {
     display: flex;
     flex-wrap: wrap;
     position: sticky;
+    z-index: 10;
     height: 10vh;
-    border-top: 2px solid #0E0016;
+    border: 5px solid #0E0016;
     padding: 0;
-    top: -2px;
+    top: -5px;
     background-color: #0E0016;
     justify-content: center;
     overflow: hidden;
     white-space: nowrap;
 
 }
+
 .slf-btn {
     border: 1px solid #f1f1f1;
     margin: auto 5px;
@@ -49,14 +57,12 @@
     color: #f1f1f1;
     padding: 1vh;
 }
-.slf-btn-selected{
+
+.slf-btn-selected {
     border: 1px solid #00F79F;
     color: #00F79F;
 }
-.white-space {
-    height: 35vh;
 
-}
 .artist-image {
     border-radius: 50px;
-  }
+}

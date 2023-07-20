@@ -9,12 +9,11 @@ export const SearchPage = () => {
     const [focus, setFocus] = useState(false);
     const [searchInput, setSearchInput] = useState('');
 
-    const [customFilter, setCustomFilter] = useState(false);
 
     return (
         <section className="search-page-container">
-            <SearchBar focus={focus} setFocus={setFocus} searchInput={searchInput} setSearchInput={setSearchInput}/>
-            {focus ? <SearchList customFilter={customFilter} focus={focus} setFocus={setFocus} searchInput={searchInput} setSearchInput={setSearchInput}/> : <GenresList setSearchInput={setSearchInput} setFocus={setFocus} setCustomFilter={setCustomFilter} />}
+            <SearchBar focus={focus} setFocus={setFocus} searchInput={searchInput} setSearchInput={setSearchInput} />
+            {focus ? <SearchList focus={focus} setFocus={setFocus} searchInput={searchInput} setSearchInput={setSearchInput} /> : <GenresList />}
         </section>
     )
 }

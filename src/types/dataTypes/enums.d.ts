@@ -1,5 +1,6 @@
 import { AlbumType } from "./album";
 import { ArtistType } from "./artist";
+import { GenreType } from "./genre";
 import { PlaylistType } from "./playlist";
 
 
@@ -9,11 +10,18 @@ export type PossibleItems =
     | ArtistType
     | PlaylistType
 
+export type ListDetailPossibleItems =
+    | AlbumType
+    | ArtistType
+    | PlaylistType
+    | GenreType
+
 export enum ListType {
     ALBUM = "album",
     ARTIST = "artist",
     PLAYLIST = "playlist",
-    USER = "user"
+    USER = "user",
+    GENRE = "genre"
 }
 
 export enum GenreTypes {

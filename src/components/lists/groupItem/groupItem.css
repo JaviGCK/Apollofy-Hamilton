@@ -3,6 +3,7 @@
     margin: 20px;
     font-size: 14px;
     font-weight: 400;
+    position: relative;
 }
 
 .img-list {
@@ -14,4 +15,24 @@
 .item-list-info {
     display: inline-block;
     padding-left: 15px;
+}
+
+.gi-playBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    border: none;
+    background: none;
+    margin-left: auto;
+    padding: 0;
+}
+.gi-playBtn-ico{
+    text-align: center;
+    color: white;
+    padding: none;
+    font-size: 35px;
+    position: absolute;
+    right: 0;
+    bottom:50%
 }

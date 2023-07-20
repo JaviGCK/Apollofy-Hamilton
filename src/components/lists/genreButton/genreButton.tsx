@@ -1,12 +1,29 @@
 import './genreButton.css';
 import { GenreType } from '../../../types/dataTypes/genre';
+import { useListDetailContext } from '../../../hooks/useListDetailContext';
+import { ListType } from '../../../types/dataTypes/enums.d';
+import { useNavigate } from 'react-router-dom';
 
 export const GenreButton = (props: GenreType) => {
+    const { name, imageUrl, id, btnColor } = props
+    const { setNewListDetail } = useListDetailContext();
+    const navigate = useNavigate();
 
-    const {name, imageUrl, id, btnColor, setSearchInput, setCustomFilter, setFocus} = props
-    return(
+    const genreBtnClicked = () => {
+        const genre: GenreType = {
+            name: name,
+            imageUrl: imageUrl,
+            id: id,
+            btnColor: btnColor,
+            type: ListType.GENRE
+        }
+        setNewListDetail(genre);
+        navigate("/detail-page");
+    }
 
-        <button key={id} className='genre-button' style={{background:btnColor}} onClick={() => { setSearchInput(`${name}`); setCustomFilter(true); setFocus(true)}}>
+    return (
+
+        <button key={id} className='genre-button' style={{ background: btnColor }} onClick={genreBtnClicked}>
             <div className='genre-button-container'>
                 <p className='genre-tittle'> {name} </p>
                 <img className='genre-img' src={imageUrl} alt={`Cover de ${name}`} />
