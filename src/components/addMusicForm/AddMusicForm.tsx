@@ -109,6 +109,7 @@ export const AddMusicForm = () => {
                 {errors.audio && <p className="music-form-error">{errors.audio.message}</p>}
             </div>
 
+
             <input className="track-title-input add-music-input" type="text" placeholder="Your song name..."
                 {...register("title", {
                     required: {
@@ -125,7 +126,7 @@ export const AddMusicForm = () => {
                     }
                 })}
             />
-            {errors.title && <p className="music-form-error">{errors.title.message}</p>}
+            {errors.title && <p className="music-form-error error-title">{errors.title.message}</p>}
 
             <select className="track-genre-select add-music-input" id="genres"
                 defaultValue=""
@@ -148,7 +149,7 @@ export const AddMusicForm = () => {
                 <option value="drill">Drill</option>
                 <option value="urban">Urban</option>
             </select>
-            {errors.genre && <p className="music-form-error">{errors.genre.message}</p>}
+            {errors.genre && <p className="music-form-error select-error">{errors.genre.message}</p>}
 
             <div className="privacity-selection-container">
                 <p>Privacity</p>
@@ -160,6 +161,9 @@ export const AddMusicForm = () => {
                     </label>
                 </span>
             </div>
+
+
+
 
             <button className="add-music-submit-btn" type="submit">Upload</button>
         </form>
