@@ -451,7 +451,25 @@
       "profilePicture": "https://lh3.googleusercontent.com/a/AAcHTteyT9Oz1vt6FlWvmQzSCCG9OqkxJ_vtb0AJl2cfETwq=s96-c",
       "type": "user",
       "libraryList": [],
-      "tracks": []
+      "tracks": [
+        {
+          "id": "7n3v9ipr0p",
+          "name": "I hope this works",
+          "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1689863413/images/xmpkapfs0hbpyhps1xqj.jpg",
+          "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1689863412/tracks/axhv7pajbvn9za4bxb8a.mp3",
+          "liked": 0,
+          "verified": false,
+          "genre": [
+            "pop"
+          ],
+          "artists": [
+            {
+              "id": "ldotrsstski",
+              "name": "Matias Alaimo Chiappa"
+            }
+          ]
+        }
+      ]
     }
   ],
   "tracks": [
@@ -1442,6 +1460,23 @@
         {
           "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7",
           "name": "Ali Hourag"
+        }
+      ]
+    },
+    {
+      "id": "7n3v9ipr0p",
+      "name": "I hope this works",
+      "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1689863413/images/xmpkapfs0hbpyhps1xqj.jpg",
+      "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1689863412/tracks/axhv7pajbvn9za4bxb8a.mp3",
+      "liked": 0,
+      "verified": false,
+      "genre": [
+        "pop"
+      ],
+      "artists": [
+        {
+          "id": "ldotrsstski",
+          "name": "Matias Alaimo Chiappa"
         }
       ]
     }
