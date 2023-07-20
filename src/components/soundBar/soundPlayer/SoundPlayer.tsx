@@ -3,10 +3,11 @@ import { BsFillPlayCircleFill, BsFillPauseCircleFill, BsFillSkipStartCircleFill,
 import { ImLoop } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
 import "./soundPlayer.css"
-import { useRef, useState } from 'react';
+import { FC, useRef, useState } from 'react';
+import { SoundPlayerPropTypes } from '../../../types/propTypes/soundPlayerPropTypes';
 
 
-export const SoundPlayer = ({ ...props }) => {
+export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
 
     const [expandedMenu, setExpandedMenu] = useState(false)
 
@@ -25,7 +26,7 @@ export const SoundPlayer = ({ ...props }) => {
     }
 
     const handleClickNavigation = (event: any) => {
-        if (soundBarClickRef.current && props.currentTrack.duration) {
+        if (soundBarClickRef.current && props.currentTrack?.duration) {
             let soundBarWidth = soundBarClickRef.current.clientWidth
             let offset: number = event.nativeEvent.offsetX
             let offsetPercentage = offset / soundBarWidth * 100
@@ -39,7 +40,7 @@ export const SoundPlayer = ({ ...props }) => {
     }
 
     const handleLoopState = () => {
-        props.setloopActive(!props.loopActive)
+        props.setLoopActive(!props.loopActive)
     }
 
 
@@ -66,7 +67,7 @@ export const SoundPlayer = ({ ...props }) => {
                             <img className="track-image" src={props.currentTrack?.imageUrl} alt="" />
                             <div className='track-info'>
                                 <p>{props.currentTrack?.name}</p>
-                                <p>{props.currentTrack?.artists[0].name}</p>
+                                <p>{props.currentTrack?.artists ? props.currentTrack.artists[0].name : ""}</p>
                             </div>
 
                         </div>
@@ -97,7 +98,7 @@ export const SoundPlayer = ({ ...props }) => {
 
                             <div className='track-info'>
                                 <p className='expanded-title'>{props.currentTrack?.name}</p>
-                                <p className='expanded-subtitle'>{props.currentTrack?.artists[0].name}</p>
+                                <p className='expanded-subtitle'>{props.currentTrack?.artists ? props.currentTrack?.artists[0].name : ""}</p>
                             </div>
 
                         </div>
@@ -115,8 +116,8 @@ export const SoundPlayer = ({ ...props }) => {
                                 </div>
                             </div>
                             <div className='numeric-progress-container'>
-                                <span>{formatTime(props.currentTrack?.progress / 100 * props.currentTrack?.duration)}</span>
-                                <span>{formatTime(props.currentTrack?.duration)}</span>
+                                <span>{formatTime((props.currentTrack?.progress && props.currentTrack?.duration) ? (props.currentTrack.progress / 100 * props.currentTrack?.duration) : 0)}</span>
+                                <span>{formatTime(props.currentTrack?.duration ? props.currentTrack?.duration : 0)}</span>
                             </div>
                         </div>
 

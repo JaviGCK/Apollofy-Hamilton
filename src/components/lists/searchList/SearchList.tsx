@@ -155,6 +155,7 @@ const SearchList = (props: SearchProps) => {
                                     <div className='sl-result'>
                                         {filteredAlbum.map((album) => (
                                             <GroupItem
+                                                key={album.id}
                                                 imageUrl={album.imageUrl}
                                                 name={album.name}
                                                 artist={album.artists![0].name}
@@ -172,6 +173,7 @@ const SearchList = (props: SearchProps) => {
                                         {filteredArtist.map((artist) => {
                                             return (
                                                 <GroupItem
+                                                    key={artist.imageUrl}
                                                     imageUrl={artist.imageUrl}
                                                     name={artist.name}
                                                     type={"Artist"} />
@@ -189,6 +191,7 @@ const SearchList = (props: SearchProps) => {
                                         {filteredPlaylist.map((playlist) => {
                                             return (
                                                 <GroupItem
+                                                    key={playlist.id}
                                                     imageUrl={playlist.imageUrl}
                                                     name={playlist.name}
                                                     artist={playlist.description}

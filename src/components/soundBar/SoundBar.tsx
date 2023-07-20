@@ -60,6 +60,9 @@ export const SoundBar = () => {
 
         // console.log(index)
         if (index === 0 && trackList !== null) {
+            // const prevTrack = trackList[trackList.length - 1];
+            // prevTrack.progress = 0;
+
             setCurrentTrack(trackList[trackList.length - 1])
         }
         else {
@@ -80,8 +83,8 @@ export const SoundBar = () => {
             setCurrentTrack(trackList[0])
         }
         else {
-            console.log("entra el el else")
             setCurrentTrack(trackList[index + 1])
+
         }
 
         audioElement.current.currentTime = 0
@@ -105,17 +108,22 @@ export const SoundBar = () => {
     }, [isPlaying])
 
     useEffect(() => {
+        console.log(currentTrack);
+    }, [currentTrack])
+
+    useEffect(() => {
         // setTrackList(testMusic)
+        console.log(trackList);
         audioElement.current?.addEventListener("loadedmetadata", handleMetaDataLoad)
         return () => { audioElement.current?.removeEventListener("loadedmetadata", handleMetaDataLoad) }
-    }, [])
+    }, [trackList])
 
 
     return (
         <div>
             <audio src={currentTrack ? currentTrack.url : ""} ref={audioElement} onTimeUpdate={() => getTrackProgress()} />
             <SoundPlayer
-                trackList={trackList}
+                // trackList={trackList}
                 // setTrackList={setTrackList}
                 isPlaying={isPlaying}
                 setIsPlaying={setIsPlaying}
@@ -125,12 +133,23 @@ export const SoundBar = () => {
                 handlePrevTrack={handlePrevTrack}
                 handleNextTrack={handleNextTrack}
                 loopActive={loopActive}
-                setloopActive={setLoopActive}
+                setLoopActive={setLoopActive}
             />
         </div>
     )
 }
 
+// export interface SoundPlayerPropTypes {
+//     isPlaying: boolean,
+//     setIsPlaying: () => void,
+//     currentTrack: TrackType,
+//     setCurrentTrack: () => void,
+//     audioElement: HTMLAudioElement,
+//     handlePrevTrack: () => void,
+//     handleNextTrack: () => void,
+//     loopActive: boolean,
+//     setLoopActive: () => void
+// }
 
 
 

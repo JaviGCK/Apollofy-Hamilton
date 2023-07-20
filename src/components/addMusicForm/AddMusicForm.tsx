@@ -61,6 +61,7 @@ export const AddMusicForm = () => {
             ...userLogged,
             tracks: newTracksList
         }
+        console.log(userLoggedNewObject);
         setCurrentLoggedUser(userLoggedNewObject);
 
         reset();
