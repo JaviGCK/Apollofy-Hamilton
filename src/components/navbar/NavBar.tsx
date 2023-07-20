@@ -12,7 +12,7 @@ export const NavBar = () => {
     const handleIconsClicked = (path: string) => {
 
         switch (path) {
-            case '/': navigate('/');
+            case 'home': navigate('home');
                 break
             case 'search': navigate('search');
                 break
@@ -28,7 +28,7 @@ export const NavBar = () => {
     const iconsNavbar = [
         {
             id: "home-icon",
-            path: "/"
+            path: "home"
         },
         {
             id: "search-icon",

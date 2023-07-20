@@ -9,15 +9,14 @@ export const LoginButton = () => {
     const handleLogin = async () => {
       await loginWithRedirect({
         appState: {
-          returnTo: "/",
+          returnTo: "/home",
         },
       });
     };
 
     return (
         <>
-        <h1>LoginPage</h1>
-        <button onClick={handleLogin}>Log In</button>;)
+        <button  className = 'login-btn'onClick={handleLogin}>Log In</button>
         </>
     )
   

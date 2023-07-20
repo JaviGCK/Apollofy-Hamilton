@@ -18,16 +18,16 @@ export const RouterPaths = () => {
         <Auth0ProviderWithNavigate>
           <Routes>
 
-            <Route path='/login'>
+            <Route path='/'>
               <Route index element={<LoginPage />} />
             </Route>
-            <Route path='/*' element={AuthenticationGuard(Layout)}>
-              <Route index element={<HomePage />} />
+            <Route path='' element={AuthenticationGuard(Layout)}>
+              <Route path='home' element={<HomePage />} />
               <Route path='search' element={<SearchPage />} />
               <Route path='library' element={<LibraryPage />} />
               <Route path='user' element={<UserPage />} />
             </Route>
-
+          
           </Routes>
         </Auth0ProviderWithNavigate>
       </BrowserRouter>
