@@ -1,6 +1,6 @@
 .group-item-list {
     display: flex;
-    margin: 20px;
+    margin: 20px 5px;
     font-size: 14px;
     font-weight: 400;
     position: relative;
@@ -17,7 +17,7 @@
     padding-left: 15px;
 }
 
-.gi-playBtn{
+.gi-playBtn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,12 +27,13 @@
     margin-left: auto;
     padding: 0;
 }
-.gi-playBtn-ico{
+
+.gi-playBtn-ico {
     text-align: center;
     color: white;
     padding: none;
     font-size: 35px;
     position: absolute;
     right: 0;
-    bottom:50%
+    bottom: 50%
 }
