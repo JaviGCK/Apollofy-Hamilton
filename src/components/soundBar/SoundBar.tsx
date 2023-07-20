@@ -77,6 +77,9 @@ export const SoundBar = () => {
 
     const handleNextTrack = () => {
 
+        console.log(audioElement.current)
+        console.log(currentTrack)
+        console.log(trackList)
         if (audioElement.current === null || currentTrack === null || trackList === null) return
 
         const index = trackList.findIndex((x: any) => x.name === currentTrack.name)
@@ -87,7 +90,7 @@ export const SoundBar = () => {
             setCurrentTrack(trackList[0])
         }
         else {
-            console.log(trackList[index + 1]);
+            console.log("next");
             setCurrentTrack(trackList[index + 1])
 
         }
@@ -121,7 +124,7 @@ export const SoundBar = () => {
         console.log(trackList);
         audioElement.current?.addEventListener("loadedmetadata", handleMetaDataLoad)
         return () => { audioElement.current?.removeEventListener("loadedmetadata", handleMetaDataLoad) }
-    }, [trackList])
+    }, [])
 
 
     return (
