@@ -4,13 +4,15 @@ import { BiPlay } from "react-icons/bi";
 import "./trendItem.css"
 import { TrendItemProps } from "../../../types/propTypes/trendItemProps";
 import { FC, useEffect, useState } from "react";
-import { fetchData } from "../../../api/fetchApi";
+import { fetchData, getFullTrack } from "../../../api/fetchApi";
 import { AlbumType } from "../../../types/dataTypes/album";
 import { PlaylistType } from "../../../types/dataTypes/playlist";
 import { ArtistType } from "../../../types/dataTypes/artist";
 import { TrackType } from "../../../types/dataTypes/track";
 import { useNavigate } from "react-router-dom";
 import { useListDetailContext } from "../../../hooks/useListDetailContext";
+import { ListType } from "../../../types/dataTypes/enums.d";
+import { useTrackListContext } from "../../../hooks/useTrackListContext";
 
 
 export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
@@ -25,6 +27,8 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
     const [item, setItem] = useState<itemType | null>(null);
     const navigate = useNavigate();
     const { setNewListDetail } = useListDetailContext();
+    const [trackIds, setTrackIds] = useState<string[] | null>(null);
+    const { setNewTrackList } = useTrackListContext();
 
     useEffect(() => {
         (async function fetchItemData() {
@@ -48,7 +52,7 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
                 const albumPlaylistItem = itemFetched as PlaylistType | AlbumType;
                 if (albumPlaylistItem.tracks !== undefined) {
                     trackId = albumPlaylistItem.tracks[0].id;
-                    // console.log(albumPlaylistItem.tracks[0]);
+
                 }
             } else {
                 const artistItem = itemFetched as ArtistType;
@@ -85,6 +89,56 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
 
     }
 
+    const homePagePlayClicked = (e: any) => {
+        e.stopPropagation();
+
+        (async function setTracksSoundbar() {
+            const data = await fetchData(`${props.type}s?id=${props.id}`) as AlbumType[] | PlaylistType[] | ArtistType[];
+            const dataFetched = data[0] as (AlbumType | PlaylistType | ArtistType);
+            if (props.type !== ListType.ARTIST) {
+                const playlistOrAlbum = dataFetched as AlbumType | PlaylistType;
+
+                let trackListIds: string[] = [];
+                playlistOrAlbum.tracks?.forEach(async (track) => {
+                    trackListIds.push(track.id)
+                })
+                setTrackIds(trackListIds);
+
+            } else {
+
+                const artistObtained = dataFetched as ArtistType;
+
+                let trackListIdsArtist: string[] = [];
+                artistObtained.albums?.forEach(async (album, index1) => {
+
+                    const albumFetchedArray = await fetchData(`albums?id=${album.id}`) as AlbumType[];
+                    const albumFetched = albumFetchedArray[0];
+
+
+                    albumFetched.tracks?.forEach((track, index2) => {
+                        trackListIdsArtist?.push(track.id);
+
+                        if ((artistObtained.albums && index1 === artistObtained.albums?.length - 1) &&
+                            albumFetched.tracks && index2 === albumFetched.tracks.length - 1) {
+
+                            setTrackIds(trackListIdsArtist);
+                        }
+                    })
+
+                })
+
+            }
+        }());
+
+    }
+
+    useEffect(() => {
+        if (trackIds === null) return;
+        (async function getTracksById() {
+            setNewTrackList(await getFullTrack(trackIds));
+        }());
+    }, [trackIds])
+
     return (
         <div className="trend-item-container" onClick={handleListDetailClicked}>
             {item && <>
@@ -98,7 +152,7 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
                             <FaMusic className="dashboard-music-icon" /> <span>{item.artistsName[0]}</span> - <span>{item.albumName}</span>
                         </p>
 
-                        <span className="play-btn-container">
+                        <span className="play-btn-container" onClick={homePagePlayClicked}>
                             <BiPlay className="dashboard-play-icon" />
                         </span>
                     </div>
