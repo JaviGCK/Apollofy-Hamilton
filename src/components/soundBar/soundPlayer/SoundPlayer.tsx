@@ -3,7 +3,7 @@ import { BsFillPlayCircleFill, BsFillPauseCircleFill, BsFillSkipStartCircleFill,
 import { ImLoop } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
 import "./soundPlayer.css"
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useRef, useState } from 'react';
 import { SoundPlayerPropTypes } from '../../../types/propTypes/soundPlayerPropTypes';
 
 
@@ -15,8 +15,6 @@ export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
     const playerContainer = useRef<HTMLDivElement | null>(null)
 
     const soundBarClickRef = useRef<HTMLDivElement | null>(null)
-
-
 
 
     const handlePlayPause = (event: any) => {

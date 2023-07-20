@@ -9,16 +9,18 @@ import { ListDetailProps } from '../../types/propTypes/listDetailProps';
 
 export const ListDetailPage: FC<ListDetailProps> = ({ ...props }) => {
 
-    const [album, setAlbum] = useState<AlbumType | null>(null);
-    /**${props.albumId} */
-    useEffect(() => {
-        const api = async () => {
-            const data = await fetch(`http://localhost:3001/albums?id=4yP0hdKOZPNshxUOjY0cZj`);
-            const albumFetched = await data.json();
-            setAlbum(albumFetched[0]);
-        };
-        api();
-    }, []);
+    // const [album, setAlbum] = useState<AlbumType | null>(null);
+    // /**${props.albumId} */
+    // useEffect(() => {
+    //     const api = async () => {
+    //         const data = await fetch(`http://localhost:3001/albums?id=4yP0hdKOZPNshxUOjY0cZj`);
+    //         const albumFetched = await data.json();
+    //         setAlbum(albumFetched[0]);
+    //     };
+    //     api();
+    // }, []);
+
+    // const [ty]
 
     return (
         <div>
