@@ -78,9 +78,7 @@ export const LibraryPage = () => {
                     return (
                         <GroupItem
                             key={list.id}
-                            imageUrl={list.imageUrl}
-                            name={list.name}
-                            type={list.type}
+                            track={list}
                         />
                     )
                 })}
