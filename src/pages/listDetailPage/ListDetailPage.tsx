@@ -29,7 +29,7 @@ export const ListDetailPage = () => {
     useEffect(() => {
         if (listDetail !== null) {
 
-            if (listDetail?.type !== ListType.ARTIST) {
+            if (listDetail?.type !== ListType.ARTIST && listDetail?.type !== ListType.GENRE) {
                 let newTracksIds: string[] = [];
                 const playlistOrAlbum = listDetail as PlaylistType | AlbumType;
 
@@ -40,7 +40,7 @@ export const ListDetailPage = () => {
 
                 }
                 setTrackIds(newTracksIds)
-            } else {
+            } else if (listDetail?.type === ListType.ARTIST) {
                 const artistObtained = listDetail as ArtistType;
                 (async function getTracksIds() {
                     let newTracksIds: string[] = [];
