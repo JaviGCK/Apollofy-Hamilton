@@ -51,7 +51,7 @@ export const NavBar = () => {
                 track.progress = 0;
                 track.duration = 0;
             })
-            console.log(tracksFetched);
+            // console.log(tracksFetched);
             setNewTrackList(tracksFetched);
 
         }());

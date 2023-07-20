@@ -4,15 +4,18 @@ import { NavBar } from '../components/navbar/NavBar'
 import { SoundBar } from '../components/soundBar/SoundBar'
 import { UserContextProvider } from '../context/UserContextProvider'
 import { TrackListContextProvider } from '../context/TrackListContextProvider'
+import { ListDetailContextProvider } from '../context/ListDetailContextProvider'
 
 export const Layout = () => {
   return (
     <>
       <UserContextProvider>
         <TrackListContextProvider>
-          <Outlet />
-          <SoundBar />
-          <NavBar />
+          <ListDetailContextProvider>
+            <Outlet />
+            <SoundBar />
+            <NavBar />
+          </ListDetailContextProvider>
         </TrackListContextProvider>
       </UserContextProvider>
     </>

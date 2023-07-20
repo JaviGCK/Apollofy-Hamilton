@@ -9,6 +9,7 @@ import { AuthenticationGuard } from '../components/login/AuthenticationGuard'
 import { Auth0ProviderWithNavigate } from '../context/Auth0ProviderWithNavigate'
 import { FilterProvider } from '../context/FilterContext'
 import { AddMusicPage } from '../pages/addMusicPage/AddMusicPage'
+import { ListDetailPage } from '../pages/listDetailPage/ListDetailPage'
 
 
 
@@ -31,6 +32,7 @@ export const RouterPaths = () => {
                 <Route path='library' element={<LibraryPage />} />
                 <Route path='user' element={<UserPage />} />
                 <Route path='form' element={<AddMusicPage />} />
+                <Route path='detail-page' element={<ListDetailPage />} />
               </Route>
 
             </Routes>

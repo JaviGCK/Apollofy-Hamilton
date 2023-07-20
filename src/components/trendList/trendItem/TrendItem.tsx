@@ -9,6 +9,8 @@ import { AlbumType } from "../../../types/dataTypes/album";
 import { PlaylistType } from "../../../types/dataTypes/playlist";
 import { ArtistType } from "../../../types/dataTypes/artist";
 import { TrackType } from "../../../types/dataTypes/track";
+import { useNavigate } from "react-router-dom";
+import { useListDetailContext } from "../../../hooks/useListDetailContext";
 
 
 export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
@@ -21,6 +23,8 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
         artistsName: string[]
     }
     const [item, setItem] = useState<itemType | null>(null);
+    const navigate = useNavigate();
+    const { setNewListDetail } = useListDetailContext();
 
     useEffect(() => {
         (async function fetchItemData() {
@@ -71,8 +75,19 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
         }());
     }, [])
 
+    const handleListDetailClicked = () => {
+        (async function getList() {
+            const data = await fetchData(`${props.type}s?id=${props.id}`) as AlbumType[] | PlaylistType[] | ArtistType[];
+            const dataFetched = data[0] as (AlbumType | PlaylistType | ArtistType);
+            setNewListDetail(dataFetched);
+            navigate("/detail-page");
+        }());
+
+
+    }
+
     return (
-        <div className="trend-item-container">
+        <div className="trend-item-container" onClick={handleListDetailClicked}>
             {item && <>
                 <div className="trend-item-card">
                     <img className="trend-item-card-img" src={item.imageUrl} alt={`Cover Image of ${item.itemTitle}`} />

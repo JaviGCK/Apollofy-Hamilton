@@ -64,9 +64,9 @@ export const SoundBar = () => {
     }
 
     const handleMetaDataLoad = () => {
-        console.log("before if");
+        // console.log("before if");
         if (currentTrack === null) return;
-        console.log("after if");
+        // console.log("after if");
         const trackDuration = audioElement.current?.duration
         setCurrentTrack({
             ...currentTrack,

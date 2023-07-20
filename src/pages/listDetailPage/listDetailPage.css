@@ -20,15 +20,24 @@
 }
 
 .list-detail-img {
-    width: 280px;
-    height: 290px;
+    width: 220px;
+    height: 230px;
+}
+
+.artist-img {
+    border-radius: 50%;
+    ;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .list-detail-dashboard {
     display: flex;
     align-items: center;
     width: 100vw;
-    margin-top: 5vh;
+    margin-top: 2rem;
 }
 
 .list-detail-add-btn {
@@ -65,6 +74,12 @@
 }
 
 .list-detail-container-items {
-    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
     height: calc(100vh - 50px);
+}
+
+.list-detail-container-items::-webkit-scrollbar {
+    width: 0;
 }
