@@ -20,23 +20,25 @@ export const TrendList = () => {
         { id: "top-albums", topTrendText: "Top Albums", topTrendArray: topTrends?.topAlbums }
     ]
     return (
-        <div className="trendlist-container">
+        <div className="trendlist-wrapper">
+            <div className="trendlist-container">
 
-            {topTrends && topTrendsArray.map((topTrendType) => (
-                <div key={topTrendType.id} className="top-trend-container">
-                    <h3 className="trend-type-title">{topTrendType.topTrendText}</h3>
-                    <div className="top-trend-items-container">
-                        {topTrendType.topTrendArray?.map((topTrendItem) => (
-                            <TrendItem
-                                key={topTrendItem.id}
-                                id={topTrendItem.id}
-                                type={topTrendItem.type}
-                            />
-                        ))}
+                {topTrends && topTrendsArray.map((topTrendType) => (
+                    <div key={topTrendType.id} className="top-trend-container">
+                        <h3 className="trend-type-title">{topTrendType.topTrendText}</h3>
+                        <div className="top-trend-items-container">
+                            {topTrendType.topTrendArray?.map((topTrendItem) => (
+                                <TrendItem
+                                    key={topTrendItem.id}
+                                    id={topTrendItem.id}
+                                    type={topTrendItem.type}
+                                />
+                            ))}
+                        </div>
                     </div>
-                </div>
-            ))}
-            <div className="white-space-home-page"></div>
+                ))}
+                <div className="white-space"></div>
+            </div>
         </div>
     )
 }

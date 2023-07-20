@@ -1,14 +1,18 @@
+.trendlist-wrapper {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.trendlist-wrapper::-webkit-scrollbar {
+    width: 0;
+}
+
 .trendlist-container {
     display: flex;
     flex-direction: column;
     gap: 16px;
     padding: 18px;
-    height: 85vh;
-    overflow-y: scroll;
-}
 
-.trendlist-container::-webkit-scrollbar {
-    width: 0;
 }
 
 .trend-type-title {
@@ -31,9 +35,4 @@
 
 .top-trend-items-container::-webkit-scrollbar {
     width: 0;
-}
-
-.white-space-home-page {
-    height: 10vh;
-
 }

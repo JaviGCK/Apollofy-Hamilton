@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&display=swap');
 
 .profile-music-container {
+    display: flex;
+    flex-direction: column;
     font-family: 'Noto Sans', sans-serif;
     height: 70vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
-.profileMusic-container h3 {
+.profile-music-container::-webkit-scrollbar {
+    width: 0;
+}
+
+.profile-music-container h3 {
     font-weight: 500;
 }
 
@@ -13,10 +21,4 @@
     display: flex;
     flex-direction: column;
     margin-top: 0.5vh;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-}
-
-.music-list-container::-webkit-scrollbar {
-    width: 0;
 }
