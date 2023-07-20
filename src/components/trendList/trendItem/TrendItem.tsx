@@ -44,7 +44,7 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
                 const albumPlaylistItem = itemFetched as PlaylistType | AlbumType;
                 if (albumPlaylistItem.tracks !== undefined) {
                     trackId = albumPlaylistItem.tracks[0].id;
-                    console.log(albumPlaylistItem.tracks[0]);
+                    // console.log(albumPlaylistItem.tracks[0]);
                 }
             } else {
                 const artistItem = itemFetched as ArtistType;

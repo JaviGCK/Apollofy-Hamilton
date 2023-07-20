@@ -1,37 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
-.profile-chart-container{
+
+.profile-chart-container {
     font-family: 'Noto Sans', sans-serif;
-    height: 25%;
+    height: 25vh;
     padding: 0.5rem;
     display: grid;
     grid-template-rows: 60% auto;
 
 }
+
 .pcc-top {
     display: grid;
     grid-template-columns: 30% auto;
 }
-.profile-img-container{
+
+.profile-img-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.pcc-profile-image{
+
+.pcc-profile-image {
     height: 100%;
     width: 100%;
-    border-radius: 50px;
+    border-radius: 50%;
+    object-fit: cover;
     box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
-.profile-data-container{
+
+.profile-data-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 3vh;
 }
-.pcc-width{
+
+.pcc-width {
     font-weight: 200;
 }
-.pcc-bottom{
+
+.pcc-bottom {
     margin: auto 0;
     margin-top: 10px;
     padding: 8px;
@@ -39,7 +51,8 @@
     flex-direction: row;
     align-items: center;
 }
-.pcc-bottom button{
+
+.pcc-bottom button {
     font-family: 'Noto Sans', sans-serif;
     font-size: 12px;
     width: 65px;

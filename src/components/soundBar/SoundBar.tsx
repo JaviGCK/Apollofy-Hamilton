@@ -40,8 +40,8 @@ export const SoundBar = () => {
             const trackDuration = audioElement.current.duration
             const currentTrackProgress = audioElement.current.currentTime
 
-            console.log(trackDuration)
-            console.log(currentTrackProgress)
+            // console.log(trackDuration)
+            // console.log(currentTrackProgress)
             setCurrentTrack({
                 ...currentTrack,
                 progress: currentTrackProgress / trackDuration * 100,
@@ -67,7 +67,7 @@ export const SoundBar = () => {
 
         const index = trackList.findIndex((x: any) => x.name === currentTrack.name)
 
-        console.log(index)
+        // console.log(index)
         if (index === 0) {
             setCurrentTrack(trackList[trackList.length - 1])
         }
@@ -84,7 +84,7 @@ export const SoundBar = () => {
 
         const index = trackList.findIndex((x: any) => x.name === currentTrack.name)
 
-        console.log(index)
+        // console.log(index)
         if (index === trackList.length - 1) {
             setCurrentTrack(trackList[0])
         }

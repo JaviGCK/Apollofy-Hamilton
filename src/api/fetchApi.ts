@@ -35,7 +35,7 @@ export const getListByReference = async (type: string, id: string): Promise<any>
 }
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
-export const postDataCloud = async (dataForm: FormData) => {
+export const postDataCloud = async (dataForm: FormData): Promise<string> => {
     const response = await fetch(`https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLOUD_NAME}/auto/upload`, {
         method: 'POST',
         body: dataForm
@@ -45,17 +45,33 @@ export const postDataCloud = async (dataForm: FormData) => {
 }
 
 
-//--------------------------------------------------------------------------------------------------------------------------------------------
 
+//--------------------------------------------------------------------------------------------------------------------------------------------
 export const postTrackServer = async (userEmail: string, trackUrl: string, trackId: string, trackTitle: string, trackImg: string, trackPrivacy: boolean, trackGenre: GenreTypes): Promise<void> => {
     // const users = await fetchData("users") as UserType[];
     // const user = users.find(({ email }) => email === userEmail) as UserType;
-    const userFetched = await fetchData(`users?email=${userEmail}`) as UserType[];
-    const user = userFetched[0];
+
+    const user = await getUserByEmail(userEmail);
 
     const userTracks = user.tracks as TrackType[];
+    const newTrack = getNewTrack(user.id, trackUrl, trackId, trackTitle, trackImg, trackGenre);
+
+    updateUser(user, userTracks, newTrack)
+
+    if (!trackPrivacy) {
+        postNewData(newTrack, "tracks");
+    }
+}
+//--------------------------------------------------------------------------------------------------------------------------------------------
+export const getUserByEmail = async (userEmail: string): Promise<UserType> => {
+    const userFetched = await fetchData(`users?email=${userEmail}`) as UserType[];
+    const user = userFetched[0];
+    return user;
+}
+//--------------------------------------------------------------------------------------------------------------------------------------------
+export const getNewTrack = (userId: string, trackUrl: string, trackId: string, trackTitle: string, trackImg: string, trackGenre: GenreTypes): TrackType => {
     const userArtist: ArtistType = {
-        id: user.id
+        id: userId
     }
 
     const newTrack: TrackType = {
@@ -68,17 +84,13 @@ export const postTrackServer = async (userEmail: string, trackUrl: string, track
         genre: [trackGenre],
         artists: [userArtist]
     }
-    updateUser(user, userTracks, newTrack)
-
-    if (!trackPrivacy) {
-        postTrack(newTrack);
-    }
+    return newTrack;
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
 export const updateUser = async (user: UserType, userTracks: TrackType[], newTrack: TrackType) => {
-    const response = await fetch(`http://localhost:3001/users/${user.id}`, {
+    await fetch(`http://localhost:3001/users/${user.id}`, {
         method: "PATCH",
         body: JSON.stringify({
             ...user,
@@ -88,22 +100,23 @@ export const updateUser = async (user: UserType, userTracks: TrackType[], newTra
             "Content-type": "application/json; charset=UTF-8"
         }
     })
-    const dataFetched = await response.json();
-    console.log(dataFetched);
+    // const dataFetched = await response.json();
+
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
-export const postTrack = async (track: TrackType) => {
-    const response = await fetch("http://localhost:3001/tracks", {
+export const postNewData = async (newData: TrackType | UserType, newDataType: string) => {
+    await fetch(`http://localhost:3001/${newDataType}`, {
         method: "POST",
-        body: JSON.stringify(track),
+        body: JSON.stringify(newData),
         headers: {
             "Content-type": "application/json; charset=UTF-8"
         }
     });
-    const dataFetched = await response.json();
-    console.log(dataFetched);
+    // const dataFetched = await response.json();
+
 }
+
 
 

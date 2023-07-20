@@ -3,11 +3,41 @@ import { BiHomeAlt2, BiSearch, BiSolidHeart } from 'react-icons/bi'
 import { MdLibraryAdd } from 'react-icons/md'
 import { GiAlienStare } from 'react-icons/gi'
 import { useNavigate } from 'react-router-dom'
+import { useUserContext } from '../../hooks/useUserContext'
+import { UserType } from '../../types/dataTypes/user'
+import { fetchData, postNewData } from '../../api/fetchApi'
+import { useAuth0 } from '@auth0/auth0-react'
+import { getUniqueId } from '../../utils/functions/randomId'
+import { ListType } from '../../types/dataTypes/enums.d'
 
 
 export const NavBar = () => {
 
     const navigate = useNavigate();
+    const { user } = useAuth0();
+    const { currentUser, setCurrentLoggedUser } = useUserContext();
+
+    if (currentUser === null) {
+        (async function fetchUser() {
+            const usersFetched = await fetchData('users') as UserType[];
+            const loggedUserObject = usersFetched.find(({ email }) => email === user?.email);
+
+            if (loggedUserObject !== undefined) {
+                setCurrentLoggedUser(loggedUserObject)
+            } else {
+                const newUser: UserType = {
+                    id: getUniqueId(),
+                    email: user?.email,
+                    name: user?.name,
+                    profilePicture: user?.picture,
+                    type: ListType.USER,
+                    libraryList: [],
+                    tracks: []
+                }
+                postNewData(newUser, "users");
+            }
+        }());
+    }
 
     const handleIconsClicked = (path: string) => {
 

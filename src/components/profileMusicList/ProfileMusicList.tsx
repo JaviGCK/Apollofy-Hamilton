@@ -1,28 +1,22 @@
 import './profileMusicList.css'
-import { useEffect, useState } from 'react'
+import { FC } from 'react'
 import { GroupItem } from '../lists/groupItem/GroupItem'
-import { fetchData } from '../../api/fetchApi'
-import { UserType } from '../../types/dataTypes/user'
 
-const test = {
-    imageUrl: "https://play-lh.googleusercontent.com/rKLMwthaxMG2wXoSRI7gyuoZWkuIUagkFhRh4pFWqKquwzXx5R8w7aS148LzgeDlqWZs",
-    name: "Not Depresing music",
-    type: "Emotional Damage - Album"
-}
+import { ProfileMusicListPropTypes } from '../../types/propTypes/profileMusicListProps'
 
-const ProfileMusicList = () => {
-    const [myMusic, setMyMusic] = useState<UserType[]>([]);
-    useEffect(() => {
-        (async function fetchUsers() {
-            const usersFetched = await fetchData("users") as UserType[];
-            setMyMusic(usersFetched);
-        }());
-    }, [])
+
+
+const ProfileMusicList: FC<ProfileMusicListPropTypes> = ({ tracks }) => {
+
+
     return (
-        <div className='profileMusic-container'>
+        <div className='profile-music-container'>
             <h3>My Music</h3>
             <div className='music-list-container'>
-                <GroupItem imageUrl={test.imageUrl} name={test.name} type={test.type} />
+                {tracks?.map((track) => (
+                    <GroupItem key={track.url} id={track.id} imageUrl={track.imageUrl} name={track.name} type="track" />
+                ))}
+                <div className='white-space'></div>
             </div>
         </div>
     )

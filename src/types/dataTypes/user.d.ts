@@ -4,13 +4,11 @@ import { TrackType } from "./track";
 
 export interface UserType {
     id: string,
-    firstName?: string,
-    lastName?: string,
+    name?: string,
     email?: string,
     profilePicture?: string,
-    isLoggedIn?: boolean,
     libraryList?: PossibleItems[],
-    type: ListType,
+    type?: ListType,
     tracks?: TrackType[]
 }
 

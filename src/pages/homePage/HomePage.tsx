@@ -6,13 +6,11 @@ import { useAuth0 } from "@auth0/auth0-react"
 
 export const HomePage = () => {
 
-
     const {
         isLoading,
-        isAuthenticated,
         error,
-        user
     } = useAuth0();
+
 
     if (isLoading) {
         return <div>Loading...</div>;
@@ -21,9 +19,9 @@ export const HomePage = () => {
         return <div>Oops... {error.message}</div>;
     }
 
-    if (isAuthenticated) {
-        console.log(isAuthenticated)
-    }
+    // if (isAuthenticated) {
+    //     console.log(isAuthenticated)
+    // }
 
     return (
 

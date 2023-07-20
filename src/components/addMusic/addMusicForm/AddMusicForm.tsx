@@ -1,17 +1,19 @@
 import { useForm } from "react-hook-form"
 import { useState } from "react"
-import { postDataCloud, postTrackServer } from "../../../api/fetchApi"
+import { getNewTrack, getUserByEmail, postDataCloud, postTrackServer } from "../../../api/fetchApi"
 import { useAuth0 } from "@auth0/auth0-react"
 import { GenreTypes } from "../../../types/dataTypes/enums"
 import { getUniqueId } from "../../../utils/functions/randomId"
 import "./addMusicForm.css"
 import toast, { Toaster } from "react-hot-toast"
+import { useUserContext } from "../../../hooks/useUserContext"
 
 
 export const AddMusicForm = () => {
 
     const [privacityState, setPrivacityState] = useState(false)
     const { user } = useAuth0()
+    const { setCurrentLoggedUser } = useUserContext();
 
     const { register, handleSubmit, formState: { errors }, reset, watch } = useForm({
         defaultValues: {
@@ -52,6 +54,11 @@ export const AddMusicForm = () => {
         toast.success('Track uploaded successfully...')
 
         postTrackServer(email, audioUrl, trackId, trackTitle, imageUrl, trackPrivacy, trackGenre);
+
+        const loggedUser = await getUserByEmail(email);
+        const newTrack = getNewTrack(loggedUser.id, audioUrl, trackId, trackTitle, imageUrl, trackGenre);
+        loggedUser.tracks?.push(newTrack)
+        setCurrentLoggedUser(loggedUser);
 
         reset();
 
