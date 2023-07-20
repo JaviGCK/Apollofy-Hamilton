@@ -1,4 +1,4 @@
-.library-page-container{
+.library-page-container {
     height: 100vh;
     overflow: scroll;
 }
@@ -6,14 +6,14 @@
 .library-heading {
     display: flex;
     justify-content: space-between;
-    padding: 65px 20px 20px 20px;
+    padding: 30px 20px 20px 30px;
 }
 
 .heading-user {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 8px;
+    gap: 25px;
 }
 
 .library-user-img {
@@ -26,7 +26,7 @@
 }
 
 .heading-buttons {
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     gap: 30px;

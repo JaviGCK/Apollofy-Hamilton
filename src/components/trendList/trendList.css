@@ -19,6 +19,7 @@
 .top-trend-container {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 .top-trend-items-container {

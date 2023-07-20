@@ -8,7 +8,7 @@ export const HomePage = () => {
 
     const {
         isLoading,
-        error,
+        error
     } = useAuth0();
 
 

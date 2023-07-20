@@ -7,8 +7,8 @@ import { LoginPage } from '../pages/loginPage/LoginPage'
 import { UserPage } from '../pages/userPage/UserPage'
 import { AuthenticationGuard } from '../components/login/AuthenticationGuard'
 import { Auth0ProviderWithNavigate } from '../context/Auth0ProviderWithNavigate'
-import { AddMusic } from '../components/addMusic/AddMusic'
 import { FilterProvider } from '../context/FilterContext'
+import { AddMusicPage } from '../pages/addMusicPage/AddMusicPage'
 
 
 
@@ -30,7 +30,7 @@ export const RouterPaths = () => {
                 <Route path='search' element={<SearchPage />} />
                 <Route path='library' element={<LibraryPage />} />
                 <Route path='user' element={<UserPage />} />
-                <Route path='form' element={<AddMusic />} />
+                <Route path='form' element={<AddMusicPage />} />
               </Route>
 
             </Routes>
