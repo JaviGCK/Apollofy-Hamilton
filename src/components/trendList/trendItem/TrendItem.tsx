@@ -109,17 +109,17 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
                 const artistObtained = dataFetched as ArtistType;
 
                 let trackListIdsArtist: string[] = [];
-                artistObtained.albums?.forEach(async (album, index1) => {
+                artistObtained.albums?.forEach(async (album, albumIndex) => {
 
                     const albumFetchedArray = await fetchData(`albums?id=${album.id}`) as AlbumType[];
                     const albumFetched = albumFetchedArray[0];
 
 
-                    albumFetched.tracks?.forEach((track, index2) => {
+                    albumFetched.tracks?.forEach((track, trackIndex) => {
                         trackListIdsArtist?.push(track.id);
 
-                        if ((artistObtained.albums && index1 === artistObtained.albums?.length - 1) &&
-                            albumFetched.tracks && index2 === albumFetched.tracks.length - 1) {
+                        if ((artistObtained.albums && albumIndex === artistObtained.albums?.length - 1) &&
+                            albumFetched.tracks && trackIndex === albumFetched.tracks.length - 1) {
 
                             setTrackIds(trackListIdsArtist);
                         }

@@ -5,7 +5,6 @@ import { Filter } from '../../components/filter'
 import { listsFilterCategories } from '../../assets/globalVariables'
 import { useEffect, useState } from 'react'
 import { GroupItem } from '../../components/lists/groupItem/GroupItem'
-import { GroupButton } from '../../components/lists/groupButtons/GroupButton'
 import { getUserListsReferences, getListByReference } from '../../api/fetchApi'
 import { useFilterContext } from '../../utils/hooks/useFilterProvider'
 import { PossibleItems } from '../../types/dataTypes/enums'
@@ -30,11 +29,11 @@ export const LibraryPage = () => {
         const getFetch = async () => {
             if (user?.email === undefined) return
             const allUserLists = await getUserListsReferences(user?.email)
-            const libraryLists = allUserLists[0].libraryList
-            await libraryLists.map(async (list: any) => {
+            const libraryLists = allUserLists[0].libraryList as PossibleItems[]
+            await libraryLists.map(async (list: any, index) => {
                 const result = await getListByReference(list.type, list.id)
                 allLists.push(result)
-                setUserLists(allLists)
+                if (libraryLists.length - 1 === index) setUserLists(allLists);
             })
         }
         getFetch()
@@ -72,21 +71,21 @@ export const LibraryPage = () => {
                 </div>
             </div>
             <Filter filters={listsFilterCategories} />
-            <div>
-                {filteredLists?.map((list) => {
+            <div className='library-list-items-wrapper'>
+                <div className='library-items-container'>
+                    {filteredLists?.map((list) => {
 
-                    return (
-                        <GroupItem
-                            key={list.id}
-                            track={list}
-                        />
-                    )
-                })}
+                        return (
+                            <GroupItem
+                                key={list.id}
+                                track={list}
+                            />
+                        )
+                    })}
+                </div>
+
+                <div className="white-space"></div>
             </div>
-
-            <GroupButton buttonType="Artist" />
-            <GroupButton buttonType="Album" />
-            <div className="white-space"></div>
         </section>
 
     )

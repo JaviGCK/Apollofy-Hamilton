@@ -11,9 +11,9 @@ const ProfileChart: FC<ProfileChartPropTypes> = ({ imageUrl, userName }) => {
                     <p className='profile-data-followers'><span>50</span><span className='pcc-width'> Followers </span><span>0</span><span className='pcc-width'> Following</span></p>
                 </div>
             </div>
-            <div className='pcc-bottom'>
-                {/* <button>Edit</button> */}
-            </div>
+            {/* <div className='pcc-bottom'>
+                <button>Edit</button>
+            </div> */}
         </div>
     )
 }

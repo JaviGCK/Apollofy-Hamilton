@@ -284,6 +284,29 @@
             }
           ],
           "type": "artist"
+        },
+        {
+          "id": "7960b357-dc43-4939-832d-b2115f163bc3",
+          "name": "Today's Top Hits",
+          "isFollowed": true,
+          "owner": "Apollofy",
+          "imageUrl": "https://i.scdn.co/image/ab67706f00000003b3823d06a3718d5dc082e91f",
+          "description": "Today's Top Hits",
+          "tracks": [
+            {
+              "id": "22agj1ppHejR41cUyf7k6v"
+            },
+            {
+              "id": "709MdyUol3Qfgcowmd7KV4"
+            },
+            {
+              "id": "62yJjFtgkhUrXktIoSjgP2"
+            },
+            {
+              "id": "0Y7exe8Yu2nbuIvGDRGXcz"
+            }
+          ],
+          "type": "playlist"
         }
       ],
       "type": "user",
@@ -429,6 +452,23 @@
           "verified": false,
           "genre": [
             "dance"
+          ],
+          "artists": [
+            {
+              "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7",
+              "name": "Ali Hourag"
+            }
+          ]
+        },
+        {
+          "id": "ikzz9ukzqj",
+          "name": "my song",
+          "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1689888106/images/ctqzxfgtbzgxxbnhfh2y.jpg",
+          "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1689888105/tracks/zm2ufbir74tzscmtwkxe.mp3",
+          "liked": 0,
+          "verified": false,
+          "genre": [
+            "metal"
           ],
           "artists": [
             {
@@ -1520,6 +1560,23 @@
         {
           "id": "ldotrsstski",
           "name": "Matias Alaimo Chiappa"
+        }
+      ]
+    },
+    {
+      "id": "ikzz9ukzqj",
+      "name": "my song",
+      "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1689888106/images/ctqzxfgtbzgxxbnhfh2y.jpg",
+      "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1689888105/tracks/zm2ufbir74tzscmtwkxe.mp3",
+      "liked": 0,
+      "verified": false,
+      "genre": [
+        "metal"
+      ],
+      "artists": [
+        {
+          "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7",
+          "name": "Ali Hourag"
         }
       ]
     }

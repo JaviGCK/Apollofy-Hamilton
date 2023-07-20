@@ -1,6 +1,5 @@
 .library-page-container {
     height: 100vh;
-    overflow: scroll;
 }
 
 .library-heading {
@@ -23,6 +22,16 @@
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+}
+
+.library-list-items-wrapper {
+    height: calc(100vh - 240px);
+    overflow-y: scroll;
+    padding-left: 25px;
+}
+
+.library-list-items-wrapper::-webkit-scrollbar {
+    width: 0;
 }
 
 .heading-buttons {

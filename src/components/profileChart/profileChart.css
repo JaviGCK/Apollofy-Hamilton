@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
 
 .profile-chart-container {
-    height: 25vh;
+    /* height: 25vh; */
     padding: 0.5rem;
-    display: grid;
-    grid-template-rows: 60% auto;
-
+    display: flex;
+    padding-bottom: 30px;
 }
 
 .pcc-top {
