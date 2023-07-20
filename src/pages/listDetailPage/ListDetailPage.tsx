@@ -9,17 +9,20 @@ import { ListType } from '../../types/dataTypes/enums.d';
 import { PlaylistType } from '../../types/dataTypes/playlist';
 import { AlbumType } from '../../types/dataTypes/album';
 import { ArtistType } from '../../types/dataTypes/artist';
-import { fetchData } from '../../api/fetchApi';
+import { fetchData, getFullTrack } from '../../api/fetchApi';
 import { useNavigate } from 'react-router-dom';
 import { getUniqueId } from '../../utils/functions/randomId';
 import { TrackType } from '../../types/dataTypes/track';
 import { GenreType } from '../../types/dataTypes/genre';
+import { useTrackListContext } from '../../hooks/useTrackListContext';
 
 export const ListDetailPage = () => {
 
     const { listDetail } = useListDetailContext();
 
     const [trackIds, setTrackIds] = useState<string[] | null>(null);
+
+    const { setNewTrackList } = useTrackListContext();
 
     const navigate = useNavigate();
 
@@ -85,6 +88,13 @@ export const ListDetailPage = () => {
 
     }, [listDetail])
 
+    const playBtnClicked = () => {
+        if (trackIds === null) return;
+        (async function getTracksById() {
+            setNewTrackList(await getFullTrack(trackIds));
+        }());
+    }
+
     useEffect(() => {
         if (listDetail === null) navigate("/home")
     }, [])
@@ -104,7 +114,7 @@ export const ListDetailPage = () => {
                     <div className="list-detail-dashboard">
                         <AiOutlinePlusCircle className="list-detail-add-btn" />
                         <BiSolidHeart className="list-detail-heart-btn" />
-                        <span className="list-detail-container-play-btn">
+                        <span className="list-detail-container-play-btn" onClick={playBtnClicked}>
                             <BiPlay className="list-detail-play-btn" />
                         </span>
                     </div>

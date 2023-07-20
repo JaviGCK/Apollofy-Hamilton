@@ -52,7 +52,7 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
                 const albumPlaylistItem = itemFetched as PlaylistType | AlbumType;
                 if (albumPlaylistItem.tracks !== undefined) {
                     trackId = albumPlaylistItem.tracks[0].id;
-                    // console.log(albumPlaylistItem.tracks[0]);
+
                 }
             } else {
                 const artistItem = itemFetched as ArtistType;
@@ -91,13 +91,13 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
 
     const homePagePlayClicked = (e: any) => {
         e.stopPropagation();
-        console.log("entro");
+
         (async function setTracksSoundbar() {
             const data = await fetchData(`${props.type}s?id=${props.id}`) as AlbumType[] | PlaylistType[] | ArtistType[];
             const dataFetched = data[0] as (AlbumType | PlaylistType | ArtistType);
             if (props.type !== ListType.ARTIST) {
                 const playlistOrAlbum = dataFetched as AlbumType | PlaylistType;
-                // console.log(playlistOrAlbum);
+
                 let trackListIds: string[] = [];
                 playlistOrAlbum.tracks?.forEach(async (track) => {
                     trackListIds.push(track.id)
@@ -107,13 +107,13 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
             } else {
 
                 const artistObtained = dataFetched as ArtistType;
-                console.log(artistObtained);
+
                 let trackListIdsArtist: string[] = [];
                 artistObtained.albums?.forEach(async (album, index1) => {
-                    console.log(album);
+
                     const albumFetchedArray = await fetchData(`albums?id=${album.id}`) as AlbumType[];
                     const albumFetched = albumFetchedArray[0];
-                    console.log(albumFetched);
+
 
                     albumFetched.tracks?.forEach((track, index2) => {
                         trackListIdsArtist?.push(track.id);
