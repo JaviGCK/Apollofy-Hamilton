@@ -10,7 +10,7 @@ export const AuthenticationGuard = (component: any) => {
 
     onRedirecting: () => (
 
-      <div className="page-layout">
+      <div className="feat(">
 
         <HashLoader
           color={"#00ffa3"}
