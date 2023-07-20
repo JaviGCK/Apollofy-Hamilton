@@ -13,3 +13,11 @@
     background: #a785fe;
     color: #000;
 }
+
+.page-layout {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
