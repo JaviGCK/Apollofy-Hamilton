@@ -10,8 +10,7 @@ export const HomePage = () => {
     const {
         isLoading,
         isAuthenticated,
-        error,
-        user
+        error
     } = useAuth0();
 
     if (isLoading) {

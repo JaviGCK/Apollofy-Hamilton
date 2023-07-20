@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
 }
 
 .trend-item-card {
@@ -85,5 +86,5 @@
 
 
 .trend-title {
-    text-align: center;
+    width: 90%;
 }

@@ -73,7 +73,7 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
 
     return (
         <div className="trend-item-container">
-            {item && <div>
+            {item && <>
                 <div className="trend-item-card">
                     <img className="trend-item-card-img" src={item.imageUrl} alt={`Cover Image of ${item.itemTitle}`} />
 
@@ -90,7 +90,7 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
                     </div>
                 </div>
                 <span className="trend-title">{item.itemTitle}</span>
-            </div>}
+            </>}
         </div>
     )
 }
