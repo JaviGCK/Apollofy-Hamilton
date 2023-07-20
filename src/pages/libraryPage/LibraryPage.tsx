@@ -63,7 +63,7 @@ export const LibraryPage = () => {
                     <figure className='library-user-img'>
                         {user === undefined ? <img src="/src/assets/img/defaultuser.webp" alt="default user image" /> : <img src={user?.picture} alt={`${user?.name}´s profile image`} />}
                     </figure>
-                    {user === undefined ? <h2>Your Library</h2> : <h2>{`${user?.name}´s Library`}</h2>}
+                    {user === undefined ? <h2>Your Library</h2> : <h2>{`${user?.given_name}´s Library`}</h2>}
 
                 </div>
                 <div className='heading-buttons'>
