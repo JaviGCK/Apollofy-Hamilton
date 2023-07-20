@@ -10,7 +10,7 @@ export const UserPage = () => {
 
     return (
         <section className="user-page-container">
-            <ShareButton />
+            {/* <ShareButton /> */}
             <ProfileChart
                 imageUrl={currentUser?.profilePicture}
                 userName={currentUser?.name}

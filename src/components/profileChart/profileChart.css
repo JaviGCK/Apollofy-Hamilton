@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
 
 .profile-chart-container {
-    font-family: 'Noto Sans', sans-serif;
     height: 25vh;
     padding: 0.5rem;
     display: grid;
@@ -10,8 +9,8 @@
 }
 
 .pcc-top {
-    display: grid;
-    grid-template-columns: 30% auto;
+    display: flex;
+
 }
 
 .profile-img-container {

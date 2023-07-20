@@ -12,7 +12,7 @@ const ProfileChart: FC<ProfileChartPropTypes> = ({ imageUrl, userName }) => {
                 </div>
             </div>
             <div className='pcc-bottom'>
-                <button>Edit</button>
+                {/* <button>Edit</button> */}
             </div>
         </div>
     )
