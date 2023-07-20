@@ -30,7 +30,8 @@ export const SoundBar = () => {
 
             const trackDuration = audioElement.current.duration
             const currentTrackProgress = audioElement.current.currentTime
-
+            console.log(audioElement.current);
+            console.log(currentTrackProgress);
             // console.log(trackDuration)
             // console.log(currentTrackProgress)
             setCurrentTrack({
@@ -39,9 +40,11 @@ export const SoundBar = () => {
                 duration: trackDuration
             })
 
+
             if (audioElement.current.currentTime === audioElement.current.duration) {
 
                 handleNextTrack()
+
                 if (currentTrack.name !== trackList[trackList.length - 1].name || loopActive) audioElement.current.play()
                 else setIsPlaying(false)
 
@@ -80,9 +83,11 @@ export const SoundBar = () => {
 
         // console.log(index)
         if (index === trackList.length - 1) {
+            console.log(trackList[0]);
             setCurrentTrack(trackList[0])
         }
         else {
+            console.log(trackList[index + 1]);
             setCurrentTrack(trackList[index + 1])
 
         }
@@ -93,6 +98,7 @@ export const SoundBar = () => {
     const handleMetaDataLoad = () => {
         if (currentTrack === null) return;
         const trackDuration = audioElement.current?.duration
+        console.log(trackDuration);
         setCurrentTrack({
             ...currentTrack,
             progress: 0,
@@ -100,11 +106,10 @@ export const SoundBar = () => {
         })
     }
 
+
     useEffect(() => {
         if (isPlaying && audioElement.current) audioElement.current.play()
         else if (!isPlaying && audioElement.current) audioElement.current.pause()
-
-
     }, [isPlaying])
 
     useEffect(() => {
@@ -121,7 +126,8 @@ export const SoundBar = () => {
 
     return (
         <div>
-            <audio src={currentTrack ? currentTrack.url : ""} ref={audioElement} onTimeUpdate={() => getTrackProgress()} />
+            <audio src={currentTrack ? currentTrack.url : ""} ref={audioElement} onLoadedMetadata={handleMetaDataLoad} onTimeUpdate={() => getTrackProgress()} />
+
             <SoundPlayer
                 // trackList={trackList}
                 // setTrackList={setTrackList}

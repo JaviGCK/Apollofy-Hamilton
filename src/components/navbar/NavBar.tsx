@@ -47,7 +47,11 @@ export const NavBar = () => {
         // let tracks: TrackType[] = [];
         (async function fetchTracks() {
             const tracksFetched = await fetchData("tracks") as TrackType[];
-            console.log("fetch tracks");
+            tracksFetched.forEach((track) => {
+                track.progress = 0;
+                track.duration = 0;
+            })
+            console.log(tracksFetched);
             setNewTrackList(tracksFetched);
 
         }());
