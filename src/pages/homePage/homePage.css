@@ -16,6 +16,21 @@
     height: 40px;
 }
 
-.home-setting-icon :active {
+.home-setting-icon:active{
     color: #00ffa3;
 }
+
+.settings-menu-container{ 
+    height: 0;
+    position: absolute;
+    top: 12vh;
+    right: 0;
+    overflow: hidden;
+    /* transition: all 2s; */
+    
+}
+
+.setting-menu-container-expanded{
+    height: 30vh;
+}
+

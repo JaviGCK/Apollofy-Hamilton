@@ -1,0 +1,27 @@
+.settings-menu-bar{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 40vw;
+    padding: 20px;
+    margin-right: 22.5px;
+    border-radius: 10%;
+    row-gap: 1.5vh;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.67);
+    box-shadow: 5px -5px 12px 0px rgba(255, 255, 255, 0.05) inset, -5px 5px 12px 0px rgba(255, 255, 255, 0.05) inset,
+        4px 7px 15px 0px rgba(0, 0, 0, 0.08), -1px 0px 2px 0px rgba(201, 201, 201, 0.1) inset;
+    backdrop-filter: blur(6px);
+}
+
+.setting-menu-options-construction{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.construction-icon{
+    color: #00ffa3;
+}
