@@ -12,6 +12,8 @@ import { ArtistType } from '../../types/dataTypes/artist';
 import { fetchData } from '../../api/fetchApi';
 import { useNavigate } from 'react-router-dom';
 import { getUniqueId } from '../../utils/functions/randomId';
+import { TrackType } from '../../types/dataTypes/track';
+import { GenreType } from '../../types/dataTypes/genre';
 
 export const ListDetailPage = () => {
 
@@ -56,7 +58,6 @@ export const ListDetailPage = () => {
 
                             if (artistObtained.albums) {
                                 if (index === artistObtained.albums.length - 1) {
-                                    console.log(newTracksIds);
                                     setTrackIds(newTracksIds);
                                 }
                             }
@@ -65,7 +66,21 @@ export const ListDetailPage = () => {
                     }
                 }());
             } else {
-                console.log(listDetail);
+                const genreObtained = listDetail as GenreType;
+                (async function getTracksOfGenre() {
+                    const tracks: TrackType[] = await fetchData("tracks") as TrackType[];
+                    const tracksWanted = tracks.filter((track) => {
+                        let found = false;
+                        track.genre?.forEach((genre) => {
+                            if (genre.toLowerCase() === genreObtained.name.toLowerCase()) found = true;
+                        })
+                        return found;
+                    })
+                    let tracksId: string[] = []
+                    tracksWanted.forEach((track) => { tracksId.push(track.id); })
+                    setTrackIds(tracksId);
+
+                }());
             }
         }
 

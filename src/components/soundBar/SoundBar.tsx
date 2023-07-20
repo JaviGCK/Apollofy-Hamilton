@@ -16,7 +16,6 @@ export const SoundBar = () => {
     useEffect(() => {
         if (trackList !== null) {
             setCurrentTrack(trackList[0])
-            console.log(trackList)
         }
     }, [trackList])
 
