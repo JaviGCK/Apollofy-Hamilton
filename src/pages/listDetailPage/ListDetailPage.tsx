@@ -103,7 +103,7 @@ export const ListDetailPage = () => {
                     />
 
                     <div className="list-detail-dashboard">
-                        <AiOutlinePlusCircle className="list-detail-add-btn" />
+                        {/* <AiOutlinePlusCircle className="list-detail-add-btn" /> */}
                         <BiSolidHeart className="list-detail-heart-btn" />
                         <span className="list-detail-container-play-btn">
                             <BiPlay className="list-detail-play-btn" />

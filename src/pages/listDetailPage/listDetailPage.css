@@ -35,8 +35,10 @@
 
 .list-detail-dashboard {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     width: 100vw;
+    padding-right: 10px;
     margin-top: 2rem;
 }
 
