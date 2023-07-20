@@ -1,18 +1,17 @@
 import { createContext, useState } from "react";
-import { PossibleItems } from "../types/dataTypes/enums";
-
+import { ListDetailPossibleItems } from "../types/dataTypes/enums";
 
 interface listDetailContextType {
-    listDetail: PossibleItems | null,
-    setNewListDetail: (newListDetail: PossibleItems) => void
+    listDetail: ListDetailPossibleItems | null,
+    setNewListDetail: (newListDetail: ListDetailPossibleItems) => void
 }
 
 export const listDetailContext = createContext<listDetailContextType>({ listDetail: null, setNewListDetail: () => { } });
 
 export const ListDetailContextProvider = ({ ...props }) => {
-    const [listDetail, setListDetail] = useState<PossibleItems | null>(null);
+    const [listDetail, setListDetail] = useState<ListDetailPossibleItems | null>(null);
 
-    const setNewListDetail = (newListDetail: PossibleItems) => {
+    const setNewListDetail = (newListDetail: ListDetailPossibleItems) => {
         setListDetail(newListDetail);
     }
 
