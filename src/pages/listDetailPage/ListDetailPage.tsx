@@ -64,6 +64,8 @@ export const ListDetailPage = () => {
                         })
                     }
                 }());
+            } else {
+                console.log(listDetail);
             }
         }
 

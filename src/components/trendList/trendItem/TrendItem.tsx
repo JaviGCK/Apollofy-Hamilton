@@ -83,7 +83,6 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
             navigate("/detail-page");
         }());
 
-
     }
 
     return (
