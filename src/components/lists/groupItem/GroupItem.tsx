@@ -1,9 +1,9 @@
 import './groupItem.css'
 import { BsFillPlayCircleFill } from 'react-icons/bs';
-import { useTrackListContext } from '../../../hooks/useTrackListContext';
+import { useTrackListContext } from '../../../utils/hooks/useTrackListContext';
 import { fetchData } from '../../../api/fetchApi';
 import { ArtistType } from '../../../types/dataTypes/artist';
-import { useListDetailContext } from '../../../hooks/useListDetailContext';
+import { useListDetailContext } from '../../../utils/hooks/useListDetailContext';
 import { PlaylistType } from '../../../types/dataTypes/playlist';
 import { AlbumType } from '../../../types/dataTypes/album';
 import { useNavigate } from 'react-router-dom';

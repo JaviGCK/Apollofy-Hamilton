@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { FaAngleLeft } from "react-icons/fa";
 import { BiSolidHeart, BiPlay } from "react-icons/bi";
 import { TrackList } from "../../components/lists/trackList/TrackList";
-import { useListDetailContext } from '../../hooks/useListDetailContext';
+import { useListDetailContext } from '../../utils/hooks/useListDetailContext';
 import { ListType } from '../../types/dataTypes/enums.d';
 import { PlaylistType } from '../../types/dataTypes/playlist';
 import { AlbumType } from '../../types/dataTypes/album';
@@ -13,8 +13,8 @@ import { useNavigate } from 'react-router-dom';
 import { getUniqueId } from '../../utils/functions/randomId';
 import { TrackType } from '../../types/dataTypes/track';
 import { GenreType } from '../../types/dataTypes/genre';
-import { useTrackListContext } from '../../hooks/useTrackListContext';
-import { useUserContext } from '../../hooks/useUserContext';
+import { useTrackListContext } from '../../utils/hooks/useTrackListContext';
+import { useUserContext } from '../../utils/hooks/useUserContext';
 import toast, { Toaster } from 'react-hot-toast';
 
 export const ListDetailPage = () => {

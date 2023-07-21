@@ -6,7 +6,7 @@ import { GenreTypes } from "../../types/dataTypes/enums"
 import { getUniqueId } from "../../utils/functions/randomId"
 import "./addMusicForm.css"
 import toast, { Toaster } from "react-hot-toast"
-import { useUserContext } from "../../hooks/useUserContext"
+import { useUserContext } from "../../utils/hooks/useUserContext"
 
 
 export const AddMusicForm = () => {

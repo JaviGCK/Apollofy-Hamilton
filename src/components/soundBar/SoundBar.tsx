@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react"
 import "./soundBar.css"
 import { SoundPlayer } from "./soundPlayer/SoundPlayer"
-import { useTrackListContext } from "../../hooks/useTrackListContext"
+import { useTrackListContext } from "../../utils/hooks/useTrackListContext"
 import { TrackType } from "../../types/dataTypes/track"
 
 

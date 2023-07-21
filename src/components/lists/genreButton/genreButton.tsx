@@ -1,6 +1,6 @@
 import './genreButton.css';
 import { GenreType } from '../../../types/dataTypes/genre';
-import { useListDetailContext } from '../../../hooks/useListDetailContext';
+import { useListDetailContext } from '../../../utils/hooks/useListDetailContext';
 import { ListType } from '../../../types/dataTypes/enums.d';
 import { useNavigate } from 'react-router-dom';
 

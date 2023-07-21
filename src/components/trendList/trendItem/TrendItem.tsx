@@ -10,9 +10,9 @@ import { PlaylistType } from "../../../types/dataTypes/playlist";
 import { ArtistType } from "../../../types/dataTypes/artist";
 import { TrackType } from "../../../types/dataTypes/track";
 import { useNavigate } from "react-router-dom";
-import { useListDetailContext } from "../../../hooks/useListDetailContext";
+import { useListDetailContext } from "../../../utils/hooks/useListDetailContext";
 import { ListType } from "../../../types/dataTypes/enums.d";
-import { useTrackListContext } from "../../../hooks/useTrackListContext";
+import { useTrackListContext } from "../../../utils/hooks/useTrackListContext";
 
 
 export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
