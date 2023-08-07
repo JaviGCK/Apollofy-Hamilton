@@ -2,7 +2,7 @@ import './navBar.css'
 import { BiHomeAlt2, BiSearch, BiSolidHeart } from 'react-icons/bi'
 import { MdLibraryAdd } from 'react-icons/md'
 import { GiAlienStare } from 'react-icons/gi'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { useUserContext } from '../../utils/hooks/useUserContext'
 import { UserType } from '../../types/dataTypes/user'
 import { fetchData, postNewData } from '../../api/fetchApi'
@@ -11,14 +11,28 @@ import { getUniqueId } from '../../utils/functions/randomId'
 import { ListType } from '../../types/dataTypes/enums.d'
 import { useTrackListContext } from '../../utils/hooks/useTrackListContext'
 import { TrackType } from '../../types/dataTypes/track.d'
+import { useEffect } from 'react'
 
 
 export const NavBar = () => {
+
 
     const navigate = useNavigate();
     const { user } = useAuth0();
     const { currentUser, setCurrentLoggedUser } = useUserContext();
     const { trackList, setNewTrackList } = useTrackListContext();
+    const location = useLocation().pathname.slice(1)
+
+
+
+
+    useEffect(() => {
+
+        const button = document.querySelector(`#${location}`) as HTMLInputElement;
+        button.checked = true;
+
+    }, [])
+
 
     if (currentUser === null) {
         (async function fetchUser() {
@@ -75,23 +89,23 @@ export const NavBar = () => {
 
     const iconsNavbar = [
         {
-            id: "home-icon",
+            id: "home",
             path: "home"
         },
         {
-            id: "search-icon",
+            id: "search",
             path: "search"
         },
         {
-            id: "add-icon",
+            id: "form",
             path: "form"
         },
         {
-            id: "fav-icon",
+            id: "library",
             path: "library"
         },
         {
-            id: "user-icon",
+            id: "user",
             path: "user"
         }
     ]
@@ -99,7 +113,8 @@ export const NavBar = () => {
     return (
         <nav className="navBar-bottom-container">
             {iconsNavbar.map((icon, index) => (
-                <div className="icon-navbar-container" key={icon.id}>
+                //BUG ERROR EN LA KEY
+                <div className="icon-navbar-container" key={index}>
                     <input id={icon.id} name="icon-navbar-bottom" type="radio" className="input-navbar-bottom" />
                     <label htmlFor={icon.id} className="label-navbar-bottom">
                         {index === 0 && <BiHomeAlt2 className="icons-navbar" onClick={() => handleIconsClicked(icon.path)} />}

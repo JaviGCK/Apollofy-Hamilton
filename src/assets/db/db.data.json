@@ -510,10 +510,54 @@
         {
           "id": "7960b357-dc43-4939-832d-b2115f163bc3",
           "type": "playlist"
+        },
+        {
+          "id": "5t9ChGEQOzEA3gxWtXEw48",
+          "name": "Elphomega",
+          "genres": [
+            "hip-hop",
+            "rap"
+          ],
+          "popularity": 33,
+          "imageUrl": "https://i.scdn.co/image/ab676161000051743dc69e75a2c86e2341c64064",
+          "albums": [
+            {
+              "id": "2Ppv8YROLkQ2IcmjMCytS0"
+            },
+            {
+              "id": "32HzePZsOJ6gWR6MXB5gBQ"
+            }
+          ],
+          "type": "artist"
+        },
+        {
+          "name": "R&B",
+          "imageUrl": "https://t4.ftcdn.net/jpg/03/08/18/99/360_F_308189978_CtvYsmilaUzUBIR0jJF0irSX5aE16g69.jpg",
+          "id": "3bd5c81a-1d7a-4b5f-8c29-2cfe3c17e42a",
+          "btnColor": "#E13300",
+          "type": "genre"
         }
       ],
       "type": "user",
-      "tracks": []
+      "tracks": [
+        {
+          "id": "rvcmy8t1k4",
+          "name": "asas",
+          "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1689937230/images/a9f8vbpceho2riuoijzi.jpg",
+          "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1689937229/tracks/e5cwkngsbykwpydfmads.mp3",
+          "liked": 0,
+          "verified": false,
+          "genre": [
+            "r&b"
+          ],
+          "artists": [
+            {
+              "id": "e47291ca-f376-4456-bd60-e02319ee280d",
+              "name": "Luis Jover"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "ad84c6f9-e695-456d-95ef-cf8a982e2e7d",
@@ -569,6 +613,15 @@
           ]
         }
       ]
+    },
+    {
+      "id": "h63jq4xmvi5",
+      "email": "luiggijov@gmail.com",
+      "name": "Lu1San",
+      "profilePicture": "https://lh3.googleusercontent.com/a/AAcHTtfm4t9Zlef0JmdUhJNk41O24V6mJC3cSmEGium_1KdC1Q=s96-c",
+      "type": "user",
+      "libraryList": [],
+      "tracks": []
     }
   ],
   "tracks": [
