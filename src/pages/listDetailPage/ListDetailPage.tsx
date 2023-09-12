@@ -16,10 +16,11 @@ import { GenreType } from '../../types/dataTypes/genre';
 import { useTrackListContext } from '../../utils/hooks/useTrackListContext';
 import { useUserContext } from '../../utils/hooks/useUserContext';
 import toast, { Toaster } from 'react-hot-toast';
+import { placeholder } from '@cloudinary/react';
 
 export const ListDetailPage = () => {
 
-    const { listDetail } = useListDetailContext();
+    const { listDetail, playBtnRef } = useListDetailContext();
 
     const { currentUser } = useUserContext();
 
@@ -96,6 +97,9 @@ export const ListDetailPage = () => {
         (async function getTracksById() {
             setNewTrackList(await getFullTrack(trackIds));
         }());
+        if (playBtnRef.current) {
+            playBtnRef.current.click()
+        }
     }
 
     const heartIconClicked = () => {

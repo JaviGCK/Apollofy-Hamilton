@@ -41,11 +41,17 @@
     justify-content: center;
 }
 
-
+.controls-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .controls-icon {
     height: 50px;
     width: 50px;
+    color: #f1f1f1;
+    background: transparent;
 }
 
 .content-bar {

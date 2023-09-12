@@ -3,15 +3,16 @@ import { BsFillPlayCircleFill, BsFillPauseCircleFill, BsFillSkipStartCircleFill,
 import { ImLoop } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
 import "./soundPlayer.css"
-import { FC, useRef, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { SoundPlayerPropTypes } from '../../../types/propTypes/soundPlayerPropTypes';
+import { useListDetailContext } from '../../../utils/hooks/useListDetailContext';
 
 
 export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
 
 
     const [expandedMenu, setExpandedMenu] = useState(false)
-
+    const { playBtnRef } = useListDetailContext();
 
     const playerContainer = useRef<HTMLDivElement | null>(null)
 
@@ -51,7 +52,9 @@ export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
         return formattedTime;
     }
 
-
+    useEffect(() => {
+        console.log(playBtnRef);
+    }, [])
 
     return (
 
@@ -71,8 +74,8 @@ export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
 
                         </div>
 
-                        <div id="controls-icon" className="controls-container">
-                            {props.isPlaying ? <BsFillPauseCircleFill id="controls-icon" className="controls-icon" onClick={handlePlayPause} /> : <BsFillPlayCircleFill id="controls-icon" className="controls-icon" onClick={handlePlayPause} />}
+                        <div id="controls-icon" className="controls-container" >
+                            {props.isPlaying ? <button style={{ border: 'none' }} className="controls-icon"><BsFillPauseCircleFill id="controls-icon" className="controls-icon" onClick={handlePlayPause} /> </button> : <button ref={playBtnRef} style={{ border: 'none' }} className="controls-icon" onClick={handlePlayPause}><BsFillPlayCircleFill id="controls-icon" className="controls-icon" /></button>}
 
                         </div>
                     </div>
@@ -145,29 +148,29 @@ export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
 
 
 
-        // <div ref={playerContainer} className="player-container">
-        //     <div className="player-heading" onClick={handleToggle}>
-        //         <div className="player-info">
+// <div ref={playerContainer} className="player-container">
+//     <div className="player-heading" onClick={handleToggle}>
+//         <div className="player-info">
 
-        //             <img className="track-image" src={props.currentTrack.imageUrl} alt="" />
-        //             <div className='track-info'>
-        //                 <p>{props.currentTrack.name}</p>
-        //                 <p>{props.currentTrack.artistName}</p>
-        //             </div>
+//             <img className="track-image" src={props.currentTrack.imageUrl} alt="" />
+//             <div className='track-info'>
+//                 <p>{props.currentTrack.name}</p>
+//                 <p>{props.currentTrack.artistName}</p>
+//             </div>
 
-        //         </div>
+//         </div>
 
-        //         <div id="controls-icon" className="controls-container">
-        //             {props.isPlaying ? <BsFillPauseCircleFill id="controls-icon" className="controls-icon" onClick={handlePlayPause} /> : <BsFillPlayCircleFill id="controls-icon" className="controls-icon" onClick={handlePlayPause} />}
+//         <div id="controls-icon" className="controls-container">
+//             {props.isPlaying ? <BsFillPauseCircleFill id="controls-icon" className="controls-icon" onClick={handlePlayPause} /> : <BsFillPlayCircleFill id="controls-icon" className="controls-icon" onClick={handlePlayPause} />}
 
-        //         </div>
-        //     </div>
-        //    <div className="content-bar">
-        //         <div className="navigation-content-bar" ref={soundBarClickRef} onClick={handleClickNavigation}>
-        //             <div className="progress-bar" style={{ width: `${props.currentTrack.progress}%` }}>
+//         </div>
+//     </div>
+//    <div className="content-bar">
+//         <div className="navigation-content-bar" ref={soundBarClickRef} onClick={handleClickNavigation}>
+//             <div className="progress-bar" style={{ width: `${props.currentTrack.progress}%` }}>
 
-        //             </div>
-        //         </div>
-        //     </div>
+//             </div>
+//         </div>
+//     </div>
 
-        // </div>
+// </div>
