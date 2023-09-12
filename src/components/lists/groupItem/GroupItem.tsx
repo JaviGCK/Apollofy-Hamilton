@@ -1,5 +1,5 @@
 import './groupItem.css'
-import { BsFillPlayCircleFill } from 'react-icons/bs';
+import { BsFillPlayCircleFill, BsStopCircleFill } from 'react-icons/bs';
 import { useTrackListContext } from '../../../utils/hooks/useTrackListContext';
 import { fetchData } from '../../../api/fetchApi';
 import { ArtistType } from '../../../types/dataTypes/artist';
@@ -7,11 +7,13 @@ import { useListDetailContext } from '../../../utils/hooks/useListDetailContext'
 import { PlaylistType } from '../../../types/dataTypes/playlist';
 import { AlbumType } from '../../../types/dataTypes/album';
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 export const GroupItem = ({ ...props }) => {
-    const { track, isActive, onItemClicked } = props
-    const { setNewTrackList } = useTrackListContext();
-    const { setNewListDetail } = useListDetailContext();
+    const { track, onItemClicked } = props
+    const { setNewTrackList, audioElement } = useTrackListContext();
+    const { setNewListDetail, playBtnRef, pauseBtnRef } = useListDetailContext();
+    const [isPlaying, setIsPlaying] = useState(false);
     const navigate = useNavigate();
     const itemClicked = () => {
         if (track.type) {
@@ -24,6 +26,9 @@ export const GroupItem = ({ ...props }) => {
         }
 
     }
+    useEffect(() => {
+        console.log(audioElement)
+    }, [isPlaying])
     return (
         <>
 
@@ -36,10 +41,11 @@ export const GroupItem = ({ ...props }) => {
                 </div>
                 {track.hasOwnProperty('liked') ?
                     <button className="gi-playBtn"
-                        onClick={() => { onItemClicked(); setNewTrackList([track]); }}>
-                        <BsFillPlayCircleFill
+                        onClick={() => { onItemClicked(); setNewTrackList([track]); isPlaying ? pauseBtnRef.current.click() : playBtnRef.current.click() }}>
+                        {isPlaying ? <BsStopCircleFill className="gi-playBtn-ico" onClick={() => { setIsPlaying(false); audioElement.current.currentTime = 0 }} /> : <BsFillPlayCircleFill
+                            onClick={() => { setIsPlaying(true); }}
                             className="gi-playBtn-ico"
-                            style={{ color: isActive ? '#00F79F' : '#f1f1f1' }} />
+                        />}
                     </button> : <></>}
             </div>
         </>

@@ -5,13 +5,20 @@
     align-items: center;
     padding: 20px 30px 50px;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 80px) 60px 20px 60px 20px 40px 60px;
+    grid-template-rows: repeat(2, 100px) 60px 20px 60px 20px 40px 60px;
     grid-column-gap: 0px;
-    grid-row-gap: 10px;
+    grid-row-gap: 2px;
 }
 
 .track-img-container {
     grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-preview {
+    height: 15vh;
 }
 
 .track-audio-container {

@@ -8,7 +8,6 @@ import { BiSearch } from 'react-icons/bi';
 
 export const UserPage: React.FC = () => {
     const { currentUser } = useUserContext();
-
     const [searchTerm, setSearchTerm] = useState<string>('');
     const [searchResults, setSearchResults] = useState(currentUser?.tracks || []);
     const [isInputFocused, setIsInputFocused] = useState<boolean>(false);

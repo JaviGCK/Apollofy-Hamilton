@@ -5,6 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react"
 import { GenreTypes } from "../../types/dataTypes/enums"
 import { getUniqueId } from "../../utils/functions/randomId"
 import "./addMusicForm.css"
+import placeholder from '../../assets/img/bg-image.webp'
 import toast, { Toaster } from "react-hot-toast"
 import { useUserContext } from "../../utils/hooks/useUserContext"
 
@@ -23,7 +24,7 @@ export const AddMusicForm = () => {
             genre: ""
         }
     })
-
+    const [imagePreview, setImagePreview] = useState(placeholder)
 
     const submitForm = async () => {
 
@@ -61,7 +62,6 @@ export const AddMusicForm = () => {
             ...userLogged,
             tracks: newTracksList
         }
-        console.log(userLoggedNewObject);
         setCurrentLoggedUser(userLoggedNewObject);
 
         reset();
@@ -72,7 +72,15 @@ export const AddMusicForm = () => {
     const handlePrivacity = () => {
         setPrivacityState(!privacityState)
     }
-
+    const handlePreview = () => {
+        const trackImgFileList = watch("image");
+        const trackImgFile = trackImgFileList[0];
+        const reader = new FileReader();
+        reader.onload = () => {
+            setImagePreview(reader.result as string);
+        };
+        reader.readAsDataURL(trackImgFile as any);
+    }
 
     return (
 
@@ -84,17 +92,33 @@ export const AddMusicForm = () => {
             />
 
             <div className="track-img-container">
-                <label htmlFor="track-img-input" className="track-img-label">Select your track´s image</label>
-                <input id="track-img-input" className="track-img-input add-music-input hidden-input" type="file" accept="image/jpeg, image/jpg, image/webp" placeholder="Select track image..."
-                    {...register("image", {
-                        required: {
-                            value: true,
-                            message: "Image is required"
-                        }
-                    })}
-                />
-                {errors.image && <p className="music-form-error">{errors.image.message}</p>}
+                <div>
+                    <label htmlFor="track-img-input" className="track-img-label">Select your track´s image</label>
+                    <input
+                        id="track-img-input"
+                        className="track-img-input add-music-input hidden-input"
+                        type="file"
+                        accept="image/jpeg, image/jpg, image/webp"
+                        placeholder="Select track image..."
+                        {...register("image", {
+                            required: {
+                                value: true,
+                                message: "Image is required"
+                            }
+                        })}
+                        onChange={(e) => {
+                            register("image").onChange(e);
+                            handlePreview();
+                        }}
+                    />
+
+                    {errors.image && <p className="music-form-error">{errors.image.message}</p>}
+                </div>
+                <div>
+                    <img className='img-preview' src={imagePreview} alt="Preview img" />
+                </div>
             </div>
+
 
             <div className="track-audio-container">
                 <label htmlFor="track-audio-input" className="track-audio-label">Select your track</label>
@@ -170,5 +194,3 @@ export const AddMusicForm = () => {
 
     )
 }
-
-

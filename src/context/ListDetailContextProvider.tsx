@@ -5,6 +5,7 @@ interface listDetailContextType {
     listDetail: ListDetailPossibleItems | null,
     setNewListDetail: (newListDetail: ListDetailPossibleItems) => void
     playBtnRef?: any
+    pauseBtnRef?: any
 }
 
 export const listDetailContext = createContext<listDetailContextType>({ listDetail: null, setNewListDetail: () => { } });
@@ -16,8 +17,9 @@ export const ListDetailContextProvider = ({ ...props }) => {
         setListDetail(newListDetail);
     }
     const playBtnRef = useRef(null)
+    const pauseBtnRef = useRef(null)
     return (
-        <listDetailContext.Provider value={{ listDetail, setNewListDetail, playBtnRef }}>
+        <listDetailContext.Provider value={{ listDetail, setNewListDetail, playBtnRef, pauseBtnRef }}>
             {props.children}
         </listDetailContext.Provider>
     )

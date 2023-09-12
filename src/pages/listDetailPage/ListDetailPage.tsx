@@ -1,7 +1,7 @@
 import './listDetailPage.css'
 import { useEffect, useState } from "react";
 import { FaAngleLeft } from "react-icons/fa";
-import { BiSolidHeart, BiPlay } from "react-icons/bi";
+import { BiSolidHeart, BiPlay, BiStop } from "react-icons/bi";
 import { TrackList } from "../../components/lists/trackList/TrackList";
 import { useListDetailContext } from '../../utils/hooks/useListDetailContext';
 import { ListType } from '../../types/dataTypes/enums.d';
@@ -16,15 +16,16 @@ import { GenreType } from '../../types/dataTypes/genre';
 import { useTrackListContext } from '../../utils/hooks/useTrackListContext';
 import { useUserContext } from '../../utils/hooks/useUserContext';
 import toast, { Toaster } from 'react-hot-toast';
-import { placeholder } from '@cloudinary/react';
 
 export const ListDetailPage = () => {
 
-    const { listDetail, playBtnRef } = useListDetailContext();
+    const { listDetail, playBtnRef, pauseBtnRef } = useListDetailContext();
 
     const { currentUser } = useUserContext();
 
     const [trackIds, setTrackIds] = useState<string[] | null>(null);
+
+    const [isPlaying, setIsPlaying] = useState(false)
 
     const { setNewTrackList } = useTrackListContext();
 
@@ -99,6 +100,7 @@ export const ListDetailPage = () => {
         }());
         if (playBtnRef.current) {
             playBtnRef.current.click()
+            setIsPlaying(true)
         }
     }
 
@@ -139,7 +141,7 @@ export const ListDetailPage = () => {
                         {/* <AiOutlinePlusCircle className="list-detail-add-btn" /> */}
                         <BiSolidHeart className="list-detail-heart-btn" onClick={heartIconClicked} />
                         <span className="list-detail-container-play-btn" onClick={playBtnClicked}>
-                            <BiPlay className="list-detail-play-btn" />
+                            {isPlaying ? <BiStop className="list-detail-play-btn" onClick={() => { pauseBtnRef.current.click(); setIsPlaying(false) }} /> : <BiPlay className="list-detail-play-btn" />}
                         </span>
                     </div>
 

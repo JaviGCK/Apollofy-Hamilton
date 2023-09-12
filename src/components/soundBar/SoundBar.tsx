@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react"
+import { useState, useEffect } from "react"
 import "./soundBar.css"
 import { SoundPlayer } from "./soundPlayer/SoundPlayer"
 import { useTrackListContext } from "../../utils/hooks/useTrackListContext"
@@ -8,7 +8,7 @@ import { TrackType } from "../../types/dataTypes/track"
 
 
 export const SoundBar = () => {
-    const { trackList } = useTrackListContext();
+    const { trackList, audioElement } = useTrackListContext();
     const [isPlaying, setIsPlaying] = useState(false)
     const [currentTrack, setCurrentTrack] = useState<TrackType | null>(null)
     const [loopActive, setLoopActive] = useState(false)
@@ -19,7 +19,7 @@ export const SoundBar = () => {
         }
     }, [trackList])
 
-    const audioElement = useRef<HTMLAudioElement | null>(null)
+
 
     const getTrackProgress = () => {
         if (audioElement.current && trackList !== null && currentTrack !== null) {

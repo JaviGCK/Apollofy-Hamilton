@@ -12,7 +12,7 @@ export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
 
 
     const [expandedMenu, setExpandedMenu] = useState(false)
-    const { playBtnRef } = useListDetailContext();
+    const { playBtnRef, pauseBtnRef } = useListDetailContext();
 
     const playerContainer = useRef<HTMLDivElement | null>(null)
 
@@ -51,10 +51,9 @@ export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
         const formattedTime = `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
         return formattedTime;
     }
-
     useEffect(() => {
-        console.log(playBtnRef);
-    }, [])
+        console.log(pauseBtnRef)
+    }, [props.isPlaying])
 
     return (
 
@@ -75,7 +74,7 @@ export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
                         </div>
 
                         <div id="controls-icon" className="controls-container" >
-                            {props.isPlaying ? <button style={{ border: 'none' }} className="controls-icon"><BsFillPauseCircleFill id="controls-icon" className="controls-icon" onClick={handlePlayPause} /> </button> : <button ref={playBtnRef} style={{ border: 'none' }} className="controls-icon" onClick={handlePlayPause}><BsFillPlayCircleFill id="controls-icon" className="controls-icon" /></button>}
+                            {props.isPlaying ? <button ref={pauseBtnRef} style={{ border: 'none' }} className="controls-icon" onClick={handlePlayPause}><BsFillPauseCircleFill id="controls-icon" className="controls-icon" /> </button> : <button ref={playBtnRef} style={{ border: 'none' }} className="controls-icon" onClick={handlePlayPause}><BsFillPlayCircleFill id="controls-icon" className="controls-icon" /></button>}
 
                         </div>
                     </div>
