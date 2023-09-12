@@ -492,10 +492,112 @@
         {
           "id": "7960b357-dc43-4939-832d-b2115f163bc3",
           "type": "playlist"
+        },
+        {
+          "id": "52iwsT98xCoGgiGntTiR7K",
+          "name": "Quevedo",
+          "genres": [
+            "rap",
+            "urban"
+          ],
+          "popularity": 84,
+          "imageUrl": "https://i.scdn.co/image/ab6761610000517497848feb6af104e4562841ac",
+          "albums": [
+            {
+              "id": "156gxGFDxadwiIC3Bfwmj3"
+            }
+          ],
+          "type": "artist"
         }
       ],
       "type": "user",
-      "tracks": []
+      "tracks": [
+        {
+          "id": "dkmp1zaln7p",
+          "name": "bad bunny",
+          "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1694512740/images/nh0qbx3a1d74bczuymds.jpg",
+          "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1694512739/tracks/ay4svyyvusbd1wbymkaj.mp3",
+          "liked": 0,
+          "verified": false,
+          "genre": [
+            "hip-hop"
+          ],
+          "artists": [
+            {
+              "id": "af99a651-4118-48ab-933c-0f7927fe70d2",
+              "name": "Javier Cabello"
+            }
+          ]
+        },
+        {
+          "id": "9fdudtfno56",
+          "name": "Musica1",
+          "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1694512860/images/e5ve46pbcti8xrxoa4fj.jpg",
+          "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1694512859/tracks/gqbhythpoffb7fdkgl9c.mp3",
+          "liked": 0,
+          "verified": false,
+          "genre": [
+            "dance"
+          ],
+          "artists": [
+            {
+              "id": "af99a651-4118-48ab-933c-0f7927fe70d2",
+              "name": "Javier Cabello"
+            }
+          ]
+        },
+        {
+          "id": "moj8yd5utq",
+          "name": "music 2",
+          "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1694512896/images/s5i8nubmitvsfoyxeodg.jpg",
+          "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1694512892/tracks/nuaixwtnabmrglknt9mj.mp3",
+          "liked": 0,
+          "verified": false,
+          "genre": [
+            "dance"
+          ],
+          "artists": [
+            {
+              "id": "af99a651-4118-48ab-933c-0f7927fe70d2",
+              "name": "Javier Cabello"
+            }
+          ]
+        },
+        {
+          "id": "h351w16denb",
+          "name": "cancion",
+          "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1694512915/images/qrktwh9s0dqmprqmvaqs.jpg",
+          "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1694512913/tracks/g8dqpdvmavofqwq8q9ie.mp3",
+          "liked": 0,
+          "verified": false,
+          "genre": [
+            "r&b"
+          ],
+          "artists": [
+            {
+              "id": "af99a651-4118-48ab-933c-0f7927fe70d2",
+              "name": "Javier Cabello"
+            }
+          ]
+        },
+        {
+          "id": "f18bveopdz",
+          "name": "track",
+          "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1694512940/images/ahlq5jjn2xa06jegew9u.jpg",
+          "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1694512938/tracks/qb2heigpxhj1xauzml6l.mp3",
+          "liked": 0,
+          "verified": false,
+          "genre": [
+            "r&b"
+          ],
+          "artists": [
+            {
+              "id": "af99a651-4118-48ab-933c-0f7927fe70d2",
+              "name": "Javier Cabello"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "e47291ca-f376-4456-bd60-e02319ee280d",
@@ -1630,6 +1732,91 @@
         {
           "id": "101117c9-e76e-4904-ad3d-1d9cd08835e7",
           "name": "Ali Hourag"
+        }
+      ]
+    },
+    {
+      "id": "dkmp1zaln7p",
+      "name": "bad bunny",
+      "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1694512740/images/nh0qbx3a1d74bczuymds.jpg",
+      "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1694512739/tracks/ay4svyyvusbd1wbymkaj.mp3",
+      "liked": 0,
+      "verified": false,
+      "genre": [
+        "hip-hop"
+      ],
+      "artists": [
+        {
+          "id": "af99a651-4118-48ab-933c-0f7927fe70d2",
+          "name": "Javier Cabello"
+        }
+      ]
+    },
+    {
+      "id": "9fdudtfno56",
+      "name": "Musica1",
+      "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1694512860/images/e5ve46pbcti8xrxoa4fj.jpg",
+      "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1694512859/tracks/gqbhythpoffb7fdkgl9c.mp3",
+      "liked": 0,
+      "verified": false,
+      "genre": [
+        "dance"
+      ],
+      "artists": [
+        {
+          "id": "af99a651-4118-48ab-933c-0f7927fe70d2",
+          "name": "Javier Cabello"
+        }
+      ]
+    },
+    {
+      "id": "moj8yd5utq",
+      "name": "music 2",
+      "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1694512896/images/s5i8nubmitvsfoyxeodg.jpg",
+      "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1694512892/tracks/nuaixwtnabmrglknt9mj.mp3",
+      "liked": 0,
+      "verified": false,
+      "genre": [
+        "dance"
+      ],
+      "artists": [
+        {
+          "id": "af99a651-4118-48ab-933c-0f7927fe70d2",
+          "name": "Javier Cabello"
+        }
+      ]
+    },
+    {
+      "id": "h351w16denb",
+      "name": "cancion",
+      "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1694512915/images/qrktwh9s0dqmprqmvaqs.jpg",
+      "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1694512913/tracks/g8dqpdvmavofqwq8q9ie.mp3",
+      "liked": 0,
+      "verified": false,
+      "genre": [
+        "r&b"
+      ],
+      "artists": [
+        {
+          "id": "af99a651-4118-48ab-933c-0f7927fe70d2",
+          "name": "Javier Cabello"
+        }
+      ]
+    },
+    {
+      "id": "f18bveopdz",
+      "name": "track",
+      "imageUrl": "http://res.cloudinary.com/dqdysl9ep/image/upload/v1694512940/images/ahlq5jjn2xa06jegew9u.jpg",
+      "url": "http://res.cloudinary.com/dqdysl9ep/video/upload/v1694512938/tracks/qb2heigpxhj1xauzml6l.mp3",
+      "liked": 0,
+      "verified": false,
+      "genre": [
+        "r&b"
+      ],
+      "artists": [
+        {
+          "id": "af99a651-4118-48ab-933c-0f7927fe70d2",
+          "name": "Javier Cabello"
         }
       ]
     }

@@ -1,7 +1,38 @@
 .user-page-container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    padding: 1rem;
+    padding: 5vw;
+}
+
+.search-bar-user-page {
+    display: flex;
+    align-items: center;
+    background-color: #e2d7ff;
+    margin: 0 auto;
+    height: 40px;
+    border: 4px solid transparent;
+    border-radius: 20px;
+    margin: 15px auto;
+}
+
+.searchbar-icon-search {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 10px;
+    color: #572364;
+}
+
+.searchbar-input {
+    border: 0;
+    background-color: transparent;
+    padding: 0.2rem;
+    width: 100%;
+    height: 100%;
+    color: #572364;
+    border-radius: 20px;
+}
+
+.search-bar-user-page-focused {
+    border: 4px solid #00ffa3;
+    border-radius: 20px;
 }
