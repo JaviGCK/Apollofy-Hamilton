@@ -91,8 +91,8 @@ export const AddMusicForm = () => {
                 reverseOrder={false}
             />
 
-            <div className="track-img-container">
-                <div>
+            <div className="track-container">
+                <div className="track-img-container">
                     <label htmlFor="track-img-input" className="track-img-label">Select your track´s image</label>
                     <input
                         id="track-img-input"
@@ -114,7 +114,7 @@ export const AddMusicForm = () => {
 
                     {errors.image && <p className="music-form-error">{errors.image.message}</p>}
                 </div>
-                <div>
+                <div className="track-img-container-preview">
                     <img className='img-preview' src={imagePreview} alt="Preview img" />
                 </div>
             </div>
