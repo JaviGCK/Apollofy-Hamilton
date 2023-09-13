@@ -6,6 +6,7 @@ import './settingsBar.css'
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import i18n from "../../utils/functions/i18n";
+import toast, { Toaster } from "react-hot-toast";
 
 export const SettingsBar = () => {
 
@@ -18,10 +19,23 @@ export const SettingsBar = () => {
     }
     const handleLanguageClicked = (lang_code: string) => {
         i18n.changeLanguage(lang_code)
+        if (lang_code === "en") {
+            toast("You have changed language to english!", {
+                icon: '🇬🇧',
+            });
+        } else {
+            toast("¡Has cambiado el idioma al español!", {
+                icon: '🇪🇸',
+            });
+        }
     }
 
     return (
         <>
+            <Toaster
+                position="top-center"
+                reverseOrder={false}
+            />
             {!languageClicked ?
                 <nav className="settings-menu-bar">
                     <span className="setting-menu-options-construction">{t('language')}<MdLanguage className='language-icon' onClick={handleLanguage} /></span>
