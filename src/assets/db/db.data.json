@@ -492,6 +492,22 @@
         {
           "id": "7960b357-dc43-4939-832d-b2115f163bc3",
           "type": "playlist"
+        },
+        {
+          "id": "52iwsT98xCoGgiGntTiR7K",
+          "name": "Quevedo",
+          "genres": [
+            "rap",
+            "urban"
+          ],
+          "popularity": 84,
+          "imageUrl": "https://i.scdn.co/image/ab6761610000517497848feb6af104e4562841ac",
+          "albums": [
+            {
+              "id": "156gxGFDxadwiIC3Bfwmj3"
+            }
+          ],
+          "type": "artist"
         }
       ],
       "type": "user",
