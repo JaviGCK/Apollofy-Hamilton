@@ -34,7 +34,7 @@
 
 .sl-filter-buttons {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     position: sticky;
     z-index: 1;
     height: 10vh;

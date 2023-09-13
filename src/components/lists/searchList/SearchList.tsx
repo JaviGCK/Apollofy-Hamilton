@@ -8,6 +8,7 @@ import { GroupItem } from '../groupItem/GroupItem'
 import { TrackType } from '../../../types/dataTypes/track'
 import { PlaylistType } from '../../../types/dataTypes/playlist'
 import { ArtistType } from '../../../types/dataTypes/artist'
+import { useTranslation } from 'react-i18next'
 
 const reducer = (filter: any, action: any) => {
     switch (action.type) {
@@ -37,12 +38,9 @@ const SearchList = (props: SearchProps) => {
     const [filteredArtist, setFilteredArtists] = useState<ArtistType[]>([])
     const [filteredTrack, setFilteredTracks] = useState<TrackType[]>([])
     const [filteredPlaylist, setFilteredPlaylist] = useState<PlaylistType[]>([])
-    //Button Filter Usestate
-    //!const [allFilter, setAllFilter] = useState(false);
-    //!const [tracksFilter, setTracksFilter] = useState(false);
-    //!const [artistFilter, setArtistFilter] = useState(false);
-    //!const [albumFilter, setAlbumFilter] = useState(false);
-    //!const [trackFilter, setTrackFilter] = useState(false);
+
+    const { t } = useTranslation();
+
     const initialState = 'All';
     const [filter, dispatch] = useReducer(reducer, initialState);
 
@@ -109,16 +107,16 @@ const SearchList = (props: SearchProps) => {
     }
         , [filter]);
 
-        const handleItemClick = (index: any) => {
-            setActiveIndex(index);
-          };
+    const handleItemClick = (index: any) => {
+        setActiveIndex(index);
+    };
     return (
         <>
             <section className='searchlist-container' ref={scrollRef}>
 
                 <div className='results-container'>
                     {searchInput == '' ? <div className='sl-awaiting-input'>
-                        <p>Listen to anything... anywhere you want.</p>
+                        <p>{t('searchbarMessage')}</p>
                         <GiUfo className="ufo-ico" />
                     </div>
 
@@ -126,18 +124,18 @@ const SearchList = (props: SearchProps) => {
 
                         <div className='sl-input-received'>
                             <div className='sl-filter-buttons'>
-                                <button className={`slf-btn ${filter === 'All' ? 'slf-btn-selected' : ''}`} onClick={() => dispatch({ type: 'SET_ALL' })}>All</button>
-                                <button className={`slf-btn ${filter === 'Tracks' ? 'slf-btn-selected' : ''}`} onClick={() => dispatch({ type: 'SET_TRACKS' })}>Tracks</button>
-                                <button className={`slf-btn ${filter === 'Artist' ? 'slf-btn-selected' : ''}`} onClick={() => dispatch({ type: 'SET_ARTIST' })}>Artist</button>
-                                <button className={`slf-btn ${filter === 'Album' ? 'slf-btn-selected' : ''}`} onClick={() => dispatch({ type: 'SET_ALBUM' })}>Album</button>
-                                <button className={`slf-btn ${filter === 'Playlist' ? 'slf-btn-selected' : ''}`} onClick={() => dispatch({ type: 'SET_PLAYLIST' })}>Playlist</button>
+                                <button className={`slf-btn ${filter === 'All' ? 'slf-btn-selected' : ''}`} onClick={() => dispatch({ type: 'SET_ALL' })}>{t('allSearch')}</button>
+                                <button className={`slf-btn ${filter === 'Tracks' ? 'slf-btn-selected' : ''}`} onClick={() => dispatch({ type: 'SET_TRACKS' })}>{t('tracksSearch')}</button>
+                                <button className={`slf-btn ${filter === 'Artist' ? 'slf-btn-selected' : ''}`} onClick={() => dispatch({ type: 'SET_ARTIST' })}>{t('artistsSearch')}</button>
+                                <button className={`slf-btn ${filter === 'Album' ? 'slf-btn-selected' : ''}`} onClick={() => dispatch({ type: 'SET_ALBUM' })}>{t('albumsSearch')}</button>
+                                <button className={`slf-btn ${filter === 'Playlist' ? 'slf-btn-selected' : ''}`} onClick={() => dispatch({ type: 'SET_PLAYLIST' })}>{t('playlistsSearch')}</button>
                             </div>
 
 
 
                             {filter === 'All' || filter === 'Tracks' ? (
                                 <>
-                                    {filteredTrack.length == 0 ? <></> : <h3>Tracks</h3>}
+                                    {filteredTrack.length == 0 ? <></> : <h3>{t('tracksSearch')}</h3>}
                                     <div className='sl-result'>
                                         {filteredTrack.map((track, index) => {
                                             return (
@@ -147,7 +145,7 @@ const SearchList = (props: SearchProps) => {
                                                     isActive={activeIndex === index}
                                                     onItemClicked={() => handleItemClick(index)}
 
-                                                    />
+                                                />
 
                                             )
                                         }
@@ -159,7 +157,7 @@ const SearchList = (props: SearchProps) => {
 
                             {filter === 'All' || filter === 'Album' ? (
                                 <>
-                                    {filteredAlbum.length === 0 ? null : <h3>Albums</h3>}
+                                    {filteredAlbum.length === 0 ? null : <h3>{t('albumsSearch')}</h3>}
                                     <div className='sl-result'>
                                         {filteredAlbum.map((album) => (
                                             <GroupItem
@@ -173,7 +171,7 @@ const SearchList = (props: SearchProps) => {
 
                             {filter === 'All' || filter === 'Artist' ? (
                                 <>
-                                    {filteredArtist.length == 0 ? <></> : <h3>Artist</h3>}
+                                    {filteredArtist.length == 0 ? <></> : <h3>{t('artistsSearch')}</h3>}
                                     <div className='sl-result'>
                                         {filteredArtist.map((artist) => {
                                             return (
@@ -189,13 +187,13 @@ const SearchList = (props: SearchProps) => {
 
                             {filter === 'All' || filter === 'Playlist' ? (
                                 <>
-                                    {filteredPlaylist.length == 0 ? <></> : <h3>Playlists</h3>}
+                                    {filteredPlaylist.length == 0 ? <></> : <h3>{t('playlistsSearch')}</h3>}
                                     <div className='sl-result'>
                                         {filteredPlaylist.map((playlist) => {
                                             return (
                                                 <GroupItem
                                                     key={playlist.id}
-                                                    track={playlist}/>
+                                                    track={playlist} />
                                             )
                                         }
                                         )}

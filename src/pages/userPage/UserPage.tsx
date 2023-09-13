@@ -1,16 +1,19 @@
 import { useState } from 'react';
-import ShareButton from '../../components/shareButton/ShareButton';
+// import ShareButton from '../../components/shareButton/ShareButton';
 import ProfileChart from '../../components/profileChart/ProfileChart';
 import ProfileMusicList from '../../components/profileMusicList/ProfileMusicList';
 import './userPage.css';
 import { useUserContext } from '../../utils/hooks/useUserContext';
 import { BiSearch } from 'react-icons/bi';
+import { useTranslation } from 'react-i18next';
 
 export const UserPage: React.FC = () => {
     const { currentUser } = useUserContext();
     const [searchTerm, setSearchTerm] = useState<string>('');
     const [searchResults, setSearchResults] = useState(currentUser?.tracks || []);
     const [isInputFocused, setIsInputFocused] = useState<boolean>(false);
+
+    const { t } = useTranslation();
 
     const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newSearchTerm = e.target.value;
@@ -42,7 +45,7 @@ export const UserPage: React.FC = () => {
                 <input
                     className='searchbar-input'
                     type="text"
-                    placeholder="Search my song"
+                    placeholder={t('searchMySong')}
                     value={searchTerm}
                     onChange={handleSearchChange}
                     onFocus={handleInputFocus}

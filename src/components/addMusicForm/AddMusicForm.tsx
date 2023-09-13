@@ -8,6 +8,7 @@ import "./addMusicForm.css"
 import placeholder from '../../assets/img/bg-image.webp'
 import toast, { Toaster } from "react-hot-toast"
 import { useUserContext } from "../../utils/hooks/useUserContext"
+import { useTranslation } from "react-i18next"
 
 
 export const AddMusicForm = () => {
@@ -15,6 +16,7 @@ export const AddMusicForm = () => {
     const [privacityState, setPrivacityState] = useState(false)
     const { user } = useAuth0()
     const { setCurrentLoggedUser } = useUserContext();
+    const { t } = useTranslation();
 
     const { register, handleSubmit, formState: { errors }, reset, watch } = useForm({
         defaultValues: {
@@ -91,9 +93,9 @@ export const AddMusicForm = () => {
                 reverseOrder={false}
             />
 
-            <div className="track-img-container">
-                <div>
-                    <label htmlFor="track-img-input" className="track-img-label">Select your track´s image</label>
+            <div className="track-container">
+                <div className="track-img-container">
+                    <label htmlFor="track-img-input" className="track-img-label">{t('selectTrackImage')}</label>
                     <input
                         id="track-img-input"
                         className="track-img-input add-music-input hidden-input"
@@ -114,14 +116,14 @@ export const AddMusicForm = () => {
 
                     {errors.image && <p className="music-form-error">{errors.image.message}</p>}
                 </div>
-                <div>
+                <div className="track-img-container-preview">
                     <img className='img-preview' src={imagePreview} alt="Preview img" />
                 </div>
             </div>
 
 
             <div className="track-audio-container">
-                <label htmlFor="track-audio-input" className="track-audio-label">Select your track</label>
+                <label htmlFor="track-audio-input" className="track-audio-label">{t('selectTrack')}</label>
                 <input id="track-audio-input" className="track-audio-input add-music-input hidden-input" type="file" accept="audio/mp3, audio/wav, audio/ogg" placeholder="Select your audio..."
                     {...register("audio", {
                         required: {
@@ -134,7 +136,7 @@ export const AddMusicForm = () => {
             </div>
 
 
-            <input className="track-title-input add-music-input" type="text" placeholder="Your song name..."
+            <input className="track-title-input add-music-input" type="text" placeholder={t('songName')}
                 {...register("title", {
                     required: {
                         value: true,
@@ -161,7 +163,7 @@ export const AddMusicForm = () => {
                     }
                 })}
             >
-                <option value="" disabled hidden>Select a genre for your song</option>
+                <option value="" disabled hidden>{t('songGenre')}</option>
                 <option value="hip-hop">Hip-Hop</option>
                 <option value="rock">Rock</option>
                 <option value="pop">Pop</option>
@@ -176,9 +178,9 @@ export const AddMusicForm = () => {
             {errors.genre && <p className="music-form-error select-error">{errors.genre.message}</p>}
 
             <div className="privacity-selection-container">
-                <p>Privacity</p>
+                <p>{t('trackPrivacyText')}</p>
                 <span className="privacity-btn-container">
-                    <p>{privacityState ? "Private" : "Public"}</p>
+                    <p>{privacityState ? t('trackPrivacityPrivate') : t('trackPrivacityPublic')}</p>
                     <label className="switch">
                         <input type="checkbox" id="track-privacity-check" onChange={handlePrivacity} />
                         <span className="slider"></span>
@@ -189,7 +191,7 @@ export const AddMusicForm = () => {
 
 
 
-            <button className="add-music-submit-btn" type="submit">Upload</button>
+            <button className="add-music-submit-btn" type="submit">{t('upload')}</button>
         </form>
 
     )

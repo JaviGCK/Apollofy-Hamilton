@@ -19,6 +19,8 @@
 
 .img-preview {
     height: 15vh;
+    width: 100%;
+    object-fit: cover;
 }
 
 .track-audio-container {
@@ -49,7 +51,9 @@
     grid-area: 8 / 1 / 9 / 2;
 }
 
-
+.track-container {
+    display: flex;
+}
 
 .track-img-container,
 .track-audio-container {
@@ -60,6 +64,22 @@
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+    width: 100%;
+}
+
+.track-img-container-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #00ffa3;
+    padding: 8px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    width: 200px;
+    margin-left: 2vw;
 }
 
 .title-genres-privacity-container {
@@ -76,8 +96,12 @@
     height: 40px;
     padding-left: 15px;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    background: #E2D7FF;
-    box-shadow: 5px -5px 12px 0px rgba(255, 255, 255, 0.05) inset, -5px 5px 12px 0px rgba(255, 255, 255, 0.05) inset, 4px 7px 15px 0px rgba(0, 0, 0, 0.08), -1px 0px 2px 0px rgba(201, 201, 201, 0.10) inset;
+    background: #e2d7ff;
+    box-shadow:
+        5px -5px 12px 0px rgba(255, 255, 255, 0.05) inset,
+        -5px 5px 12px 0px rgba(255, 255, 255, 0.05) inset,
+        4px 7px 15px 0px rgba(0, 0, 0, 0.08),
+        -1px 0px 2px 0px rgba(201, 201, 201, 0.1) inset;
     backdrop-filter: blur(6px);
     border-radius: 12px;
     -webkit-border-radius: 12px;
@@ -92,11 +116,14 @@
     padding-left: 15px;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    background: #E2D7FF;
-    box-shadow: 5px -5px 12px 0px rgba(255, 255, 255, 0.05) inset, -5px 5px 12px 0px rgba(255, 255, 255, 0.05) inset, 4px 7px 15px 0px rgba(0, 0, 0, 0.08), -1px 0px 2px 0px rgba(201, 201, 201, 0.10) inset;
+    background: #e2d7ff;
+    box-shadow:
+        5px -5px 12px 0px rgba(255, 255, 255, 0.05) inset,
+        -5px 5px 12px 0px rgba(255, 255, 255, 0.05) inset,
+        4px 7px 15px 0px rgba(0, 0, 0, 0.08),
+        -1px 0px 2px 0px rgba(201, 201, 201, 0.1) inset;
     backdrop-filter: blur(6px);
 }
-
 
 .privacity-selection-container {
     width: 100%;
@@ -111,7 +138,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .hidden-input {
@@ -137,7 +163,7 @@
 
 .music-form-error {
     color: red;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-size: 12px;
     font-weight: bold;
 }
@@ -146,10 +172,6 @@
     display: inline;
     content: "⚠ ";
 }
-
-
-
-
 
 /* ----------TOGGLE-BUTTON----------*/
 
