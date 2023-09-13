@@ -3,9 +3,11 @@ import { TrendItem } from "./trendItem/TrendItem"
 import "./trendList.css"
 import { TopTrends } from "../../types/dataTypes/topTrends"
 import { fetchData } from "../../api/fetchApi"
+import { useTranslation } from "react-i18next"
 
 export const TrendList = () => {
     const [topTrends, setTopTrends] = useState<TopTrends | null>(null)
+    const { t } = useTranslation();
 
     useEffect(() => {
         (async function fetchTopTrends() {
@@ -16,8 +18,8 @@ export const TrendList = () => {
 
     const topTrendsArray = [
         { id: "top-playlists", topTrendText: "Top Playlists", topTrendArray: topTrends?.topPlaylists },
-        { id: "top-artists", topTrendText: "Top Artists", topTrendArray: topTrends?.topArtists },
-        { id: "top-albums", topTrendText: "Top Albums", topTrendArray: topTrends?.topAlbums }
+        { id: "top-artists", topTrendText: t('topArtists'), topTrendArray: topTrends?.topArtists },
+        { id: "top-albums", topTrendText: t('topAlbums'), topTrendArray: topTrends?.topAlbums }
     ]
     return (
         <div className="trendlist-wrapper">

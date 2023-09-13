@@ -3,6 +3,8 @@ import { Auth0Provider } from '@auth0/auth0-react'
 import App from './App.tsx'
 import './index.css'
 
+import './utils/functions/i18n.ts'
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
 
   <Auth0Provider
@@ -12,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       redirect_uri: window.location.origin
     }}>
     <App />
-      
+
   </Auth0Provider>
 
 )

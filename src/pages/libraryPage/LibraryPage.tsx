@@ -2,12 +2,13 @@ import './libraryPage.css'
 import { BiSearch, BiPlus } from 'react-icons/bi'
 import { useAuth0 } from '@auth0/auth0-react'
 import { Filter } from '../../components/filter'
-import { listsFilterCategories } from '../../assets/globalVariables'
 import { useEffect, useState } from 'react'
 import { GroupItem } from '../../components/lists/groupItem/GroupItem'
 import { getUserListsReferences, getListByReference } from '../../api/fetchApi'
 import { useFilterContext } from '../../utils/hooks/useFilterProvider'
 import { PossibleItems } from '../../types/dataTypes/enums'
+import { useTranslation } from 'react-i18next'
+import { CollectionFilters, FilterCategories } from '../../types/propTypes/filterTypes'
 
 
 export const LibraryPage = () => {
@@ -19,7 +20,7 @@ export const LibraryPage = () => {
 
     const { currentFilter } = useFilterContext();
 
-
+    const { t } = useTranslation();
 
     if (userLists === null) {
 
@@ -38,6 +39,29 @@ export const LibraryPage = () => {
         }
         getFetch()
     }
+
+    const listsFilterCategories: FilterCategories[] = [
+        {
+            name: t('allSearch'),
+            id: "1",
+            filter: CollectionFilters.ALL
+        },
+        {
+            name: t('playlistsSearch'),
+            id: "2",
+            filter: CollectionFilters.PLAYLISTS
+        },
+        {
+            name: t('albumsSearch'),
+            id: "3",
+            filter: CollectionFilters.ALBUMS
+        },
+        {
+            name: t('artistsSearch'),
+            id: "4",
+            filter: CollectionFilters.ARTISTS
+        },
+    ]
 
 
     useEffect(() => {
@@ -62,8 +86,7 @@ export const LibraryPage = () => {
                     <figure className='library-user-img'>
                         {user === undefined ? <img src="/src/assets/img/defaultuser.webp" alt="default user image" /> : <img src={user?.picture} alt={`${user?.name}´s profile image`} />}
                     </figure>
-                    {user === undefined ? <h2>Your Library</h2> : <h2>{`${user?.given_name}´s Library`}</h2>}
-
+                    <h2>{t('yourLibrary')}</h2>
                 </div>
                 <div className='heading-buttons'>
                     <BiSearch className='library-button-icon' />
@@ -74,7 +97,6 @@ export const LibraryPage = () => {
             <div className='library-list-items-wrapper'>
                 <div className='library-items-container'>
                     {filteredLists?.map((list) => {
-
                         return (
                             <GroupItem
                                 key={list.id}
@@ -83,7 +105,6 @@ export const LibraryPage = () => {
                         )
                     })}
                 </div>
-
                 <div className="white-space"></div>
             </div>
         </section>

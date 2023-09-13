@@ -1,4 +1,5 @@
 
+
 import { useFilterContext } from '../../../utils/hooks/useFilterProvider'
 import "./filterButton.css"
 
@@ -6,7 +7,6 @@ import "./filterButton.css"
 export const FilterButton = ({ ...props }) => {
 
     const { changeFilter } = useFilterContext()
-
 
     return (
 

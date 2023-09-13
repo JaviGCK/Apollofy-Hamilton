@@ -4,11 +4,14 @@ import { FC, useState } from 'react'
 import { GroupItem } from '../lists/groupItem/GroupItem'
 
 import { ProfileMusicListPropTypes } from '../../types/propTypes/profileMusicListProps'
+import { useTranslation } from 'react-i18next'
 
 
 
 const ProfileMusicList: FC<ProfileMusicListPropTypes> = ({ tracks }) => {
     const [activeIndex, setActiveIndex] = useState(null);
+
+    const { t } = useTranslation();
 
     const handleItemClick = (index: any) => {
         setActiveIndex(index);
@@ -16,7 +19,7 @@ const ProfileMusicList: FC<ProfileMusicListPropTypes> = ({ tracks }) => {
 
     return (
         <div className='profile-music-container'>
-            <h3>My Music</h3>
+            <h3>{t('myMusicProfile')}</h3>
             <div className='music-list-container'>
                 {tracks?.map((track, index) => (
                     <GroupItem
