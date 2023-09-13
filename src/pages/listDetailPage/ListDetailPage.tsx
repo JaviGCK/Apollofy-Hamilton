@@ -16,6 +16,7 @@ import { GenreType } from '../../types/dataTypes/genre';
 import { useTrackListContext } from '../../utils/hooks/useTrackListContext';
 import { useUserContext } from '../../utils/hooks/useUserContext';
 import toast, { Toaster } from 'react-hot-toast';
+import { useIsPlayingContext } from '../../utils/hooks/useIsPlayingContext';
 
 export const ListDetailPage = () => {
 
@@ -25,7 +26,7 @@ export const ListDetailPage = () => {
 
     const [trackIds, setTrackIds] = useState<string[] | null>(null);
 
-    const [isPlaying, setIsPlaying] = useState(false)
+    const { isPlaying, changeIsPlaying } = useIsPlayingContext();
 
     const { setNewTrackList } = useTrackListContext();
 
@@ -100,8 +101,14 @@ export const ListDetailPage = () => {
             setNewTrackList(await getFullTrack(trackIds));
         }());
 
+        if (!isPlaying) {
+            changeIsPlaying(true);
+
+        }
+
+
     }
-    console.log(trackIds);
+
     const heartIconClicked = () => {
         const libraryListUser = currentUser?.libraryList;
         const itemSearched = libraryListUser?.find((item) => {
@@ -148,8 +155,8 @@ export const ListDetailPage = () => {
                     <div className="list-detail-dashboard">
                         {/* <AiOutlinePlusCircle className="list-detail-add-btn" /> */}
                         <BiSolidHeart className="list-detail-heart-btn" onClick={heartIconClicked} />
-                        <span className="list-detail-container-play-btn" onClick={playBtnClicked}>
-                            {isPlaying ? <BiPause className="list-detail-play-btn" /> : <BiPlay className="list-detail-play-btn" />}
+                        <span className="list-detail-container-play-btn" >
+                            {isPlaying ? <BiPause className="list-detail-play-btn" /> : <BiPlay className="list-detail-play-btn" onClick={playBtnClicked} />}
                         </span>
                         <FaRandom
                             className={`list-detail-shuffle-btn ${isShuffleActive ? 'active' : ''}`}

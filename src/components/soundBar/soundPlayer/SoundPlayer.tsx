@@ -3,16 +3,15 @@ import { BsFillPlayCircleFill, BsFillPauseCircleFill, BsFillSkipStartCircleFill,
 import { ImLoop } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
 import "./soundPlayer.css"
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useRef, useState } from 'react';
 import { SoundPlayerPropTypes } from '../../../types/propTypes/soundPlayerPropTypes';
-import { useListDetailContext } from '../../../utils/hooks/useListDetailContext';
+
 
 
 export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
 
 
     const [expandedMenu, setExpandedMenu] = useState(false)
-    const { playBtnRef, pauseBtnRef } = useListDetailContext();
 
     const playerContainer = useRef<HTMLDivElement | null>(null)
 
@@ -51,9 +50,7 @@ export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
         const formattedTime = `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
         return formattedTime;
     }
-    useEffect(() => {
-        console.log(pauseBtnRef)
-    }, [props.isPlaying])
+
 
     return (
 
@@ -74,7 +71,7 @@ export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
                         </div>
 
                         <div id="controls-icon" className="controls-container" >
-                            {props.isPlaying ? <button ref={pauseBtnRef} style={{ border: 'none' }} className="controls-icon" onClick={handlePlayPause}><BsFillPauseCircleFill id="controls-icon" className="controls-icon" /> </button> : <button ref={playBtnRef} style={{ border: 'none' }} className="controls-icon" onClick={handlePlayPause}><BsFillPlayCircleFill id="controls-icon" className="controls-icon" /></button>}
+                            {props.isPlaying ? <button style={{ border: 'none' }} className="controls-icon" onClick={handlePlayPause}><BsFillPauseCircleFill id="controls-icon" className="controls-icon" /> </button> : <button style={{ border: 'none' }} className="controls-icon" onClick={handlePlayPause}><BsFillPlayCircleFill id="controls-icon" className="controls-icon" /></button>}
 
                         </div>
                     </div>

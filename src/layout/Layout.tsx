@@ -12,8 +12,10 @@ export const Layout = () => {
       <UserContextProvider>
         <TrackListContextProvider>
           <ListDetailContextProvider>
-            <Outlet />
-            <SoundBar />
+            <ListDetailContextProvider>
+              <Outlet />
+              <SoundBar />
+            </ListDetailContextProvider>
             <NavBar />
           </ListDetailContextProvider>
         </TrackListContextProvider>
