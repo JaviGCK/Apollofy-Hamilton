@@ -1,7 +1,7 @@
 import './listDetailPage.css'
 import { useEffect, useState } from "react";
-import { FaAngleLeft } from "react-icons/fa";
-import { BiSolidHeart, BiPlay, BiStop } from "react-icons/bi";
+import { FaAngleLeft, FaRandom } from "react-icons/fa";
+import { BiSolidHeart, BiPlay, BiPause } from "react-icons/bi";
 import { TrackList } from "../../components/lists/trackList/TrackList";
 import { useListDetailContext } from '../../utils/hooks/useListDetailContext';
 import { ListType } from '../../types/dataTypes/enums.d';
@@ -19,7 +19,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 export const ListDetailPage = () => {
 
-    const { listDetail, playBtnRef, pauseBtnRef } = useListDetailContext();
+    const { listDetail } = useListDetailContext();
 
     const { currentUser } = useUserContext();
 
@@ -35,6 +35,7 @@ export const ListDetailPage = () => {
         navigate(-1);
     }
 
+    const [isShuffleActive, setIsShuffleActive] = useState(false);
 
     useEffect(() => {
         if (listDetail !== null) {
@@ -98,12 +99,9 @@ export const ListDetailPage = () => {
         (async function getTracksById() {
             setNewTrackList(await getFullTrack(trackIds));
         }());
-        if (playBtnRef.current) {
-            playBtnRef.current.click()
-            setIsPlaying(true)
-        }
-    }
 
+    }
+    console.log(trackIds);
     const heartIconClicked = () => {
         const libraryListUser = currentUser?.libraryList;
         const itemSearched = libraryListUser?.find((item) => {
@@ -120,6 +118,16 @@ export const ListDetailPage = () => {
     useEffect(() => {
         if (listDetail === null) navigate("/home")
     }, [])
+
+
+
+    const toggleShuffle = () => {
+
+        setIsShuffleActive(!isShuffleActive);
+        if (isShuffleActive) {
+
+        }
+    };
 
     return (
         <>
@@ -141,8 +149,13 @@ export const ListDetailPage = () => {
                         {/* <AiOutlinePlusCircle className="list-detail-add-btn" /> */}
                         <BiSolidHeart className="list-detail-heart-btn" onClick={heartIconClicked} />
                         <span className="list-detail-container-play-btn" onClick={playBtnClicked}>
-                            {isPlaying ? <BiStop className="list-detail-play-btn" onClick={() => { pauseBtnRef.current.click(); setIsPlaying(false) }} /> : <BiPlay className="list-detail-play-btn" />}
+                            {isPlaying ? <BiPause className="list-detail-play-btn" /> : <BiPlay className="list-detail-play-btn" />}
                         </span>
+                        <FaRandom
+                            className={`list-detail-shuffle-btn ${isShuffleActive ? 'active' : ''}`}
+                            onClick={toggleShuffle}
+                        />
+
                     </div>
 
                 </div>
