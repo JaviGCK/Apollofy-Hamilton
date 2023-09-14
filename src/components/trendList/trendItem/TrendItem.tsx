@@ -1,6 +1,6 @@
 
 import { FaMusic } from "react-icons/fa";
-import { BiPlay } from "react-icons/bi";
+import { BiPlay, BiStop } from "react-icons/bi";
 import "./trendItem.css"
 import { TrendItemProps } from "../../../types/propTypes/trendItemProps";
 import { FC, useEffect, useState } from "react";
@@ -13,6 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { useListDetailContext } from "../../../utils/hooks/useListDetailContext";
 import { ListType } from "../../../types/dataTypes/enums.d";
 import { useTrackListContext } from "../../../utils/hooks/useTrackListContext";
+import { useIsPlayingContext } from "../../../utils/hooks/useIsPlayingContext";
 
 
 export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
@@ -29,7 +30,8 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
     const { setNewListDetail } = useListDetailContext();
     const [trackIds, setTrackIds] = useState<string[] | null>(null);
     const { setNewTrackList } = useTrackListContext();
-
+    const { trackList } = useTrackListContext()
+    const [btnActive, setBtnActive] = useState(false)
     useEffect(() => {
         (async function fetchItemData() {
             const data = await fetchData(`${props.type}s?id=${props.id}`) as (AlbumType[] | PlaylistType[] | ArtistType[]);
@@ -93,6 +95,7 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
         e.stopPropagation();
 
         (async function setTracksSoundbar() {
+            let currentTrackIds: string[] = []
             const data = await fetchData(`${props.type}s?id=${props.id}`) as AlbumType[] | PlaylistType[] | ArtistType[];
             const dataFetched = data[0] as (AlbumType | PlaylistType | ArtistType);
             if (props.type !== ListType.ARTIST) {
@@ -103,7 +106,7 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
                     trackListIds.push(track.id)
                 })
                 setTrackIds(trackListIds);
-
+                currentTrackIds = trackListIds
             } else {
 
                 const artistObtained = dataFetched as ArtistType;
@@ -122,12 +125,28 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
                             albumFetched.tracks && trackIndex === albumFetched.tracks.length - 1) {
 
                             setTrackIds(trackListIdsArtist);
+                            currentTrackIds = trackListIdsArtist
                         }
                     })
 
                 })
 
             }
+            (async function checkTrackList() {
+                if (trackList === null) return
+                let coincides = true
+                let soundPlayerIds = trackList.map((track) => track.id)
+                if (soundPlayerIds.length === currentTrackIds.length) {
+                    for (let i = 0; i < currentTrackIds.length; i++) {
+                        if (!soundPlayerIds.includes(currentTrackIds[i])) {
+                            coincides = false
+                        }
+                    }
+                } else { coincides = false }
+
+                coincides ? setBtnActive(true) : setBtnActive(false)
+            }())
+
         }());
 
     }
@@ -153,7 +172,10 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
                         </p>
 
                         <span className="play-btn-container" onClick={homePagePlayClicked}>
-                            <BiPlay className="dashboard-play-icon" />
+                            {btnActive ?
+                                <BiStop className="dashboard-play-icon" />
+                                :
+                                <BiPlay className="dashboard-play-icon" />}
                         </span>
                     </div>
                 </div>

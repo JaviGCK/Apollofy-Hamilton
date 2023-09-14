@@ -1,7 +1,7 @@
 import './listDetailPage.css'
 import { useEffect, useState } from "react";
 import { FaAngleLeft, FaRandom } from "react-icons/fa";
-import { BiSolidHeart, BiPlay, BiPause } from "react-icons/bi";
+import { BiSolidHeart, BiPlay, BiStop } from "react-icons/bi";
 import { TrackList } from "../../components/lists/trackList/TrackList";
 import { useListDetailContext } from '../../utils/hooks/useListDetailContext';
 import { ListType } from '../../types/dataTypes/enums.d';
@@ -26,9 +26,10 @@ export const ListDetailPage = () => {
 
     const [trackIds, setTrackIds] = useState<string[] | null>(null);
 
-    const { isPlaying, changeIsPlaying } = useIsPlayingContext();
+    const { isPlayingList, changeIsPlayingList, isListBtnActive, changeIsBtnActive } = useIsPlayingContext();
 
-    const { setNewTrackList } = useTrackListContext();
+
+    const { trackList, setNewTrackList } = useTrackListContext();
 
     const navigate = useNavigate();
 
@@ -40,6 +41,7 @@ export const ListDetailPage = () => {
 
     useEffect(() => {
         if (listDetail !== null) {
+            let currentTracksIds: string[] = []
 
             if (listDetail?.type !== ListType.ARTIST && listDetail?.type !== ListType.GENRE) {
                 let newTracksIds: string[] = [];
@@ -51,6 +53,8 @@ export const ListDetailPage = () => {
                     })
                 }
                 setTrackIds(newTracksIds)
+                currentTracksIds = newTracksIds
+
             } else if (listDetail?.type === ListType.ARTIST) {
                 const artistObtained = listDetail as ArtistType;
                 (async function getTracksIds() {
@@ -68,6 +72,7 @@ export const ListDetailPage = () => {
                             if (artistObtained.albums) {
                                 if (index === artistObtained.albums.length - 1) {
                                     setTrackIds(newTracksIds);
+                                    currentTracksIds = newTracksIds
                                 }
                             }
 
@@ -88,26 +93,41 @@ export const ListDetailPage = () => {
                     let tracksId: string[] = []
                     tracksWanted.forEach((track) => { tracksId.push(track.id); })
                     setTrackIds(tracksId);
+                    currentTracksIds = tracksId
 
                 }());
             }
+
+            (async function checkTrackList() {
+                if (trackList === null) return
+                let coincides = true
+                let soundPlayerIds = trackList.map((track) => track.id)
+                if (soundPlayerIds.length === currentTracksIds.length) {
+                    for (let i = 0; i < currentTracksIds.length; i++) {
+                        if (!soundPlayerIds.includes(currentTracksIds[i])) {
+                            coincides = false
+                        }
+                    }
+                } else { coincides = false }
+
+                coincides ? changeIsBtnActive(true) : changeIsBtnActive(false)
+            }())
         }
 
     }, [listDetail])
 
+    const getTrackListById = async (trackById: string[]) => {
+        return await getFullTrack(trackById)
+    }
+
     const playBtnClicked = () => {
         if (trackIds === null) return;
         (async function getTracksById() {
-            setNewTrackList(await getFullTrack(trackIds));
+            setNewTrackList(await getTrackListById(trackIds));
         }());
-
-        if (!isPlaying) {
-            changeIsPlaying(true);
-
-        }
-
-
+        changeIsBtnActive(!isListBtnActive)
     }
+
 
     const heartIconClicked = () => {
         const libraryListUser = currentUser?.libraryList;
@@ -155,8 +175,8 @@ export const ListDetailPage = () => {
                     <div className="list-detail-dashboard">
                         {/* <AiOutlinePlusCircle className="list-detail-add-btn" /> */}
                         <BiSolidHeart className="list-detail-heart-btn" onClick={heartIconClicked} />
-                        <span className="list-detail-container-play-btn" >
-                            {isPlaying ? <BiPause className="list-detail-play-btn" /> : <BiPlay className="list-detail-play-btn" onClick={playBtnClicked} />}
+                        <span className="list-detail-container-play-btn" onClick={playBtnClicked} >
+                            {isListBtnActive ? <BiStop className="list-detail-play-btn" /> : <BiPlay className="list-detail-play-btn" />}
                         </span>
                         <FaRandom
                             className={`list-detail-shuffle-btn ${isShuffleActive ? 'active' : ''}`}

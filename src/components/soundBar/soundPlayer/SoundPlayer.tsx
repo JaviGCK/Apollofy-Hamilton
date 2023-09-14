@@ -8,6 +8,7 @@ import { SoundPlayerPropTypes } from '../../../types/propTypes/soundPlayerPropTy
 
 
 
+
 export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
 
 
@@ -71,7 +72,13 @@ export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
                         </div>
 
                         <div id="controls-icon" className="controls-container" >
-                            {props.isPlaying ? <button style={{ border: 'none' }} className="controls-icon" onClick={handlePlayPause}><BsFillPauseCircleFill id="controls-icon" className="controls-icon" /> </button> : <button style={{ border: 'none' }} className="controls-icon" onClick={handlePlayPause}><BsFillPlayCircleFill id="controls-icon" className="controls-icon" /></button>}
+                            {props.isPlaying ?
+                                <button style={{ border: 'none' }} className="controls-icon" onClick={handlePlayPause}>
+                                    <BsFillPauseCircleFill id="controls-icon" className="controls-icon" />
+                                </button> :
+                                <button style={{ border: 'none' }} className="controls-icon" onClick={handlePlayPause}>
+                                    <BsFillPlayCircleFill id="controls-icon" className="controls-icon" />
+                                </button>}
 
                         </div>
                     </div>
