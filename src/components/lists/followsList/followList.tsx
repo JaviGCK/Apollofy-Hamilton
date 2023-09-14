@@ -1,39 +1,45 @@
 import './followsList.css'
-import { FC, useEffect, useState } from "react";
+import { FC, useContext, useEffect, useState } from "react";
 
-import { UserType } from '../../../types/dataTypes/user';
-import { FollowsPropTypes } from "../../../types/propTypes/followsPropTypes";
+import { UserType } from '../../profileChart/ProfileChart';
 import { fetchData } from '../../../api/fetchApi';
+import { userContext } from '../../../context/UserContextProvider';
 
 //import { getUniqueId } from '../../../utils/functions/randomId';
 
-export const FollowsList: FC<FollowsPropTypes> = ({ userId, userFollowers, userFollowing }) => {
+export interface FollowsType {
+    userId: string,
+    followers: UserType[],
+    following: UserType[]
+}
 
-    const [user, setUser] = useState<UserType | null>(null);
+export interface FollowsPropTypes {
 
-    useEffect(() => {
-        (async function getTrack() {
-            const userFetched = await fetchData(`users?id=${userId}`) as UserType[]; // habria que poner el end point de los seguidores del usuario 
-            const user = userFetched[0];
-            setUser(user);
-        }());
-    }, [])
+    list: UserType[],
+}
 
+export const FollowsList: FC<FollowsPropTypes> = ({ list }) => {
 
     return (
         <>
 
-            {user && <div className="list-follows-detail">
-                <img
-                    className="list-follows-detail-img"
-                    src={userFollowers.followedBy.profilePicture}
-                    alt={`Image of ${userFollowers.followedBy.name}`}
-                />
-                <div className="list-follows-detail-info">
-                    <h3>{userFollowers.followedBy.name}</h3>
+            <div className="list-follows-detail">
+                {list.map((user) => (
+                    <div key={user.id}>
+                        <img
+                            className="list-follows-detail-img"
+                            src={user.imageUrl}
+                            alt={`Image of ${user.userName}`}
+                        />
+                        <div className="list-follows-detail-info">
+                            <h3>{user.userName}</h3>
 
-                </div>
-            </div>}
+                        </div>
+                    </div>
+                ))}
+
+
+            </div>
 
         </>
     );
