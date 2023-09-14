@@ -3,6 +3,7 @@
     flex-direction: column;
     font-family: 'Noto Sans', sans-serif;
     height: calc(100vh - 175px);
+    max-height: 40vh;
     overflow-y: scroll;
     scroll-behavior: smooth;
 }

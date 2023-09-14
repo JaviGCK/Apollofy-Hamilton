@@ -43,7 +43,8 @@ i18n
                     followersProfile: 'Followers',
                     followingProfile: 'Following',
                     myMusicProfile: 'My Music',
-                    searchMySong: 'Search my song...'
+                    searchMySong: 'Search my song...',
+                    userSearch: 'Users'
                 }
             },
             es: {
@@ -58,12 +59,12 @@ i18n
                     topGenres: 'Tus Top Géneros',
                     searchbarText: '¿Qué quieres escuchar?',
                     searchbarMessage: 'Escucha lo que quieras... donde quieras.',
-                    allSearch: 'todo',
+                    allSearch: 'Todo',
                     tracksSearch: 'Canciones',
                     artistsSearch: 'Artistas',
                     albumsSearch: 'Álbumes',
                     playlistsSearch: 'Playlists',
-                    addTrack: '¡añade tu canción!',
+                    addTrack: '¡Añade tu canción!',
                     selectTrackImage: "Elige la imagen de tu canción",
                     selectTrack: 'Elige tu canción',
                     songName: "Nombre de tu canción...",
@@ -79,7 +80,8 @@ i18n
                     followersProfile: 'Seguidores',
                     followingProfile: 'Seguidos',
                     myMusicProfile: 'Mi música',
-                    searchMySong: 'Buscar mi canción...'
+                    searchMySong: 'Buscar mi canción...',
+                    userSearch: 'Usuarios'
                 }
             }
         }

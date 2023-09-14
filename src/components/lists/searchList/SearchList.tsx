@@ -7,8 +7,10 @@ import { AlbumType } from '../../../types/dataTypes/album'
 import { GroupItem } from '../groupItem/GroupItem'
 import { TrackType } from '../../../types/dataTypes/track'
 import { PlaylistType } from '../../../types/dataTypes/playlist'
+import { UserType } from '../../../types/dataTypes/user'
 import { ArtistType } from '../../../types/dataTypes/artist'
 import { useTranslation } from 'react-i18next'
+import { GroupUsers } from '../groupUsers/GroupUsers'
 
 const reducer = (filter: any, action: any) => {
     switch (action.type) {
@@ -22,6 +24,8 @@ const reducer = (filter: any, action: any) => {
             return 'Album';
         case 'SET_PLAYLIST':
             return 'Playlist';
+        case 'SET_USERS':
+            return 'Users';
         default:
             return filter;
     }
@@ -34,10 +38,12 @@ const SearchList = (props: SearchProps) => {
     const [dataArtists, setDataArtist] = useState<ArtistType[]>([])
     const [dataTracks, setDataTracks] = useState<TrackType[]>([])
     const [dataPlaylists, setDataPlaylists] = useState<PlaylistType[]>([])
+    const [dataUsers, setDataUsers] = useState<UserType[]>([])
     const [filteredAlbum, setFilteredAlbum] = useState<AlbumType[]>([])
     const [filteredArtist, setFilteredArtists] = useState<ArtistType[]>([])
     const [filteredTrack, setFilteredTracks] = useState<TrackType[]>([])
     const [filteredPlaylist, setFilteredPlaylist] = useState<PlaylistType[]>([])
+    const [filteredUsers, setFilteredUsers] = useState<UserType[]>([])
 
     const { t } = useTranslation();
 
@@ -57,6 +63,8 @@ const SearchList = (props: SearchProps) => {
         setDataTracks(fetchedTracktData);
         const fetchedPlaylistData: any = await fetchData('playlists')
         setDataPlaylists(fetchedPlaylistData);
+        const fetchedUsersData: any = await fetchData('users')
+        setDataUsers(fetchedUsersData);
     }
     useEffect(() => {
         retrieveData()
@@ -95,6 +103,14 @@ const SearchList = (props: SearchProps) => {
         if (result4) {
             setFilteredPlaylist(result4)
         }
+        //Filter Users
+        const filteredUser = dataUsers.filter((user, index, arr) => {
+            return arr.findIndex((a) => a.name === user.name) === index;
+        });
+        let result5 = filteredUser.filter((user) => user.name?.toLowerCase().includes(searchInput.toLocaleLowerCase()))
+        if (result5) {
+            setFilteredUsers(result5)
+        }
 
     }, [searchInput])
     const adjustScrollBar = () => {
@@ -125,10 +141,12 @@ const SearchList = (props: SearchProps) => {
                         <div className='sl-input-received'>
                             <div className='sl-filter-buttons'>
                                 <button className={`slf-btn ${filter === 'All' ? 'slf-btn-selected' : ''}`} onClick={() => dispatch({ type: 'SET_ALL' })}>{t('allSearch')}</button>
+                                <button className={`slf-btn ${filter === 'Users' ? 'slf-btn-selected' : ''}`} onClick={() => dispatch({ type: 'SET_USERS' })}>{t('userSearch')}</button>
                                 <button className={`slf-btn ${filter === 'Tracks' ? 'slf-btn-selected' : ''}`} onClick={() => dispatch({ type: 'SET_TRACKS' })}>{t('tracksSearch')}</button>
                                 <button className={`slf-btn ${filter === 'Artist' ? 'slf-btn-selected' : ''}`} onClick={() => dispatch({ type: 'SET_ARTIST' })}>{t('artistsSearch')}</button>
                                 <button className={`slf-btn ${filter === 'Album' ? 'slf-btn-selected' : ''}`} onClick={() => dispatch({ type: 'SET_ALBUM' })}>{t('albumsSearch')}</button>
                                 <button className={`slf-btn ${filter === 'Playlist' ? 'slf-btn-selected' : ''}`} onClick={() => dispatch({ type: 'SET_PLAYLIST' })}>{t('playlistsSearch')}</button>
+
                             </div>
 
 
@@ -197,6 +215,20 @@ const SearchList = (props: SearchProps) => {
                                             )
                                         }
                                         )}
+                                    </div>
+                                </>
+                            ) : null}
+
+                            {filter === 'Users' ? (
+                                <>
+                                    {filteredUsers.length === 0 ? null : <h3>{t('userSearch')}</h3>}
+                                    <div className='sl-result'>
+                                        {filteredUsers.map((user) => (
+                                            <GroupUsers
+                                                key={user.id}
+                                                user={user}
+                                            />
+                                        ))}
                                     </div>
                                 </>
                             ) : null}
