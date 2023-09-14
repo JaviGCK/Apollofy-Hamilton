@@ -1,0 +1,15 @@
+.list-follows-detail {
+    display: flex;
+    margin: 3vh 3.5vh 3vh 3.5vh;
+}
+
+.list-follows-detail-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.list-follows-detail-info {
+    display: inline-block;
+    padding-left: 3vw; 
+}

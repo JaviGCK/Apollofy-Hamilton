@@ -9,7 +9,7 @@ export interface UserType {
     profilePicture?: string,
     libraryList?: PossibleItems[],
     type?: ListType,
-    tracks?: TrackType[]
+    tracks?: TrackType[],
 }
 
 /**
