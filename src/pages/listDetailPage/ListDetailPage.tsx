@@ -17,6 +17,7 @@ import { useTrackListContext } from '../../utils/hooks/useTrackListContext';
 import { useUserContext } from '../../utils/hooks/useUserContext';
 import toast, { Toaster } from 'react-hot-toast';
 import { useIsPlayingContext } from '../../utils/hooks/useIsPlayingContext';
+import { useTrackIdsContext } from '../../utils/hooks/useTrackIdsContext';
 
 export const ListDetailPage = () => {
 
@@ -24,12 +25,12 @@ export const ListDetailPage = () => {
 
     const { currentUser } = useUserContext();
 
-    const [trackIds, setTrackIds] = useState<string[] | null>(null);
+    const { trackIds, changeTrackIds } = useTrackIdsContext();
 
-    const { isPlayingList, changeIsPlayingList, isListBtnActive, changeIsBtnActive } = useIsPlayingContext();
+    const { isListBtnActive, changeIsBtnActive, changeIsPlayingList, changeListId } = useIsPlayingContext();
 
 
-    const { trackList, setNewTrackList } = useTrackListContext();
+    const { trackList, setNewTrackList, audioElement } = useTrackListContext();
 
     const navigate = useNavigate();
 
@@ -41,9 +42,9 @@ export const ListDetailPage = () => {
 
     useEffect(() => {
         if (listDetail !== null) {
-            let currentTracksIds: string[] = []
 
             if (listDetail?.type !== ListType.ARTIST && listDetail?.type !== ListType.GENRE) {
+
                 let newTracksIds: string[] = [];
                 const playlistOrAlbum = listDetail as PlaylistType | AlbumType;
 
@@ -52,10 +53,10 @@ export const ListDetailPage = () => {
                         newTracksIds.push(track.id);
                     })
                 }
-                setTrackIds(newTracksIds)
-                currentTracksIds = newTracksIds
+                changeTrackIds(newTracksIds)
 
             } else if (listDetail?.type === ListType.ARTIST) {
+
                 const artistObtained = listDetail as ArtistType;
                 (async function getTracksIds() {
                     let newTracksIds: string[] = [];
@@ -71,8 +72,8 @@ export const ListDetailPage = () => {
 
                             if (artistObtained.albums) {
                                 if (index === artistObtained.albums.length - 1) {
-                                    setTrackIds(newTracksIds);
-                                    currentTracksIds = newTracksIds
+                                    changeTrackIds(newTracksIds);
+
                                 }
                             }
 
@@ -92,29 +93,36 @@ export const ListDetailPage = () => {
                     })
                     let tracksId: string[] = []
                     tracksWanted.forEach((track) => { tracksId.push(track.id); })
-                    setTrackIds(tracksId);
-                    currentTracksIds = tracksId
+                    changeTrackIds(tracksId);
 
                 }());
             }
 
-            (async function checkTrackList() {
-                if (trackList === null) return
-                let coincides = true
-                let soundPlayerIds = trackList.map((track) => track.id)
-                if (soundPlayerIds.length === currentTracksIds.length) {
-                    for (let i = 0; i < currentTracksIds.length; i++) {
-                        if (!soundPlayerIds.includes(currentTracksIds[i])) {
-                            coincides = false
-                        }
-                    }
-                } else { coincides = false }
-
-                coincides ? changeIsBtnActive(true) : changeIsBtnActive(false)
-            }())
         }
 
     }, [listDetail])
+
+
+    useEffect(() => {
+        (async function checkTrackList() {
+            if (trackList === null) return
+            let coincides = true
+            let soundPlayerIds = trackList.map((track) => track.id)
+            if (soundPlayerIds.length === trackIds.length) {
+                for (let i = 0; i < trackIds.length; i++) {
+                    if (!soundPlayerIds.includes(trackIds[i])) {
+                        coincides = false
+                    }
+                }
+            } else { coincides = false }
+
+            //Estudiar que no siempre debe de estar parado, ya que si yo lo he parado tiene
+            //que estar bien!
+            //Esto debería de estar en concordancia con 
+            //las otras variables que hacen referencia al soundbar!!!!!!
+            coincides ? changeIsBtnActive(true) : changeIsBtnActive(false)
+        }())
+    }, [trackIds])
 
     const getTrackListById = async (trackById: string[]) => {
         return await getFullTrack(trackById)
@@ -125,7 +133,12 @@ export const ListDetailPage = () => {
         (async function getTracksById() {
             setNewTrackList(await getTrackListById(trackIds));
         }());
-        changeIsBtnActive(!isListBtnActive)
+        changeIsPlayingList(!isListBtnActive);
+        changeIsBtnActive(!isListBtnActive);
+        audioElement.current.currentTime = 0;
+
+        if (listDetail === null) return;
+        changeListId(listDetail.id)
     }
 
 

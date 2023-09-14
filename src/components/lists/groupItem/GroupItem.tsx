@@ -7,12 +7,12 @@ import { useListDetailContext } from '../../../utils/hooks/useListDetailContext'
 import { PlaylistType } from '../../../types/dataTypes/playlist';
 import { AlbumType } from '../../../types/dataTypes/album';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export const GroupItem = ({ ...props }) => {
     const { track, onItemClicked } = props
     const { setNewTrackList, audioElement } = useTrackListContext();
-    const { setNewListDetail, playBtnRef, pauseBtnRef } = useListDetailContext();
+    const { setNewListDetail } = useListDetailContext();
     const [isPlaying, setIsPlaying] = useState(false);
     const navigate = useNavigate();
     const itemClicked = () => {
@@ -26,9 +26,7 @@ export const GroupItem = ({ ...props }) => {
         }
 
     }
-    useEffect(() => {
-        console.log(audioElement)
-    }, [isPlaying])
+
     return (
         <>
 
@@ -41,7 +39,7 @@ export const GroupItem = ({ ...props }) => {
                 </div>
                 {track.hasOwnProperty('liked') ?
                     <button className="gi-playBtn"
-                        onClick={() => { onItemClicked(); setNewTrackList([track]); isPlaying ? pauseBtnRef.current.click() : playBtnRef.current.click() }}>
+                        onClick={() => { onItemClicked(); setNewTrackList([track]); }}>
                         {isPlaying ? <BsStopCircleFill className="gi-playBtn-ico" onClick={() => { setIsPlaying(false); audioElement.current.currentTime = 0 }} /> : <BsFillPlayCircleFill
                             onClick={() => { setIsPlaying(true); }}
                             className="gi-playBtn-ico"

@@ -4,8 +4,7 @@ import { ListDetailPossibleItems } from "../types/dataTypes/enums";
 interface listDetailContextType {
     listDetail: ListDetailPossibleItems | null,
     setNewListDetail: (newListDetail: ListDetailPossibleItems) => void
-    playBtnRef?: any
-    pauseBtnRef?: any
+
 }
 
 export const listDetailContext = createContext<listDetailContextType>({ listDetail: null, setNewListDetail: () => { } });
