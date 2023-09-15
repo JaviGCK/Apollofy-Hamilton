@@ -6,6 +6,7 @@ import { TrackType } from '../../types/dataTypes/track'
 import { useUserContext } from '../../utils/hooks/useUserContext'
 import { FollowsList } from '../lists/followsList/FollowList'
 
+
 export interface UserType {
     id: string,
     userName?: string,
