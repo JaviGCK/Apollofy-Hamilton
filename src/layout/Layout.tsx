@@ -5,6 +5,8 @@ import { SoundBar } from '../components/soundBar/SoundBar'
 import { UserContextProvider } from '../context/UserContextProvider'
 import { TrackListContextProvider } from '../context/TrackListContextProvider'
 import { ListDetailContextProvider } from '../context/ListDetailContextProvider'
+import { IsPlayingContextProvider } from '../context/IsPlayingContextProvider'
+import { TrackIdsContextProvider } from '../context/TrackIdsContextProvider'
 
 export const Layout = () => {
   return (
@@ -12,9 +14,13 @@ export const Layout = () => {
       <UserContextProvider>
         <TrackListContextProvider>
           <ListDetailContextProvider>
-            <Outlet />
-            <SoundBar />
-            <NavBar />
+            <IsPlayingContextProvider>
+              <TrackIdsContextProvider>
+                <Outlet />
+                <SoundBar />
+                <NavBar />
+              </TrackIdsContextProvider>
+            </IsPlayingContextProvider>
           </ListDetailContextProvider>
         </TrackListContextProvider>
       </UserContextProvider>

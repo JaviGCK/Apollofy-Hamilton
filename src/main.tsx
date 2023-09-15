@@ -4,17 +4,20 @@ import App from './App.tsx'
 import './index.css'
 
 import './utils/functions/i18n.ts'
+const { VITE_AUTH0_DOMAIN: domain, VITE_AUTH0_CLIENT_ID: clientId, VITE_AUTH0_AUDIENCE: audience } = import.meta.env
+const redirectUri: string = window.location.origin + "/home"
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 
-  <Auth0Provider
-    clientId='ZkEGJH0Gs2jT7K1ydUJEP15lcSx7qtci'
-    domain={'dev-7g7shvra8f741e5q.us.auth0.com'}
+  <Auth0Provider domain={domain}
+    clientId={clientId}
     authorizationParams={{
-      redirect_uri: window.location.origin
-    }}>
+      redirect_uri: redirectUri,
+      audience: audience
+    }}
+  >
     <App />
-
   </Auth0Provider>
+
 
 )

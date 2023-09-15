@@ -1,6 +1,6 @@
 import './listDetailPage.css'
 import { useEffect, useState } from "react";
-import { FaAngleLeft } from "react-icons/fa";
+import { FaAngleLeft, FaRandom } from "react-icons/fa";
 import { BiSolidHeart, BiPlay, BiStop } from "react-icons/bi";
 import { TrackList } from "../../components/lists/trackList/TrackList";
 import { useListDetailContext } from '../../utils/hooks/useListDetailContext';
@@ -16,18 +16,21 @@ import { GenreType } from '../../types/dataTypes/genre';
 import { useTrackListContext } from '../../utils/hooks/useTrackListContext';
 import { useUserContext } from '../../utils/hooks/useUserContext';
 import toast, { Toaster } from 'react-hot-toast';
+import { useIsPlayingContext } from '../../utils/hooks/useIsPlayingContext';
+import { useTrackIdsContext } from '../../utils/hooks/useTrackIdsContext';
 
 export const ListDetailPage = () => {
 
-    const { listDetail, playBtnRef, pauseBtnRef } = useListDetailContext();
+    const { listDetail } = useListDetailContext();
 
     const { currentUser } = useUserContext();
 
-    const [trackIds, setTrackIds] = useState<string[] | null>(null);
+    const { trackIds, changeTrackIds } = useTrackIdsContext();
 
-    const [isPlaying, setIsPlaying] = useState(false)
+    const { isListBtnActive, changeIsBtnActive, changeIsPlayingList, changeListId } = useIsPlayingContext();
 
-    const { setNewTrackList } = useTrackListContext();
+
+    const { trackList, setNewTrackList, audioElement } = useTrackListContext();
 
     const navigate = useNavigate();
 
@@ -35,11 +38,13 @@ export const ListDetailPage = () => {
         navigate(-1);
     }
 
+    const [isShuffleActive, setIsShuffleActive] = useState(false);
 
     useEffect(() => {
         if (listDetail !== null) {
 
             if (listDetail?.type !== ListType.ARTIST && listDetail?.type !== ListType.GENRE) {
+
                 let newTracksIds: string[] = [];
                 const playlistOrAlbum = listDetail as PlaylistType | AlbumType;
 
@@ -48,8 +53,10 @@ export const ListDetailPage = () => {
                         newTracksIds.push(track.id);
                     })
                 }
-                setTrackIds(newTracksIds)
+                changeTrackIds(newTracksIds)
+
             } else if (listDetail?.type === ListType.ARTIST) {
+
                 const artistObtained = listDetail as ArtistType;
                 (async function getTracksIds() {
                     let newTracksIds: string[] = [];
@@ -65,7 +72,8 @@ export const ListDetailPage = () => {
 
                             if (artistObtained.albums) {
                                 if (index === artistObtained.albums.length - 1) {
-                                    setTrackIds(newTracksIds);
+                                    changeTrackIds(newTracksIds);
+
                                 }
                             }
 
@@ -85,24 +93,54 @@ export const ListDetailPage = () => {
                     })
                     let tracksId: string[] = []
                     tracksWanted.forEach((track) => { tracksId.push(track.id); })
-                    setTrackIds(tracksId);
+                    changeTrackIds(tracksId);
 
                 }());
             }
+
         }
 
     }, [listDetail])
 
+
+    useEffect(() => {
+        (async function checkTrackList() {
+            if (trackList === null) return
+            let coincides = true
+            let soundPlayerIds = trackList.map((track) => track.id)
+            if (soundPlayerIds.length === trackIds.length) {
+                for (let i = 0; i < trackIds.length; i++) {
+                    if (!soundPlayerIds.includes(trackIds[i])) {
+                        coincides = false
+                    }
+                }
+            } else { coincides = false }
+
+            //Estudiar que no siempre debe de estar parado, ya que si yo lo he parado tiene
+            //que estar bien!
+            //Esto debería de estar en concordancia con 
+            //las otras variables que hacen referencia al soundbar!!!!!!
+            coincides ? changeIsBtnActive(true) : changeIsBtnActive(false)
+        }())
+    }, [trackIds])
+
+    const getTrackListById = async (trackById: string[]) => {
+        return await getFullTrack(trackById)
+    }
+
     const playBtnClicked = () => {
         if (trackIds === null) return;
         (async function getTracksById() {
-            setNewTrackList(await getFullTrack(trackIds));
+            setNewTrackList(await getTrackListById(trackIds));
         }());
-        if (playBtnRef.current) {
-            playBtnRef.current.click()
-            setIsPlaying(true)
-        }
+        changeIsPlayingList(!isListBtnActive);
+        changeIsBtnActive(!isListBtnActive);
+        audioElement.current.currentTime = 0;
+
+        if (listDetail === null) return;
+        changeListId(listDetail.id)
     }
+
 
     const heartIconClicked = () => {
         const libraryListUser = currentUser?.libraryList;
@@ -120,6 +158,16 @@ export const ListDetailPage = () => {
     useEffect(() => {
         if (listDetail === null) navigate("/home")
     }, [])
+
+
+
+    const toggleShuffle = () => {
+
+        setIsShuffleActive(!isShuffleActive);
+        if (isShuffleActive) {
+
+        }
+    };
 
     return (
         <>
@@ -140,9 +188,14 @@ export const ListDetailPage = () => {
                     <div className="list-detail-dashboard">
                         {/* <AiOutlinePlusCircle className="list-detail-add-btn" /> */}
                         <BiSolidHeart className="list-detail-heart-btn" onClick={heartIconClicked} />
-                        <span className="list-detail-container-play-btn" onClick={playBtnClicked}>
-                            {isPlaying ? <BiStop className="list-detail-play-btn" onClick={() => { pauseBtnRef.current.click(); setIsPlaying(false) }} /> : <BiPlay className="list-detail-play-btn" />}
+                        <span className="list-detail-container-play-btn" onClick={playBtnClicked} >
+                            {isListBtnActive ? <BiStop className="list-detail-play-btn" /> : <BiPlay className="list-detail-play-btn" />}
                         </span>
+                        <FaRandom
+                            className={`list-detail-shuffle-btn ${isShuffleActive ? 'active' : ''}`}
+                            onClick={toggleShuffle}
+                        />
+
                     </div>
 
                 </div>

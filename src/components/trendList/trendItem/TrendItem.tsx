@@ -1,6 +1,6 @@
 
 import { FaMusic } from "react-icons/fa";
-import { BiPlay } from "react-icons/bi";
+import { BiPlay, BiStop } from "react-icons/bi";
 import "./trendItem.css"
 import { TrendItemProps } from "../../../types/propTypes/trendItemProps";
 import { FC, useEffect, useState } from "react";
@@ -13,7 +13,17 @@ import { useNavigate } from "react-router-dom";
 import { useListDetailContext } from "../../../utils/hooks/useListDetailContext";
 import { ListType } from "../../../types/dataTypes/enums.d";
 import { useTrackListContext } from "../../../utils/hooks/useTrackListContext";
+import { useIsPlayingContext } from "../../../utils/hooks/useIsPlayingContext";
 
+
+
+/**
+ * Tenemos que averiguar que las tracklist que hay en cada trenditem con 
+ * iguales que las tracklist que tenemos en el soundbar.
+ * Si es así, el estado INDIVIDUAL de cada trenditem, va a poder coger la
+ * información del contexto que dirige al botón de play / pause que tenemos
+ * dentro de listDetailPage
+ */
 
 export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
     interface itemType {
@@ -29,6 +39,10 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
     const { setNewListDetail } = useListDetailContext();
     const [trackIds, setTrackIds] = useState<string[] | null>(null);
     const { setNewTrackList } = useTrackListContext();
+    const { trackList } = useTrackListContext()
+    const { isListBtnActive } = useIsPlayingContext();
+    const [btnActive, setBtnActive] = useState(false)
+
 
     useEffect(() => {
         (async function fetchItemData() {
@@ -73,9 +87,7 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
                     if (artist.name !== undefined) newItem.artistsName.push(artist.name);
                 })
             }
-
             setItem(newItem);
-
         }());
     }, [])
 
@@ -86,12 +98,18 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
             setNewListDetail(dataFetched);
             navigate("/detail-page");
         }());
-
     }
 
     const homePagePlayClicked = (e: any) => {
         e.stopPropagation();
+        setBtnActive(!btnActive);
+        if (trackIds === null) return;
+        (async function getTracksById() {
+            setNewTrackList(await getFullTrack(trackIds));
+        }());
+    }
 
+    useEffect(() => {
         (async function setTracksSoundbar() {
             const data = await fetchData(`${props.type}s?id=${props.id}`) as AlbumType[] | PlaylistType[] | ArtistType[];
             const dataFetched = data[0] as (AlbumType | PlaylistType | ArtistType);
@@ -103,7 +121,6 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
                     trackListIds.push(track.id)
                 })
                 setTrackIds(trackListIds);
-
             } else {
 
                 const artistObtained = dataFetched as ArtistType;
@@ -128,16 +145,40 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
                 })
 
             }
+
+            // SACAR A USEEFFECT PARA QUE LOS ARTISTS Y GÉNEROS FUNCIONEN
+
         }());
 
-    }
+    }, [])
+
 
     useEffect(() => {
-        if (trackIds === null) return;
-        (async function getTracksById() {
-            setNewTrackList(await getFullTrack(trackIds));
-        }());
+        //AQUÍ HACER EL ESTUDIO DE LA IGUALDAD DE LAS TRACKLISTS
+        (async function checkTrackList() {
+            if (trackList === null) return;
+            if (trackIds === null) return;
+            let coincides = true
+            let soundPlayerIds = trackList.map((track) => track.id)
+            if (soundPlayerIds.length === trackIds.length) {
+                for (let i = 0; i < trackIds.length; i++) {
+                    if (!soundPlayerIds.includes(trackIds[i])) {
+                        coincides = false
+                    }
+                }
+            } else { coincides = false }
+            // coincides ? setBtnActive(true) : setBtnActive(false)
+            if (coincides) {
+                // setBtnActive(isListBtnActive);
+                /*
+                No vale porque ese contexto puede ser de otro item
+                Para solucionarlo, añadirle un ID al contexto que guarda
+                el listDetail
+                 */
+            }
+        }())
     }, [trackIds])
+
 
     return (
         <div className="trend-item-container" onClick={handleListDetailClicked}>
@@ -153,7 +194,10 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
                         </p>
 
                         <span className="play-btn-container" onClick={homePagePlayClicked}>
-                            <BiPlay className="dashboard-play-icon" />
+                            {btnActive ?
+                                <BiStop className="dashboard-play-icon" />
+                                :
+                                <BiPlay className="dashboard-play-icon" />}
                         </span>
                     </div>
                 </div>

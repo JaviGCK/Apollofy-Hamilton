@@ -26,7 +26,6 @@
 
 .artist-img {
     border-radius: 50%;
-    ;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -52,6 +51,15 @@
     width: 45px;
     height: 42px;
     margin: 0 5vw 0 50vw;
+}
+
+.list-detail-shuffle-btn {
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+.list-detail-shuffle-btn.active {
+    color: #00ffa3;
 }
 
 .list-detail-container-play-btn {

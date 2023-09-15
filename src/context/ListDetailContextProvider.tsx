@@ -1,11 +1,10 @@
-import { createContext, useState, useRef } from "react";
+import { createContext, useState } from "react";
 import { ListDetailPossibleItems } from "../types/dataTypes/enums";
 
 interface listDetailContextType {
     listDetail: ListDetailPossibleItems | null,
     setNewListDetail: (newListDetail: ListDetailPossibleItems) => void
-    playBtnRef?: any
-    pauseBtnRef?: any
+
 }
 
 export const listDetailContext = createContext<listDetailContextType>({ listDetail: null, setNewListDetail: () => { } });
@@ -16,10 +15,9 @@ export const ListDetailContextProvider = ({ ...props }) => {
     const setNewListDetail = (newListDetail: ListDetailPossibleItems) => {
         setListDetail(newListDetail);
     }
-    const playBtnRef = useRef(null)
-    const pauseBtnRef = useRef(null)
+
     return (
-        <listDetailContext.Provider value={{ listDetail, setNewListDetail, playBtnRef, pauseBtnRef }}>
+        <listDetailContext.Provider value={{ listDetail, setNewListDetail }}>
             {props.children}
         </listDetailContext.Provider>
     )
