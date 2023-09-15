@@ -7,10 +7,11 @@ import { AlbumType } from '../../../types/dataTypes/album'
 import { GroupItem } from '../groupItem/GroupItem'
 import { TrackType } from '../../../types/dataTypes/track'
 import { PlaylistType } from '../../../types/dataTypes/playlist'
-import { UserType } from '../../../types/dataTypes/user'
 import { ArtistType } from '../../../types/dataTypes/artist'
 import { useTranslation } from 'react-i18next'
 import { GroupUsers } from '../groupUsers/GroupUsers'
+import { useAuth0 } from '@auth0/auth0-react'
+import { UserType } from '../../profileChart/ProfileChart'
 
 const reducer = (filter: any, action: any) => {
     switch (action.type) {
@@ -34,6 +35,7 @@ const reducer = (filter: any, action: any) => {
 const SearchList = (props: SearchProps) => {
     const { searchInput } = props
     //Search Filters Usestate
+    const { getAccessTokenSilently } = useAuth0();
     const [dataAlbum, setDataAlbum] = useState<AlbumType[]>([])
     const [dataArtists, setDataArtist] = useState<ArtistType[]>([])
     const [dataTracks, setDataTracks] = useState<TrackType[]>([])
@@ -55,15 +57,15 @@ const SearchList = (props: SearchProps) => {
     const scrollRef = useRef<HTMLElement | null>(null)
 
     const retrieveData = async () => {
-        const fetchedAlbumData: any = await fetchData('albums')
+        const fetchedAlbumData: any = await fetchData(getAccessTokenSilently, 'albums')
         setDataAlbum(fetchedAlbumData);
-        const fetchedArtistData: any = await fetchData('artists')
+        const fetchedArtistData: any = await fetchData(getAccessTokenSilently, 'artists')
         setDataArtist(fetchedArtistData);
-        const fetchedTracktData: any = await fetchData('tracks')
+        const fetchedTracktData: any = await fetchData(getAccessTokenSilently, 'tracks')
         setDataTracks(fetchedTracktData);
-        const fetchedPlaylistData: any = await fetchData('playlists')
+        const fetchedPlaylistData: any = await fetchData(getAccessTokenSilently, 'playlists')
         setDataPlaylists(fetchedPlaylistData);
-        const fetchedUsersData: any = await fetchData('users')
+        const fetchedUsersData: any = await fetchData(getAccessTokenSilently, 'users')
         setDataUsers(fetchedUsersData);
     }
     useEffect(() => {
@@ -105,9 +107,9 @@ const SearchList = (props: SearchProps) => {
         }
         //Filter Users
         const filteredUser = dataUsers.filter((user, index, arr) => {
-            return arr.findIndex((a) => a.name === user.name) === index;
+            return arr.findIndex((a) => a.userName === user.userName) === index;
         });
-        let result5 = filteredUser.filter((user) => user.name?.toLowerCase().includes(searchInput.toLocaleLowerCase()))
+        let result5 = filteredUser.filter((user) => user.userName?.toLowerCase().includes(searchInput.toLocaleLowerCase()))
         if (result5) {
             setFilteredUsers(result5)
         }
@@ -158,7 +160,7 @@ const SearchList = (props: SearchProps) => {
                                         {filteredTrack.map((track, index) => {
                                             return (
                                                 <GroupItem
-                                                    key={track.url}
+                                                    key={track.audioUrl}
                                                     track={track}
                                                     isActive={activeIndex === index}
                                                     onItemClicked={() => handleItemClick(index)}

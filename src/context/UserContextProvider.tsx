@@ -1,5 +1,6 @@
 import { createContext, useState } from "react"
-import { UserType } from "../types/dataTypes/user";
+import { UserType } from "../components/profileChart/ProfileChart";
+
 
 
 

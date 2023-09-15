@@ -36,11 +36,7 @@ export const SearchUser: React.FC = () => {
 
     return (
         <section className="user-page-container">
-            {/* <ShareButton /> */}
-            <ProfileChart
-                imageUrl={user?.profilePicture}
-                userName={user?.name}
-            />
+            <ProfileChart />
             <div className={`search-bar-user-page ${isInputFocused ? 'search-bar-user-page-focused' : ''}`}>
                 <BiSearch className="searchbar-icon-search" />
                 <input

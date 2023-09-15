@@ -1,9 +1,8 @@
 import { useForm } from "react-hook-form"
 import { useState } from "react"
-import { postDataCloud, postTrackServer } from "../../api/fetchApi"
+import { postTrack } from "../../api/fetchApi"
 import { useAuth0 } from "@auth0/auth0-react"
 import { GenreTypes } from "../../types/dataTypes/enums"
-import { getUniqueId } from "../../utils/functions/randomId"
 import "./addMusicForm.css"
 import placeholder from '../../assets/img/bg-image.webp'
 import toast, { Toaster } from "react-hot-toast"
@@ -13,9 +12,9 @@ import { useTranslation } from "react-i18next"
 
 export const AddMusicForm = () => {
 
-    const [privacityState, setPrivacityState] = useState(false)
-    const { user } = useAuth0()
-    const { setCurrentLoggedUser } = useUserContext();
+    const [privacityState, setPrivacityState] = useState<boolean>(false)
+    const { getAccessTokenSilently } = useAuth0()
+    const { currentUser, setCurrentLoggedUser } = useUserContext();
     const { t } = useTranslation();
 
     const { register, handleSubmit, formState: { errors }, reset, watch } = useForm({
@@ -30,12 +29,11 @@ export const AddMusicForm = () => {
 
     const submitForm = async () => {
 
-        const email = user?.email as string; //este sería el usuario que se logea!!
+        // const email = user?.email as string; //este sería el usuario que se logea!!
         const trackTitle = watch("title");
         const trackPrivacy = privacityState;
-        const trackId = getUniqueId();
         const trackGenre = watch("genre") as GenreTypes;
-        toast.success('Track is uploading...')
+        toast.success('Track is uploading...');
 
         const trackAudioFileList = watch("audio");
         const trackAudioFile = trackAudioFileList[0];
@@ -45,23 +43,21 @@ export const AddMusicForm = () => {
 
         const formTrackData = new FormData();
         formTrackData.append("upload_preset", "apollofy-track-addition")
-        formTrackData.append("file", trackAudioFile);
+        formTrackData.append("audio", trackAudioFile);
+        formTrackData.append("image", trackImgFile);
+        formTrackData.append("name", trackTitle);
+        formTrackData.append("genres", trackGenre);
+        formTrackData.append("privacity", trackPrivacy.toString());
 
-        const formTrackImgData = new FormData();
-        formTrackImgData.append("upload_preset", "apollofy_tracks-img")
-        formTrackImgData.append("file", trackImgFile);
-
-        const audioUrl = await postDataCloud(formTrackData);
-        const imageUrl = await postDataCloud(formTrackImgData);
+        if (currentUser?.id === undefined) return;
+        const newTrack = await postTrack(getAccessTokenSilently, formTrackData, currentUser?.id);
 
         toast.success('Track uploaded successfully...')
 
-
-        const dataToUpdate = await postTrackServer(email, audioUrl, trackId, trackTitle, imageUrl, trackPrivacy, trackGenre);
-        const { userLogged, userLoggedTracks, newTrack } = dataToUpdate;
-        const newTracksList = [...userLoggedTracks, newTrack];
+        if (currentUser.trackList === undefined) return;
+        const newTracksList = [...currentUser.trackList, newTrack];
         const userLoggedNewObject = {
-            ...userLogged,
+            ...currentUser,
             tracks: newTracksList
         }
         setCurrentLoggedUser(userLoggedNewObject);

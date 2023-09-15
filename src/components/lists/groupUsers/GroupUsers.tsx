@@ -2,18 +2,18 @@ import './groupUsers.css'
 
 import { fetchData } from '../../../api/fetchApi';
 import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { UserType } from '../../../types/dataTypes/user';
+import { useAuth0 } from '@auth0/auth0-react';
+import { UserType } from '../../profileChart/ProfileChart';
 
 export const GroupUsers = ({ ...props }) => {
     const { user } = props;
-    console.log(user)
+    const { getAccessTokenSilently } = useAuth0();
     const navigate = useNavigate();
-    const { t } = useTranslation();
+
     const itemClicked = () => {
         if (user) {
             (async function showItemClicked() {
-                const itemFetched = await fetchData(`users?id=${user.id}`) as (UserType[]);
+                const itemFetched = await fetchData(getAccessTokenSilently, `users?id=${user.id}`) as (UserType[]);
                 const item = itemFetched[0];
                 navigate(`/search-user/${user.id}`, { state: { item } });
             }());

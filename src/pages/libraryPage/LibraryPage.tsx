@@ -13,7 +13,7 @@ import { CollectionFilters, FilterCategories } from '../../types/propTypes/filte
 
 export const LibraryPage = () => {
 
-    const { user } = useAuth0();
+    const { user, getAccessTokenSilently } = useAuth0();
 
     const [userLists, setUserLists] = useState<PossibleItems[] | null>(null)
     const [filteredLists, setFilteredLists] = useState<PossibleItems[] | null>(null)
@@ -29,10 +29,10 @@ export const LibraryPage = () => {
 
         const getFetch = async () => {
             if (user?.email === undefined) return
-            const allUserLists = await getUserListsReferences(user?.email)
+            const allUserLists = await getUserListsReferences(getAccessTokenSilently, user?.email)
             const libraryLists = allUserLists[0].libraryList as PossibleItems[]
             await libraryLists.map(async (list: any, index) => {
-                const result = await getListByReference(list.type, list.id)
+                const result = await getListByReference(getAccessTokenSilently, list.type, list.id)
                 allLists.push(result)
                 if (libraryLists.length - 1 === index) setUserLists(allLists);
             })

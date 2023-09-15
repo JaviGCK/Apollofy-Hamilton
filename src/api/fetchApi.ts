@@ -1,149 +1,129 @@
 
+import { UserDataType } from "../components/navbar/NavBar";
+import { UserType } from "../components/profileChart/ProfileChart";
 import { AlbumType } from "../types/dataTypes/album";
 import { ArtistType } from "../types/dataTypes/artist";
-import { GenreTypes, PossibleItems } from "../types/dataTypes/enums";
+import { PossibleItems } from "../types/dataTypes/enums";
 import { GenreType } from "../types/dataTypes/genre";
 import { PlaylistType } from "../types/dataTypes/playlist";
 import { TopTrends } from "../types/dataTypes/topTrends";
 import { TrackType } from "../types/dataTypes/track";
-import { UserType } from "../types/dataTypes/user";
+
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
-export const fetchData = async (data: string): Promise<GenreType[] | UserType[] | TopTrends | AlbumType[] | PlaylistType[] | ArtistType[] | AlbumType | PlaylistType | ArtistType> => {
-    const response = await fetch(`http://localhost:3001/${data}`);
+export const fetchData = async (getToken: any, data: string): Promise<GenreType[] | UserType[] | TopTrends | AlbumType[] | PlaylistType[] | ArtistType[] | AlbumType | PlaylistType | ArtistType> => {
+    const { VITE_API_URL: url } = import.meta.env;
+    const token = await getToken();
+    const response = await fetch(`${url}${data}`, {
+        method: "GET",
+        headers: {
+            authorization: `Bearer ${token}`,
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    });
     const dataFetched = await response.json();
     return dataFetched;
 }
 
 
 
-export const getUserListsReferences = async (userEmail: string): Promise<any> => {
-    const response = await fetch(`http://localhost:3001/users?email=${userEmail}`);
-    const dataFetched = await response.json();
-    return dataFetched
-
-}
-
-
-export const getListByReference = async (type: string, id: string): Promise<any> => {
-
-    const response = await fetch(`http://localhost:3001/${type}s/${id}`);
-    const dataFetched = await response.json();
-    return dataFetched
-
-}
-//--------------------------------------------------------------------------------------------------------------------------------------------
-
-export const postDataCloud = async (dataForm: FormData): Promise<string> => {
-    const response = await fetch(`https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLOUD_NAME}/auto/upload`, {
-        method: 'POST',
-        body: dataForm
-    })
-    const dataFetched = await response.json();
-    return dataFetched.url;
-}
-
-
-
-//--------------------------------------------------------------------------------------------------------------------------------------------
-export const postTrackServer = async (userEmail: string, trackUrl: string, trackId: string, trackTitle: string, trackImg: string, trackPrivacy: boolean, trackGenre: GenreTypes): Promise<{ userLogged: UserType, userLoggedTracks: TrackType[], newTrack: TrackType }> => {
-    // const users = await fetchData("users") as UserType[];
-    // const user = users.find(({ email }) => email === userEmail) as UserType;
-
-    const userLogged = await getUserByEmail(userEmail);
-    const userName = userLogged.name as string;
-    const userLoggedTracks = userLogged.tracks as TrackType[];
-    const newTrack = getNewTrack(userName, userLogged.id, trackUrl, trackId, trackTitle, trackImg, trackGenre);
-
-    await updateUser(userLogged, userLoggedTracks, newTrack)
-
-    if (!trackPrivacy) {
-        await postNewData(newTrack, "tracks");
-    }
-
-    return { userLogged, userLoggedTracks, newTrack }
-}
-//--------------------------------------------------------------------------------------------------------------------------------------------
-export const getUserByEmail = async (userEmail: string): Promise<UserType> => {
-    const userFetched = await fetchData(`users?email=${userEmail}`) as UserType[];
-    const user = userFetched[0];
-    return user;
-}
-//--------------------------------------------------------------------------------------------------------------------------------------------
-export const getNewTrack = (userName: string, userId: string, trackUrl: string, trackId: string, trackTitle: string, trackImg: string, trackGenre: GenreTypes): TrackType => {
-    const userArtist: ArtistType = {
-        id: userId,
-        name: userName
-    }
-
-    const newTrack: TrackType = {
-        id: trackId,
-        name: trackTitle,
-        imageUrl: trackImg,
-        url: trackUrl,
-        liked: 0,
-        verified: false,
-        genre: [trackGenre],
-        artists: [userArtist]
-    }
-    return newTrack;
-}
-
-//--------------------------------------------------------------------------------------------------------------------------------------------
-
-export const updateUser = async (user: UserType, userTracks: TrackType[], newTrack: TrackType) => {
-    await fetch(`http://localhost:3001/users/${user.id}`, {
-        method: "PATCH",
-        body: JSON.stringify({
-            ...user,
-            tracks: [...userTracks, newTrack]
-        }),
+export const getUserListsReferences = async (getToken: any, userEmail: string): Promise<any> => {
+    const { VITE_API_URL: url } = import.meta.env;
+    const token = await getToken();
+    const response = await fetch(`${url}users?email=${userEmail}`, {
+        method: "GET",
         headers: {
-            "Content-type": "application/json; charset=UTF-8"
-        }
-    })
-    // const dataFetched = await response.json();
-}
-
-//--------------------------------------------------------------------------------------------------------------------------------------------
-
-export const postNewData = async (newData: TrackType | UserType, newDataType: string) => {
-    await fetch(`http://localhost:3001/${newDataType}`, {
-        method: "POST",
-        body: JSON.stringify(newData),
-        headers: {
+            authorization: `Bearer ${token}`,
             "Content-type": "application/json; charset=UTF-8"
         }
     });
-    // const dataFetched = await response.json();
+    const dataFetched = await response.json();
+    return dataFetched
 
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
+export const getListByReference = async (getToken: any, type: string, id: string): Promise<any> => {
+    const { VITE_API_URL: url } = import.meta.env;
+    const token = await getToken();
+    const response = await fetch(`${url}${type}s/${id}`, {
+        method: "GET",
+        headers: {
+            authorization: `Bearer ${token}`,
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    });
+    const dataFetched = await response.json();
+    return dataFetched
+
+}
+
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+export const postTrack = async (getToken: any, formTrackData: FormData, id: string) => {
+    // const users = await fetchData("users") as UserType[];
+    // const user = users.find(({ email }) => email === userEmail) as UserType;
+    const { VITE_API_URL: url } = import.meta.env;
+    const token = await getToken();
+    const response = await fetch(`${url}tracks/${id}`, {
+        method: "POST",
+        headers: {
+            authorization: `Bearer ${token}`
+        },
+        body: formTrackData
+    });
+    const dataFetched = response.json();
+    return dataFetched;
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
+export const postNewUser = async (getToken: any, newUser: UserDataType): Promise<UserType> => {
+    const { VITE_API_URL: url } = import.meta.env;
+    const token = await getToken();
+    const response = await fetch(`${url}users`, {
+        method: "POST",
+        body: JSON.stringify(newUser),
+        headers: {
+            authorization: `Bearer ${token}`,
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    });
+    const dataFetched = await response.json();
+    return dataFetched;
 }
 
 
 //---------------------------------------------------------------------------------------------------------------------------------------------
 
-export const getFullTrack = async (tracksById: string[]): Promise<TrackType[]> => {
+export const getFullTrack = async (getToken: any, tracksById: string[]): Promise<TrackType[]> => {
     const tracks: TrackType[] = [];
     for (const trackId of tracksById) {
-        const fullTrack = await fetchData(`tracks?id=${trackId}`) as TrackType[];
+        const fullTrack = await fetchData(getToken, `tracks?id=${trackId}`) as TrackType[];
         tracks.push(fullTrack[0])
     }
     return tracks;
 }
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
-export const updateUserLList = async (user: UserType, libraryList: PossibleItems[], newItem: PossibleItems) => {
-    await fetch(`http://localhost:3001/users/${user.id}`, {
-        method: "PATCH",
+export const updateUserLList = async (getToken: any, user: UserType, libraryList: PossibleItems[], newItem: PossibleItems) => {
+    const { VITE_API_URL: url } = import.meta.env;
+    const token = await getToken();
+    const response = await fetch(`${url}users/${user.id}`, {
+        method: "PUT",
         body: JSON.stringify({
             ...user,
             libraryList: [...libraryList, newItem]
         }),
         headers: {
+            authorization: `Bearer ${token}`,
             "Content-type": "application/json; charset=UTF-8"
         }
     })
-    // const dataFetched = await response.json();
+    const dataFetched = await response.json();
+    return dataFetched;
 }

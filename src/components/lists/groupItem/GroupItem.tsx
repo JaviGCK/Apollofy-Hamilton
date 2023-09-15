@@ -9,9 +9,11 @@ import { AlbumType } from '../../../types/dataTypes/album';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useAuth0 } from '@auth0/auth0-react';
 
 export const GroupItem = ({ ...props }) => {
     const { track, onItemClicked } = props
+    const { getAccessTokenSilently } = useAuth0();
     const { setNewTrackList, audioElement } = useTrackListContext();
     const { setNewListDetail } = useListDetailContext();
     const [isPlaying, setIsPlaying] = useState(false);
@@ -20,7 +22,7 @@ export const GroupItem = ({ ...props }) => {
     const itemClicked = () => {
         if (track.type) {
             (async function showItemClicked() {
-                const itemFetched = await fetchData(`${track.type}s?id=${track.id}`) as (ArtistType[] | PlaylistType[] | AlbumType[]);
+                const itemFetched = await fetchData(getAccessTokenSilently, `${track.type}s?id=${track.id}`) as (ArtistType[] | PlaylistType[] | AlbumType[]);
                 const item = itemFetched[0];
                 setNewListDetail(item);
                 navigate("/detail-page");

@@ -4,16 +4,18 @@ import { useState } from "react";
 import "./genresList.css"
 import { fetchData } from "../../../api/fetchApi";
 import { useTranslation } from "react-i18next";
+import { useAuth0 } from "@auth0/auth0-react";
 
 
 
 export const GenresList = () => {
     const [genres, setGenres] = useState<GenreType[]>([]);
+    const { getAccessTokenSilently } = useAuth0();
     const { t } = useTranslation();
 
     if (genres.length === 0) {
         const fetchGenres = async () => {
-            const data: GenreType[] = await fetchData("genres") as GenreType[];
+            const data: GenreType[] = await fetchData(getAccessTokenSilently, "genres") as GenreType[];
             setGenres(data);
         }
         fetchGenres();

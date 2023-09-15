@@ -116,7 +116,7 @@ export const SoundBar = () => {
 
     return (
         <div>
-            <audio src={currentTrack ? currentTrack.url : ""} ref={audioElement} onLoadedMetadata={handleMetaDataLoad} onTimeUpdate={() => getTrackProgress()} />
+            <audio src={currentTrack ? currentTrack.audioUrl : ""} ref={audioElement} onLoadedMetadata={handleMetaDataLoad} onTimeUpdate={() => getTrackProgress()} />
 
             <SoundPlayer
                 isPlaying={isPlaying}

@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 export const UserPage: React.FC = () => {
     const { currentUser } = useUserContext();
     const [searchTerm, setSearchTerm] = useState<string>('');
-    const [searchResults, setSearchResults] = useState(currentUser?.tracks || []);
+    const [searchResults, setSearchResults] = useState(currentUser?.trackList || []);
     const [isInputFocused, setIsInputFocused] = useState<boolean>(false);
 
     const { t } = useTranslation();
@@ -19,7 +19,7 @@ export const UserPage: React.FC = () => {
         const newSearchTerm = e.target.value;
         setSearchTerm(newSearchTerm);
 
-        const filteredTracks = (currentUser?.tracks || []).filter((track) =>
+        const filteredTracks = (currentUser?.trackList || []).filter((track) =>
             track.name?.toLowerCase().includes(newSearchTerm.toLowerCase())
         );
         setSearchResults(filteredTracks);
@@ -35,11 +35,7 @@ export const UserPage: React.FC = () => {
 
     return (
         <section className="user-page-container">
-            {/* <ShareButton /> */}
-            <ProfileChart
-                imageUrl={currentUser?.profilePicture}
-                userName={currentUser?.name}
-            />
+            <ProfileChart />
             <div className={`search-bar-user-page ${isInputFocused ? 'search-bar-user-page-focused' : ''}`}>
                 <BiSearch className="searchbar-icon-search" />
                 <input
@@ -52,7 +48,7 @@ export const UserPage: React.FC = () => {
                     onBlur={handleInputBlur}
                 />
             </div>
-            <ProfileMusicList tracks={searchTerm ? searchResults : currentUser?.tracks} />
+            <ProfileMusicList tracks={searchTerm ? searchResults : currentUser?.trackList} />
         </section>
     );
 };

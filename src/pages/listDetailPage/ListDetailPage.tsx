@@ -18,12 +18,15 @@ import { useUserContext } from '../../utils/hooks/useUserContext';
 import toast, { Toaster } from 'react-hot-toast';
 import { useIsPlayingContext } from '../../utils/hooks/useIsPlayingContext';
 import { useTrackIdsContext } from '../../utils/hooks/useTrackIdsContext';
+import { useAuth0 } from '@auth0/auth0-react';
 
 export const ListDetailPage = () => {
 
     const { listDetail } = useListDetailContext();
 
     const { currentUser } = useUserContext();
+
+    const { getAccessTokenSilently } = useAuth0();
 
     const { trackIds, changeTrackIds } = useTrackIdsContext();
 
@@ -63,7 +66,7 @@ export const ListDetailPage = () => {
                     if (artistObtained.albums) {
 
                         artistObtained.albums.forEach(async (album, index) => {
-                            const albumsFetched = await fetchData(`albums?id=${album.id}`) as AlbumType[];
+                            const albumsFetched = await fetchData(getAccessTokenSilently, `albums?id=${album.id}`) as AlbumType[];
                             const albumFetched = albumsFetched[0];
 
                             albumFetched.tracks?.forEach((track) => {
@@ -83,10 +86,10 @@ export const ListDetailPage = () => {
             } else {
                 const genreObtained = listDetail as GenreType;
                 (async function getTracksOfGenre() {
-                    const tracks: TrackType[] = await fetchData("tracks") as TrackType[];
+                    const tracks: TrackType[] = await fetchData(getAccessTokenSilently, "tracks") as TrackType[];
                     const tracksWanted = tracks.filter((track) => {
                         let found = false;
-                        track.genre?.forEach((genre) => {
+                        track.genres?.forEach((genre) => {
                             if (genre.toLowerCase() === genreObtained.name.toLowerCase()) found = true;
                         })
                         return found;
@@ -125,7 +128,7 @@ export const ListDetailPage = () => {
     }, [trackIds])
 
     const getTrackListById = async (trackById: string[]) => {
-        return await getFullTrack(trackById)
+        return await getFullTrack(getFullTrack, trackById)
     }
 
     const playBtnClicked = () => {
@@ -143,12 +146,12 @@ export const ListDetailPage = () => {
 
 
     const heartIconClicked = () => {
-        const libraryListUser = currentUser?.libraryList;
+        const libraryListUser = currentUser?.favourites;
         const itemSearched = libraryListUser?.find((item) => {
             if (item.id === listDetail?.id) return true;
         })
-        if (itemSearched === undefined && currentUser && currentUser?.libraryList && listDetail) {
-            updateUserLList(currentUser, currentUser.libraryList, listDetail);
+        if (itemSearched === undefined && currentUser && currentUser?.favourites && listDetail) {
+            updateUserLList(getAccessTokenSilently, currentUser, currentUser.favourites, listDetail);
             toast.success('Successfully added!')
         } else {
             toast.success('Already exists!')

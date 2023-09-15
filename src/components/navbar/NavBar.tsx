@@ -4,21 +4,25 @@ import { MdLibraryAdd } from 'react-icons/md'
 import { GiAlienStare } from 'react-icons/gi'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useUserContext } from '../../utils/hooks/useUserContext'
-import { UserType } from '../../types/dataTypes/user'
-import { fetchData, postNewData } from '../../api/fetchApi'
+import { fetchData, postNewUser } from '../../api/fetchApi'
 import { useAuth0 } from '@auth0/auth0-react'
-import { getUniqueId } from '../../utils/functions/randomId'
-import { ListType } from '../../types/dataTypes/enums.d'
 import { useTrackListContext } from '../../utils/hooks/useTrackListContext'
 import { TrackType } from '../../types/dataTypes/track.d'
 import { useEffect } from 'react'
+import { UserType } from '../profileChart/ProfileChart'
 
+
+export interface UserDataType {
+    userName: string,
+    email: string,
+    imageUrl?: string
+}
 
 export const NavBar = () => {
 
 
     const navigate = useNavigate();
-    const { user } = useAuth0();
+    const { user, getAccessTokenSilently } = useAuth0();
     const { currentUser, setCurrentLoggedUser } = useUserContext();
     const { trackList, setNewTrackList } = useTrackListContext();
     const location = useLocation().pathname.slice(1)
@@ -36,23 +40,20 @@ export const NavBar = () => {
 
     if (currentUser === null) {
         (async function fetchUser() {
-            const usersFetched = await fetchData('users') as UserType[];
+            const usersFetched = await fetchData(getAccessTokenSilently, 'users') as UserType[];
             const loggedUserObject = usersFetched.find(({ email }) => email === user?.email);
 
             if (loggedUserObject !== undefined) {
                 setCurrentLoggedUser(loggedUserObject);
             } else {
-                const newUser: UserType = {
-                    id: getUniqueId(),
+                if (!(user?.email && user.name)) return
+                const newUser: UserDataType = {
                     email: user?.email,
-                    name: user?.name,
-                    profilePicture: user?.picture,
-                    type: ListType.USER,
-                    libraryList: [],
-                    tracks: []
+                    userName: user?.name,
+                    imageUrl: user?.picture
                 }
-                setCurrentLoggedUser(newUser);
-                postNewData(newUser, "users");
+                const newFetchedUser = await postNewUser(getAccessTokenSilently, newUser);
+                setCurrentLoggedUser(newFetchedUser);
             }
         }());
     }
@@ -60,7 +61,7 @@ export const NavBar = () => {
     if (trackList === null) {
         // let tracks: TrackType[] = [];
         (async function fetchTracks() {
-            const tracksFetched = await fetchData("tracks") as TrackType[];
+            const tracksFetched = await fetchData(getAccessTokenSilently, "tracks") as TrackType[];
             tracksFetched.forEach((track) => {
                 track.progress = 0;
                 track.duration = 0;
