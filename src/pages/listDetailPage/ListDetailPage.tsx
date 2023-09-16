@@ -4,7 +4,6 @@ import { FaAngleLeft, FaRandom } from "react-icons/fa";
 import { BiSolidHeart, BiPlay, BiStop } from "react-icons/bi";
 import { TrackList } from "../../components/lists/trackList/TrackList";
 import { useListDetailContext } from '../../utils/hooks/useListDetailContext';
-import { ListType } from '../../types/enums';
 import { PlaylistType } from '../../types/playlist';
 import { AlbumType } from '../../types/album';
 import { ArtistType } from '../../types/artist';
@@ -19,6 +18,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useIsPlayingContext } from '../../utils/hooks/useIsPlayingContext';
 import { useTrackIdsContext } from '../../utils/hooks/useTrackIdsContext';
 import { useAuth0 } from '@auth0/auth0-react';
+import { ListType } from '../../types/enums';
 
 export const ListDetailPage = () => {
 

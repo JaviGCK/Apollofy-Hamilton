@@ -10,9 +10,9 @@ import { ArtistType } from "../../../types/artist";
 import { TrackType } from "../../../types/track";
 import { useNavigate } from "react-router-dom";
 import { useListDetailContext } from "../../../utils/hooks/useListDetailContext";
-import { ListType } from "../../../types/enums";
 import { useTrackListContext } from "../../../utils/hooks/useTrackListContext";
 import { useAuth0 } from "@auth0/auth0-react";
+import { ListType } from "../../../types/enums";
 
 interface TrendItemProps {
     "id": string,
