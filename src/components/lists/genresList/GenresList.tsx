@@ -1,5 +1,5 @@
 import { GenreButton } from "../genreButton/genreButton";
-import { GenreType } from "../../../types/dataTypes/genre";
+import { GenreType } from "../../../types/genre";
 import { useState } from "react";
 import "./genresList.css"
 import { fetchData } from "../../../api/fetchApi";

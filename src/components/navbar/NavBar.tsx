@@ -7,7 +7,7 @@ import { useUserContext } from '../../utils/hooks/useUserContext'
 import { fetchData, postNewUser } from '../../api/fetchApi'
 import { useAuth0 } from '@auth0/auth0-react'
 import { useTrackListContext } from '../../utils/hooks/useTrackListContext'
-import { TrackType } from '../../types/dataTypes/track.d'
+import { TrackType } from '../../types/track'
 import { useEffect } from 'react'
 import { UserType } from '../profileChart/ProfileChart'
 

@@ -4,7 +4,7 @@ import { ImLoop } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
 import "./soundPlayer.css"
 import { FC, useRef, useState } from 'react';
-import { TrackType } from '../../../types/dataTypes/track';
+import { TrackType } from '../../../types/track';
 
 
 interface SoundPlayerPropTypes {

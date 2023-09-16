@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { ListDetailPossibleItems } from "../types/dataTypes/enums";
+import { ListDetailPossibleItems } from "../types/enums";
 
 interface listDetailContextType {
     listDetail: ListDetailPossibleItems | null,

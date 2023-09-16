@@ -2,10 +2,10 @@ import './groupItem.css'
 import { BsFillPlayCircleFill, BsStopCircleFill } from 'react-icons/bs';
 import { useTrackListContext } from '../../../utils/hooks/useTrackListContext';
 import { fetchData } from '../../../api/fetchApi';
-import { ArtistType } from '../../../types/dataTypes/artist';
+import { ArtistType } from '../../../types/artist';
 import { useListDetailContext } from '../../../utils/hooks/useListDetailContext';
-import { PlaylistType } from '../../../types/dataTypes/playlist';
-import { AlbumType } from '../../../types/dataTypes/album';
+import { PlaylistType } from '../../../types/playlist';
+import { AlbumType } from '../../../types/album';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';

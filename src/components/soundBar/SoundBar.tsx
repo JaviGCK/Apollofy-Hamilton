@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import "./soundBar.css"
 import { SoundPlayer } from "./soundPlayer/SoundPlayer"
 import { useTrackListContext } from "../../utils/hooks/useTrackListContext"
-import { TrackType } from "../../types/dataTypes/track"
+import { TrackType } from "../../types/track"
 import { useIsPlayingContext } from "../../utils/hooks/useIsPlayingContext"
 import { useTrackIdsContext } from "../../utils/hooks/useTrackIdsContext"
 

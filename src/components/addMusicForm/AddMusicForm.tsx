@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form"
 import { useState } from "react"
 import { postTrack } from "../../api/fetchApi"
 import { useAuth0 } from "@auth0/auth0-react"
-import { GenreTypes } from "../../types/dataTypes/enums"
+import { GenreTypes } from "../../types/enums"
 import "./addMusicForm.css"
 import placeholder from '../../assets/img/bg-image.webp'
 import toast, { Toaster } from "react-hot-toast"

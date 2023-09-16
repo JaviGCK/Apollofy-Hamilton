@@ -4,9 +4,9 @@ import "./trendList.css"
 import { fetchData } from "../../api/fetchApi"
 import { useTranslation } from "react-i18next"
 import { useAuth0 } from "@auth0/auth0-react"
-import { ArtistType } from "../../types/dataTypes/artist"
-import { AlbumType } from "../../types/dataTypes/album"
-import { PlaylistType } from "../../types/dataTypes/playlist"
+import { ArtistType } from "../../types/artist"
+import { AlbumType } from "../../types/album"
+import { PlaylistType } from "../../types/playlist"
 
 
 export interface TopTrends {

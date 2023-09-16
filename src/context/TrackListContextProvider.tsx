@@ -1,5 +1,5 @@
 import { createContext, useState, useRef } from "react"
-import { TrackType } from "../types/dataTypes/track"
+import { TrackType } from "../types/track"
 
 type trackListContextTypes = {
     trackList: TrackType[] | null,

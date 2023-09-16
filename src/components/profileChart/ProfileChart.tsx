@@ -1,8 +1,8 @@
 import { FC, useState } from 'react'
 import './profileChart.css'
 import { useTranslation } from 'react-i18next'
-import { ListType, PossibleItems } from '../../types/dataTypes/enums'
-import { TrackType } from '../../types/dataTypes/track'
+import { ListType, PossibleItems } from '../../types/enums'
+import { TrackType } from '../../types/track'
 import { useUserContext } from '../../utils/hooks/useUserContext'
 import { FollowsList } from '../lists/followsList/FollowList'
 

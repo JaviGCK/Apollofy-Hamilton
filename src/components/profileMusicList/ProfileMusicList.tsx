@@ -3,7 +3,7 @@ import './profileMusicList.css'
 import { FC, useState } from 'react'
 import { GroupItem } from '../lists/groupItem/GroupItem'
 import { useTranslation } from 'react-i18next'
-import { TrackType } from '../../types/dataTypes/track'
+import { TrackType } from '../../types/track'
 
 interface ProfileMusicListPropTypes {
     tracks: TrackType[] | undefined,

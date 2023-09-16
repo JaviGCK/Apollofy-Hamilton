@@ -1,7 +1,7 @@
 import './genreButton.css';
-import { GenreType } from '../../../types/dataTypes/genre';
+import { GenreType } from '../../../types/genre';
 import { useListDetailContext } from '../../../utils/hooks/useListDetailContext';
-import { ListType } from '../../../types/dataTypes/enums.d';
+import { ListType } from '../../../types/enums';
 import { useNavigate } from 'react-router-dom';
 
 export const GenreButton = (props: GenreType) => {

@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import { GroupItem } from '../../components/lists/groupItem/GroupItem'
 import { getUserListsReferences, getListByReference } from '../../api/fetchApi'
 import { useFilterContext } from '../../utils/hooks/useFilterProvider'
-import { PossibleItems } from '../../types/dataTypes/enums'
+import { PossibleItems } from '../../types/enums'
 import { useTranslation } from 'react-i18next'
 import { CollectionFilters } from '../../context/FilterContext'
 

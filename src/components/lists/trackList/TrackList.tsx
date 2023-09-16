@@ -1,7 +1,7 @@
 import './trackList.css'
 import { FC, useEffect, useState } from "react";
 import { fetchData } from '../../../api/fetchApi';
-import { TrackType } from '../../../types/dataTypes/track';
+import { TrackType } from '../../../types/track';
 import { getUniqueId } from '../../../utils/functions/randomId';
 import { useAuth0 } from '@auth0/auth0-react';
 interface TrackListProps {

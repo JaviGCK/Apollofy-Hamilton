@@ -4,13 +4,13 @@ import { BiPlay, BiStop } from "react-icons/bi";
 import "./trendItem.css"
 import { FC, useEffect, useState } from "react";
 import { fetchData, getFullTrack } from "../../../api/fetchApi";
-import { AlbumType } from "../../../types/dataTypes/album";
-import { PlaylistType } from "../../../types/dataTypes/playlist";
-import { ArtistType } from "../../../types/dataTypes/artist";
-import { TrackType } from "../../../types/dataTypes/track";
+import { AlbumType } from "../../../types/album";
+import { PlaylistType } from "../../../types/playlist";
+import { ArtistType } from "../../../types/artist";
+import { TrackType } from "../../../types/track";
 import { useNavigate } from "react-router-dom";
 import { useListDetailContext } from "../../../utils/hooks/useListDetailContext";
-import { ListType } from "../../../types/dataTypes/enums.d";
+import { ListType } from "../../../types/enums";
 import { useTrackListContext } from "../../../utils/hooks/useTrackListContext";
 import { useAuth0 } from "@auth0/auth0-react";
 
