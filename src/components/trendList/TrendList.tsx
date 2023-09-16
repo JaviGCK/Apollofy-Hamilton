@@ -27,8 +27,11 @@ export const TrendList = () => {
 
     useEffect(() => {
         (async function fetchTopTrends() {
-            const topTrendsFetched: TopTrends = await fetchData(getAccessTokenSilently, "topTrends") as TopTrends;
-            setTopTrends(topTrendsFetched);
+            const topArtists = await fetchData(getAccessTokenSilently, "topArtists") as ArtistType[];
+            const topPlaylists = await fetchData(getAccessTokenSilently, "topPlaylists") as PlaylistType[];
+            const topAlbums = await fetchData(getAccessTokenSilently, "topAlbums") as AlbumType[];
+            const topTrends: TopTrends = { topArtists, topAlbums, topPlaylists }
+            setTopTrends(topTrends);
         }());
     }, [])
 

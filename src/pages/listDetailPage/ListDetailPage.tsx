@@ -18,7 +18,15 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useIsPlayingContext } from '../../utils/hooks/useIsPlayingContext';
 import { useTrackIdsContext } from '../../utils/hooks/useTrackIdsContext';
 import { useAuth0 } from '@auth0/auth0-react';
-import { ListType } from '../../types/enums';
+// import { ListType } from '../../types/enums';
+
+enum ListType {
+    ALBUM = "album",
+    ARTIST = "artist",
+    PLAYLIST = "playlist",
+    USER = "user",
+    GENRE = "genre"
+}
 
 export const ListDetailPage = () => {
 

@@ -1,8 +1,16 @@
 import './genreButton.css';
 import { GenreType } from '../../../types/genre';
 import { useListDetailContext } from '../../../utils/hooks/useListDetailContext';
-import { ListType } from '../../../types/enums';
+// import { ListType } from '../../../types/enums';
 import { useNavigate } from 'react-router-dom';
+
+enum ListType {
+    ALBUM = "album",
+    ARTIST = "artist",
+    PLAYLIST = "playlist",
+    USER = "user",
+    GENRE = "genre"
+}
 
 export const GenreButton = (props: GenreType) => {
     const { name, imageUrl, id, color } = props

@@ -12,11 +12,19 @@ import { useNavigate } from "react-router-dom";
 import { useListDetailContext } from "../../../utils/hooks/useListDetailContext";
 import { useTrackListContext } from "../../../utils/hooks/useTrackListContext";
 import { useAuth0 } from "@auth0/auth0-react";
-import { ListType } from "../../../types/enums";
+// import { ListType } from "../../../types/enums";
 
 interface TrendItemProps {
     "id": string,
     "type": ListType | undefined
+}
+
+enum ListType {
+    ALBUM = "album",
+    ARTIST = "artist",
+    PLAYLIST = "playlist",
+    USER = "user",
+    GENRE = "genre"
 }
 
 /**
