@@ -5,7 +5,7 @@ import { ListType } from '../../../types/dataTypes/enums.d';
 import { useNavigate } from 'react-router-dom';
 
 export const GenreButton = (props: GenreType) => {
-    const { name, imageUrl, id, btnColor } = props
+    const { name, imageUrl, id, color } = props
     const { setNewListDetail } = useListDetailContext();
     const navigate = useNavigate();
 
@@ -14,7 +14,7 @@ export const GenreButton = (props: GenreType) => {
             name: name,
             imageUrl: imageUrl,
             id: id,
-            btnColor: btnColor,
+            color: color,
             type: ListType.GENRE
         }
         setNewListDetail(genre);
@@ -23,7 +23,7 @@ export const GenreButton = (props: GenreType) => {
 
     return (
 
-        <button key={id} className='genre-button' style={{ background: btnColor }} onClick={genreBtnClicked}>
+        <button key={id} className='genre-button' style={{ background: color }} onClick={genreBtnClicked}>
             <div className='genre-button-container'>
                 <p className='genre-tittle'> {name} </p>
                 <img className='genre-img' src={imageUrl} alt={`Cover de ${name}`} />

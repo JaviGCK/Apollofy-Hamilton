@@ -2,7 +2,6 @@
 import { FaMusic } from "react-icons/fa";
 import { BiPlay, BiStop } from "react-icons/bi";
 import "./trendItem.css"
-import { TrendItemProps } from "../../../types/propTypes/trendItemProps";
 import { FC, useEffect, useState } from "react";
 import { fetchData, getFullTrack } from "../../../api/fetchApi";
 import { AlbumType } from "../../../types/dataTypes/album";
@@ -15,7 +14,10 @@ import { ListType } from "../../../types/dataTypes/enums.d";
 import { useTrackListContext } from "../../../utils/hooks/useTrackListContext";
 import { useAuth0 } from "@auth0/auth0-react";
 
-
+interface TrendItemProps {
+    "id": string,
+    "type": ListType | undefined
+}
 
 /**
  * Tenemos que averiguar que las tracklist que hay en cada trenditem con 

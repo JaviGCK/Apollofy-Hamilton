@@ -1,12 +1,12 @@
 
 import { UserDataType } from "../components/navbar/NavBar";
 import { UserType } from "../components/profileChart/ProfileChart";
+import { TopTrends } from "../components/trendList/TrendList";
 import { AlbumType } from "../types/dataTypes/album";
 import { ArtistType } from "../types/dataTypes/artist";
 import { PossibleItems } from "../types/dataTypes/enums";
 import { GenreType } from "../types/dataTypes/genre";
 import { PlaylistType } from "../types/dataTypes/playlist";
-import { TopTrends } from "../types/dataTypes/topTrends";
 import { TrackType } from "../types/dataTypes/track";
 
 

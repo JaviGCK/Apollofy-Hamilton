@@ -8,7 +8,13 @@ import { getUserListsReferences, getListByReference } from '../../api/fetchApi'
 import { useFilterContext } from '../../utils/hooks/useFilterProvider'
 import { PossibleItems } from '../../types/dataTypes/enums'
 import { useTranslation } from 'react-i18next'
-import { CollectionFilters, FilterCategories } from '../../types/propTypes/filterTypes'
+import { CollectionFilters } from '../../context/FilterContext'
+
+export type FilterCategories = {
+    name: string
+    id: string
+    filter: CollectionFilters
+}
 
 
 export const LibraryPage = () => {

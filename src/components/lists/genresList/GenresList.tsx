@@ -27,7 +27,7 @@ export const GenresList = () => {
                 <p className="top-clases-genres">{t('topGenres')}</p>
                 {genres.map((genre: GenreType) => {
                     return (
-                        <GenreButton key={genre.id} id={genre.id} name={genre.name} imageUrl={genre.imageUrl} btnColor={genre.btnColor} />
+                        <GenreButton key={genre.id} id={genre.id} name={genre.name} imageUrl={genre.imageUrl} color={genre.color} />
                     )
                 })}
                 <div className="white-space"></div>

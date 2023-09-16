@@ -2,7 +2,6 @@ import './searchList.css'
 import { fetchData } from '../../../api/fetchApi'
 import { useState, useEffect, useReducer, useRef } from 'react'
 import { GiUfo } from "react-icons/gi"
-import { SearchProps } from '../../../types/propTypes/searchProps'
 import { AlbumType } from '../../../types/dataTypes/album'
 import { GroupItem } from '../groupItem/GroupItem'
 import { TrackType } from '../../../types/dataTypes/track'
@@ -31,6 +30,14 @@ const reducer = (filter: any, action: any) => {
             return filter;
     }
 };
+
+export interface SearchProps {
+    focus: boolean;
+    setFocus: React.Dispatch<React.SetStateAction<boolean>>
+    searchInput: string;
+    customFilter?: boolean;
+    setSearchInput: React.Dispatch<React.SetStateAction<string>>
+}
 
 const SearchList = (props: SearchProps) => {
     const { searchInput } = props
@@ -85,9 +92,9 @@ const SearchList = (props: SearchProps) => {
         const filteredArtists = dataArtists.filter((artist, index, arr) => {
             return arr.findIndex((a) => a.name === artist.name) === index;
         });
-        result = filteredArtists.filter((artist) => artist.name?.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase()))
+        let result2 = filteredArtists.filter((artist) => artist.name?.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase()))
         if (result) {
-            setFilteredArtists(result);
+            setFilteredArtists(result2);
         }
         //Filter Tracks
         const filteredTracks = dataTracks.filter((track, index, arr) => {

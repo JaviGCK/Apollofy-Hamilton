@@ -2,10 +2,12 @@
 import './profileMusicList.css'
 import { FC, useState } from 'react'
 import { GroupItem } from '../lists/groupItem/GroupItem'
-import { ProfileMusicListPropTypes } from '../../types/propTypes/profileMusicListProps'
 import { useTranslation } from 'react-i18next'
+import { TrackType } from '../../types/dataTypes/track'
 
-
+interface ProfileMusicListPropTypes {
+    tracks: TrackType[] | undefined,
+}
 
 const ProfileMusicList: FC<ProfileMusicListPropTypes> = ({ tracks }) => {
     const [activeIndex, setActiveIndex] = useState(null);

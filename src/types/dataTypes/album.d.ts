@@ -1,15 +1,18 @@
 
 import { ArtistType } from "./artist";
 import { ListType } from "./enums";
+import { GenreType } from "./genre";
 import { TrackType } from "./track";
 
 
 export interface AlbumType {
     id: string,
     name?: string,
+    genres?: GenreType[],
     imageUrl?: string,
-    tracks?: TrackType[],
+    popularity?: number,
     artists?: ArtistType[], //just the id and name of the artists
+    tracks?: TrackType[],
     type?: ListType
 }
 /**

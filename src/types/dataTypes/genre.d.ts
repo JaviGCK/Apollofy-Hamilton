@@ -1,9 +1,11 @@
 import { GenreTypes, ListType } from "./enums"
+import { TrackType } from "./track"
 
 export interface GenreType {
     id: string,
     name: GenreTypes,
     imageUrl: string,
-    btnColor: string,
+    tracks?: TrackType[],
+    color: string,
     type?: ListType.GENRE
 }

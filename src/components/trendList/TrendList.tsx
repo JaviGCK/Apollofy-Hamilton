@@ -1,10 +1,24 @@
 import { useEffect, useState } from "react"
 import { TrendItem } from "./trendItem/TrendItem"
 import "./trendList.css"
-import { TopTrends } from "../../types/dataTypes/topTrends"
 import { fetchData } from "../../api/fetchApi"
 import { useTranslation } from "react-i18next"
 import { useAuth0 } from "@auth0/auth0-react"
+import { ArtistType } from "../../types/dataTypes/artist"
+import { AlbumType } from "../../types/dataTypes/album"
+import { PlaylistType } from "../../types/dataTypes/playlist"
+
+
+export interface TopTrends {
+    topArtists: ArtistType[],
+    topAlbums: AlbumType[],
+    topPlaylists: PlaylistType[]
+}
+
+// topAlbums will have the complete object since it does not change
+// however, artis and playlist objects changes often and will only come with
+// id, name and type
+
 
 export const TrendList = () => {
     const [topTrends, setTopTrends] = useState<TopTrends | null>(null)

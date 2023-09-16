@@ -3,8 +3,8 @@ import "./searchBar.css"
 import { useEffect } from 'react';
 import { eventListenerSearchbar } from '../../utils/functions/eventListenerSearchbar';
 import React from 'react';
-import { SearchProps } from '../../types/propTypes/searchProps';
 import { useTranslation } from 'react-i18next';
+import { SearchProps } from '../lists/searchList/SearchList';
 
 export const SearchBar: React.FC<SearchProps> = (props: SearchProps) => {
 

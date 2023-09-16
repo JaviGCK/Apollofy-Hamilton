@@ -4,10 +4,20 @@ import { ImLoop } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
 import "./soundPlayer.css"
 import { FC, useRef, useState } from 'react';
-import { SoundPlayerPropTypes } from '../../../types/propTypes/soundPlayerPropTypes';
+import { TrackType } from '../../../types/dataTypes/track';
 
 
-
+interface SoundPlayerPropTypes {
+    isPlaying: boolean,
+    setIsPlaying: (playing: boolean) => void,
+    currentTrack: TrackType | null,
+    setCurrentTrack: (track: TrackType) => void,
+    audioElement: any,
+    handlePrevTrack: () => void,
+    handleNextTrack: () => void,
+    loopActive: boolean,
+    setLoopActive: (active: boolean) => void
+}
 
 export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
 

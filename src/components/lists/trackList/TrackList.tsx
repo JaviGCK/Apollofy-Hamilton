@@ -1,11 +1,12 @@
 import './trackList.css'
 import { FC, useEffect, useState } from "react";
-
-import { TrackListProps } from "../../../types/propTypes/trackListProps";
 import { fetchData } from '../../../api/fetchApi';
 import { TrackType } from '../../../types/dataTypes/track';
 import { getUniqueId } from '../../../utils/functions/randomId';
 import { useAuth0 } from '@auth0/auth0-react';
+interface TrackListProps {
+  trackId: string,
+}
 
 export const TrackList: FC<TrackListProps> = ({ trackId }) => {
 

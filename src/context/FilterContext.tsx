@@ -1,5 +1,12 @@
 import { useState, createContext } from "react"
-import { CollectionFilters } from "../types/propTypes/filterTypes"
+
+export enum CollectionFilters {
+    ALL = "all",
+    PLAYLISTS = "playlist",
+    ALBUMS = "album",
+    ARTISTS = "artist"
+}
+
 
 export const currentFilterContext = createContext<{ currentFilter: CollectionFilters, changeFilter: (filterParam: CollectionFilters) => void }>({ currentFilter: CollectionFilters.ALL, changeFilter: () => { } })
 

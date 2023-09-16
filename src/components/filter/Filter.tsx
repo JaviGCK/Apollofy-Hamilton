@@ -1,6 +1,7 @@
 
-import { FilterCategories } from "../../types/propTypes/filterTypes"
+
 import { FilterButton } from '.'
+import { FilterCategories } from '../../pages/libraryPage/LibraryPage'
 import "./filter.css"
 
 
