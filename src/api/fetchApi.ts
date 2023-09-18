@@ -4,7 +4,6 @@ import { UserType } from "../components/profileChart/ProfileChart";
 import { TopTrends } from "../components/trendList/TrendList";
 import { AlbumType } from "../types/album";
 import { ArtistType } from "../types/artist";
-import { PossibleItems } from "../types/enums";
 import { GenreType } from "../types/genre";
 import { PlaylistType } from "../types/playlist";
 import { TrackType } from "../types/track";
