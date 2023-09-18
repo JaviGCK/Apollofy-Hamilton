@@ -84,41 +84,41 @@ const SearchList = (props: SearchProps) => {
         const filteredAlbums = dataAlbum.filter((album, index, arr) => {
             return arr.findIndex((a) => a.name === album.name) === index;
         });
-        let result = filteredAlbums.filter((album) => album.name?.toLowerCase().includes(searchInput.toLowerCase()))
-        if (result) {
-            setFilteredAlbum(result)
+        let resultAlbums = filteredAlbums.filter((album) => album.name?.toLowerCase().includes(searchInput.toLowerCase()))
+        if (resultAlbums) {
+            setFilteredAlbum(resultAlbums)
         }
         //Filter Artist
         const filteredArtists = dataArtists.filter((artist, index, arr) => {
             return arr.findIndex((a) => a.name === artist.name) === index;
         });
-        let result2 = filteredArtists.filter((artist) => artist.name?.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase()))
-        if (result) {
-            setFilteredArtists(result2);
+        let resultArtists = filteredArtists.filter((artist) => artist.name?.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase()))
+        if (resultAlbums) {
+            setFilteredArtists(resultArtists);
         }
         //Filter Tracks
         const filteredTracks = dataTracks.filter((track, index, arr) => {
             return arr.findIndex((a) => a.name === track.name) === index;
         });
-        let result3 = filteredTracks.filter((track) => track.name?.toLowerCase().includes(searchInput.toLocaleLowerCase()));
-        if (result3) {
-            setFilteredTracks(result3)
+        let resultTracks = filteredTracks.filter((track) => track.name?.toLowerCase().includes(searchInput.toLocaleLowerCase()));
+        if (resultTracks) {
+            setFilteredTracks(resultTracks)
         }
         //Filter Playlists
         const filteredPlayLists = dataPlaylists.filter((playlist, index, arr) => {
             return arr.findIndex((a) => a.name === playlist.name) === index;
         });
-        let result4 = filteredPlayLists.filter((playlist) => playlist.name?.toLowerCase().includes(searchInput.toLocaleLowerCase()))
-        if (result4) {
-            setFilteredPlaylist(result4)
+        let resultPlaylists = filteredPlayLists.filter((playlist) => playlist.name?.toLowerCase().includes(searchInput.toLocaleLowerCase()))
+        if (resultPlaylists) {
+            setFilteredPlaylist(resultPlaylists)
         }
         //Filter Users
         const filteredUser = dataUsers.filter((user, index, arr) => {
             return arr.findIndex((a) => a.userName === user.userName) === index;
         });
-        let result5 = filteredUser.filter((user) => user.userName?.toLowerCase().includes(searchInput.toLocaleLowerCase()))
-        if (result5) {
-            setFilteredUsers(result5)
+        let resultUsers = filteredUser.filter((user) => user.userName?.toLowerCase().includes(searchInput.toLocaleLowerCase()))
+        if (resultUsers) {
+            setFilteredUsers(resultUsers)
         }
 
     }, [searchInput])

@@ -1,21 +1,26 @@
 import './groupUsers.css'
 
-import { fetchData } from '../../../api/fetchApi';
-import { useNavigate } from 'react-router-dom';
-import { useAuth0 } from '@auth0/auth0-react';
-import { UserType } from '../../profileChart/ProfileChart';
 
-export const GroupUsers = ({ ...props }) => {
-    const { user } = props;
-    const { getAccessTokenSilently } = useAuth0();
+import { useNavigate } from 'react-router-dom';
+// import { useAuth0 } from '@auth0/auth0-react';
+import { UserType } from '../../profileChart/ProfileChart';
+import { FC } from 'react';
+
+
+type GroupUsersType = {
+    user: UserType
+}
+
+export const GroupUsers: FC<GroupUsersType> = ({ user }) => {
+
+    // const { getAccessTokenSilently } = useAuth0();
     const navigate = useNavigate();
 
     const itemClicked = () => {
         if (user) {
             (async function showItemClicked() {
-                const itemFetched = await fetchData(getAccessTokenSilently, `users?id=${user.id}`) as (UserType[]);
-                const item = itemFetched[0];
-                navigate(`/search-user/${user.id}`, { state: { item } });
+                // const userFetched = await fetchData(getAccessTokenSilently, `users/${user.id}`) as UserType;
+                navigate(`/search-user/${user.id}`, { state: { user } });
             }());
         }
 
@@ -23,9 +28,10 @@ export const GroupUsers = ({ ...props }) => {
     return (
         <>
             <div className="group-item-list" onClick={itemClicked}>
-                <img className={`img-list`} src={user.profilePicture} style={{ borderRadius: '50%' }} alt={`Image or Cover of ${user.name}`} />
+                <img className={`img-list`} src={user.imageUrl} style={{ borderRadius: '50%' }} alt={`Image or Cover of ${user.userName}`} />
                 <div className='item-list-info'>
-                    <h3>{user.name.length > 17 ? `${user.name.slice(0, 17)}...` : user.name}</h3>
+
+                    <h3>{(user.userName && user.userName.length > 17) ? `${user.userName.slice(0, 17)}...` : user.userName}</h3>
 
                 </div>
             </div>

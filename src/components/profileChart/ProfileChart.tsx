@@ -1,10 +1,10 @@
-import { FC, useState } from 'react'
-import './profileChart.css'
-import { useTranslation } from 'react-i18next'
-import { ListType, PossibleItems } from '../../types/enums'
-import { TrackType } from '../../types/track'
-import { useUserContext } from '../../utils/hooks/useUserContext'
-import { FollowsList } from '../lists/followsList/FollowList'
+import { FC, useState } from 'react';
+import './profileChart.css';
+import { useTranslation } from 'react-i18next';
+import { ListType, PossibleItems } from '../../types/enums';
+import { TrackType } from '../../types/track';
+import { useUserContext } from '../../utils/hooks/useUserContext';
+import { FollowsList } from '../lists/followsList/followList';
 
 
 export interface UserType {
@@ -13,48 +13,55 @@ export interface UserType {
     email?: string,
     imageUrl?: string,
     followers: UserType[],
+    followersIds?: string[],
     following: UserType[],
+    followingIds: string[],
     favourites?: PossibleItems[],
     type?: ListType,
     trackList?: TrackType[],
     playLists?: string[]
 }
 
-const ProfileChart: FC = () => {
+type ProfileChartProps = {
+    user: UserType | null
+}
 
+
+const ProfileChart: FC<ProfileChartProps> = ({ user }) => {
+
+    let selectedUser: UserType | null;
     const { currentUser } = useUserContext();
+    user === null ? selectedUser = currentUser : selectedUser = user;
     const [modalState, setModalState] = useState<string | null>(null)
 
     const { t } = useTranslation();
     return (
         <div className='profile-chart-container'>
-            {currentUser &&
+            {selectedUser &&
                 <div className='pcc-top'>
-                    <div className='profile-img-container'><img className='pcc-profile-image' src={currentUser.imageUrl} alt="Profile-picture" /></div>
+                    <div className='profile-img-container'><img className='pcc-profile-image' src={selectedUser.imageUrl} alt="Profile-picture" /></div>
                     <div className='profile-data-container'>
-                        <p>{currentUser.userName}</p>
-                        <p className='profile-data-followers'>
+                        <p>{selectedUser.userName}</p>
+                        <div className='profile-data-followers'>
                             <div onClick={() => setModalState("followers")}>
-                                <span>{currentUser.following.length}</span><span className='pcc-width'> {t('followersProfile')} </span>
+                                <span>{selectedUser.followers.length}</span><span className='pcc-width'> {t('followersProfile')} </span>
                             </div>
                             <div onClick={() => setModalState("following")}>
-                                <span>{currentUser.following.length}</span><span className='pcc-width'> {t('followingProfile')} </span>
+                                <span>{selectedUser.following.length}</span><span className='pcc-width'> {t('followingProfile')} </span>
                             </div>
 
-                        </p>
+                        </div>
                     </div>
                     <div className={modalState === null ? "list-hidden" : "list-visible"}>
-                        if ({modalState === "followers"}){
+                        {modalState === "followers" &&
                             <FollowsList
-                                list={currentUser.followers}
-                            />
-                        } else if ({modalState === "following"}) {
+                                list={selectedUser.followers}
+                            />}
+                        {modalState === "following" &&
                             <FollowsList
-                                list={currentUser.following}
-                            />
-                        } else {
-                            null
-                        }
+                                list={selectedUser.following}
+                            />}
+
                     </div>
                 </div>}
         </div>

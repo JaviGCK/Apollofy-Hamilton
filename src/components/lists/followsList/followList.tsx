@@ -3,12 +3,6 @@ import { FC } from "react";
 import { UserType } from '../../profileChart/ProfileChart';
 
 
-export interface FollowsType {
-    userId: string,
-    followers: UserType[],
-    following: UserType[]
-}
-
 export interface FollowsPropTypes {
 
     list: UserType[],

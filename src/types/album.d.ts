@@ -13,7 +13,7 @@ export interface AlbumType {
     popularity?: number,
     artists?: ArtistType[], //just the id and name of the artists
     tracks?: TrackType[],
-    type?: ListType
+    listType?: ListType
 }
 /**
  * If the album name is the same as the track,

@@ -32,6 +32,7 @@ export const TrendList = () => {
             const topAlbums = await fetchData(getAccessTokenSilently, "albums/top") as AlbumType[];
             const topTrends: TopTrends = { topArtists, topAlbums, topPlaylists }
             setTopTrends(topTrends);
+            console.log(topTrends)
         }());
     }, [])
 
@@ -52,7 +53,7 @@ export const TrendList = () => {
                                 <TrendItem
                                     key={topTrendItem.id}
                                     id={topTrendItem.id}
-                                    type={topTrendItem.type}
+                                    listType={topTrendItem.listType}
                                 />
                             ))}
                         </div>

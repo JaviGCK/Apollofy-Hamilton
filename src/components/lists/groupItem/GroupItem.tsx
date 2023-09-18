@@ -19,11 +19,13 @@ export const GroupItem = ({ ...props }) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const navigate = useNavigate();
     const { t } = useTranslation();
+
+
     const itemClicked = () => {
-        if (track.type) {
+        if (track.listType) {
             (async function showItemClicked() {
-                const itemFetched = await fetchData(getAccessTokenSilently, `${track.type}s?id=${track.id}`) as (ArtistType[] | PlaylistType[] | AlbumType[]);
-                const item = itemFetched[0];
+                const item = await fetchData(getAccessTokenSilently, `${track.listType}s/${track.id}`) as (ArtistType | PlaylistType | AlbumType);
+
                 setNewListDetail(item);
                 navigate("/detail-page");
             }());
@@ -36,7 +38,7 @@ export const GroupItem = ({ ...props }) => {
                 <img className={`img-list ${track.type === 'artist' ? 'artist-image' : ''}`} src={track.imageUrl} alt={`Image or Cover of ${track.name}`} />
                 <div className='item-list-info'>
                     <h3>{track.name.length > 17 ? `${track.name.slice(0, 17)}...` : track.name}</h3>
-                    {(track.hasOwnProperty('artists')) ? <p>{track.artists[0].name}</p> : <></>}
+                    {(track.hasOwnProperty('artists') && track.artists.length > 0) ? <p>{track.artists[0].name}</p> : <></>}
                     <p>{track.type === "artist" && t('artistType')}</p>
                     <p>{track.type === "album" && t('albumType')}</p>
                     <p>{track.type === "playlist" && t('playlistType')}</p>

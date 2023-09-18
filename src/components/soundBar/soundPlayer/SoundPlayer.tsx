@@ -76,7 +76,7 @@ export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
                             <img className="track-image" src={props.currentTrack?.imageUrl} alt="" />
                             <div className='track-info'>
                                 <p>{props.currentTrack?.name}</p>
-                                <p>{props.currentTrack?.artists ? props.currentTrack.artists[0].name : ""}</p>
+                                <p>{(props.currentTrack?.artists && props.currentTrack?.artists.length > 0) ? props.currentTrack.artists[0].name : ""}</p>
                             </div>
 
                         </div>

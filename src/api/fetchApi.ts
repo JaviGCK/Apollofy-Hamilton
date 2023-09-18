@@ -127,3 +127,22 @@ export const updateUserLList = async (getToken: any, user: UserType, libraryList
     const dataFetched = await response.json();
     return dataFetched;
 }
+
+
+export const updateUserFollowing = async (getToken: any, user: UserType, followingId: string, action: string) => {
+    const { VITE_API_URL: url } = import.meta.env;
+    const token = await getToken();
+    const response = await fetch(`${url}users/following/${user.id}`, {
+        method: "PATCH",
+        headers: {
+            authorization: `Bearer ${token}`,
+            "Content-type": "application/json; charset=UTF-8"
+        },
+        body: JSON.stringify({
+            followingId,
+            action,
+        }),
+
+    })
+    return response;
+}

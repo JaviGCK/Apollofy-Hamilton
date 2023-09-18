@@ -64,3 +64,14 @@
     border-radius: 50px;
     padding: 8px;
 }
+
+.list-hidden {
+    visibility: hidden;
+    display: none;
+}
+
+.list-visible {
+    position: absolute;
+    visibility: visible;
+    display: flex;
+}

@@ -8,7 +8,7 @@ export interface PlaylistType {
     description?: string,
     owner?: string,
     privacity?: boolean,
-    type?: ListType
+    listType?: ListType
 }
 
 // If owner is app, then owner = "Apollofy"

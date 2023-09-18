@@ -35,7 +35,9 @@ export const UserPage: React.FC = () => {
 
     return (
         <section className="user-page-container">
-            <ProfileChart />
+            <ProfileChart
+                user={null}
+            />
             <div className={`search-bar-user-page ${isInputFocused ? 'search-bar-user-page-focused' : ''}`}>
                 <BiSearch className="searchbar-icon-search" />
                 <input

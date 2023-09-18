@@ -15,8 +15,8 @@ import { useAuth0 } from "@auth0/auth0-react";
 // import { ListType } from "../../../types/enums";
 
 interface TrendItemProps {
-    "id": string,
-    "type": ListType | undefined
+    id: string,
+    listType: ListType | undefined
 }
 
 enum ListType {
@@ -36,6 +36,8 @@ enum ListType {
  */
 
 export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
+
+    console.log(props)
     interface itemType {
         itemTitle: string,
         imageUrl: string,
@@ -57,8 +59,10 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
 
     useEffect(() => {
         (async function fetchItemData() {
-            const data = await fetchData(getAccessTokenSilently, `${props.type}s?id=${props.id}`) as (AlbumType[] | PlaylistType[] | ArtistType[]);
-            const itemFetched = data[0];
+            console.log(props.listType)
+            const data = await fetchData(getAccessTokenSilently, `${props.listType}s/${props.id}`) as (AlbumType | PlaylistType | ArtistType);
+            const itemFetched = data;
+
 
             const newItem: itemType = {
                 itemTitle: "",
@@ -73,23 +77,25 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
             if (itemFetched.imageUrl !== undefined) newItem.imageUrl = itemFetched.imageUrl;
             if (itemFetched.name !== undefined) newItem.itemTitle = itemFetched.name;
 
-            if (props.type !== "artist") {
+            if (props.listType !== "artist") {
                 const albumPlaylistItem = itemFetched as PlaylistType | AlbumType;
-                if (albumPlaylistItem.tracks !== undefined) {
+
+                if (albumPlaylistItem.tracks !== undefined && albumPlaylistItem.tracks.length > 0) {
+                    console.log("este es " + albumPlaylistItem)
                     trackId = albumPlaylistItem.tracks[0].id;
 
                 }
             } else {
                 const artistItem = itemFetched as ArtistType;
                 if (artistItem.albums !== undefined) {
-                    const artistAlbumFetched = await fetchData(getAccessTokenSilently, `albums?id=${artistItem.albums[0].id}`) as AlbumType[];
+                    const artistAlbumFetched = await fetchData(getAccessTokenSilently, `albums/${artistItem.albums[0].id}`) as AlbumType[];
                     const artistAlbum = artistAlbumFetched[0];
                     if (artistAlbum.tracks !== undefined) trackId = artistAlbum.tracks[0].id;
                 }
             }
 
-            const trackFetched = await fetchData(getAccessTokenSilently, `tracks?id=${trackId}`) as TrackType[];
-            const track = trackFetched[0];
+            const track = await fetchData(getAccessTokenSilently, `tracks/${trackId}`) as TrackType;
+
             if (track.name !== undefined) newItem.trackTitle = track.name;
             if (track.audioUrl !== undefined) newItem.trackUrl = track.audioUrl;
             if (track.album?.name !== undefined) newItem.albumName = track.album.name;
@@ -104,9 +110,9 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
 
     const handleListDetailClicked = () => {
         (async function getList() {
-            const data = await fetchData(getAccessTokenSilently, `${props.type}s?id=${props.id}`) as AlbumType[] | PlaylistType[] | ArtistType[];
-            const dataFetched = data[0] as (AlbumType | PlaylistType | ArtistType);
-            setNewListDetail(dataFetched);
+            const data = await fetchData(getAccessTokenSilently, `${props.listType}s/${props.id}`) as AlbumType | PlaylistType | ArtistType;
+
+            setNewListDetail(data);
             navigate("/detail-page");
         }());
     }
@@ -122,9 +128,9 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
 
     useEffect(() => {
         (async function setTracksSoundbar() {
-            const data = await fetchData(getAccessTokenSilently, `${props.type}s?id=${props.id}`) as AlbumType[] | PlaylistType[] | ArtistType[];
-            const dataFetched = data[0] as (AlbumType | PlaylistType | ArtistType);
-            if (props.type !== ListType.ARTIST) {
+            const data = await fetchData(getAccessTokenSilently, `${props.listType}s/${props.id}`) as AlbumType | PlaylistType | ArtistType;
+            const dataFetched = data as (AlbumType | PlaylistType | ArtistType);
+            if (props.listType !== ListType.ARTIST) {
                 const playlistOrAlbum = dataFetched as AlbumType | PlaylistType;
 
                 let trackListIds: string[] = [];
@@ -139,8 +145,7 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
                 let trackListIdsArtist: string[] = [];
                 artistObtained.albums?.forEach(async (album, albumIndex) => {
 
-                    const albumFetchedArray = await fetchData(getAccessTokenSilently, `albums?id=${album.id}`) as AlbumType[];
-                    const albumFetched = albumFetchedArray[0];
+                    const albumFetched = await fetchData(getAccessTokenSilently, `albums/${album.id}`) as AlbumType;
 
 
                     albumFetched.tracks?.forEach((track, trackIndex) => {
