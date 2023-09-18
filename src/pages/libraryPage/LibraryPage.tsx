@@ -4,11 +4,12 @@ import { useAuth0 } from '@auth0/auth0-react'
 import { Filter } from '../../components/filter'
 import { useEffect, useState } from 'react'
 import { GroupItem } from '../../components/lists/groupItem/GroupItem'
-import { getUserListsReferences, getListByReference } from '../../api/fetchApi'
+import { getListByReference } from '../../api/fetchApi'
 import { useFilterContext } from '../../utils/hooks/useFilterProvider'
 import { PossibleItems } from '../../types/enums'
 import { useTranslation } from 'react-i18next'
 import { CollectionFilters } from '../../context/FilterContext'
+import { useUserContext } from '../../utils/hooks/useUserContext'
 
 export type FilterCategories = {
     name: string
@@ -19,12 +20,15 @@ export type FilterCategories = {
 
 export const LibraryPage = () => {
 
-    const { user, getAccessTokenSilently } = useAuth0();
+    const { getAccessTokenSilently } = useAuth0();
+
+    const { currentUser } = useUserContext()
+
+    const { currentFilter } = useFilterContext();
 
     const [userLists, setUserLists] = useState<PossibleItems[] | null>(null)
     const [filteredLists, setFilteredLists] = useState<PossibleItems[] | null>(null)
 
-    const { currentFilter } = useFilterContext();
 
     const { t } = useTranslation();
 
@@ -34,13 +38,16 @@ export const LibraryPage = () => {
         //BUG when first chargin page, sometimes render all items, sometimes no-.
 
         const getFetch = async () => {
-            if (user?.email === undefined) return
-            const allUserLists = await getUserListsReferences(getAccessTokenSilently, user?.email)
-            const libraryLists = allUserLists[0].libraryList as PossibleItems[]
-            await libraryLists.map(async (list: any, index) => {
+
+
+            const favLists = currentUser?.favourites as PossibleItems[]
+
+            console.log(currentUser)
+            console.log(favLists)
+            favLists.map(async (list: any, index) => {
                 const result = await getListByReference(getAccessTokenSilently, list.type, list.id)
                 allLists.push(result)
-                if (libraryLists.length - 1 === index) setUserLists(allLists);
+                if (favLists.length - 1 === index) setUserLists(allLists);
             })
         }
         getFetch()
@@ -78,7 +85,7 @@ export const LibraryPage = () => {
 
         } else {
             if (userLists === null) return
-            const newFilteredLists = userLists?.filter((list: PossibleItems) => list.type?.includes(currentFilter))
+            const newFilteredLists = userLists?.filter((list: PossibleItems) => list.listType?.includes(currentFilter))
             setFilteredLists(newFilteredLists)
         }
 
@@ -90,7 +97,7 @@ export const LibraryPage = () => {
             <div className='library-heading'>
                 <div className='heading-user'>
                     <figure className='library-user-img'>
-                        {user === undefined ? <img src="/src/assets/img/defaultuser.webp" alt="default user image" /> : <img src={user?.picture} alt={`${user?.name}´s profile image`} />}
+                        {currentUser === undefined ? <img src="/src/assets/img/defaultuser.webp" alt="default user image" /> : <img src={currentUser?.imageUrl} alt={`${currentUser?.userName}´s profile image`} />}
                     </figure>
                     <h2>{t('yourLibrary')}</h2>
                 </div>
