@@ -1,5 +1,4 @@
 import { LogoutButton } from "../logout/Logout"
-import { IoIosConstruct } from "react-icons/io";
 import { MdLanguage } from "react-icons/md";
 import { FaAngleLeft } from "react-icons/fa";
 import './settingsBar.css'
@@ -39,7 +38,6 @@ export const SettingsBar = () => {
             {!languageClicked ?
                 <nav className="settings-menu-bar">
                     <span className="setting-menu-options-construction">{t('language')}<MdLanguage className='language-icon' onClick={handleLanguage} /></span>
-                    <span className="setting-menu-options-construction">{t('notifications')}<IoIosConstruct className='construction-icon' /></span>
                     <LogoutButton />
                 </nav>
                 :

@@ -82,113 +82,114 @@ export const AddMusicForm = () => {
 
     return (
 
+        <>
+            <form className="add-music-form" onSubmit={handleSubmit(submitForm)}>
+                <Toaster
+                    position="top-center"
+                    reverseOrder={false}
+                />
 
-        <form className="add-music-form" onSubmit={handleSubmit(submitForm)}>
-            <Toaster
-                position="top-center"
-                reverseOrder={false}
-            />
+                <div className="track-container">
+                    <div className="track-img-container-preview">
+                        <img className='img-preview' src={imagePreview} alt="Preview img" />
+                    </div>
+                    <div className="track-img-container">
+                        <label htmlFor="track-img-input" className="track-img-label">{t('selectTrackImage')}</label>
+                        <input
+                            id="track-img-input"
+                            className="track-img-input add-music-input hidden-input"
+                            type="file"
+                            accept="image/jpeg, image/jpg, image/webp"
+                            placeholder="Select track image..."
+                            {...register("image", {
+                                required: {
+                                    value: true,
+                                    message: "Image is required"
+                                }
+                            })}
+                            onChange={(e) => {
+                                register("image").onChange(e);
+                                handlePreview();
+                            }}
+                        />
 
-            <div className="track-container">
-                <div className="track-img-container">
-                    <label htmlFor="track-img-input" className="track-img-label">{t('selectTrackImage')}</label>
-                    <input
-                        id="track-img-input"
-                        className="track-img-input add-music-input hidden-input"
-                        type="file"
-                        accept="image/jpeg, image/jpg, image/webp"
-                        placeholder="Select track image..."
-                        {...register("image", {
-                            required: {
-                                value: true,
-                                message: "Image is required"
-                            }
-                        })}
-                        onChange={(e) => {
-                            register("image").onChange(e);
-                            handlePreview();
-                        }}
-                    />
+                        {errors.image && <p className="music-form-error">{errors.image.message}</p>}
+                    </div>
 
-                    {errors.image && <p className="music-form-error">{errors.image.message}</p>}
+
+
+
+                    <div className="track-audio-container">
+                        <label htmlFor="track-audio-input" className="track-audio-label">{t('selectTrack')}</label>
+                        <input id="track-audio-input" className="track-audio-input add-music-input hidden-input" type="file" accept="audio/mp3, audio/wav, audio/ogg" placeholder="Select your audio..."
+                            {...register("audio", {
+                                required: {
+                                    value: true,
+                                    message: "Audio is required"
+                                }
+                            })}
+                        />
+                        {errors.audio && <p className="music-form-error">{errors.audio.message}</p>}
+                    </div>
                 </div>
-                <div className="track-img-container-preview">
-                    <img className='img-preview' src={imagePreview} alt="Preview img" />
-                </div>
-            </div>
 
-
-            <div className="track-audio-container">
-                <label htmlFor="track-audio-input" className="track-audio-label">{t('selectTrack')}</label>
-                <input id="track-audio-input" className="track-audio-input add-music-input hidden-input" type="file" accept="audio/mp3, audio/wav, audio/ogg" placeholder="Select your audio..."
-                    {...register("audio", {
+                <input className="track-title-input add-music-input" type="text" placeholder={t('songName')}
+                    {...register("title", {
                         required: {
                             value: true,
-                            message: "Audio is required"
+                            message: "Track title is required"
+                        },
+                        minLength: {
+                            value: 4,
+                            message: "Use 4 or more characters"
+                        },
+                        maxLength: {
+                            value: 20,
+                            message: "Use less than 20 characters"
                         }
                     })}
                 />
-                {errors.audio && <p className="music-form-error">{errors.audio.message}</p>}
-            </div>
+                {errors.title && <p className="music-form-error error-title">{errors.title.message}</p>}
 
+                <select className="track-genre-select add-music-input" id="genres"
+                    defaultValue=""
+                    {...register("genre", {
+                        required: {
+                            value: true,
+                            message: "Genre selection is required"
+                        }
+                    })}
+                >
+                    <option value="" disabled hidden>{t('songGenre')}</option>
+                    <option value="hip-hop">Hip-Hop</option>
+                    <option value="rock">Rock</option>
+                    <option value="pop">Pop</option>
+                    <option value="r&b">R&B</option>
+                    <option value="metal">Metal</option>
+                    <option value="punk">Punk</option>
+                    <option value="dance">Dance</option>
+                    <option value="rap">Rap</option>
+                    <option value="drill">Drill</option>
+                    <option value="urban">Urban</option>
+                </select>
+                {errors.genre && <p className="music-form-error select-error">{errors.genre.message}</p>}
 
-            <input className="track-title-input add-music-input" type="text" placeholder={t('songName')}
-                {...register("title", {
-                    required: {
-                        value: true,
-                        message: "Track title is required"
-                    },
-                    minLength: {
-                        value: 4,
-                        message: "Use 4 or more characters"
-                    },
-                    maxLength: {
-                        value: 20,
-                        message: "Use less than 20 characters"
-                    }
-                })}
-            />
-            {errors.title && <p className="music-form-error error-title">{errors.title.message}</p>}
-
-            <select className="track-genre-select add-music-input" id="genres"
-                defaultValue=""
-                {...register("genre", {
-                    required: {
-                        value: true,
-                        message: "Genre selection is required"
-                    }
-                })}
-            >
-                <option value="" disabled hidden>{t('songGenre')}</option>
-                <option value="hip-hop">Hip-Hop</option>
-                <option value="rock">Rock</option>
-                <option value="pop">Pop</option>
-                <option value="r&b">R&B</option>
-                <option value="metal">Metal</option>
-                <option value="punk">Punk</option>
-                <option value="dance">Dance</option>
-                <option value="rap">Rap</option>
-                <option value="drill">Drill</option>
-                <option value="urban">Urban</option>
-            </select>
-            {errors.genre && <p className="music-form-error select-error">{errors.genre.message}</p>}
-
-            <div className="privacity-selection-container">
-                <p>{t('trackPrivacyText')}</p>
-                <span className="privacity-btn-container">
-                    <p>{privacityState ? t('trackPrivacityPrivate') : t('trackPrivacityPublic')}</p>
-                    <label className="switch">
-                        <input type="checkbox" id="track-privacity-check" onChange={handlePrivacity} />
-                        <span className="slider"></span>
-                    </label>
-                </span>
-            </div>
+                <div className="privacity-selection-container">
+                    <p>{t('trackPrivacyText')}</p>
+                    <span className="privacity-btn-container">
+                        <p>{privacityState ? t('trackPrivacityPrivate') : t('trackPrivacityPublic')}</p>
+                        <label className="switch">
+                            <input type="checkbox" id="track-privacity-check" onChange={handlePrivacity} />
+                            <span className="slider"></span>
+                        </label>
+                    </span>
+                </div>
 
 
 
 
-            <button className="add-music-submit-btn" type="submit">{t('upload')}</button>
-        </form>
-
+                <button className="add-music-submit-btn" type="submit">{t('upload')}</button>
+            </form>
+        </>
     )
 }

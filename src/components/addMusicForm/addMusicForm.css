@@ -1,26 +1,26 @@
 .add-music-form {
-    height: calc(80vh - 160px);
+    height: 100vh;
     display: grid;
     text-align: center;
     align-items: center;
     padding: 20px 30px 50px;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 100px) 60px 20px 60px 20px 40px 60px;
+    grid-template-rows: repeat(2, 100px) 60px 20px 40px 20px 40px 20px 60px;
     grid-column-gap: 0px;
-    grid-row-gap: 2px;
+    grid-row-gap: 10px;
 }
 
 .track-img-container {
-    grid-area: 1 / 1 / 2 / 2;
+    grid-row: 1 / 1 / 2 / 2;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .img-preview {
-    height: 15vh;
-    width: 100%;
-    object-fit: cover;
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
 }
 
 .track-audio-container {
@@ -28,37 +28,41 @@
 }
 
 .track-title-input {
-    grid-area: 3 / 1 / 4 / 2;
+    grid-area: 8 / 1 / 4 / 2;
 }
 
 .error-title {
-    grid-area: 4 / 1 / 5 / 2;
+    grid-area: 8 / 1 / 5 / 2;
 }
 
 .track-genre-select {
-    grid-area: 5 / 1 / 6 / 2;
+    grid-area: 8 / 1 / 6 / 2;
 }
 
 .select-error {
-    grid-area: 6 / 1 / 7 / 2;
+    grid-area: 8 / 1 / 7 / 2;
 }
 
 .privacity-selection-container {
-    grid-area: 7 / 1 / 8 / 2;
+    grid-area: 8 / 1 / 8 / 2;
 }
 
 .add-music-submit-btn {
-    grid-area: 8 / 1 / 9 / 2;
+    grid-area: 9 / 1 / 9 / 2;
 }
 
 .track-container {
+    grid-area: 2 / 1;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .track-img-container,
 .track-audio-container {
     border: 1px solid #00ffa3;
     padding: 8px;
+    margin-top: 15px;
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -78,8 +82,6 @@
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
-    width: 200px;
-    margin-left: 2vw;
 }
 
 .title-genres-privacity-container {
@@ -88,7 +90,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
 }
 
 .track-title-input {
@@ -96,7 +98,8 @@
     height: 40px;
     padding-left: 15px;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    background: #e2d7ff;
+    background: #a785fe;
+    color: #f1f1f1;
     box-shadow:
         5px -5px 12px 0px rgba(255, 255, 255, 0.05) inset,
         -5px 5px 12px 0px rgba(255, 255, 255, 0.05) inset,
@@ -110,19 +113,25 @@
     -o-border-radius: 12px;
 }
 
+.track-title-input::placeholder {
+    color: #f1f1f1;
+}
+
 .track-genre-select {
     width: 100%;
     height: 40px;
     padding-left: 15px;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    background: #e2d7ff;
+    background: #a785fe;
+    color: #f1f1f1;
     box-shadow:
         5px -5px 12px 0px rgba(255, 255, 255, 0.05) inset,
         -5px 5px 12px 0px rgba(255, 255, 255, 0.05) inset,
         4px 7px 15px 0px rgba(0, 0, 0, 0.08),
         -1px 0px 2px 0px rgba(201, 201, 201, 0.1) inset;
     backdrop-filter: blur(6px);
+    margin-top: 30px;
 }
 
 .privacity-selection-container {
@@ -151,7 +160,7 @@
     background-color: #00ffa3;
     color: #1e1e1e;
     width: 100%;
-    height: 40px;
+    height: 60px;
     font-size: 24px;
     font-weight: bold;
     border-radius: 8px;

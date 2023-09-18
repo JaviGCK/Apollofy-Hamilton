@@ -2,7 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
+    width: 100%;
+    padding: 20px;
 }
 
 .add-music-user-img {
@@ -14,5 +15,4 @@
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-
 }
