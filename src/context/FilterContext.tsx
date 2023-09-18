@@ -4,7 +4,8 @@ export enum CollectionFilters {
     ALL = "all",
     PLAYLISTS = "playlist",
     ALBUMS = "album",
-    ARTISTS = "artist"
+    ARTISTS = "artist",
+    TRACKS = "track"
 }
 
 

@@ -107,25 +107,7 @@ export const getFullTrack = async (getToken: any, tracksById: string[]): Promise
     }
     return tracks;
 }
-//--------------------------------------------------------------------------------------------------------------------------------------------
 
-//export const updateUserLList = async (getToken: any, user: UserType, libraryList: PossibleItems[], newItem: PossibleItems) => {
-//    const { VITE_API_URL: url } = import.meta.env;
-//    const token = await getToken();
-//    const response = await fetch(`${url}users/${user.id}`, {
-//        method: "PUT",
-//        body: JSON.stringify({
-//            ...user,
-//            libraryList: [...libraryList, newItem]
-//        }),
-//        headers: {
-//            authorization: `Bearer ${token}`,
-//            "Content-type": "application/json; charset=UTF-8"
-//        }
-//    })
-//    const dataFetched = await response.json();
-//    return dataFetched;
-//}
 
 export const addFavourites = async (getToken: any, userId: string, listType: string, listTypeId: string) => {
     const { VITE_API_URL: url } = import.meta.env;

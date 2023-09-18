@@ -37,7 +37,6 @@ enum ListType {
 
 export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
 
-    console.log(props)
     interface itemType {
         itemTitle: string,
         imageUrl: string,
@@ -59,7 +58,6 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
 
     useEffect(() => {
         (async function fetchItemData() {
-            console.log(props.listType)
             const data = await fetchData(getAccessTokenSilently, `${props.listType}s/${props.id}`) as (AlbumType | PlaylistType | ArtistType);
             const itemFetched = data;
 
@@ -81,7 +79,7 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
                 const albumPlaylistItem = itemFetched as PlaylistType | AlbumType;
 
                 if (albumPlaylistItem.tracks !== undefined && albumPlaylistItem.tracks.length > 0) {
-                    console.log("este es " + albumPlaylistItem)
+
                     trackId = albumPlaylistItem.tracks[0].id;
 
                 }

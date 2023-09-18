@@ -10,7 +10,7 @@ import { Auth0ProviderWithNavigate } from '../context/Auth0ProviderWithNavigate'
 import { FilterProvider } from '../context/FilterContext'
 import { AddMusicPage } from '../pages/addMusicPage/AddMusicPage'
 import { ListDetailPage } from '../pages/listDetailPage/ListDetailPage'
-import { SearchUser } from '../pages/searchUser/SearchUser'
+import { SearchUserPage } from '../pages/searchUserPage/SearchUserPage'
 
 
 
@@ -32,7 +32,7 @@ export const RouterPaths = () => {
                 <Route path='search' element={<SearchPage />} />
                 <Route path='library' element={<LibraryPage />} />
                 <Route path='user' element={<UserPage />} />
-                <Route path='search-user/:userId' element={<SearchUser />} />
+                <Route path='search-user/:userId' element={<SearchUserPage />} />
                 <Route path='form' element={<AddMusicPage />} />
                 <Route path='detail-page' element={<ListDetailPage />} />
               </Route>

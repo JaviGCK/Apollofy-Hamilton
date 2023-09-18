@@ -25,12 +25,10 @@ export const GroupItem = ({ ...props }) => {
         if (track.listType) {
             (async function showItemClicked() {
                 const item = await fetchData(getAccessTokenSilently, `${track.listType}s/${track.id}`) as (ArtistType | PlaylistType | AlbumType);
-
                 setNewListDetail(item);
                 navigate("/detail-page");
             }());
         }
-
     }
     return (
         <>
@@ -42,6 +40,7 @@ export const GroupItem = ({ ...props }) => {
                     <p>{track.type === "artist" && t('artistType')}</p>
                     <p>{track.type === "album" && t('albumType')}</p>
                     <p>{track.type === "playlist" && t('playlistType')}</p>
+                    <p>{track.type === "track" && t('trackType')}</p>
                 </div>
                 {track.hasOwnProperty('liked') ?
                     <button className="gi-playBtn"

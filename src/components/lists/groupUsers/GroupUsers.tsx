@@ -4,7 +4,8 @@ import './groupUsers.css'
 import { useNavigate } from 'react-router-dom';
 // import { useAuth0 } from '@auth0/auth0-react';
 import { UserType } from '../../profileChart/ProfileChart';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
+import { useSelectedUserContext } from '../../../utils/hooks/useSearchedUserContext';
 
 
 type GroupUsersType = {
@@ -13,18 +14,23 @@ type GroupUsersType = {
 
 export const GroupUsers: FC<GroupUsersType> = ({ user }) => {
 
+    const { changeSelectedUser } = useSelectedUserContext();
     // const { getAccessTokenSilently } = useAuth0();
+
     const navigate = useNavigate();
 
     const itemClicked = () => {
         if (user) {
             (async function showItemClicked() {
                 // const userFetched = await fetchData(getAccessTokenSilently, `users/${user.id}`) as UserType;
-                navigate(`/search-user/${user.id}`, { state: { user } });
+                navigate(`/search-user/${user.id}`);
             }());
         }
 
     }
+    useEffect(() => {
+        changeSelectedUser(user);
+    }, [])
     return (
         <>
             <div className="group-item-list" onClick={itemClicked}>

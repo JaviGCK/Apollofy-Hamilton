@@ -1,10 +1,11 @@
 import { FC, useState } from 'react';
 import './profileChart.css';
 import { useTranslation } from 'react-i18next';
-import { ListType, PossibleItems } from '../../types/enums';
+import { ListType } from '../../types/enums';
 import { TrackType } from '../../types/track';
 import { useUserContext } from '../../utils/hooks/useUserContext';
 import { FollowsList } from '../lists/followsList/followList';
+import { FavouriteType } from '../../pages/libraryPage/LibraryPage';
 
 
 export interface UserType {
@@ -16,7 +17,7 @@ export interface UserType {
     followersIds?: string[],
     following: UserType[],
     followingIds: string[],
-    favourites?: PossibleItems[],
+    favourites?: FavouriteType[],
     type?: ListType,
     trackList?: TrackType[],
     playLists?: string[]

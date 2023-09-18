@@ -161,9 +161,12 @@ export const ListDetailPage = () => {
         if (itemSearched === undefined && currentUser && currentUser?.favourites && listDetail) {
             // await updateUserLList(getAccessTokenSilently, currentUser, currentUser.favourites, listDetail);
             if (listDetail.listType) {
-                await addFavourites(getAccessTokenSilently, currentUser.id, listDetail.listType, listDetail.id)
+                const favouritesResult = await addFavourites(getAccessTokenSilently, currentUser.id, listDetail.listType, listDetail.id)
+                if (favouritesResult.status === 201) {
+                    toast.success('Successfully added!')
+                }
             }
-            toast.success('Successfully added!')
+
         } else {
             toast.success('Already exists!')
         }

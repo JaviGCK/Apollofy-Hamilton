@@ -4,12 +4,16 @@ import { useAuth0 } from '@auth0/auth0-react'
 import { Filter } from '../../components/filter'
 import { useEffect, useState } from 'react'
 import { GroupItem } from '../../components/lists/groupItem/GroupItem'
-import { getListByReference } from '../../api/fetchApi'
+import { fetchData } from '../../api/fetchApi'
 import { useFilterContext } from '../../utils/hooks/useFilterProvider'
-import { PossibleItems } from '../../types/enums'
+import { ListType, PossibleItems } from '../../types/enums'
 import { useTranslation } from 'react-i18next'
 import { CollectionFilters } from '../../context/FilterContext'
 import { useUserContext } from '../../utils/hooks/useUserContext'
+import { ArtistType } from '../../types/artist'
+import { AlbumType } from '../../types/album'
+import { PlaylistType } from '../../types/playlist'
+import { TrackType } from '../../types/track'
 
 export type FilterCategories = {
     name: string
@@ -17,6 +21,15 @@ export type FilterCategories = {
     filter: CollectionFilters
 }
 
+export type FavouriteType = {
+    id: string,
+    artist: ArtistType | null,
+    album: AlbumType | null,
+    playlist: PlaylistType | null,
+    track: TrackType | null,
+    listType: ListType,
+    userId?: string
+}
 
 export const LibraryPage = () => {
 
@@ -32,26 +45,11 @@ export const LibraryPage = () => {
 
     const { t } = useTranslation();
 
-    if (userLists === null) {
-
-        const allLists: PossibleItems[] = []
-        //BUG when first chargin page, sometimes render all items, sometimes no-.
-
-        const getFetch = async () => {
 
 
-            const favLists = currentUser?.favourites as PossibleItems[]
 
-            console.log(currentUser)
-            console.log(favLists)
-            favLists.map(async (list: any, index) => {
-                const result = await getListByReference(getAccessTokenSilently, list.type, list.id)
-                allLists.push(result)
-                if (favLists.length - 1 === index) setUserLists(allLists);
-            })
-        }
-        getFetch()
-    }
+
+
 
     const listsFilterCategories: FilterCategories[] = [
         {
@@ -74,23 +72,66 @@ export const LibraryPage = () => {
             id: "4",
             filter: CollectionFilters.ARTISTS
         },
+        {
+            name: t('tracksSearch'),
+            id: "5",
+            filter: CollectionFilters.TRACKS
+        }
     ]
 
 
     useEffect(() => {
 
-        if (currentFilter === "all") {
-            if (userLists === null) return
-            setFilteredLists(userLists)
+        if (userLists) {
+            if (currentFilter === "all") {
+                if (userLists === null) return
+                setFilteredLists(userLists)
 
-        } else {
-            if (userLists === null) return
-            const newFilteredLists = userLists?.filter((list: PossibleItems) => list.listType?.includes(currentFilter))
-            setFilteredLists(newFilteredLists)
+            } else {
+                if (userLists === null) return
+                const newFilteredLists = userLists?.filter((list: PossibleItems) => list.listType?.includes(currentFilter))
+                setFilteredLists(newFilteredLists)
+            }
         }
+
 
     }, [currentFilter, userLists]);
 
+    useEffect(() => {
+        if (currentUser) {
+            const allLists: PossibleItems[] = []
+            //BUG when first chargin page, sometimes render all items, sometimes no-.
+
+            const getFetch = async () => {
+                const favLists = currentUser?.favourites as FavouriteType[]
+
+                if (favLists) {
+                    favLists.map(async (list: FavouriteType) => {
+                        const type = list.listType;
+                        let result: PossibleItems | null = null;
+                        switch (type) {
+                            case "artist": result = await fetchData(getAccessTokenSilently, `${list.listType}s/${list.artist?.id}`) as ArtistType
+                                break;
+                            case "track": result = await fetchData(getAccessTokenSilently, `${list.listType}s/${list.track?.id}`) as TrackType
+                                break;
+                            case "album": result = await fetchData(getAccessTokenSilently, `${list.listType}s/${list.album?.id}`) as AlbumType
+                                break;
+                            case "playlist": result = await fetchData(getAccessTokenSilently, `${list.listType}s/${list.playlist?.id}`) as PlaylistType
+                                break;
+                            default: result = null
+                        }
+
+                        if (result) allLists.push(result)
+                        if (favLists.length === allLists.length) {
+                            setUserLists(allLists);
+                        }
+                    })
+                }
+            }
+            getFetch()
+        }
+
+    }, [currentUser])
 
     return (
         <section className='library-page-container'>
@@ -109,14 +150,13 @@ export const LibraryPage = () => {
             <Filter filters={listsFilterCategories} />
             <div className='library-list-items-wrapper'>
                 <div className='library-items-container'>
-                    {filteredLists?.map((list) => {
-                        return (
-                            <GroupItem
-                                key={list.id}
-                                track={list}
-                            />
-                        )
-                    })}
+                    {currentUser && filteredLists && filteredLists.map((list) =>
+                        <GroupItem
+                            key={list.id}
+                            track={list}
+                        />
+
+                    )}
                 </div>
                 <div className="white-space"></div>
             </div>

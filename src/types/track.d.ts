@@ -1,5 +1,5 @@
 import { ArtistType } from "./artist";
-import { GenreTypes } from "./enums";
+import { GenreTypes, ListType } from "./enums";
 import { AlbumType } from "./album";
 
 
@@ -15,7 +15,8 @@ export interface TrackType {
     privacy: boolean,
     album?: AlbumType,
     progress?: number,
-    duration?: number
+    duration?: number,
+    listType: ListType
 }
 
 /**
