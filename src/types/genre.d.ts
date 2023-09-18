@@ -7,5 +7,5 @@ export interface GenreType {
     imageUrl: string,
     tracks?: TrackType[],
     color: string,
-    type?: ListType.GENRE
+    listType?: ListType.GENRE
 }
