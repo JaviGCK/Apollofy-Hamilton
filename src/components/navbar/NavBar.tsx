@@ -124,7 +124,6 @@ export const NavBar = () => {
     return (
         <nav className="navBar-bottom-container">
             {iconsNavbar.map((icon, index) => (
-                //BUG ERROR EN LA KEY
                 <div className="icon-navbar-container" key={index}>
                     <input id={icon.id} name="icon-navbar-bottom" type="radio" className="input-navbar-bottom" />
                     <label htmlFor={icon.id} className="label-navbar-bottom">
