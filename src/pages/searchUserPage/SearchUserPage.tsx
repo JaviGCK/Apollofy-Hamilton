@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
 // import ShareButton from '../../components/shareButton/ShareButton';
 import ProfileChart, { UserType } from '../../components/profileChart/ProfileChart';
 import ProfileMusicList from '../../components/profileMusicList/ProfileMusicList';
@@ -12,6 +11,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { useSelectedUserContext } from '../../utils/hooks/useSearchedUserContext';
 
 export const SearchUserPage: React.FC = () => {
+    const { t } = useTranslation();
     const { selectedUser, changeSelectedUser } = useSelectedUserContext()
     const { currentUser, setCurrentLoggedUser } = useUserContext();
     const [searchTerm, setSearchTerm] = useState<string>('');
@@ -20,11 +20,14 @@ export const SearchUserPage: React.FC = () => {
     const [isFollowed, setIsFollowed] = useState<boolean>(false);
     const { getAccessTokenSilently } = useAuth0()
 
-    if (currentUser === null) return;
 
+    useEffect(() => {
+        if (selectedUser) {
+            if (currentUser?.followingIds.includes(selectedUser.id)) setIsFollowed(true);
+        }
 
+    }, [])
 
-    const { t } = useTranslation();
 
     const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newSearchTerm = e.target.value;
@@ -45,7 +48,7 @@ export const SearchUserPage: React.FC = () => {
     };
 
     const handleFollow = async (action: string) => {
-        if (selectedUser) {
+        if (selectedUser && currentUser) {
             const response = await updateUserFollowing(getAccessTokenSilently, currentUser, selectedUser.id, action);
             if (response.status === 201) {
                 setIsFollowed(!isFollowed)
@@ -57,14 +60,6 @@ export const SearchUserPage: React.FC = () => {
         }
 
     }
-
-    useEffect(() => {
-        if (selectedUser) {
-            if (currentUser?.followingIds.includes(selectedUser.id)) setIsFollowed(true);
-        }
-
-    }, [])
-
 
     return (
         <section className="user-page-container">

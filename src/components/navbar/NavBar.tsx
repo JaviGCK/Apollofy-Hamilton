@@ -107,7 +107,7 @@ export const NavBar = () => {
     ]
 
     useEffect(() => {
-        const button = document.querySelector(`#${location}`) as HTMLInputElement;
+        const button = document.querySelector(`#${location.split("-")[0]}`) as HTMLInputElement;
         button.checked = true;
         (async function fetchTopTrends() {
             const topArtists = await fetchData(getAccessTokenSilently, "artists/top") as ArtistType[];
