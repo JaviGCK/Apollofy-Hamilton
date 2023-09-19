@@ -37,7 +37,6 @@ export const AddMusicForm = () => {
 
     const submitForm = async () => {
 
-        // const email = user?.email as string; //este sería el usuario que se logea!!
         const trackTitle = watch("title");
         const trackPrivacy = privacityState;
         const trackGenre = watch("genre") as GenreTypes;

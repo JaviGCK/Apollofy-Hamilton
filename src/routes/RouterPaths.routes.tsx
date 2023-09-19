@@ -11,6 +11,7 @@ import { FilterProvider } from '../context/FilterContext'
 import { AddMusicPage } from '../pages/addMusicPage/AddMusicPage'
 import { ListDetailPage } from '../pages/listDetailPage/ListDetailPage'
 import { SearchUserPage } from '../pages/searchUserPage/SearchUserPage'
+import { SkeletonTheme } from 'react-loading-skeleton'
 
 
 
@@ -19,28 +20,30 @@ export const RouterPaths = () => {
 
   return (
     <>
-      <BrowserRouter>
-        <Auth0ProviderWithNavigate>
-          <FilterProvider>
-            <Routes>
+      <SkeletonTheme baseColor="#313131" highlightColor="#525252">
+        <BrowserRouter>
+          <Auth0ProviderWithNavigate>
+            <FilterProvider>
+              <Routes>
 
-              <Route path='/'>
-                <Route index element={<LoginPage />} />
-              </Route>
-              <Route path='' element={AuthenticationGuard(Layout)}>
-                <Route path='home' element={<HomePage />} />
-                <Route path='search' element={<SearchPage />} />
-                <Route path='library' element={<LibraryPage />} />
-                <Route path='user' element={<UserPage />} />
-                <Route path='search-user/:userId' element={<SearchUserPage />} />
-                <Route path='form' element={<AddMusicPage />} />
-                <Route path='detail-page' element={<ListDetailPage />} />
-              </Route>
+                <Route path='/'>
+                  <Route index element={<LoginPage />} />
+                </Route>
+                <Route path='' element={AuthenticationGuard(Layout)}>
+                  <Route path='home' element={<HomePage />} />
+                  <Route path='search' element={<SearchPage />} />
+                  <Route path='library' element={<LibraryPage />} />
+                  <Route path='user' element={<UserPage />} />
+                  <Route path='search-user/:userId' element={<SearchUserPage />} />
+                  <Route path='form' element={<AddMusicPage />} />
+                  <Route path='detail-page' element={<ListDetailPage />} />
+                </Route>
 
-            </Routes>
-          </FilterProvider>
-        </Auth0ProviderWithNavigate>
-      </BrowserRouter>
+              </Routes>
+            </FilterProvider>
+          </Auth0ProviderWithNavigate>
+        </BrowserRouter>
+      </SkeletonTheme>
     </>
   )
 }

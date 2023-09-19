@@ -4,7 +4,6 @@ import { SoundPlayer } from "./soundPlayer/SoundPlayer"
 import { useTrackListContext } from "../../utils/hooks/useTrackListContext"
 import { TrackType } from "../../types/track"
 import { useIsPlayingContext } from "../../utils/hooks/useIsPlayingContext"
-import { useTrackIdsContext } from "../../utils/hooks/useTrackIdsContext"
 
 
 
@@ -14,8 +13,7 @@ export const SoundBar = () => {
     const [isPlaying, setIsPlaying] = useState(false)
     const [currentTrack, setCurrentTrack] = useState<TrackType | null>(null)
     const [loopActive, setLoopActive] = useState(false)
-    const { isPlayingList, changeIsBtnActive } = useIsPlayingContext();
-    const { trackIds } = useTrackIdsContext();
+    const { isPlayingList } = useIsPlayingContext();
 
     useEffect(() => {
         if (trackList !== null) {
@@ -85,31 +83,11 @@ export const SoundBar = () => {
     useEffect(() => {
         if (isPlaying && audioElement.current) audioElement.current.play()
         else if (!isPlaying && audioElement.current) audioElement.current.pause()
-        // changeIsPlayingList(isPlaying)
-        //Si se cambia el play del soundbar, tmb lo debería de hacer el play
-        // de list detail. Y para hacerlo debería de ver si la tracklist del soundbar
-        // es la misma que los trackIds, es decir, si la tracklist coincide con el 
-        // detail list que se está enseñando por pantalla
-
-        if (isPlaying) {
-            if (trackList === null) return;
-            let coincides = true;
-            let soundPlayerIds = trackList.map((track) => track.id)
-            if (soundPlayerIds.length === trackIds.length) {
-                for (let i = 0; i < trackIds.length - 1; i++) {
-                    if (!soundPlayerIds.includes(trackIds[i])) {
-                        coincides = false
-                    }
-                }
-            } else { coincides = false }
-            coincides ? changeIsBtnActive(isPlaying) : changeIsBtnActive(!isPlaying)
-        }
 
 
     }, [isPlaying, currentTrack])
 
     useEffect(() => {
-        //Si se cambia isPlayingList, pues isPlaying también debería de cambiar
         setIsPlaying(isPlayingList);
     }, [isPlayingList])
 
@@ -133,39 +111,3 @@ export const SoundBar = () => {
     )
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const testMusic = [
-//     {
-//         name: "Repeat After Me (Interlude)",
-//         url: "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689331273/APOLLOFY/apollofy_repeat-after-me-The-weeknd.mp3",
-//         artistName: "Matias LaPara",
-//         imageUrl: "https://i.scdn.co/image/ab67616100005174920dc1f617550de8388f368e"
-//     },
-//     {
-//         name: "SECOND TRACK",
-//         url: "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689331273/APOLLOFY/apollofy_repeat-after-me-The-weeknd.mp3",
-//         artistName: "Matias LaPara",
-//         imageUrl: "https://i.scdn.co/image/ab67616100005174920dc1f617550de8388f368e"
-//     },
-//     {
-//         name: "THIRD TRACK",
-//         url: "https://res.cloudinary.com/dqdysl9ep/video/upload/v1689331273/APOLLOFY/apollofy_repeat-after-me-The-weeknd.mp3",
-//         artistName: "Matias LaPara",
-//         imageUrl: "https://i.scdn.co/image/ab67616100005174920dc1f617550de8388f368e"
-//     }
-// ]

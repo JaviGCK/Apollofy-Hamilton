@@ -5,11 +5,15 @@ import './homePage.css'
 import { useAuth0 } from "@auth0/auth0-react"
 import { SettingsBar } from "../../components/settingsbar/SettingsBar.tsx"
 import { useEffect, useRef, useState } from "react"
+import 'react-loading-skeleton/dist/skeleton.css'
+import { useTopTrendsContext } from "../../utils/hooks/useTopTrendsContext.ts"
+import { HomeCardsSkeleton } from "../../components/homeCardsSkeleton/HomeCardsSkeleton.tsx"
 
 export const HomePage = () => {
 
     const [settingsExpanded, setSettingsExpanded] = useState(false)
     const settingMenu = useRef<HTMLDivElement | null>(null)
+    const { topTrends } = useTopTrendsContext();
 
     const {
         isLoading,
@@ -46,7 +50,8 @@ export const HomePage = () => {
             {settingsExpanded ? <div ref={settingMenu} className="settings-menu-container">
                 <SettingsBar />
             </div> : <></>}
-            <TrendList />
+            {topTrends ? <TrendList /> : <HomeCardsSkeleton />}
+
         </section>
     )
 }

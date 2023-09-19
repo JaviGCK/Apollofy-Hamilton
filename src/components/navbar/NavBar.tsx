@@ -10,8 +10,11 @@ import { useTrackListContext } from '../../utils/hooks/useTrackListContext'
 import { TrackType } from '../../types/track'
 import { useEffect } from 'react'
 import { UserType } from '../profileChart/ProfileChart'
-import { useGenreContext } from '../../utils/hooks/useGenresContext'
-import { GenreType } from '../../types/genre'
+import { ArtistType } from '../../types/artist'
+import { PlaylistType } from '../../types/playlist'
+import { AlbumType } from '../../types/album'
+import { useTopTrendsContext } from '../../utils/hooks/useTopTrendsContext'
+import { TopTrendsType } from '../../context/TopTrendsContextProvider'
 
 
 export interface UserDataType {
@@ -27,29 +30,9 @@ export const NavBar = () => {
     const { user, getAccessTokenSilently } = useAuth0();
     const { currentUser, setCurrentLoggedUser } = useUserContext();
     const { trackList, setNewTrackList } = useTrackListContext();
-    const { showGenre, setGenres } = useGenreContext();
+    // const { showGenre, setGenres } = useGenreContext();
     const location = useLocation().pathname.slice(1)
-
-
-
-
-    useEffect(() => {
-
-        const button = document.querySelector(`#${location}`) as HTMLInputElement;
-        button.checked = true;
-
-        if (showGenre === null) {
-
-            (async function fetchGenres() {
-
-                const genresFetched = await fetchData(getAccessTokenSilently, "genres") as GenreType[];
-
-                setGenres(genresFetched)
-            }())
-
-        }
-
-    }, [])
+    const { changeTopTrends } = useTopTrendsContext()
 
 
     if (currentUser === null) {
@@ -73,14 +56,12 @@ export const NavBar = () => {
     }
 
     if (trackList === null) {
-        // let tracks: TrackType[] = [];
         (async function fetchTracks() {
             const tracksFetched = await fetchData(getAccessTokenSilently, "tracks") as TrackType[];
             tracksFetched.forEach((track) => {
                 track.progress = 0;
                 track.duration = 0;
             })
-            // console.log(tracksFetched);
             setNewTrackList(tracksFetched);
 
         }());
@@ -125,10 +106,22 @@ export const NavBar = () => {
         }
     ]
 
+    useEffect(() => {
+        const button = document.querySelector(`#${location}`) as HTMLInputElement;
+        button.checked = true;
+        (async function fetchTopTrends() {
+            const topArtists = await fetchData(getAccessTokenSilently, "artists/top") as ArtistType[];
+            const topPlaylists = await fetchData(getAccessTokenSilently, "playlists/top") as PlaylistType[];
+            const topAlbums = await fetchData(getAccessTokenSilently, "albums/top") as AlbumType[];
+            const topTrends: TopTrendsType = { topArtists, topAlbums, topPlaylists }
+            changeTopTrends(topTrends);
+        }());
+
+    }, [])
+
     return (
         <nav className="navBar-bottom-container">
             {iconsNavbar.map((icon, index) => (
-                //BUG ERROR EN LA KEY
                 <div className="icon-navbar-container" key={index}>
                     <input id={icon.id} name="icon-navbar-bottom" type="radio" className="input-navbar-bottom" />
                     <label htmlFor={icon.id} className="label-navbar-bottom">

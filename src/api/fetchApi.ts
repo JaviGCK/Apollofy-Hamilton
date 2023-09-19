@@ -6,7 +6,6 @@ import { AlbumType } from "../types/album";
 import { ArtistType } from "../types/artist";
 import { GenreType } from "../types/genre";
 import { PlaylistType } from "../types/playlist";
-import { TrackType } from "../types/track";
 
 
 
@@ -99,14 +98,6 @@ export const postNewUser = async (getToken: any, newUser: UserDataType): Promise
 
 //---------------------------------------------------------------------------------------------------------------------------------------------
 
-export const getFullTrack = async (getToken: any, tracksById: string[]): Promise<TrackType[]> => {
-    const tracks: TrackType[] = [];
-    for (const trackId of tracksById) {
-        const fullTrack = await fetchData(getToken, `tracks?id=${trackId}`) as TrackType[];
-        tracks.push(fullTrack[0])
-    }
-    return tracks;
-}
 
 
 export const addFavourites = async (getToken: any, userId: string, listType: string, listTypeId: string) => {
