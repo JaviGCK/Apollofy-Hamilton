@@ -34,20 +34,6 @@ export const NavBar = () => {
     const { changeTopTrends } = useTopTrendsContext()
 
 
-    useEffect(() => {
-        const button = document.querySelector(`#${location}`) as HTMLInputElement;
-        button.checked = true;
-        (async function fetchTopTrends() {
-            const topArtists = await fetchData(getAccessTokenSilently, "artists/top") as ArtistType[];
-            const topPlaylists = await fetchData(getAccessTokenSilently, "playlists/top") as PlaylistType[];
-            const topAlbums = await fetchData(getAccessTokenSilently, "albums/top") as AlbumType[];
-            const topTrends: TopTrendsType = { topArtists, topAlbums, topPlaylists }
-            changeTopTrends(topTrends);
-        }());
-
-    }, [])
-
-
     if (currentUser === null) {
         (async function fetchUser() {
             const usersFetched = await fetchData(getAccessTokenSilently, 'users') as UserType[];
@@ -69,14 +55,12 @@ export const NavBar = () => {
     }
 
     if (trackList === null) {
-        // let tracks: TrackType[] = [];
         (async function fetchTracks() {
             const tracksFetched = await fetchData(getAccessTokenSilently, "tracks") as TrackType[];
             tracksFetched.forEach((track) => {
                 track.progress = 0;
                 track.duration = 0;
             })
-            // console.log(tracksFetched);
             setNewTrackList(tracksFetched);
 
         }());
@@ -120,6 +104,19 @@ export const NavBar = () => {
             path: "user"
         }
     ]
+
+    useEffect(() => {
+        const button = document.querySelector(`#${location}`) as HTMLInputElement;
+        button.checked = true;
+        (async function fetchTopTrends() {
+            const topArtists = await fetchData(getAccessTokenSilently, "artists/top") as ArtistType[];
+            const topPlaylists = await fetchData(getAccessTokenSilently, "playlists/top") as PlaylistType[];
+            const topAlbums = await fetchData(getAccessTokenSilently, "albums/top") as AlbumType[];
+            const topTrends: TopTrendsType = { topArtists, topAlbums, topPlaylists }
+            changeTopTrends(topTrends);
+        }());
+
+    }, [])
 
     return (
         <nav className="navBar-bottom-container">
