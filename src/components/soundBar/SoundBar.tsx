@@ -4,7 +4,7 @@ import { SoundPlayer } from "./soundPlayer/SoundPlayer"
 import { useTrackListContext } from "../../utils/hooks/useTrackListContext"
 import { TrackType } from "../../types/track"
 import { useIsPlayingContext } from "../../utils/hooks/useIsPlayingContext"
-import { useTrackIdsContext } from "../../utils/hooks/useTrackIdsContext"
+// import { useTrackIdsContext } from "../../utils/hooks/useTrackIdsContext"
 
 
 
@@ -14,8 +14,8 @@ export const SoundBar = () => {
     const [isPlaying, setIsPlaying] = useState(false)
     const [currentTrack, setCurrentTrack] = useState<TrackType | null>(null)
     const [loopActive, setLoopActive] = useState(false)
-    const { isPlayingList, changeIsBtnActive } = useIsPlayingContext();
-    const { trackIds } = useTrackIdsContext();
+    const { isPlayingList } = useIsPlayingContext();
+    // const { trackIds } = useTrackIdsContext();
 
     useEffect(() => {
         if (trackList !== null) {
@@ -91,19 +91,19 @@ export const SoundBar = () => {
         // es la misma que los trackIds, es decir, si la tracklist coincide con el 
         // detail list que se está enseñando por pantalla
 
-        if (isPlaying) {
-            if (trackList === null) return;
-            let coincides = true;
-            let soundPlayerIds = trackList.map((track) => track.id)
-            if (soundPlayerIds.length === trackIds.length) {
-                for (let i = 0; i < trackIds.length - 1; i++) {
-                    if (!soundPlayerIds.includes(trackIds[i])) {
-                        coincides = false
-                    }
-                }
-            } else { coincides = false }
-            coincides ? changeIsBtnActive(isPlaying) : changeIsBtnActive(!isPlaying)
-        }
+        // if (isPlaying) {
+        //     if (trackList === null) return;
+        //     let coincides = true;
+        //     let soundPlayerIds = trackList.map((track) => track.id)
+        //     if (soundPlayerIds.length === trackIds.length) {
+        //         for (let i = 0; i < trackIds.length - 1; i++) {
+        //             if (!soundPlayerIds.includes(trackIds[i])) {
+        //                 coincides = false
+        //             }
+        //         }
+        //     } else { coincides = false }
+        //     coincides ? changeIsBtnActive(isPlaying) : changeIsBtnActive(!isPlaying)
+        // }
 
 
     }, [isPlaying, currentTrack])

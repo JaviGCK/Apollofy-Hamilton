@@ -1,25 +1,25 @@
 import './trackList.css'
-import { FC, useEffect, useState } from "react";
-import { fetchData } from '../../../api/fetchApi';
+import { FC } from "react";
+// import { fetchData } from '../../../api/fetchApi';
 import { TrackType } from '../../../types/track';
 import { getUniqueId } from '../../../utils/functions/randomId';
-import { useAuth0 } from '@auth0/auth0-react';
+// import { useAuth0 } from '@auth0/auth0-react';
 interface TrackListProps {
-  trackId: string,
+  track: TrackType,
 }
 
-export const TrackList: FC<TrackListProps> = ({ trackId }) => {
+export const TrackList: FC<TrackListProps> = ({ track }) => {
 
-  const [track, setTrack] = useState<TrackType | null>(null);
-  const { getAccessTokenSilently } = useAuth0();
+  // const [track, setTrack] = useState<TrackType | null>(null);
+  // const { getAccessTokenSilently } = useAuth0();
 
-  useEffect(() => {
-    (async function getTrack() {
-      const trackFetched = await fetchData(getAccessTokenSilently, `tracks?id=${trackId}`) as TrackType[];
-      const track = trackFetched[0];
-      setTrack(track);
-    }());
-  }, [])
+  // useEffect(() => {
+  //   (async function getTrack() {
+  //     const trackFetched = await fetchData(getAccessTokenSilently, `tracks/${trackId}`) as TrackType;
+  //     const track = trackFetched;
+  //     setTrack(track);
+  //   }());
+  // }, [])
 
   return (
     <>

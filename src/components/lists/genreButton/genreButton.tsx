@@ -9,11 +9,12 @@ enum ListType {
     ARTIST = "artist",
     PLAYLIST = "playlist",
     USER = "user",
-    GENRE = "genre"
+    GENRE = "genre",
+    TRACK = "track"
 }
 
 export const GenreButton = (props: GenreType) => {
-    const { name, imageUrl, id, color } = props
+    const { name, imageUrl, id, color, tracks } = props
     const { setNewListDetail } = useListDetailContext();
     const navigate = useNavigate();
 
@@ -23,7 +24,8 @@ export const GenreButton = (props: GenreType) => {
             imageUrl: imageUrl,
             id: id,
             color: color,
-            type: ListType.GENRE
+            listType: ListType.GENRE,
+            tracks: tracks
         }
         setNewListDetail(genre);
         navigate("/detail-page");

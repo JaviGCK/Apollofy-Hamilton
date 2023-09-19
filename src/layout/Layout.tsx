@@ -6,8 +6,8 @@ import { UserContextProvider } from '../context/UserContextProvider'
 import { TrackListContextProvider } from '../context/TrackListContextProvider'
 import { ListDetailContextProvider } from '../context/ListDetailContextProvider'
 import { IsPlayingContextProvider } from '../context/IsPlayingContextProvider'
-import { TrackIdsContextProvider } from '../context/TrackIdsContextProvider'
 import { SelectedUserContextProvider } from '../context/SelectedUserContextProvider'
+import { TopTrendsContextProvider } from '../context/TopTrendsContextProvider'
 
 export const Layout = () => {
   return (
@@ -16,13 +16,13 @@ export const Layout = () => {
         <TrackListContextProvider>
           <ListDetailContextProvider>
             <IsPlayingContextProvider>
-              <TrackIdsContextProvider>
+              <TopTrendsContextProvider>
                 <SelectedUserContextProvider>
                   <Outlet />
                   <SoundBar />
                   <NavBar />
                 </SelectedUserContextProvider>
-              </TrackIdsContextProvider>
+              </TopTrendsContextProvider>
             </IsPlayingContextProvider>
           </ListDetailContextProvider>
         </TrackListContextProvider>

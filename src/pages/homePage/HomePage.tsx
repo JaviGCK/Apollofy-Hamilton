@@ -5,6 +5,8 @@ import './homePage.css'
 import { useAuth0 } from "@auth0/auth0-react"
 import { SettingsBar } from "../../components/settingsbar/SettingsBar.tsx"
 import { useEffect, useRef, useState } from "react"
+import Skeleton from "react-loading-skeleton"
+import 'react-loading-skeleton/dist/skeleton.css'
 
 export const HomePage = () => {
 

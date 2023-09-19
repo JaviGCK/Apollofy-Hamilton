@@ -10,6 +10,11 @@ import { useTrackListContext } from '../../utils/hooks/useTrackListContext'
 import { TrackType } from '../../types/track'
 import { useEffect } from 'react'
 import { UserType } from '../profileChart/ProfileChart'
+import { ArtistType } from '../../types/artist'
+import { PlaylistType } from '../../types/playlist'
+import { AlbumType } from '../../types/album'
+import { useTopTrendsContext } from '../../utils/hooks/useTopTrendsContext'
+import { TopTrendsType } from '../../context/TopTrendsContextProvider'
 
 
 export interface UserDataType {
@@ -26,14 +31,19 @@ export const NavBar = () => {
     const { currentUser, setCurrentLoggedUser } = useUserContext();
     const { trackList, setNewTrackList } = useTrackListContext();
     const location = useLocation().pathname.slice(1)
-
-
+    const { changeTopTrends } = useTopTrendsContext()
 
 
     useEffect(() => {
-
         const button = document.querySelector(`#${location}`) as HTMLInputElement;
         button.checked = true;
+        (async function fetchTopTrends() {
+            const topArtists = await fetchData(getAccessTokenSilently, "artists/top") as ArtistType[];
+            const topPlaylists = await fetchData(getAccessTokenSilently, "playlists/top") as PlaylistType[];
+            const topAlbums = await fetchData(getAccessTokenSilently, "albums/top") as AlbumType[];
+            const topTrends: TopTrendsType = { topArtists, topAlbums, topPlaylists }
+            changeTopTrends(topTrends);
+        }());
 
     }, [])
 
