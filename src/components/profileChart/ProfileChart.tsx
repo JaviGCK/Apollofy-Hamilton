@@ -57,10 +57,12 @@ const ProfileChart: FC<ProfileChartProps> = ({ user }) => {
                         {modalState === "followers" &&
                             <FollowsList
                                 list={selectedUser.followers}
+                                handleClose={setModalState}
                             />}
                         {modalState === "following" &&
                             <FollowsList
                                 list={selectedUser.following}
+                                handleClose={setModalState}
                             />}
 
                     </div>

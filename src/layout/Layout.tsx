@@ -8,6 +8,7 @@ import { ListDetailContextProvider } from '../context/ListDetailContextProvider'
 import { IsPlayingContextProvider } from '../context/IsPlayingContextProvider'
 import { TrackIdsContextProvider } from '../context/TrackIdsContextProvider'
 import { SelectedUserContextProvider } from '../context/SelectedUserContextProvider'
+import { GenreContextProvider } from '../context/GenresContext'
 
 export const Layout = () => {
   return (
@@ -18,9 +19,11 @@ export const Layout = () => {
             <IsPlayingContextProvider>
               <TrackIdsContextProvider>
                 <SelectedUserContextProvider>
-                  <Outlet />
-                  <SoundBar />
-                  <NavBar />
+                  <GenreContextProvider>
+                    <Outlet />
+                    <SoundBar />
+                    <NavBar />
+                  </GenreContextProvider>
                 </SelectedUserContextProvider>
               </TrackIdsContextProvider>
             </IsPlayingContextProvider>

@@ -10,6 +10,8 @@ import { useTrackListContext } from '../../utils/hooks/useTrackListContext'
 import { TrackType } from '../../types/track'
 import { useEffect } from 'react'
 import { UserType } from '../profileChart/ProfileChart'
+import { useGenreContext } from '../../utils/hooks/useGenresContext'
+import { GenreType } from '../../types/genre'
 
 
 export interface UserDataType {
@@ -25,6 +27,7 @@ export const NavBar = () => {
     const { user, getAccessTokenSilently } = useAuth0();
     const { currentUser, setCurrentLoggedUser } = useUserContext();
     const { trackList, setNewTrackList } = useTrackListContext();
+    const { showGenre, setGenres } = useGenreContext();
     const location = useLocation().pathname.slice(1)
 
 
@@ -34,6 +37,17 @@ export const NavBar = () => {
 
         const button = document.querySelector(`#${location}`) as HTMLInputElement;
         button.checked = true;
+
+        if (showGenre === null) {
+
+            (async function fetchGenres() {
+
+                const genresFetched = await fetchData(getAccessTokenSilently, "genres") as GenreType[];
+
+                setGenres(genresFetched)
+            }())
+
+        }
 
     }, [])
 

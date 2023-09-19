@@ -1,8 +1,40 @@
 .list-follows-detail {
     display: flex;
-    margin: 3vh 3.5vh 3vh 3.5vh;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 80vw;
+    padding: 20px;
+    border-radius: 5%;
+    row-gap: 1.5vh;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.67);
+    box-shadow: 5px -5px 12px 0px rgba(255, 255, 255, 0.05) inset, -5px 5px 12px 0px rgba(255, 255, 255, 0.05) inset,
+        4px 7px 15px 0px rgba(0, 0, 0, 0.08), -1px 0px 2px 0px rgba(201, 201, 201, 0.1) inset;
+    backdrop-filter: blur(6px);
+    overflow: scroll;
+    position: absolute;
+    top: 15vh;
+    max-height: 60vh;    
+    margin-left: 10px; 
+        
 }
 
+.back-icon-follow {
+    display: flex;
+    align-self: flex-start;
+    width: 2rem;
+    height: 2rem;
+    color: #00ffa3;
+}
+
+.list-follow-user {
+    display: flex;
+    margin: 10px 5px;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
 .list-follows-detail-img {
     width: 70px;
     height: 70px;

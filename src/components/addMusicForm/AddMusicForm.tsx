@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form"
-import { useState } from "react"
-import { postTrack } from "../../api/fetchApi"
+import { useState, useEffect } from "react"
+import { fetchData, postTrack } from "../../api/fetchApi"
 import { useAuth0 } from "@auth0/auth0-react"
 import { GenreTypes } from "../../types/enums"
 import "./addMusicForm.css"
@@ -8,6 +8,11 @@ import placeholder from '../../assets/img/bg-image.webp'
 import toast, { Toaster } from "react-hot-toast"
 import { useUserContext } from "../../utils/hooks/useUserContext"
 import { useTranslation } from "react-i18next"
+import { GenreType } from "../../types/genre"
+import { Select, Space } from 'antd';
+import { useGenreContext } from "../../utils/hooks/useGenresContext"
+
+
 
 
 export const AddMusicForm = () => {
@@ -15,7 +20,10 @@ export const AddMusicForm = () => {
     const [privacityState, setPrivacityState] = useState<boolean>(false)
     const { getAccessTokenSilently } = useAuth0()
     const { currentUser, setCurrentLoggedUser } = useUserContext();
+    const { showGenre, setGenres } = useGenreContext();
     const { t } = useTranslation();
+    const { Option } = Select;
+
 
     const { register, handleSubmit, formState: { errors }, reset, watch } = useForm({
         defaultValues: {
@@ -79,6 +87,11 @@ export const AddMusicForm = () => {
         };
         reader.readAsDataURL(trackImgFile as any);
     }
+
+    const handleChange = (value: string[]) => {
+        //console.log(`selected ${value}`);
+    };
+
 
     return (
 
@@ -150,27 +163,35 @@ export const AddMusicForm = () => {
             />
             {errors.title && <p className="music-form-error error-title">{errors.title.message}</p>}
 
-            <select className="track-genre-select add-music-input" id="genres"
-                defaultValue=""
-                {...register("genre", {
-                    required: {
-                        value: true,
-                        message: "Genre selection is required"
-                    }
-                })}
-            >
-                <option value="" disabled hidden>{t('songGenre')}</option>
-                <option value="hip-hop">Hip-Hop</option>
-                <option value="rock">Rock</option>
-                <option value="pop">Pop</option>
-                <option value="r&b">R&B</option>
-                <option value="metal">Metal</option>
-                <option value="punk">Punk</option>
-                <option value="dance">Dance</option>
-                <option value="rap">Rap</option>
-                <option value="drill">Drill</option>
-                <option value="urban">Urban</option>
-            </select>
+            <div className="multiselect">
+
+                <Select
+                    className="track-genre-select add-music-input"
+                    mode="multiple"
+                    placeholder={t('songGenre')}
+                    defaultValue={[]}
+                    {...register("genre", {
+                        required: {
+                            value: true,
+                            message: "Genre selection is required"
+                        }
+                    })}
+                    onChange={handleChange}
+                    optionLabelProp="label"
+                >
+                    {showGenre?.map((genres: GenreType) => (
+                        <Option
+                            key={genres.id}
+                            value={genres.name}>
+                            <Space >
+                                {genres.name}
+                            </Space>
+                        </Option>
+                    ))}
+
+                </Select>
+
+            </div>
             {errors.genre && <p className="music-form-error select-error">{errors.genre.message}</p>}
 
             <div className="privacity-selection-container">
@@ -188,7 +209,7 @@ export const AddMusicForm = () => {
 
 
             <button className="add-music-submit-btn" type="submit">{t('upload')}</button>
-        </form>
+        </form >
 
     )
 }
