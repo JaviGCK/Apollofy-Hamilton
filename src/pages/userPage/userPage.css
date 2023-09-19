@@ -4,6 +4,22 @@
     padding: 5vw;
     height: 100vh;
     width: 100vw;
+    position: relative;
+}
+
+.profile-searchbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.stat-button {
+    background: none;
+    color: #e2d7ff;
+    border: none;
+    font-size: 25px;
 }
 
 .search-bar-user-page {
