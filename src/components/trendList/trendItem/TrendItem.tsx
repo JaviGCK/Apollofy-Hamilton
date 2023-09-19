@@ -86,8 +86,8 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
             } else {
                 const artistItem = itemFetched as ArtistType;
                 if (artistItem.albums !== undefined) {
-                    const artistAlbumFetched = await fetchData(getAccessTokenSilently, `albums/${artistItem.albums[0].id}`) as AlbumType[];
-                    const artistAlbum = artistAlbumFetched[0];
+                    const artistAlbumFetched = await fetchData(getAccessTokenSilently, `albums/${artistItem.albums[0].id}`) as AlbumType;
+                    const artistAlbum = artistAlbumFetched;
                     if (artistAlbum.tracks !== undefined) trackId = artistAlbum.tracks[0].id;
                 }
             }
