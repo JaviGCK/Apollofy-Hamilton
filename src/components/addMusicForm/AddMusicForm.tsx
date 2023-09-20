@@ -20,13 +20,13 @@ export const AddMusicForm = () => {
 
     const [privacityState, setPrivacityState] = useState<boolean>(false);
     const [genresSelected, setGenresSelected] = useState<string[]>([]);
+    const [albumSelected, setAlbumSelected] = useState<string | null>(null)
     const [isFetching, setIsFetching] = useState<boolean>(false);
     const [genresSelectedError, setGenresSelectedError] = useState<boolean>(false);
     const { getAccessTokenSilently } = useAuth0()
     const { currentUser, setCurrentLoggedUser } = useUserContext();
     const { showGenre } = useGenreContext();
     const { t } = useTranslation();
-    const { Option } = Select;
 
 
     const { register, handleSubmit, formState: { errors }, reset, watch } = useForm({
@@ -34,7 +34,8 @@ export const AddMusicForm = () => {
             image: "",
             audio: "",
             title: "",
-            genres: ""
+            genres: "",
+            albumName: ""
         }
     })
     const [imagePreview, setImagePreview] = useState(placeholder)
@@ -71,17 +72,34 @@ export const AddMusicForm = () => {
                 formTrackData.append("genres", trackGenres);
                 formTrackData.append("privacityString", trackPrivacy);
 
-                if (currentUser?.id === undefined) return;
-                const updatedUser = await postTrack(getAccessTokenSilently, formTrackData, currentUser?.id);
+                let correctData: boolean = true;
+                if (albumSelected) {
+                    if (albumSelected === "newAlbum") {
+                        //crearlo y linkearlo
+                        const albumNameInput = watch("albumName");
+                        if (albumNameInput && albumNameInput !== "") {
+                            formTrackData.append("albumName", watch("albumName"))
+                        } else {
+                            correctData = false
+                            toast.error("Add an album name.")
+                        }
 
-                setCurrentLoggedUser(updatedUser);
+                    } else {
+                        formTrackData.append("albumName", albumSelected)
+                    }
+                }
+                if (correctData) {
+                    if (currentUser?.id === undefined) return;
+                    const updatedUser = await postTrack(getAccessTokenSilently, formTrackData, currentUser?.id);
+                    setCurrentLoggedUser(updatedUser);
 
-                toast.success('Track uploaded successfully...')
-                reset();
-                setIsFetching(false)
+                    toast.success('Track uploaded successfully...')
+                    reset();
+                }
             } else {
                 setGenresSelectedError(true)
             }
+            setIsFetching(false)
         }
     }
 
@@ -99,8 +117,11 @@ export const AddMusicForm = () => {
         reader.readAsDataURL(trackImgFile as any);
     }
 
-    const handleChange = (value: string[]) => {
+    const handleChangeGenres = (value: string[]) => {
         setGenresSelected(value)
+    };
+    const handleChangeAlbumName = (value: string) => {
+        setAlbumSelected(value)
     };
 
 
@@ -181,7 +202,7 @@ export const AddMusicForm = () => {
                     mode="multiple"
                     placeholder={t('songGenre')}
                     defaultValue={[]}
-                    onChange={handleChange}
+                    onChange={handleChangeGenres}
                     optionLabelProp="label"
                 >
                     {showGenre?.map((genres: GenreType) => (
@@ -214,9 +235,10 @@ export const AddMusicForm = () => {
                 <Select
                     className="add-to-album"
                     placeholder={t('selectAlbum')}
+                    onChange={handleChangeAlbumName}
                 >
                     {currentUser?.albums?.map(album => (
-                        <Select.Option key={album.id} value={album.id}>{album.name}</Select.Option>
+                        <Select.Option key={album.id} value={album.name}>{album.name}</Select.Option>
                     ))}
                     <Select.Option value="newAlbum">{t("newAlbum")}</Select.Option>
 
@@ -226,13 +248,13 @@ export const AddMusicForm = () => {
                     className="add-album-name"
                     type="text"
                     placeholder={t('addNewAlbum')}
+                    {...register("albumName", {
+                        required: false
+                    })}
                 >
                 </input>
+
             </div>
-
-
-
-
             <button className="add-music-submit-btn" type="submit">{t('upload')}</button>
         </form >
 

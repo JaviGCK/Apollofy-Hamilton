@@ -13,7 +13,6 @@ type ShareProps = {
 
 const ShareButton = (props: ShareProps) => {
     const { selectedUser } = props
-    console.log(selectedUser)
     const [shareModalOpen, setShareModalOpen] = useState<boolean>(false)
     const { currentUser } = useUserContext();
     const sharedUrl = window.location.href

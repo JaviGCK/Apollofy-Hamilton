@@ -126,7 +126,7 @@ export const deleteFavourites = async (getToken: any, favouriteId: string, userI
         }
     })
     const data: UserType = await response.json();
-    console.log(data)
+
     return data;
 }
 

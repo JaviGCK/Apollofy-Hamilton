@@ -1,6 +1,6 @@
 import './listDetailPage.css'
 import { useEffect, useState } from "react";
-import { FaAngleLeft, FaRandom } from "react-icons/fa";
+import { FaAngleLeft } from "react-icons/fa";
 import { BiSolidHeart, BiPlay, BiStop } from "react-icons/bi";
 import { TrackList } from "../../components/lists/trackList/TrackList";
 import { useListDetailContext } from '../../utils/hooks/useListDetailContext';
@@ -22,17 +22,12 @@ export const ListDetailPage = () => {
 
     const [isFetching, setIsFetching] = useState(false);
     const [isLiked, setIsLiked] = useState(false);
-    const [isShuffleActive, setIsShuffleActive] = useState(false);
     const { currentUser, setCurrentLoggedUser } = useUserContext();
     const { listDetail } = useListDetailContext();
     const { trackList, setNewTrackList, audioElement } = useTrackListContext();
     const { isPlayingList, changeIsPlayingList, changeIsBtnActive, isListBtnActive, changeLastBtnActiveId, lastBtnActiveId, changeCurrentTrack } = useIsPlayingContext();
     const { getAccessTokenSilently } = useAuth0();
     const navigate = useNavigate();
-
-    const toggleShuffle = () => {
-        setIsShuffleActive(!isShuffleActive);
-    };
 
     const handleBackIconClicked = () => {
         navigate(-1);
@@ -57,7 +52,6 @@ export const ListDetailPage = () => {
         if (trackList && listDetail?.tracks) {
             const coincides = checkCoincides();
             if (!coincides) {
-                console.log("caso 1");
                 if (listDetail && listDetail.tracks) setNewTrackList(listDetail?.tracks);
                 changeCurrentTrack(listDetail.tracks[0])
                 changeIsPlayingList(true);
@@ -65,14 +59,12 @@ export const ListDetailPage = () => {
                 changeLastBtnActiveId(listDetail.id)
                 audioElement.current.currentTime = 0;
             } else if (coincides && isPlayingList && isListBtnActive && lastBtnActiveId === listDetail.id) {
-                console.log("caso 2");
                 changeIsPlayingList(false);
                 changeIsBtnActive(false);
                 setNewTrackList(listDetail.tracks)
                 changeCurrentTrack(listDetail.tracks[0])
                 audioElement.current.currentTime = 0;
             } else if (coincides && !isPlayingList && !isListBtnActive && lastBtnActiveId === listDetail.id) {
-                console.log("caso 3");
                 changeIsBtnActive(true)
                 changeIsPlayingList(true);
                 changeLastBtnActiveId(listDetail.id)
@@ -80,7 +72,6 @@ export const ListDetailPage = () => {
                 changeCurrentTrack(listDetail.tracks[0])
                 audioElement.current.currentTime = 0;
             } else if (coincides && !isPlayingList && isListBtnActive && lastBtnActiveId !== listDetail.id) {
-                console.log("caso 4");
                 setNewTrackList(listDetail.tracks)
                 changeCurrentTrack(listDetail.tracks[0])
                 audioElement.current.currentTime = 0;
@@ -162,20 +153,15 @@ export const ListDetailPage = () => {
         if (itemSearched) setIsLiked(true);
         const coincides = checkCoincides();
         if (coincides && isPlayingList) {
-            // console.log("caso 1");
             changeIsBtnActive(true)
             if (listDetail) changeLastBtnActiveId(listDetail.id)
         } else if (!coincides && isPlayingList && lastBtnActiveId !== listDetail?.id && isListBtnActive) {
-            console.log("ccaso 2 useEffect");
             changeIsBtnActive(false);
         } else if (!coincides && isPlayingList) {
-            // console.log("caso 2");
             changeIsBtnActive(false);
         } else if (coincides && !isPlayingList && lastBtnActiveId === listDetail?.id && !isListBtnActive) {
-            // console.log("caso 4");
             changeIsBtnActive(true);
         } else if (!coincides && !isPlayingList) {
-            // console.log("caso 5");
             changeIsBtnActive(false);
         } else if (!coincides && isListBtnActive && lastBtnActiveId !== listDetail?.id && isListBtnActive) {
             changeIsBtnActive(false);
@@ -200,10 +186,6 @@ export const ListDetailPage = () => {
                         <span className="list-detail-container-play-btn" onClick={playBtnClicked} >
                             {isListBtnActive ? <BiStop className="list-detail-play-btn" /> : <BiPlay className="list-detail-play-btn" />}
                         </span>
-                        <FaRandom
-                            className={`list-detail-shuffle-btn ${isShuffleActive ? 'active' : ''}`}
-                            onClick={toggleShuffle}
-                        />
 
                     </div>
 
