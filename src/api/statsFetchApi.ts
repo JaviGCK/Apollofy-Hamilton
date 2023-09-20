@@ -24,13 +24,18 @@ export const createUserStats = async (userId: string) => {
 }
 
 export const updateUserStats = async (userId: string, endpoint: string, content?: string | number) => {
+
+    const bodyContent = {
+        content: content
+    }
     const { VITE_API_STATS_URL: url } = import.meta.env;
+
     const response = await fetch(`${url}${endpoint}/${userId}`, {
         method: "PATCH",
         headers: {
             "Content-type": "application/json; charset=UTF-8"
         },
-        body: JSON.stringify(content)
+        body: JSON.stringify(bodyContent)
 
     })
     const data = await response.json()

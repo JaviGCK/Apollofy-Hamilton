@@ -13,6 +13,9 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useAuth0 } from '@auth0/auth0-react';
 import { UserType } from '../../components/profileChart/ProfileChart';
 import { FavouriteType } from '../libraryPage/LibraryPage';
+import { updateUserStats } from '../../api/statsFetchApi';
+import { AlbumType } from '../../types/album';
+import { PlaylistType } from '../../types/playlist';
 
 export const ListDetailPage = () => {
 
@@ -56,6 +59,10 @@ export const ListDetailPage = () => {
                     setIsLiked(true);
                     setCurrentLoggedUser(newUser)
                     toast.success('Successfully added!')
+                    if (listDetail.listType !== "artist") {
+                        let checkedList = listDetail as AlbumType | PlaylistType
+                        if (checkedList.usersId) updateUserStats(checkedList.usersId, "likes", "increase")
+                    }
                 }
             }
 
@@ -65,6 +72,10 @@ export const ListDetailPage = () => {
                 setIsLiked(false);
                 setCurrentLoggedUser(newUser)
                 toast.success('Successfully removed!')
+                if (listDetail?.listType !== "artist") {
+                    let checkedList = listDetail as AlbumType | PlaylistType
+                    if (checkedList.usersId) updateUserStats(checkedList.usersId, "likes", "decrease")
+                }
             }
 
         }

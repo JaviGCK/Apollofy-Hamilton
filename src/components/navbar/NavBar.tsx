@@ -119,7 +119,6 @@ export const NavBar = () => {
 
                 if (loggedUserObject !== undefined) {
                     setCurrentLoggedUser(loggedUserObject);
-                    createUserStats(loggedUserObject.id);
                 } else {
                     if (!(user?.email && user.name)) return
                     const newUser: UserDataType = {

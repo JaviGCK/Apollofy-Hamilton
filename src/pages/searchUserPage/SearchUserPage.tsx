@@ -13,6 +13,7 @@ import { useNavigate } from 'react-router-dom';
 import { TrackType } from '../../types/track';
 import { AlbumType } from '../../types/album';
 import { PlaylistType } from '../../types/playlist';
+import { updateUserStats } from '../../api/statsFetchApi';
 
 export type SearchResultType = [
     filteredTracks: TrackType[] | undefined,
@@ -99,6 +100,7 @@ export const SearchUserPage: React.FC = () => {
                 setIsFollowed(!isFollowed)
                 const myUser = await fetchData(getAccessTokenSilently, `users/${currentUser.id}`) as UserType
                 const targetUser = await fetchData(getAccessTokenSilently, `users/${selectedUser.id}`) as UserType
+                updateUserStats(selectedUser.id, "followers", targetUser.followers.length)
                 setCurrentLoggedUser(myUser)
                 changeSelectedUser(targetUser)
             }
