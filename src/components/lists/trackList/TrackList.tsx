@@ -24,7 +24,7 @@ export const TrackList: FC<TrackListProps> = ({ track }) => {
   const { getAccessTokenSilently } = useAuth0();
   const [isFetching, setIsFetching] = useState<boolean>(false)
   const { trackList, setNewTrackList, audioElement } = useTrackListContext();
-  const { changeIsPlayingList } = useIsPlayingContext();
+  const { currentTrack, changeIsPlayingList } = useIsPlayingContext();
   const [trackIsPlaying, setTrackIsPlaying] = useState<boolean>(false);
 
   const handleLikeTrackClicked = async (event: any) => {
@@ -81,6 +81,13 @@ export const TrackList: FC<TrackListProps> = ({ track }) => {
     }
     return itemSearched;
   }
+
+  useEffect(() => {
+    if (currentTrack?.id === track.id) {
+      setTrackIsPlaying(true)
+    } else setTrackIsPlaying(false)
+  }, [currentTrack])
+
   useEffect(() => {
     const itemSearched = checkFavouriteAlreadyExist();
     if (itemSearched) setLiked(true)
