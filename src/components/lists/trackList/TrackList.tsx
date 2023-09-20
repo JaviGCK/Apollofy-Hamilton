@@ -12,6 +12,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { AiFillCheckCircle } from 'react-icons/ai';
 import { useTrackListContext } from '../../../utils/hooks/useTrackListContext';
 import { useIsPlayingContext } from '../../../utils/hooks/useIsPlayingContext';
+import { updateUserStats } from '../../../api/statsFetchApi';
 interface TrackListProps {
   track: TrackType,
 }
@@ -27,6 +28,9 @@ export const TrackList: FC<TrackListProps> = ({ track }) => {
   const [trackIsPlaying, setTrackIsPlaying] = useState<boolean>(false);
 
   const handleLikeTrackClicked = async (event: any) => {
+    if (!track.verified) {
+      if (track.userId) updateUserStats(track.userId, "views")
+    }
     event.stopPropagation();
     if (!isFetching) {
       const itemSearched = checkFavouriteAlreadyExist();

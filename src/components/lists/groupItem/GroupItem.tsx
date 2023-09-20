@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { useIsPlayingContext } from '../../../utils/hooks/useIsPlayingContext';
+import { updateUserStats } from '../../../api/statsFetchApi';
 
 export const GroupItem = ({ ...props }) => {
     const { track, onItemClicked } = props
@@ -26,6 +27,9 @@ export const GroupItem = ({ ...props }) => {
                     navigate("/detail-page");
                 }());
             } else {
+                if (!track.verified) {
+                    if (track.userId) updateUserStats(track.userId, "views")
+                }
                 setTrackIsPlaying(true)
                 if (trackList && trackList.length === 1 && trackList[0].id === track.id) {
                     changeIsPlayingList(true);
