@@ -1,26 +1,31 @@
 import { createContext, useState } from "react"
+import { TrackType } from "../types/track";
 
 
 type isPlayingContextType = {
   isPlayingList: boolean,
   isListBtnActive: boolean,
-  listId: string | null,
+  lastBtnActiveId: string | null,
+  currentTrack: TrackType | null,
   changeIsPlayingList: (playing: boolean) => void,
   changeIsBtnActive: (playing: boolean) => void,
-  changeListId: (newId: string) => void
+  changeLastBtnActiveId: (newId: string) => void,
+  changeCurrentTrack: (newTrack: TrackType) => void
 }
 
 
-export const isPlayingContext = createContext<isPlayingContextType>({ isPlayingList: false, isListBtnActive: false, listId: "", changeIsPlayingList: () => { }, changeIsBtnActive: () => { }, changeListId: () => { } });
+export const isPlayingContext = createContext<isPlayingContextType>({ isPlayingList: false, isListBtnActive: false, lastBtnActiveId: null, currentTrack: null, changeIsPlayingList: () => { }, changeIsBtnActive: () => { }, changeLastBtnActiveId: () => { }, changeCurrentTrack: () => { } });
 
 
 export const IsPlayingContextProvider = ({ ...props }) => {
 
-  const [isPlayingList, setIsPlayingList] = useState<boolean>(false)
+  const [isPlayingList, setIsPlayingList] = useState<boolean>(false);
 
-  const [isListBtnActive, setIsListBtnActive] = useState<boolean>(false)
+  const [isListBtnActive, setIsListBtnActive] = useState<boolean>(false);
 
-  const [listId, setListId] = useState<string | null>(null);
+  const [lastBtnActiveId, setLastBtnActiveId] = useState<string | null>(null);
+
+  const [currentTrack, setCurrentTrack] = useState<TrackType | null>(null);
 
   const changeIsPlayingList = (playing: boolean) => {
     setIsPlayingList(playing)
@@ -28,12 +33,15 @@ export const IsPlayingContextProvider = ({ ...props }) => {
   const changeIsBtnActive = (playing: boolean) => {
     setIsListBtnActive(playing)
   }
-  const changeListId = (newId: string) => {
-    setListId(newId);
+  const changeLastBtnActiveId = (newId: string) => {
+    setLastBtnActiveId(newId);
+  }
+  const changeCurrentTrack = (newTrack: TrackType) => {
+    setCurrentTrack(newTrack);
   }
 
   return (
-    <isPlayingContext.Provider value={{ isPlayingList, isListBtnActive, listId, changeIsPlayingList, changeIsBtnActive, changeListId }}>
+    <isPlayingContext.Provider value={{ isPlayingList, isListBtnActive, lastBtnActiveId, currentTrack, changeIsPlayingList, changeIsBtnActive, changeLastBtnActiveId, changeCurrentTrack }}>
       {props.children}
     </isPlayingContext.Provider>
   )

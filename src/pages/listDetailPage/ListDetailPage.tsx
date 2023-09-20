@@ -16,6 +16,7 @@ import { FavouriteType } from '../libraryPage/LibraryPage';
 import { updateUserStats } from '../../api/statsFetchApi';
 import { AlbumType } from '../../types/album';
 import { PlaylistType } from '../../types/playlist';
+import { useIsPlayingContext } from '../../utils/hooks/useIsPlayingContext';
 
 export const ListDetailPage = () => {
 
@@ -24,7 +25,8 @@ export const ListDetailPage = () => {
     const [isShuffleActive, setIsShuffleActive] = useState(false);
     const { currentUser, setCurrentLoggedUser } = useUserContext();
     const { listDetail } = useListDetailContext();
-    const { setNewTrackList } = useTrackListContext();
+    const { trackList, setNewTrackList, audioElement } = useTrackListContext();
+    const { isPlayingList, changeIsPlayingList, changeIsBtnActive, isListBtnActive, changeLastBtnActiveId, lastBtnActiveId, changeCurrentTrack } = useIsPlayingContext();
     const { getAccessTokenSilently } = useAuth0();
     const navigate = useNavigate();
 
@@ -36,18 +38,70 @@ export const ListDetailPage = () => {
         navigate(-1);
     }
 
-
-    const playBtnClicked = () => {
-        if (listDetail && listDetail.tracks) setNewTrackList(listDetail?.tracks);
-
-        if (listDetail === null) return;
+    const checkCoincides = (): boolean => {
+        let coincides: boolean = true;
+        if (trackList && listDetail?.tracks) {
+            const listDetailTrackIds = listDetail?.tracks.map((track) => track.id)
+            trackList.forEach((track) => {
+                if (!listDetailTrackIds.includes(track.id)) {
+                    coincides = false;
+                    return;
+                }
+            })
+        }
+        return coincides
     }
 
 
+    const playBtnClicked = () => {
+        if (trackList && listDetail?.tracks) {
+            const coincides = checkCoincides();
+            if (!coincides) {
+                console.log("caso 1");
+                if (listDetail && listDetail.tracks) setNewTrackList(listDetail?.tracks);
+                changeCurrentTrack(listDetail.tracks[0])
+                changeIsPlayingList(true);
+                changeIsBtnActive(true)
+                changeLastBtnActiveId(listDetail.id)
+                audioElement.current.currentTime = 0;
+            } else if (coincides && isPlayingList && isListBtnActive && lastBtnActiveId === listDetail.id) {
+                console.log("caso 2");
+                changeIsPlayingList(false);
+                changeIsBtnActive(false);
+                setNewTrackList(listDetail.tracks)
+                changeCurrentTrack(listDetail.tracks[0])
+                audioElement.current.currentTime = 0;
+            } else if (coincides && !isPlayingList && !isListBtnActive && lastBtnActiveId === listDetail.id) {
+                console.log("caso 3");
+                changeIsBtnActive(true)
+                changeIsPlayingList(true);
+                changeLastBtnActiveId(listDetail.id)
+                setNewTrackList(listDetail.tracks)
+                changeCurrentTrack(listDetail.tracks[0])
+                audioElement.current.currentTime = 0;
+            } else if (coincides && !isPlayingList && isListBtnActive && lastBtnActiveId !== listDetail.id) {
+                console.log("caso 4");
+                setNewTrackList(listDetail.tracks)
+                changeCurrentTrack(listDetail.tracks[0])
+                audioElement.current.currentTime = 0;
+                changeIsBtnActive(false)
+                changeIsPlayingList(false);
+                changeLastBtnActiveId(listDetail.id)
+            } else {
+                console.log("ningun caso");
+            }
+        }
+    }
+
+    useEffect(() => {
+        const coincides = checkCoincides();
+        if (isPlayingList && coincides && !isListBtnActive) {
+            changeIsBtnActive(true)
+        }
+    }, [isPlayingList])
+
     const heartIconClicked = async () => {
         if (isFetching) return;
-
-        console.log(listDetail)
 
         const itemSearched = checkFavouriteAlreadyExist()
         setIsFetching(true);
@@ -101,6 +155,26 @@ export const ListDetailPage = () => {
         if (listDetail === null) navigate("/home")
         const itemSearched = checkFavouriteAlreadyExist();
         if (itemSearched) setIsLiked(true);
+        const coincides = checkCoincides();
+        if (coincides && isPlayingList) {
+            // console.log("caso 1");
+            changeIsBtnActive(true)
+            if (listDetail) changeLastBtnActiveId(listDetail.id)
+        } else if (!coincides && isPlayingList && lastBtnActiveId !== listDetail?.id && isListBtnActive) {
+            console.log("ccaso 2 useEffect");
+            changeIsBtnActive(false);
+        } else if (!coincides && isPlayingList) {
+            // console.log("caso 2");
+            changeIsBtnActive(false);
+        } else if (coincides && !isPlayingList && lastBtnActiveId === listDetail?.id && !isListBtnActive) {
+            // console.log("caso 4");
+            changeIsBtnActive(true);
+        } else if (!coincides && !isPlayingList) {
+            // console.log("caso 5");
+            changeIsBtnActive(false);
+        } else if (!coincides && isListBtnActive && lastBtnActiveId !== listDetail?.id && isListBtnActive) {
+            changeIsBtnActive(false);
+        }
     }, [])
 
 
@@ -119,7 +193,7 @@ export const ListDetailPage = () => {
                     <div className="list-detail-dashboard">
                         {listDetail.listType !== "genre" && <BiSolidHeart className={isLiked ? "list-detail-heart-btn heart-button-isliked" : "list-detail-heart-btn"} onClick={heartIconClicked} />}
                         <span className="list-detail-container-play-btn" onClick={playBtnClicked} >
-                            {false ? <BiStop className="list-detail-play-btn" /> : <BiPlay className="list-detail-play-btn" />}
+                            {isListBtnActive ? <BiStop className="list-detail-play-btn" /> : <BiPlay className="list-detail-play-btn" />}
                         </span>
                         <FaRandom
                             className={`list-detail-shuffle-btn ${isShuffleActive ? 'active' : ''}`}

@@ -9,6 +9,7 @@ import { ArtistType } from "../../../types/artist";
 import { useNavigate } from "react-router-dom";
 import { useListDetailContext } from "../../../utils/hooks/useListDetailContext";
 import { useTrackListContext } from "../../../utils/hooks/useTrackListContext";
+import { useIsPlayingContext } from "../../../utils/hooks/useIsPlayingContext";
 
 interface TrendItemProps {
     item: ArtistType | PlaylistType | AlbumType
@@ -20,7 +21,8 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
     const { item } = props;
     const navigate = useNavigate();
     const { setNewListDetail } = useListDetailContext();
-    const { setNewTrackList } = useTrackListContext();
+    const { setNewTrackList, audioElement } = useTrackListContext();
+    const { changeCurrentTrack, changeIsPlayingList } = useIsPlayingContext();
     const [btnActive, setBtnActive] = useState(false)
 
     const handleListDetailClicked = () => {
@@ -31,8 +33,12 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
     const homePagePlayClicked = (e: any) => {
         e.stopPropagation();
         setBtnActive(!btnActive);
-        console.log(item);
-        if (item.tracks) setNewTrackList(item?.tracks);
+        if (item.tracks) {
+            setNewTrackList(item?.tracks);
+            changeCurrentTrack(item.tracks[0])
+            audioElement.current.currentTime = 0;
+            changeIsPlayingList(true)
+        }
     }
 
 
