@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-// import ShareButton from '../../components/shareButton/ShareButton';
+import ShareButton from '../../components/shareButton/ShareButton';
 import ProfileChart, { UserType } from '../../components/profileChart/ProfileChart';
 import ProfileMusicList from '../../components/profileMusicList/ProfileMusicList';
 import './searchUserPage.css';
@@ -110,6 +110,7 @@ export const SearchUserPage: React.FC = () => {
 
     return (
         <section className="user-page-container">
+            <ShareButton />
             <ProfileChart
                 user={selectedUser}
             />

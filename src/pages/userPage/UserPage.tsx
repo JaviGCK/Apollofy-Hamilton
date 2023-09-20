@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import ShareButton from '../../components/shareButton/ShareButton';
+import ShareButton from '../../components/shareButton/ShareButton';
 import ProfileChart from '../../components/profileChart/ProfileChart';
 import ProfileMusicList from '../../components/profileMusicList/ProfileMusicList';
 import './userPage.css';
@@ -39,9 +39,11 @@ export const UserPage: React.FC = () => {
     return (
         <>
             <section className="user-page-container">
+                <ShareButton />
                 <ProfileChart
                     user={null}
                 />
+
                 <div className='profile-searchbar-container'>
                     <div className={`search-bar-user-page ${isInputFocused ? 'search-bar-user-page-focused' : ''}`}>
                         <BiSearch className="searchbar-icon-search" />
