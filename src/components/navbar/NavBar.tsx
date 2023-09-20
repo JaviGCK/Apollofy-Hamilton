@@ -37,25 +37,26 @@ export const NavBar = () => {
     const { changeTopTrends } = useTopTrendsContext()
 
 
-    if (currentUser === null) {
-        (async function fetchUser() {
-            const usersFetched = await fetchData(getAccessTokenSilently, 'users') as UserType[];
-            const loggedUserObject = usersFetched.find(({ email }) => email === user?.email);
+    // if (currentUser === null) {
 
-            if (loggedUserObject !== undefined) {
-                setCurrentLoggedUser(loggedUserObject);
-            } else {
-                if (!(user?.email && user.name)) return
-                const newUser: UserDataType = {
-                    email: user?.email,
-                    userName: user?.name,
-                    imageUrl: user?.picture
-                }
-                const newFetchedUser = await postNewUser(getAccessTokenSilently, newUser);
-                setCurrentLoggedUser(newFetchedUser);
-            }
-        }());
-    }
+    //     (async function fetchUser() {
+    //         const usersFetched = await fetchData(getAccessTokenSilently, 'users') as UserType[];
+    //         const loggedUserObject = usersFetched.find(({ email }) => email === user?.email);
+
+    //         if (loggedUserObject !== undefined) {
+    //             setCurrentLoggedUser(loggedUserObject);
+    //         } else {
+    //             if (!(user?.email && user.name)) return
+    //             const newUser: UserDataType = {
+    //                 email: user?.email,
+    //                 userName: user?.name,
+    //                 imageUrl: user?.picture
+    //             }
+    //             const newFetchedUser = await postNewUser(getAccessTokenSilently, newUser);
+    //             setCurrentLoggedUser(newFetchedUser);
+    //         }
+    //     }());
+    // }
 
     if (trackList === null) {
         (async function fetchTracks() {
@@ -109,6 +110,26 @@ export const NavBar = () => {
     ]
 
     useEffect(() => {
+        console.log("estoy dentro");
+        if (!currentUser) {
+            (async function fetchUser() {
+                const usersFetched = await fetchData(getAccessTokenSilently, 'users') as UserType[];
+                const loggedUserObject = usersFetched.find(({ email }) => email === user?.email);
+
+                if (loggedUserObject !== undefined) {
+                    setCurrentLoggedUser(loggedUserObject);
+                } else {
+                    if (!(user?.email && user.name)) return
+                    const newUser: UserDataType = {
+                        email: user?.email,
+                        userName: user?.name,
+                        imageUrl: user?.picture
+                    }
+                    const newFetchedUser = await postNewUser(getAccessTokenSilently, newUser);
+                    setCurrentLoggedUser(newFetchedUser);
+                }
+            }());
+        }
         const button = document.querySelector(`#${location === "detail-page" ? "home" : location.split("-")[0]}`) as HTMLInputElement;
         button.checked = true;
         (async function fetchTopTrends() {
