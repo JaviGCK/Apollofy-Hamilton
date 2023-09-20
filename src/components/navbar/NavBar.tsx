@@ -17,6 +17,7 @@ import { useTopTrendsContext } from '../../utils/hooks/useTopTrendsContext'
 import { TopTrendsType } from '../../context/TopTrendsContextProvider'
 import { GenreType } from '../../types/genre'
 import { useGenreContext } from '../../utils/hooks/useGenresContext'
+import { createUserStats } from '../../api/statsFetchApi'
 
 
 export interface UserDataType {
@@ -127,6 +128,7 @@ export const NavBar = () => {
                     }
                     const newFetchedUser = await postNewUser(getAccessTokenSilently, newUser);
                     setCurrentLoggedUser(newFetchedUser);
+                    createUserStats(newFetchedUser.id);
                 }
             }());
         }
