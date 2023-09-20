@@ -113,7 +113,23 @@ export const addFavourites = async (getToken: any, userId: string, listType: str
             "Content-type": "application/json; charset=UTF-8"
         }
     })
-    return response
+
+    return await response.json()
+}
+
+export const deleteFavourites = async (getToken: any, favouriteId: string, userId: string): Promise<UserType> => {
+    const { VITE_API_URL: url } = import.meta.env;
+    const token = await getToken();
+    const response = await fetch(`${url}favourites/${favouriteId}/${userId}`, {
+        method: 'DELETE',
+        headers: {
+            authorization: `Bearer ${token}`,
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+    const data: UserType = await response.json();
+    console.log(data)
+    return data;
 }
 
 

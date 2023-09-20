@@ -53,6 +53,10 @@
     margin: 0 5vw 0 50vw;
 }
 
+.heart-button-isliked {
+    color: #00ffa3;
+}
+
 .list-detail-shuffle-btn {
     color: #f1f1f1;
     cursor: pointer;
