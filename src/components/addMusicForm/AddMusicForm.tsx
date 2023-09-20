@@ -248,6 +248,7 @@ export const AddMusicForm = () => {
                     className="add-album-name"
                     type="text"
                     placeholder={t('addNewAlbum')}
+                    disabled={albumSelected !== "newAlbum"}
                     {...register("albumName", {
                         required: false
                     })}
