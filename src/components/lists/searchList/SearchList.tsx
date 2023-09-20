@@ -68,7 +68,7 @@ const SearchList = (props: SearchProps) => {
             const filteredAlbums = dataRetrieved.albums.filter((album, index, arr) => {
                 return arr.findIndex((a) => a.name === album.name) === index;
             });
-            let resultAlbums = filteredAlbums.filter((album) => album.name?.toLowerCase().includes(searchInput.toLowerCase()))
+            let resultAlbums = filteredAlbums.filter((album) => album.name?.toLowerCase().includes(searchInput.toLowerCase()) && !album.privacity)
             if (resultAlbums) {
                 setFilteredAlbum(resultAlbums)
             }
@@ -84,7 +84,7 @@ const SearchList = (props: SearchProps) => {
             const filteredTracks = dataRetrieved.tracks.filter((track, index, arr) => {
                 return arr.findIndex((a) => a.name === track.name) === index;
             });
-            let resultTracks = filteredTracks.filter((track) => track.name?.toLowerCase().includes(searchInput.toLocaleLowerCase()));
+            let resultTracks = filteredTracks.filter((track) => track.name?.toLowerCase().includes(searchInput.toLocaleLowerCase()) && !track.privacity);
             if (resultTracks) {
                 setFilteredTracks(resultTracks)
             }
@@ -92,7 +92,7 @@ const SearchList = (props: SearchProps) => {
             const filteredPlayLists = dataRetrieved.playlists.filter((playlist, index, arr) => {
                 return arr.findIndex((a) => a.name === playlist.name) === index;
             });
-            let resultPlaylists = filteredPlayLists.filter((playlist) => playlist.name?.toLowerCase().includes(searchInput.toLocaleLowerCase()))
+            let resultPlaylists = filteredPlayLists.filter((playlist) => playlist.name?.toLowerCase().includes(searchInput.toLocaleLowerCase()) && !playlist.privacity)
             if (resultPlaylists) {
                 setFilteredPlaylist(resultPlaylists)
             }
