@@ -14,6 +14,8 @@ import { useGenreContext } from "../../utils/hooks/useGenresContext"
 
 
 
+
+
 export const AddMusicForm = () => {
 
     const [privacityState, setPrivacityState] = useState<boolean>(false);
@@ -112,36 +114,34 @@ export const AddMusicForm = () => {
             />
 
             <div className="track-container">
-                <div className="track-img-container">
-                    <label htmlFor="track-img-input" className="track-img-label">{t('selectTrackImage')}</label>
-                    <input
-                        id="track-img-input"
-                        className="track-img-input add-music-input hidden-input"
-                        type="file"
-                        accept="image/jpeg, image/jpg, image/webp"
-                        placeholder="Select track image..."
-                        {...register("image", {
-                            required: {
-                                value: true,
-                                message: "Image is required"
-                            }
-                        })}
-                        onChange={(e) => {
-                            register("image").onChange(e);
-                            handlePreview();
-                        }}
-                    />
-
-                    {errors.image && <p className="music-form-error">{errors.image.message}</p>}
-                </div>
                 <div className="track-img-container-preview">
                     <img className='img-preview' src={imagePreview} alt="Preview img" />
                 </div>
             </div>
+            <div className="add-track-img-container">
+                <label htmlFor="track-img-input" className="track-img-label">{t('image')}</label>
+                <input
+                    id="track-img-input"
+                    className="track-img-input add-music-input hidden-input"
+                    type="file"
+                    accept="image/jpeg, image/jpg, image/webp"
+                    placeholder="Select track image..."
+                    {...register("image", {
+                        required: {
+                            value: true,
+                            message: "Image is required"
+                        }
+                    })}
+                    onChange={(e) => {
+                        register("image").onChange(e);
+                        handlePreview();
+                    }}
+                />
 
-
+            </div>
+            {errors.image && <p className="music-form-error">{errors.image.message}</p>}
             <div className="track-audio-container">
-                <label htmlFor="track-audio-input" className="track-audio-label">{t('selectTrack')}</label>
+                <label htmlFor="track-audio-input" className="track-audio-label">{t('track')}</label>
                 <input id="track-audio-input" className="track-audio-input add-music-input hidden-input" type="file" accept="audio/mp3, audio/wav, audio/ogg" placeholder="Select your audio..."
                     {...register("audio", {
                         required: {
@@ -150,8 +150,10 @@ export const AddMusicForm = () => {
                         }
                     })}
                 />
-                {errors.audio && <p className="music-form-error">{errors.audio.message}</p>}
             </div>
+            {errors.audio && <p className="music-form-error-audio">{errors.audio.message}</p>}
+
+
 
 
             <input className="track-title-input add-music-input" type="text" placeholder={t('songName')}
@@ -206,6 +208,26 @@ export const AddMusicForm = () => {
                         <span className="slider"></span>
                     </label>
                 </span>
+            </div>
+            <div className="add-to-album-container">
+
+                <Select
+                    className="add-to-album"
+                    placeholder={t('selectAlbum')}
+                >
+                    {currentUser?.albums?.map(album => (
+                        <option key={album.id} value={album.id}>{album.name}</option>
+                    ))}
+                    <option value="newAlbum">{t("newAlbum")}</option>
+
+                </Select>
+
+                <input
+                    className="add-album-name"
+                    type="text"
+                    placeholder={t('addNewAlbum')}
+                >
+                </input>
             </div>
 
 

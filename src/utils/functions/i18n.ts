@@ -44,7 +44,12 @@ i18n
                     followingProfile: 'Following',
                     myMusicProfile: 'Music of',
                     searchMySong: 'Search my song...',
-                    userSearch: 'Users'
+                    userSearch: 'Users',
+                    image: 'Add cover',
+                    track: 'Add track',
+                    selectALbum: 'Select album',
+                    newAlbum: 'New album',
+                    addNewAlbum: 'Album name'
                 }
             },
             es: {
@@ -81,7 +86,12 @@ i18n
                     followingProfile: 'Seguidos',
                     myMusicProfile: 'Música de',
                     searchMySong: 'Buscar mi canción...',
-                    userSearch: 'Usuarios'
+                    userSearch: 'Usuarios',
+                    image: 'Portada',
+                    track: 'Canción',
+                    selectALbum: 'Selecciona album',
+                    newAlbum: 'Nuevo album',
+                    addNewAlbum: 'Nombre del album'
                 }
             }
         }
