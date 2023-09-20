@@ -16,6 +16,8 @@
 }
 
 .library-user-img {
+    height: 120px;
+    width: 120px;
     overflow: hidden;
     border-radius: 50%;
     -webkit-border-radius: 50%;

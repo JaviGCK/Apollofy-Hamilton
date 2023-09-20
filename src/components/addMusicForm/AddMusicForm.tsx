@@ -2,7 +2,6 @@ import { useForm } from "react-hook-form"
 import { useState } from "react"
 import { postTrack } from "../../api/fetchApi"
 import { useAuth0 } from "@auth0/auth0-react"
-import { GenreTypes } from "../../types/enums"
 import "./addMusicForm.css"
 import placeholder from '../../assets/img/bg-image.webp'
 import toast, { Toaster } from "react-hot-toast"
@@ -69,17 +68,11 @@ export const AddMusicForm = () => {
             formTrackData.append("privacityString", trackPrivacy);
 
             if (currentUser?.id === undefined) return;
-            const newTrack = await postTrack(getAccessTokenSilently, formTrackData, currentUser?.id);
+            const updatedUser = await postTrack(getAccessTokenSilently, formTrackData, currentUser?.id);
+
+            setCurrentLoggedUser(updatedUser);
 
             toast.success('Track uploaded successfully...')
-
-            if (currentUser.trackList === undefined) return;
-            const newTracksList = [...currentUser.trackList, newTrack];
-            const userLoggedNewObject = {
-                ...currentUser,
-                tracks: newTracksList
-            }
-            setCurrentLoggedUser(userLoggedNewObject);
 
             reset();
         } else {

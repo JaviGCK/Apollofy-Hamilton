@@ -139,7 +139,9 @@ export const LibraryPage = () => {
             <div className='library-heading'>
                 <div className='heading-user'>
                     <figure className='library-user-img'>
-                        {currentUser === undefined ? <img src="/src/assets/img/defaultuser.webp" alt="default user image" /> : <img src={currentUser?.imageUrl} alt={`${currentUser?.userName}´s profile image`} />}
+                        <div className='profile-img-container'>
+                            {currentUser === undefined ? <img className='pcc-profile-image' src="/src/assets/img/defaultuser.webp" alt="default user image" /> : <img src={currentUser?.imageUrl} alt={`${currentUser?.userName}´s profile image`} />}
+                        </div>
                     </figure>
                     <h2>{t('yourLibrary')}</h2>
                 </div>
