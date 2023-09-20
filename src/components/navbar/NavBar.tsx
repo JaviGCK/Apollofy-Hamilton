@@ -20,6 +20,7 @@ import { useGenreContext } from '../../utils/hooks/useGenresContext'
 import { FavouriteType } from '../../pages/libraryPage/LibraryPage'
 import { PossibleItems } from '../../types/enums'
 import { useUserLibraryListContext } from '../../utils/hooks/useUserLibraryListContext'
+import { createUserStats } from '../../api/statsFetchApi'
 
 
 export interface UserDataType {
@@ -140,6 +141,7 @@ export const NavBar = () => {
                     }
                     const newFetchedUser = await postNewUser(getAccessTokenSilently, newUser);
                     setCurrentLoggedUser(newFetchedUser);
+                    createUserStats(newFetchedUser.id);
                 }
             }());
         }

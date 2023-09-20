@@ -15,7 +15,8 @@ export interface AlbumType {
     veified?: boolean,
     artists?: ArtistType[], //just the id and name of the artists
     tracks?: TrackType[],
-    listType?: ListType
+    listType?: ListType,
+    usersId?: string
 }
 /**
  * If the album name is the same as the track,
