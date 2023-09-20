@@ -11,6 +11,8 @@ export interface AlbumType {
     genres?: GenreType[],
     imageUrl?: string,
     popularity?: number,
+    privacity?: boolean,
+    veified?: boolean,
     artists?: ArtistType[], //just the id and name of the artists
     tracks?: TrackType[],
     listType?: ListType

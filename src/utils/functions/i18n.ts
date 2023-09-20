@@ -42,7 +42,7 @@ i18n
                     albumType: 'album',
                     followersProfile: 'Followers',
                     followingProfile: 'Following',
-                    myMusicProfile: 'My Music',
+                    myMusicProfile: 'Music of',
                     searchMySong: 'Search my song...',
                     userSearch: 'Users'
                 }
@@ -79,7 +79,7 @@ i18n
                     albumType: 'álbum',
                     followersProfile: 'Seguidores',
                     followingProfile: 'Seguidos',
-                    myMusicProfile: 'Mi música',
+                    myMusicProfile: 'Música de',
                     searchMySong: 'Buscar mi canción...',
                     userSearch: 'Usuarios'
                 }

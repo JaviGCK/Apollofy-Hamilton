@@ -6,6 +6,8 @@ import { TrackType } from '../../types/track';
 import { useUserContext } from '../../utils/hooks/useUserContext';
 import { FollowsList } from '../lists/followsList/followList';
 import { FavouriteType } from '../../pages/libraryPage/LibraryPage';
+import { AlbumType } from '../../types/album';
+import { PlaylistType } from '../../types/playlist';
 
 
 export interface UserType {
@@ -20,7 +22,8 @@ export interface UserType {
     favourites?: FavouriteType[],
     type?: ListType,
     trackList?: TrackType[],
-    playLists?: string[]
+    playLists?: PlaylistType[],
+    albums?: AlbumType[]
 }
 
 type ProfileChartProps = {

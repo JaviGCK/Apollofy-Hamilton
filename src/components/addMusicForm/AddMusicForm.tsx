@@ -18,6 +18,7 @@ export const AddMusicForm = () => {
 
     const [privacityState, setPrivacityState] = useState<boolean>(false);
     const [genresSelected, setGenresSelected] = useState<string[]>([]);
+    const [isFetching, setIsFetching] = useState<boolean>(false);
     const [genresSelectedError, setGenresSelectedError] = useState<boolean>(false);
     const { getAccessTokenSilently } = useAuth0()
     const { currentUser, setCurrentLoggedUser } = useUserContext();
@@ -37,48 +38,49 @@ export const AddMusicForm = () => {
     const [imagePreview, setImagePreview] = useState(placeholder)
 
     const submitForm = async () => {
+        if (!isFetching) {
+            setIsFetching(true)
+            if (genresSelected.length > 0) {
+                toast.success('Track is uploading...');
 
-        if (genresSelected.length > 0) {
-            toast.success('Track is uploading...');
+                setGenresSelectedError(false)
+                const trackTitle = watch("title");
 
-            setGenresSelectedError(false)
-            const trackTitle = watch("title");
+                let trackGenres = ""
+                genresSelected.forEach(genre => {
+                    trackGenres += `,${genre}`
+                })
+                trackGenres = trackGenres.slice(1)
 
-            let trackGenres = ""
-            genresSelected.forEach(genre => {
-                trackGenres += `,${genre}`
-            })
-            trackGenres = trackGenres.slice(1)
+                let trackPrivacy: string;
+                if (privacityState) trackPrivacy = "true"
+                else trackPrivacy = "false"
+                const trackAudioFileList = watch("audio");
+                const trackAudioFile = trackAudioFileList[0];
 
-            let trackPrivacy: string;
-            if (privacityState) trackPrivacy = "true"
-            else trackPrivacy = "false"
-            const trackAudioFileList = watch("audio");
-            const trackAudioFile = trackAudioFileList[0];
+                const trackImgFileList = watch("image");
+                const trackImgFile = trackImgFileList[0];
 
-            const trackImgFileList = watch("image");
-            const trackImgFile = trackImgFileList[0];
+                const formTrackData = new FormData();
+                formTrackData.append("upload_preset", "apollofy-track-addition")
+                formTrackData.append("audio", trackAudioFile);
+                formTrackData.append("image", trackImgFile);
+                formTrackData.append("name", trackTitle);
+                formTrackData.append("genres", trackGenres);
+                formTrackData.append("privacityString", trackPrivacy);
 
-            const formTrackData = new FormData();
-            formTrackData.append("upload_preset", "apollofy-track-addition")
-            formTrackData.append("audio", trackAudioFile);
-            formTrackData.append("image", trackImgFile);
-            formTrackData.append("name", trackTitle);
-            formTrackData.append("genres", trackGenres);
-            formTrackData.append("privacityString", trackPrivacy);
+                if (currentUser?.id === undefined) return;
+                const updatedUser = await postTrack(getAccessTokenSilently, formTrackData, currentUser?.id);
 
-            if (currentUser?.id === undefined) return;
-            const updatedUser = await postTrack(getAccessTokenSilently, formTrackData, currentUser?.id);
+                setCurrentLoggedUser(updatedUser);
 
-            setCurrentLoggedUser(updatedUser);
-
-            toast.success('Track uploaded successfully...')
-
-            reset();
-        } else {
-            setGenresSelectedError(true)
+                toast.success('Track uploaded successfully...')
+                reset();
+                setIsFetching(false)
+            } else {
+                setGenresSelectedError(true)
+            }
         }
-
     }
 
 

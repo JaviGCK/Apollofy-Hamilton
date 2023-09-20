@@ -1,19 +1,13 @@
 import './groupItem.css'
 import { BsFillPlayCircleFill, BsStopCircleFill } from 'react-icons/bs';
 import { useTrackListContext } from '../../../utils/hooks/useTrackListContext';
-import { fetchData } from '../../../api/fetchApi';
-import { ArtistType } from '../../../types/artist';
 import { useListDetailContext } from '../../../utils/hooks/useListDetailContext';
-import { PlaylistType } from '../../../types/playlist';
-import { AlbumType } from '../../../types/album';
-import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useAuth0 } from '@auth0/auth0-react';
+import { useNavigate } from 'react-router-dom';
 
 export const GroupItem = ({ ...props }) => {
     const { track, onItemClicked } = props
-    const { getAccessTokenSilently } = useAuth0();
     const { setNewTrackList, audioElement } = useTrackListContext();
     const { setNewListDetail } = useListDetailContext();
     const [isPlaying, setIsPlaying] = useState(false);
@@ -24,8 +18,7 @@ export const GroupItem = ({ ...props }) => {
     const itemClicked = () => {
         if (track.listType) {
             (async function showItemClicked() {
-                const item = await fetchData(getAccessTokenSilently, `${track.listType}s/${track.id}`) as (ArtistType | PlaylistType | AlbumType);
-                setNewListDetail(item);
+                setNewListDetail(track);
                 navigate("/detail-page");
             }());
         }

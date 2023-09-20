@@ -12,7 +12,7 @@ export interface TrackType {
     genres?: GenreTypes[],
     audioUrl?: string,
     verified?: boolean,
-    privacy: boolean,
+    privacity: boolean,
     album?: AlbumType,
     progress?: number,
     duration?: number,

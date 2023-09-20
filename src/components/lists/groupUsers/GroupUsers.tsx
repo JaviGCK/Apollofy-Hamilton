@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { UserType } from '../../profileChart/ProfileChart';
 import { FC } from 'react';
 import { useSelectedUserContext } from '../../../utils/hooks/useSearchedUserContext';
+import { useUserContext } from '../../../utils/hooks/useUserContext';
 
 
 type GroupUsersType = {
@@ -15,18 +16,22 @@ type GroupUsersType = {
 export const GroupUsers: FC<GroupUsersType> = ({ user }) => {
 
     const { changeSelectedUser } = useSelectedUserContext();
+    const { currentUser } = useUserContext();
 
 
     const navigate = useNavigate();
 
     const itemClicked = () => {
         if (user) {
-            (async function showItemClicked() {
-                changeSelectedUser(user);
+            changeSelectedUser(user);
+            if (user.id === currentUser?.id) {
+                const button = document.querySelector("#user") as HTMLInputElement;
+                button.checked = true;
+                navigate(`/user`);
+            } else {
                 navigate(`/search-user/${user.id}`);
-            }());
+            }
         }
-
     }
 
     return (
