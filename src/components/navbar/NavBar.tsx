@@ -8,7 +8,7 @@ import { fetchData, postNewUser } from '../../api/fetchApi'
 import { useAuth0 } from '@auth0/auth0-react'
 import { useTrackListContext } from '../../utils/hooks/useTrackListContext'
 import { TrackType } from '../../types/track'
-import { useEffect } from 'react'
+import { useEffect, useLayoutEffect } from 'react'
 import { UserType } from '../profileChart/ProfileChart'
 import { ArtistType } from '../../types/artist'
 import { PlaylistType } from '../../types/playlist'
@@ -106,8 +106,8 @@ export const NavBar = () => {
         }
     ]
 
-    useEffect(() => {
-        const button = document.querySelector(`#${location.split("-")[0]}`) as HTMLInputElement;
+    useLayoutEffect(() => {
+        const button = document.querySelector(`#${location === "detail-page" ? "home" : location.split("-")[0]}`) as HTMLInputElement;
         button.checked = true;
         (async function fetchTopTrends() {
             const topArtists = await fetchData(getAccessTokenSilently, "artists/top") as ArtistType[];

@@ -1,7 +1,6 @@
 
 import { UserDataType } from "../components/navbar/NavBar";
 import { UserType } from "../components/profileChart/ProfileChart";
-import { TopTrends } from "../components/trendList/TrendList";
 import { AlbumType } from "../types/album";
 import { ArtistType } from "../types/artist";
 import { GenreType } from "../types/genre";
@@ -11,7 +10,7 @@ import { PlaylistType } from "../types/playlist";
 
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
-export const fetchData = async (getToken: any, data: string): Promise<GenreType[] | UserType[] | TopTrends | AlbumType[] | PlaylistType[] | ArtistType[] | AlbumType | PlaylistType | ArtistType> => {
+export const fetchData = async (getToken: any, data: string): Promise<GenreType[] | UserType[] | AlbumType[] | PlaylistType[] | ArtistType[] | AlbumType | PlaylistType | ArtistType> => {
     const { VITE_API_URL: url } = import.meta.env;
     const token = await getToken();
     const response = await fetch(`${url}${data}`, {
