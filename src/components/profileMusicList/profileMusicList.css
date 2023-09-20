@@ -2,13 +2,15 @@
     display: flex;
     flex-direction: column;
     font-family: 'Noto Sans', sans-serif;
-    height: calc(100vh - 175px);
-    max-height: 75vh;
+    min-height: calc(100vh - 175px);
+}
+
+.profile-music-container-wrapper {
     overflow-y: scroll;
     scroll-behavior: smooth;
 }
 
-.profile-music-container::-webkit-scrollbar {
+.profile-music-container-wrapper::-webkit-scrollbar {
     width: 0;
 }
 

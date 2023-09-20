@@ -31,6 +31,7 @@ export const TrendItem: FC<TrendItemProps> = ({ ...props }) => {
     const homePagePlayClicked = (e: any) => {
         e.stopPropagation();
         setBtnActive(!btnActive);
+        console.log(item);
         if (item.tracks) setNewTrackList(item?.tracks);
     }
 

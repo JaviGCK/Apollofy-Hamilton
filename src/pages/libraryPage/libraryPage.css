@@ -27,9 +27,14 @@
 }
 
 .library-list-items-wrapper {
-    height: calc(100vh - 240px);
-    overflow-y: scroll;
+    overflow-y: auto;
     padding-left: 25px;
+    scroll-behavior: smooth;
+    height: calc(100vh - 240px);
+}
+
+.library-items-container {
+    min-height: calc(100vh - 240px);
 }
 
 .library-list-items-wrapper::-webkit-scrollbar {

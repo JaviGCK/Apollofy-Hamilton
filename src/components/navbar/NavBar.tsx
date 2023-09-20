@@ -110,7 +110,6 @@ export const NavBar = () => {
     ]
 
     useEffect(() => {
-        console.log("estoy dentro");
         if (!currentUser) {
             (async function fetchUser() {
                 const usersFetched = await fetchData(getAccessTokenSilently, 'users') as UserType[];

@@ -82,20 +82,16 @@ export const LibraryPage = () => {
 
 
     useEffect(() => {
-
         if (userLists) {
             if (currentFilter === "all") {
                 if (userLists === null) return
                 setFilteredLists(userLists)
-
             } else {
                 if (userLists === null) return
                 const newFilteredLists = userLists?.filter((list: PossibleItems) => list.listType?.includes(currentFilter))
                 setFilteredLists(newFilteredLists)
             }
         }
-
-
     }, [currentFilter, userLists]);
 
     useEffect(() => {
@@ -105,7 +101,6 @@ export const LibraryPage = () => {
 
             const getFetch = async () => {
                 const favLists = currentUser?.favourites as FavouriteType[]
-
                 if (favLists) {
                     favLists.map(async (list: FavouriteType) => {
                         const type = list.listType;
@@ -131,7 +126,6 @@ export const LibraryPage = () => {
             }
             getFetch()
         }
-
     }, [currentUser])
 
     return (
@@ -158,7 +152,6 @@ export const LibraryPage = () => {
                             key={getUniqueId()}
                             track={list}
                         />
-
                     )}
                 </div>
                 <div className="white-space"></div>
