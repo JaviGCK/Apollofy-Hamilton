@@ -4,6 +4,7 @@
     display: flex;
     justify-content: end;
     align-items: center;
+    position: relative;
 }
 
 .share-button-container button {
@@ -11,8 +12,66 @@
     border: none;
 }
 
+.share-modal {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 55px;
+    width: 240px;
+    left: 70px;
+    background-color: transparent;
+    transform-origin: right center;
+    opacity: 100%;
+
+}
+
+.share-modal div {
+    display: flex;
+}
+
 .share-icon {
-    color: #86808A;
+
     margin: 0 5px;
     font-size: 30px;
+}
+
+.share-icon.closed {
+    color: #f1f1f1;
+}
+
+.share-icon.open {
+    color: #86808A;
+}
+
+.share-modal.open {
+    animation: expand 0.4s forwards;
+}
+
+.share-modal.closed {
+    animation: depand 0.5s forwards;
+}
+
+@keyframes expand {
+    0% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scaleX(1);
+        opacity: 100%;
+    }
+}
+
+@keyframes depand {
+    0% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
 }

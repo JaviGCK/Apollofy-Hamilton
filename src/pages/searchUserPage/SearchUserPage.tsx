@@ -110,7 +110,7 @@ export const SearchUserPage: React.FC = () => {
 
     return (
         <section className="user-page-container">
-            <ShareButton />
+            <ShareButton selectedUser={selectedUser} />
             <ProfileChart
                 user={selectedUser}
             />
