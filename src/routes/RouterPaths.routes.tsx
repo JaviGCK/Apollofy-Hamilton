@@ -20,7 +20,7 @@ export const RouterPaths = () => {
 
   return (
     <>
-      <SkeletonTheme baseColor="#313131" highlightColor="#525252">
+      <SkeletonTheme baseColor="#313131" highlightColor="#00ffa3">
         <BrowserRouter>
           <Auth0ProviderWithNavigate>
             <FilterProvider>

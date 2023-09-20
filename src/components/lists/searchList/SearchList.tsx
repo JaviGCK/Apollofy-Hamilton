@@ -1,16 +1,16 @@
-import './searchList.css'
-import { fetchData } from '../../../api/fetchApi'
-import { useState, useEffect, useReducer, useRef } from 'react'
-import { GiUfo } from "react-icons/gi"
-import { AlbumType } from '../../../types/album'
-import { GroupItem } from '../groupItem/GroupItem'
-import { TrackType } from '../../../types/track'
-import { PlaylistType } from '../../../types/playlist'
-import { ArtistType } from '../../../types/artist'
-import { useTranslation } from 'react-i18next'
-import { GroupUsers } from '../groupUsers/GroupUsers'
-import { useAuth0 } from '@auth0/auth0-react'
-import { UserType } from '../../profileChart/ProfileChart'
+import './searchList.css';
+import { useState, useEffect, useReducer, useRef } from 'react';
+import { GiUfo } from "react-icons/gi";
+import { AlbumType } from '../../../types/album';
+import { GroupItem } from '../groupItem/GroupItem';
+import { TrackType } from '../../../types/track';
+import { PlaylistType } from '../../../types/playlist';
+import { ArtistType } from '../../../types/artist';
+import { useTranslation } from 'react-i18next';
+import { GroupUsers } from '../groupUsers/GroupUsers';
+import { UserType } from '../../profileChart/ProfileChart';
+import { DataRetrievedType } from '../../../pages/searchPage/SearchPage';
+
 
 const reducer = (filter: any, action: any) => {
     switch (action.type) {
@@ -32,22 +32,19 @@ const reducer = (filter: any, action: any) => {
 };
 
 export interface SearchProps {
-    focus: boolean;
-    setFocus: React.Dispatch<React.SetStateAction<boolean>>
-    searchInput: string;
-    customFilter?: boolean;
+    dataRetrieved?: DataRetrievedType,
+    focus: boolean,
+    setFocus: React.Dispatch<React.SetStateAction<boolean>>,
+    searchInput: string,
+    customFilter?: boolean,
     setSearchInput: React.Dispatch<React.SetStateAction<string>>
 }
 
 const SearchList = (props: SearchProps) => {
-    const { searchInput } = props
-    //Search Filters Usestate
-    const { getAccessTokenSilently } = useAuth0();
-    const [dataAlbum, setDataAlbum] = useState<AlbumType[]>([])
-    const [dataArtists, setDataArtist] = useState<ArtistType[]>([])
-    const [dataTracks, setDataTracks] = useState<TrackType[]>([])
-    const [dataPlaylists, setDataPlaylists] = useState<PlaylistType[]>([])
-    const [dataUsers, setDataUsers] = useState<UserType[]>([])
+    const { searchInput, dataRetrieved } = props
+
+    // const {albums, playlists, tracks, artists, users} = dataRetrieved;
+
     const [filteredAlbum, setFilteredAlbum] = useState<AlbumType[]>([])
     const [filteredArtist, setFilteredArtists] = useState<ArtistType[]>([])
     const [filteredTrack, setFilteredTracks] = useState<TrackType[]>([])
@@ -59,69 +56,58 @@ const SearchList = (props: SearchProps) => {
     const initialState = 'All';
     const [filter, dispatch] = useReducer(reducer, initialState);
 
-    const [activeIndex, setActiveIndex] = useState(null);
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     const scrollRef = useRef<HTMLElement | null>(null)
 
-    const retrieveData = async () => {
-        const fetchedAlbumData: any = await fetchData(getAccessTokenSilently, 'albums')
-        setDataAlbum(fetchedAlbumData);
-        const fetchedArtistData: any = await fetchData(getAccessTokenSilently, 'artists')
-        setDataArtist(fetchedArtistData);
-        const fetchedTracktData: any = await fetchData(getAccessTokenSilently, 'tracks')
-        setDataTracks(fetchedTracktData);
-        const fetchedPlaylistData: any = await fetchData(getAccessTokenSilently, 'playlists')
-        setDataPlaylists(fetchedPlaylistData);
-        const fetchedUsersData: any = await fetchData(getAccessTokenSilently, 'users')
-        setDataUsers(fetchedUsersData);
-    }
-    useEffect(() => {
-        retrieveData()
-    }, [])
+
 
     useEffect(() => {
         //Filter albums
-        const filteredAlbums = dataAlbum.filter((album, index, arr) => {
-            return arr.findIndex((a) => a.name === album.name) === index;
-        });
-        let resultAlbums = filteredAlbums.filter((album) => album.name?.toLowerCase().includes(searchInput.toLowerCase()))
-        if (resultAlbums) {
-            setFilteredAlbum(resultAlbums)
-        }
-        //Filter Artist
-        const filteredArtists = dataArtists.filter((artist, index, arr) => {
-            return arr.findIndex((a) => a.name === artist.name) === index;
-        });
-        let resultArtists = filteredArtists.filter((artist) => artist.name?.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase()))
-        if (resultAlbums) {
-            setFilteredArtists(resultArtists);
-        }
-        //Filter Tracks
-        const filteredTracks = dataTracks.filter((track, index, arr) => {
-            return arr.findIndex((a) => a.name === track.name) === index;
-        });
-        let resultTracks = filteredTracks.filter((track) => track.name?.toLowerCase().includes(searchInput.toLocaleLowerCase()));
-        if (resultTracks) {
-            setFilteredTracks(resultTracks)
-        }
-        //Filter Playlists
-        const filteredPlayLists = dataPlaylists.filter((playlist, index, arr) => {
-            return arr.findIndex((a) => a.name === playlist.name) === index;
-        });
-        let resultPlaylists = filteredPlayLists.filter((playlist) => playlist.name?.toLowerCase().includes(searchInput.toLocaleLowerCase()))
-        if (resultPlaylists) {
-            setFilteredPlaylist(resultPlaylists)
-        }
-        //Filter Users
-        const filteredUser = dataUsers.filter((user, index, arr) => {
-            return arr.findIndex((a) => a.userName === user.userName) === index;
-        });
-        let resultUsers = filteredUser.filter((user) => user.userName?.toLowerCase().includes(searchInput.toLocaleLowerCase()))
-        if (resultUsers) {
-            setFilteredUsers(resultUsers)
+        if (dataRetrieved) {
+            const filteredAlbums = dataRetrieved.albums.filter((album, index, arr) => {
+                return arr.findIndex((a) => a.name === album.name) === index;
+            });
+            let resultAlbums = filteredAlbums.filter((album) => album.name?.toLowerCase().includes(searchInput.toLowerCase()))
+            if (resultAlbums) {
+                setFilteredAlbum(resultAlbums)
+            }
+            //Filter Artist
+            const filteredArtists = dataRetrieved.artists.filter((artist, index, arr) => {
+                return arr.findIndex((a) => a.name === artist.name) === index;
+            });
+            let resultArtists = filteredArtists.filter((artist) => artist.name?.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase()))
+            if (resultAlbums) {
+                setFilteredArtists(resultArtists);
+            }
+            //Filter Tracks
+            const filteredTracks = dataRetrieved.tracks.filter((track, index, arr) => {
+                return arr.findIndex((a) => a.name === track.name) === index;
+            });
+            let resultTracks = filteredTracks.filter((track) => track.name?.toLowerCase().includes(searchInput.toLocaleLowerCase()));
+            if (resultTracks) {
+                setFilteredTracks(resultTracks)
+            }
+            //Filter Playlists
+            const filteredPlayLists = dataRetrieved.playlists.filter((playlist, index, arr) => {
+                return arr.findIndex((a) => a.name === playlist.name) === index;
+            });
+            let resultPlaylists = filteredPlayLists.filter((playlist) => playlist.name?.toLowerCase().includes(searchInput.toLocaleLowerCase()))
+            if (resultPlaylists) {
+                setFilteredPlaylist(resultPlaylists)
+            }
+            //Filter Users
+            const filteredUser = dataRetrieved.users.filter((user, index, arr) => {
+                return arr.findIndex((a) => a.userName === user.userName) === index;
+            });
+            let resultUsers = filteredUser.filter((user) => user.userName?.toLowerCase().includes(searchInput.toLocaleLowerCase()))
+            if (resultUsers) {
+                setFilteredUsers(resultUsers)
+            }
         }
 
     }, [searchInput])
+
     const adjustScrollBar = () => {
         if (scrollRef.current) {
             scrollRef.current.scrollTop = 0;
@@ -129,10 +115,9 @@ const SearchList = (props: SearchProps) => {
     }
     useEffect(() => {
         adjustScrollBar()
-    }
-        , [filter]);
+    }, [filter]);
 
-    const handleItemClick = (index: any) => {
+    const handleItemClick = (index: number) => {
         setActiveIndex(index);
     };
     return (
