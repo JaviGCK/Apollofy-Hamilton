@@ -43,7 +43,6 @@ export const ListDetailPage = () => {
 
     const heartIconClicked = async () => {
         if (isFetching) return;
-        const libraryListUser = currentUser?.favourites;
 
         const itemSearched = checkFavouriteAlreadyExist()
         setIsFetching(true);
@@ -80,10 +79,7 @@ export const ListDetailPage = () => {
                 if (item.album?.id === listDetail?.id) return true;
                 if (item.artist?.id === listDetail?.id) return true;
                 if (item.track?.id === listDetail?.id) return true;
-
-
             })
-
         }
         return itemSearched;
     }

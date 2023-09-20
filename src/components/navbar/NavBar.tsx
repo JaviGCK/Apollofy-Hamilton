@@ -15,6 +15,8 @@ import { PlaylistType } from '../../types/playlist'
 import { AlbumType } from '../../types/album'
 import { useTopTrendsContext } from '../../utils/hooks/useTopTrendsContext'
 import { TopTrendsType } from '../../context/TopTrendsContextProvider'
+import { GenreType } from '../../types/genre'
+import { useGenreContext } from '../../utils/hooks/useGenresContext'
 
 
 export interface UserDataType {
@@ -30,7 +32,7 @@ export const NavBar = () => {
     const { user, getAccessTokenSilently } = useAuth0();
     const { currentUser, setCurrentLoggedUser } = useUserContext();
     const { trackList, setNewTrackList } = useTrackListContext();
-    // const { showGenre, setGenres } = useGenreContext();
+    const { setGenres } = useGenreContext();
     const location = useLocation().pathname.slice(1)
     const { changeTopTrends } = useTopTrendsContext()
 
@@ -115,6 +117,10 @@ export const NavBar = () => {
             const topAlbums = await fetchData(getAccessTokenSilently, "albums/top") as AlbumType[];
             const topTrends: TopTrendsType = { topArtists, topAlbums, topPlaylists }
             changeTopTrends(topTrends);
+        }());
+        (async function fetchGenres() {
+            const genres = await fetchData(getAccessTokenSilently, "genres") as GenreType[];
+            setGenres(genres);
         }());
 
     }, [])

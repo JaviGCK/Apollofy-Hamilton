@@ -62,8 +62,6 @@ export const getListByReference = async (getToken: any, type: string, id: string
 
 //--------------------------------------------------------------------------------------------------------------------------------------------
 export const postTrack = async (getToken: any, formTrackData: FormData, id: string) => {
-    // const users = await fetchData("users") as UserType[];
-    // const user = users.find(({ email }) => email === userEmail) as UserType;
     const { VITE_API_URL: url } = import.meta.env;
     const token = await getToken();
     const response = await fetch(`${url}tracks/${id}`, {

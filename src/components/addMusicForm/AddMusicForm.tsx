@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form"
-import { useState, useEffect } from "react"
-import { fetchData, postTrack } from "../../api/fetchApi"
+import { useState } from "react"
+import { postTrack } from "../../api/fetchApi"
 import { useAuth0 } from "@auth0/auth0-react"
 import { GenreTypes } from "../../types/enums"
 import "./addMusicForm.css"
@@ -17,10 +17,12 @@ import { useGenreContext } from "../../utils/hooks/useGenresContext"
 
 export const AddMusicForm = () => {
 
-    const [privacityState, setPrivacityState] = useState<boolean>(false)
+    const [privacityState, setPrivacityState] = useState<boolean>(false);
+    const [genresSelected, setGenresSelected] = useState<string[]>([]);
+    const [genresSelectedError, setGenresSelectedError] = useState<boolean>(false);
     const { getAccessTokenSilently } = useAuth0()
     const { currentUser, setCurrentLoggedUser } = useUserContext();
-    const { showGenre, setGenres } = useGenreContext();
+    const { showGenre } = useGenreContext();
     const { t } = useTranslation();
     const { Option } = Select;
 
@@ -30,46 +32,59 @@ export const AddMusicForm = () => {
             image: "",
             audio: "",
             title: "",
-            genre: ""
+            genres: ""
         }
     })
     const [imagePreview, setImagePreview] = useState(placeholder)
 
     const submitForm = async () => {
 
-        const trackTitle = watch("title");
-        const trackPrivacy = privacityState;
-        const trackGenre = watch("genre") as GenreTypes;
-        toast.success('Track is uploading...');
+        if (genresSelected.length > 0) {
+            toast.success('Track is uploading...');
 
-        const trackAudioFileList = watch("audio");
-        const trackAudioFile = trackAudioFileList[0];
+            setGenresSelectedError(false)
+            const trackTitle = watch("title");
 
-        const trackImgFileList = watch("image");
-        const trackImgFile = trackImgFileList[0];
+            let trackGenres = ""
+            genresSelected.forEach(genre => {
+                trackGenres += `,${genre}`
+            })
+            trackGenres = trackGenres.slice(1)
 
-        const formTrackData = new FormData();
-        formTrackData.append("upload_preset", "apollofy-track-addition")
-        formTrackData.append("audio", trackAudioFile);
-        formTrackData.append("image", trackImgFile);
-        formTrackData.append("name", trackTitle);
-        formTrackData.append("genres", trackGenre);
-        formTrackData.append("privacity", trackPrivacy.toString());
+            let trackPrivacy: string;
+            if (privacityState) trackPrivacy = "true"
+            else trackPrivacy = "false"
+            const trackAudioFileList = watch("audio");
+            const trackAudioFile = trackAudioFileList[0];
 
-        if (currentUser?.id === undefined) return;
-        const newTrack = await postTrack(getAccessTokenSilently, formTrackData, currentUser?.id);
+            const trackImgFileList = watch("image");
+            const trackImgFile = trackImgFileList[0];
 
-        toast.success('Track uploaded successfully...')
+            const formTrackData = new FormData();
+            formTrackData.append("upload_preset", "apollofy-track-addition")
+            formTrackData.append("audio", trackAudioFile);
+            formTrackData.append("image", trackImgFile);
+            formTrackData.append("name", trackTitle);
+            formTrackData.append("genres", trackGenres);
+            formTrackData.append("privacityString", trackPrivacy);
 
-        if (currentUser.trackList === undefined) return;
-        const newTracksList = [...currentUser.trackList, newTrack];
-        const userLoggedNewObject = {
-            ...currentUser,
-            tracks: newTracksList
+            if (currentUser?.id === undefined) return;
+            const newTrack = await postTrack(getAccessTokenSilently, formTrackData, currentUser?.id);
+
+            toast.success('Track uploaded successfully...')
+
+            if (currentUser.trackList === undefined) return;
+            const newTracksList = [...currentUser.trackList, newTrack];
+            const userLoggedNewObject = {
+                ...currentUser,
+                tracks: newTracksList
+            }
+            setCurrentLoggedUser(userLoggedNewObject);
+
+            reset();
+        } else {
+            setGenresSelectedError(true)
         }
-        setCurrentLoggedUser(userLoggedNewObject);
-
-        reset();
 
     }
 
@@ -88,7 +103,7 @@ export const AddMusicForm = () => {
     }
 
     const handleChange = (value: string[]) => {
-        //console.log(`selected ${value}`);
+        setGenresSelected(value)
     };
 
 
@@ -169,12 +184,6 @@ export const AddMusicForm = () => {
                     mode="multiple"
                     placeholder={t('songGenre')}
                     defaultValue={[]}
-                    {...register("genre", {
-                        required: {
-                            value: true,
-                            message: "Genre selection is required"
-                        }
-                    })}
                     onChange={handleChange}
                     optionLabelProp="label"
                 >
@@ -191,7 +200,7 @@ export const AddMusicForm = () => {
                 </Select>
 
             </div>
-            {errors.genre && <p className="music-form-error select-error">{errors.genre.message}</p>}
+            {genresSelectedError && <p className="music-form-error select-error">Select genres for your song</p>}
 
             <div className="privacity-selection-container">
                 <p>{t('trackPrivacyText')}</p>

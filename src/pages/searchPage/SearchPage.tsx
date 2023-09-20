@@ -28,15 +28,15 @@ export const SearchPage = () => {
     const [dataRetrieved, setDataRetrieved] = useState<DataRetrievedType | null>(null)
 
     const retrieveData = async () => {
-        const fetchedAlbumData: AlbumType[] = await fetchData(getAccessTokenSilently, 'albums');
+        const fetchedAlbumData: AlbumType[] = await fetchData(getAccessTokenSilently, 'albums') as AlbumType[];
 
-        const fetchedArtistData: ArtistType[] = await fetchData(getAccessTokenSilently, 'artists');
+        const fetchedArtistData: ArtistType[] = await fetchData(getAccessTokenSilently, 'artists') as ArtistType[];
 
-        const fetchedTracktData: TrackType[] = await fetchData(getAccessTokenSilently, 'tracks');
+        const fetchedTracktData: TrackType[] = await fetchData(getAccessTokenSilently, 'tracks') as TrackType[];
 
-        const fetchedPlaylistData: PlaylistType[] = await fetchData(getAccessTokenSilently, 'playlists');
+        const fetchedPlaylistData: PlaylistType[] = await fetchData(getAccessTokenSilently, 'playlists') as PlaylistType[];
 
-        const fetchedUsersData: UserType[] = await fetchData(getAccessTokenSilently, 'users');
+        const fetchedUsersData: UserType[] = await fetchData(getAccessTokenSilently, 'users') as UserType[];
 
         const allFetchedData: DataRetrievedType = {
             albums: fetchedAlbumData,
