@@ -44,6 +44,8 @@ export const ListDetailPage = () => {
     const heartIconClicked = async () => {
         if (isFetching) return;
 
+        console.log(listDetail)
+
         const itemSearched = checkFavouriteAlreadyExist()
         setIsFetching(true);
         if (!itemSearched && currentUser && currentUser?.favourites && listDetail) {
