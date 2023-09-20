@@ -185,13 +185,13 @@ export const AddMusicForm = () => {
                     optionLabelProp="label"
                 >
                     {showGenre?.map((genres: GenreType) => (
-                        <Option
+                        <Select.Option
                             key={genres.id}
                             value={genres.name}>
                             <Space >
                                 {genres.name}
                             </Space>
-                        </Option>
+                        </Select.Option>
                     ))}
 
                 </Select>
@@ -216,9 +216,9 @@ export const AddMusicForm = () => {
                     placeholder={t('selectAlbum')}
                 >
                     {currentUser?.albums?.map(album => (
-                        <option key={album.id} value={album.id}>{album.name}</option>
+                        <Select.Option key={album.id} value={album.id}>{album.name}</Select.Option>
                     ))}
-                    <option value="newAlbum">{t("newAlbum")}</option>
+                    <Select.Option value="newAlbum">{t("newAlbum")}</Select.Option>
 
                 </Select>
 
