@@ -14,6 +14,7 @@ import { ArtistType } from '../../types/artist'
 import { AlbumType } from '../../types/album'
 import { PlaylistType } from '../../types/playlist'
 import { TrackType } from '../../types/track'
+import { getUniqueId } from '../../utils/functions/randomId'
 
 export type FilterCategories = {
     name: string
@@ -152,7 +153,7 @@ export const LibraryPage = () => {
                 <div className='library-items-container'>
                     {currentUser && filteredLists && filteredLists.map((list) =>
                         <GroupItem
-                            key={list.id}
+                            key={getUniqueId()}
                             track={list}
                         />
 

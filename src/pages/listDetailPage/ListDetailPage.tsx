@@ -83,7 +83,7 @@ export const ListDetailPage = () => {
                     />
 
                     <div className="list-detail-dashboard">
-                        <BiSolidHeart className="list-detail-heart-btn" onClick={heartIconClicked} />
+                        {listDetail.listType !== "genre" && <BiSolidHeart className="list-detail-heart-btn" onClick={heartIconClicked} />}
                         <span className="list-detail-container-play-btn" onClick={playBtnClicked} >
                             {false ? <BiStop className="list-detail-play-btn" /> : <BiPlay className="list-detail-play-btn" />}
                         </span>
