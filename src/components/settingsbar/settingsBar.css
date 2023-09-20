@@ -39,7 +39,11 @@
     width: 5rem;
 }
 
-.language-flag-icon {
+.english-language-flag-icon {
+    width: 1.85rem;
+    height: 1.85rem;
+}
+.spanish-language-flag-icon {
     width: 2rem;
     height: 2rem;
 }

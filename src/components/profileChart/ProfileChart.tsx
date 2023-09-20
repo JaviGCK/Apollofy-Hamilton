@@ -47,10 +47,10 @@ const ProfileChart: FC<ProfileChartProps> = ({ user }) => {
                     <div className='profile-data-container'>
                         <p>{selectedUser.userName}</p>
                         <div className='profile-data-followers'>
-                            <div onClick={() => setModalState("followers")}>
+                            <div onClick={() => { if (selectedUser?.following.length !== 0) { setModalState("followers") } }}>
                                 <span>{selectedUser.followers.length}</span><span className='pcc-width'> {t('followersProfile')} </span>
                             </div>
-                            <div onClick={() => setModalState("following")}>
+                            <div onClick={() => { if (selectedUser?.following.length !== 0) { setModalState("following") } }}>
                                 <span>{selectedUser.following.length}</span><span className='pcc-width'> {t('followingProfile')} </span>
                             </div>
 
