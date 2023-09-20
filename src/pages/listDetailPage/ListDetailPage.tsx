@@ -111,7 +111,7 @@ export const ListDetailPage = () => {
                     toast.success('Successfully added!')
                     if (listDetail.listType !== "artist") {
                         let checkedList = listDetail as AlbumType | PlaylistType
-                        if (checkedList.usersId) updateUserStats(checkedList.usersId, "likes", "increase")
+                        if (checkedList.usersId) updateUserStats(checkedList.usersId, "likes", "increment")
                     }
                 }
             }
@@ -124,7 +124,7 @@ export const ListDetailPage = () => {
                 toast.success('Successfully removed!')
                 if (listDetail?.listType !== "artist") {
                     let checkedList = listDetail as AlbumType | PlaylistType
-                    if (checkedList.usersId) updateUserStats(checkedList.usersId, "likes", "decrease")
+                    if (checkedList.usersId) updateUserStats(checkedList.usersId, "likes", "decrement")
                 }
             }
 
