@@ -87,8 +87,13 @@ export const ListDetailPage = () => {
                 changeIsBtnActive(false)
                 changeIsPlayingList(false);
                 changeLastBtnActiveId(listDetail.id)
-            } else {
-                console.log("ningun caso");
+            } else if (coincides && !isPlayingList && isListBtnActive && lastBtnActiveId === listDetail.id) {
+                setNewTrackList(listDetail.tracks)
+                changeCurrentTrack(listDetail.tracks[0])
+                audioElement.current.currentTime = 0;
+                changeIsBtnActive(false)
+                changeIsPlayingList(false);
+                changeLastBtnActiveId(listDetail.id)
             }
         }
     }

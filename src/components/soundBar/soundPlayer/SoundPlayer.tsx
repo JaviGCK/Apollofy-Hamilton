@@ -152,38 +152,3 @@ export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
 
     )
 }
-
-
-
-
-
-
-
-
-
-// <div ref={playerContainer} className="player-container">
-//     <div className="player-heading" onClick={handleToggle}>
-//         <div className="player-info">
-
-//             <img className="track-image" src={props.currentTrack.imageUrl} alt="" />
-//             <div className='track-info'>
-//                 <p>{props.currentTrack.name}</p>
-//                 <p>{props.currentTrack.artistName}</p>
-//             </div>
-
-//         </div>
-
-//         <div id="controls-icon" className="controls-container">
-//             {props.isPlaying ? <BsFillPauseCircleFill id="controls-icon" className="controls-icon" onClick={handlePlayPause} /> : <BsFillPlayCircleFill id="controls-icon" className="controls-icon" onClick={handlePlayPause} />}
-
-//         </div>
-//     </div>
-//    <div className="content-bar">
-//         <div className="navigation-content-bar" ref={soundBarClickRef} onClick={handleClickNavigation}>
-//             <div className="progress-bar" style={{ width: `${props.currentTrack.progress}%` }}>
-
-//             </div>
-//         </div>
-//     </div>
-
-// </div>
