@@ -66,7 +66,7 @@ export const UserPage: React.FC = () => {
             currentUser?.playLists
         ]
         setSearchResults(newSearchResult)
-    }, [])
+    }, [currentUser])
 
     return (
         <>

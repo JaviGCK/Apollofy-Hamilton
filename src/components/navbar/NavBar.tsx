@@ -17,6 +17,9 @@ import { useTopTrendsContext } from '../../utils/hooks/useTopTrendsContext'
 import { TopTrendsType } from '../../context/TopTrendsContextProvider'
 import { GenreType } from '../../types/genre'
 import { useGenreContext } from '../../utils/hooks/useGenresContext'
+import { FavouriteType } from '../../pages/libraryPage/LibraryPage'
+import { PossibleItems } from '../../types/enums'
+import { useUserLibraryListContext } from '../../utils/hooks/useUserLibraryListContext'
 
 
 export interface UserDataType {
@@ -32,31 +35,10 @@ export const NavBar = () => {
     const { user, getAccessTokenSilently } = useAuth0();
     const { currentUser, setCurrentLoggedUser } = useUserContext();
     const { trackList, setNewTrackList } = useTrackListContext();
+    const { changeUserLibraryList } = useUserLibraryListContext();
     const { setGenres } = useGenreContext();
     const location = useLocation().pathname.slice(1)
     const { changeTopTrends } = useTopTrendsContext()
-
-
-    // if (currentUser === null) {
-
-    //     (async function fetchUser() {
-    //         const usersFetched = await fetchData(getAccessTokenSilently, 'users') as UserType[];
-    //         const loggedUserObject = usersFetched.find(({ email }) => email === user?.email);
-
-    //         if (loggedUserObject !== undefined) {
-    //             setCurrentLoggedUser(loggedUserObject);
-    //         } else {
-    //             if (!(user?.email && user.name)) return
-    //             const newUser: UserDataType = {
-    //                 email: user?.email,
-    //                 userName: user?.name,
-    //                 imageUrl: user?.picture
-    //             }
-    //             const newFetchedUser = await postNewUser(getAccessTokenSilently, newUser);
-    //             setCurrentLoggedUser(newFetchedUser);
-    //         }
-    //     }());
-    // }
 
     if (trackList === null) {
         (async function fetchTracks() {
@@ -110,6 +92,38 @@ export const NavBar = () => {
     ]
 
     useEffect(() => {
+        if (currentUser) {
+            const allLists: PossibleItems[] = []
+            const fetchUserLibraryList = async () => {
+                const favLists = currentUser?.favourites as FavouriteType[]
+                if (favLists) {
+                    favLists.map(async (list: FavouriteType) => {
+                        const type = list.listType;
+                        let result: PossibleItems | null = null;
+                        switch (type) {
+                            case "artist": result = await fetchData(getAccessTokenSilently, `${list.listType}s/${list.artist?.id}`) as ArtistType
+                                break;
+                            case "track": result = await fetchData(getAccessTokenSilently, `${list.listType}s/${list.track?.id}`) as TrackType
+                                break;
+                            case "album": result = await fetchData(getAccessTokenSilently, `${list.listType}s/${list.album?.id}`) as AlbumType
+                                break;
+                            case "playlist": result = await fetchData(getAccessTokenSilently, `${list.listType}s/${list.playlist?.id}`) as PlaylistType
+                                break;
+                            default: result = null
+                        }
+
+                        if (result) allLists.push(result)
+                        if (favLists.length === allLists.length) {
+                            changeUserLibraryList(allLists);
+                        }
+                    })
+                }
+            };
+            fetchUserLibraryList();
+        }
+    }, [currentUser])
+
+    useEffect(() => {
         if (!currentUser) {
             (async function fetchUser() {
                 const usersFetched = await fetchData(getAccessTokenSilently, 'users') as UserType[];
@@ -142,7 +156,6 @@ export const NavBar = () => {
             const genres = await fetchData(getAccessTokenSilently, "genres") as GenreType[];
             setGenres(genres);
         }());
-
     }, [])
 
     return (

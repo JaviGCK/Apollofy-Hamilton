@@ -94,10 +94,6 @@ export const ListDetailPage = () => {
     return (
         <>
             {listDetail && <div className="list-detail-page-container">
-                <Toaster
-                    position="top-center"
-                    reverseOrder={false}
-                />
                 <div className="list-detail-heading">
                     <FaAngleLeft className="list-detail-angle-btn" onClick={handleBackIconClicked} />
 
@@ -132,7 +128,12 @@ export const ListDetailPage = () => {
                     </div>
 
                 </div>
+
             </div>}
+            <Toaster
+                position="top-center"
+                reverseOrder={false}
+            />
         </>
     );
 };

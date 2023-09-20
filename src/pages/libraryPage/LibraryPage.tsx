@@ -1,10 +1,8 @@
 import './libraryPage.css'
 import { BiSearch, BiPlus } from 'react-icons/bi'
-import { useAuth0 } from '@auth0/auth0-react'
 import { Filter } from '../../components/filter'
 import { useEffect, useState } from 'react'
 import { GroupItem } from '../../components/lists/groupItem/GroupItem'
-import { fetchData } from '../../api/fetchApi'
 import { useFilterContext } from '../../utils/hooks/useFilterProvider'
 import { ListType, PossibleItems } from '../../types/enums'
 import { useTranslation } from 'react-i18next'
@@ -15,6 +13,7 @@ import { AlbumType } from '../../types/album'
 import { PlaylistType } from '../../types/playlist'
 import { TrackType } from '../../types/track'
 import { getUniqueId } from '../../utils/functions/randomId'
+import { useUserLibraryListContext } from '../../utils/hooks/useUserLibraryListContext'
 
 export type FilterCategories = {
     name: string
@@ -34,23 +33,14 @@ export type FavouriteType = {
 
 export const LibraryPage = () => {
 
-    const { getAccessTokenSilently } = useAuth0();
-
     const { currentUser } = useUserContext()
 
     const { currentFilter } = useFilterContext();
-
-    const [userLists, setUserLists] = useState<PossibleItems[] | null>(null)
+    const { userLibraryList } = useUserLibraryListContext();
     const [filteredLists, setFilteredLists] = useState<PossibleItems[] | null>(null)
 
 
     const { t } = useTranslation();
-
-
-
-
-
-
 
     const listsFilterCategories: FilterCategories[] = [
         {
@@ -82,51 +72,17 @@ export const LibraryPage = () => {
 
 
     useEffect(() => {
-        if (userLists) {
+        if (userLibraryList) {
             if (currentFilter === "all") {
-                if (userLists === null) return
-                setFilteredLists(userLists)
+                if (userLibraryList === null) return
+                setFilteredLists(userLibraryList)
             } else {
-                if (userLists === null) return
-                const newFilteredLists = userLists?.filter((list: PossibleItems) => list.listType?.includes(currentFilter))
+                if (userLibraryList === null) return
+                const newFilteredLists = userLibraryList?.filter((list: PossibleItems) => list.listType?.includes(currentFilter))
                 setFilteredLists(newFilteredLists)
             }
         }
-    }, [currentFilter, userLists]);
-
-    useEffect(() => {
-        if (currentUser) {
-            const allLists: PossibleItems[] = []
-            //BUG when first chargin page, sometimes render all items, sometimes no-.
-
-            const getFetch = async () => {
-                const favLists = currentUser?.favourites as FavouriteType[]
-                if (favLists) {
-                    favLists.map(async (list: FavouriteType) => {
-                        const type = list.listType;
-                        let result: PossibleItems | null = null;
-                        switch (type) {
-                            case "artist": result = await fetchData(getAccessTokenSilently, `${list.listType}s/${list.artist?.id}`) as ArtistType
-                                break;
-                            case "track": result = await fetchData(getAccessTokenSilently, `${list.listType}s/${list.track?.id}`) as TrackType
-                                break;
-                            case "album": result = await fetchData(getAccessTokenSilently, `${list.listType}s/${list.album?.id}`) as AlbumType
-                                break;
-                            case "playlist": result = await fetchData(getAccessTokenSilently, `${list.listType}s/${list.playlist?.id}`) as PlaylistType
-                                break;
-                            default: result = null
-                        }
-
-                        if (result) allLists.push(result)
-                        if (favLists.length === allLists.length) {
-                            setUserLists(allLists);
-                        }
-                    })
-                }
-            }
-            getFetch()
-        }
-    }, [currentUser])
+    }, [currentFilter, userLibraryList]);
 
     return (
         <section className='library-page-container'>

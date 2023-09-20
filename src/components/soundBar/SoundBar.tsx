@@ -10,10 +10,10 @@ import { useIsPlayingContext } from "../../utils/hooks/useIsPlayingContext"
 
 export const SoundBar = () => {
     const { trackList, audioElement } = useTrackListContext();
-    const [isPlaying, setIsPlaying] = useState(false)
+    // const [isPlaying, setIsPlaying] = useState(false)
     const [currentTrack, setCurrentTrack] = useState<TrackType | null>(null)
     const [loopActive, setLoopActive] = useState(false)
-    const { isPlayingList } = useIsPlayingContext();
+    const { isPlayingList, changeIsPlayingList } = useIsPlayingContext();
 
     useEffect(() => {
         if (trackList !== null) {
@@ -38,7 +38,7 @@ export const SoundBar = () => {
             if (audioElement.current.currentTime === audioElement.current.duration) {
                 handleNextTrack()
                 if (currentTrack.name !== trackList[trackList.length - 1].name || loopActive) audioElement.current.play()
-                else setIsPlaying(false)
+                else changeIsPlayingList(false)
             }
         }
     }
@@ -81,15 +81,10 @@ export const SoundBar = () => {
 
 
     useEffect(() => {
-        if (isPlaying && audioElement.current) audioElement.current.play()
-        else if (!isPlaying && audioElement.current) audioElement.current.pause()
+        if (isPlayingList && audioElement.current) audioElement.current.play()
+        else if (!isPlayingList && audioElement.current) audioElement.current.pause()
 
-
-    }, [isPlaying, currentTrack])
-
-    useEffect(() => {
-        setIsPlaying(isPlayingList);
-    }, [isPlayingList])
+    }, [isPlayingList, currentTrack])
 
 
     return (
@@ -97,8 +92,8 @@ export const SoundBar = () => {
             <audio src={currentTrack ? currentTrack.audioUrl : ""} ref={audioElement} onLoadedMetadata={handleMetaDataLoad} onTimeUpdate={() => getTrackProgress()} />
 
             <SoundPlayer
-                isPlaying={isPlaying}
-                setIsPlaying={setIsPlaying}
+                isPlaying={isPlayingList}
+                setIsPlaying={changeIsPlayingList}
                 currentTrack={currentTrack}
                 setCurrentTrack={setCurrentTrack}
                 audioElement={audioElement}

@@ -2,14 +2,17 @@ import './groupItem.css'
 import { BsFillPlayCircleFill, BsStopCircleFill } from 'react-icons/bs';
 import { useTrackListContext } from '../../../utils/hooks/useTrackListContext';
 import { useListDetailContext } from '../../../utils/hooks/useListDetailContext';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import { useIsPlayingContext } from '../../../utils/hooks/useIsPlayingContext';
 
 export const GroupItem = ({ ...props }) => {
     const { track, onItemClicked } = props
-    const { setNewTrackList, audioElement } = useTrackListContext();
+    const { trackList, setNewTrackList, audioElement } = useTrackListContext();
+    const { changeIsPlayingList } = useIsPlayingContext();
     const { setNewListDetail } = useListDetailContext();
+    const [trackIsPlaying, setTrackIsPlaying] = useState<boolean>(false);
     const [isPlaying, setIsPlaying] = useState(false);
     const navigate = useNavigate();
     const { t } = useTranslation();
@@ -17,18 +20,39 @@ export const GroupItem = ({ ...props }) => {
 
     const itemClicked = () => {
         if (track.listType) {
-            (async function showItemClicked() {
-                setNewListDetail(track);
-                navigate("/detail-page");
-            }());
+            if (track.listType !== "track") {
+                (async function showItemClicked() {
+                    setNewListDetail(track);
+                    navigate("/detail-page");
+                }());
+            } else {
+                setTrackIsPlaying(true)
+                if (trackList && trackList.length === 1 && trackList[0].id === track.id) {
+                    changeIsPlayingList(true);
+                } else {
+                    const newTracklist = [track];
+                    setNewTrackList(newTracklist);
+                    audioElement.current.currentTime = 0;
+                    changeIsPlayingList(true);
+                }
+            }
         }
     }
+    useEffect(() => {
+        if (track.listType) {
+            if (trackList && trackList.length === 1 && trackList[0].id === track.id) {
+                setTrackIsPlaying(true)
+            } else {
+                setTrackIsPlaying(false)
+            }
+        }
+    }, [trackList])
     return (
         <>
             <div className="group-item-list" onClick={itemClicked}>
                 <img className={`img-list ${track.type === 'artist' ? 'artist-image' : ''}`} src={track.imageUrl} alt={`Image or Cover of ${track.name}`} />
                 <div className='item-list-info'>
-                    <h3>{track.name.length > 17 ? `${track.name.slice(0, 17)}...` : track.name}</h3>
+                    <h3 className={trackIsPlaying ? "active-track" : ""}>{track.name.length > 17 ? `${track.name.slice(0, 17)}...` : track.name}</h3>
                     {(track.hasOwnProperty('artists') && track.artists.length > 0) ? <p>{track.artists[0].name}</p> : <></>}
                     <p>{track.type === "artist" && t('artistType')}</p>
                     <p>{track.type === "album" && t('albumType')}</p>

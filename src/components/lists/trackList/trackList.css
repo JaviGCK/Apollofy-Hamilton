@@ -9,6 +9,31 @@
 }
 
 .list-detail-track-info {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
+}
+
+.track-info-left {
     display: inline-block;
-    padding-left: 3vw; 
+    padding-left: 3vw;
+}
+
+.track-add-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-add-track-right {
+    width: 2rem;
+    height: 2rem;
+}
+
+.icon-add-track-right-liked {
+    color: #00ffa3;
+}
+
+.active-track {
+    color: #00ffa3;
 }

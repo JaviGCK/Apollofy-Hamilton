@@ -9,6 +9,7 @@ import { IsPlayingContextProvider } from '../context/IsPlayingContextProvider'
 import { SelectedUserContextProvider } from '../context/SelectedUserContextProvider'
 import { GenreContextProvider } from '../context/GenresContext'
 import { TopTrendsContextProvider } from '../context/TopTrendsContextProvider'
+import { UserLibraryListContextProvider } from '../context/UserLibraryListContextProvider'
 
 export const Layout = () => {
   return (
@@ -20,9 +21,11 @@ export const Layout = () => {
               <TopTrendsContextProvider>
                 <SelectedUserContextProvider>
                   <GenreContextProvider>
-                    <Outlet />
-                    <SoundBar />
-                    <NavBar />
+                    <UserLibraryListContextProvider>
+                      <Outlet />
+                      <SoundBar />
+                      <NavBar />
+                    </UserLibraryListContextProvider>
                   </GenreContextProvider>
                 </SelectedUserContextProvider>
               </TopTrendsContextProvider>
