@@ -1,0 +1,27 @@
+.follow-button {
+    width: 300px;
+    margin: 0 auto;
+    border-style: none;
+    background-color: #00ffa3;
+    color: #1e1e1e;
+    text-align: center;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.unfollow-button {
+    width: 300px;
+    margin: 0 auto;
+    border-style: none;
+    background-color: #a785fe;
+    color: #f1f1f1;
+    text-align: center;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}

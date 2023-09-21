@@ -114,7 +114,7 @@ export const SearchUserPage: React.FC = () => {
             <ProfileChart
                 user={selectedUser}
             />
-            <button className='follow-button' onClick={!isFetching && isFollowed ? () => handleFollow("unfollow") : () => handleFollow("follow")}>{isFollowed ? "unfollow" : "follow"}</button>
+            <button className={isFollowed ? "unfollow-button" : "follow-button"} onClick={!isFetching && isFollowed ? () => handleFollow("unfollow") : () => handleFollow("follow")}>{isFollowed ? "Unfollow" : "Follow"}</button>
             <div className={`search-bar-user-page ${isInputFocused ? 'search-bar-user-page-focused' : ''}`}>
                 <BiSearch className="searchbar-icon-search" />
                 <input
