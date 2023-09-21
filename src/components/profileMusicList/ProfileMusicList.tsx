@@ -39,8 +39,8 @@ const ProfileMusicList: FC<ProfileMusicListPropTypes> = ({ searchResults }) => {
                         </div>
                     </div>
                 ))}
+                <div className='white-space'></div>
             </div>
-            <div className='white-space'></div>
         </div>
     )
 }
