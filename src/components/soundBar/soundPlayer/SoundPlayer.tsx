@@ -32,7 +32,6 @@ export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
     const handlePlayPause = (event: any) => {
         event.stopPropagation()
         props.setIsPlaying(!props.isPlaying)
-
     }
 
     const handleClickNavigation = (event: any) => {
@@ -41,7 +40,6 @@ export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
             let offset: number = event.nativeEvent.offsetX
             let offsetPercentage = offset / soundBarWidth * 100
             props.audioElement.current.currentTime = offsetPercentage / 100 * props.currentTrack.duration
-
         }
     }
 

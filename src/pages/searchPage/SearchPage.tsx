@@ -11,21 +11,14 @@ import { PlaylistType } from "../../types/playlist";
 import { TrackType } from "../../types/track";
 import { UserType } from "../../components/profileChart/ProfileChart";
 import { SearchBarSkeleton } from "../../components/searchBarSkeleton/SearchBarSkeleton";
-
-
-export type DataRetrievedType = {
-    albums: AlbumType[],
-    artists: ArtistType[],
-    playlists: PlaylistType[],
-    tracks: TrackType[],
-    users: UserType[]
-}
+import { useSearchDataContext } from "../../utils/hooks/useSearchDataContext";
+import { DataRetrievedType } from "../../context/SearchDataContextProvider";
 
 export const SearchPage = () => {
     const [focus, setFocus] = useState(false);
     const [searchInput, setSearchInput] = useState('');
     const { getAccessTokenSilently } = useAuth0();
-    const [dataRetrieved, setDataRetrieved] = useState<DataRetrievedType | null>(null)
+    const { dataRetrieved, changeDataRetrieved } = useSearchDataContext();
 
     const retrieveData = async () => {
         const fetchedAlbumData: AlbumType[] = await fetchData(getAccessTokenSilently, 'albums') as AlbumType[];
@@ -46,11 +39,13 @@ export const SearchPage = () => {
             users: fetchedUsersData
         }
 
-        setDataRetrieved(allFetchedData);
+        changeDataRetrieved(allFetchedData);
     }
 
     useEffect(() => {
-        retrieveData()
+        if (!dataRetrieved) {
+            retrieveData()
+        }
     }, [])
 
 

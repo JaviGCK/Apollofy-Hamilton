@@ -48,7 +48,8 @@ export const ListDetailPage = () => {
     }
 
 
-    const playBtnClicked = () => {
+    const playBtnClicked = (e: React.MouseEvent<HTMLElement>) => {
+        e.stopPropagation();
         if (trackList && listDetail?.tracks) {
             const coincides = checkCoincides();
             if (!coincides) {
@@ -168,46 +169,54 @@ export const ListDetailPage = () => {
         }
     }, [])
 
-
+    useEffect(() => {
+        console.log("hoooola");
+    }, [listDetail])
     return (
-        <>
-            {listDetail && <div className="list-detail-page-container">
-                <div className="list-detail-heading">
-                    <FaAngleLeft className="list-detail-angle-btn" onClick={handleBackIconClicked} />
-
-                    <img
-                        className={`list-detail-img ${listDetail.listType === "artist" ? "artist-img" : ""}`}
-                        src={listDetail?.imageUrl}
-                        alt={`Image or Cover of ${listDetail?.name}`}
-                    />
-
-                    <div className="list-detail-dashboard">
-                        {listDetail.listType !== "genre" && <BiSolidHeart className={isLiked ? "list-detail-heart-btn heart-button-isliked" : "list-detail-heart-btn"} onClick={heartIconClicked} />}
-                        <span className="list-detail-container-play-btn" onClick={playBtnClicked} >
-                            {isListBtnActive ? <BiStop className="list-detail-play-btn" /> : <BiPlay className="list-detail-play-btn" />}
-                        </span>
-
-                    </div>
-
-                </div>
-                <div className="list-detail-container-items">
-                    <div className='list-detail-wrapper'>
-                        {listDetail && listDetail.tracks && listDetail.tracks.map((track) => (
-                            <TrackList
-                                key={getUniqueId()}
-                                track={track}
-                            />
-                        ))}
-                        <div className='white-space'></div>
-                    </div>
-
-                </div>
-
-            </div>}
+        <div>
             <Toaster
                 position="top-center"
                 reverseOrder={false}
             />
-        </>
+            {listDetail &&
+
+                <div className="list-detail-page-container">
+                    <div className="list-detail-heading">
+                        <FaAngleLeft className="list-detail-angle-btn" onClick={handleBackIconClicked} />
+
+                        <img
+                            className={`list-detail-img ${listDetail.listType === "artist" ? "artist-img" : ""}`}
+                            src={listDetail?.imageUrl}
+                            alt={`Image or Cover of ${listDetail?.name}`}
+                        />
+
+                        <div className="list-detail-dashboard">
+                            {listDetail.listType !== "genre" && <BiSolidHeart className={isLiked ? "list-detail-heart-btn heart-button-isliked" : "list-detail-heart-btn"} onClick={heartIconClicked} />}
+                            <span className="list-detail-container-play-btn" onClick={playBtnClicked} >
+                                {isListBtnActive ? <BiStop className="list-detail-play-btn" /> : <BiPlay className="list-detail-play-btn" />}
+                            </span>
+
+                        </div>
+
+                    </div>
+                    <div className="list-detail-container-items">
+                        <div className='list-detail-wrapper'>
+                            {listDetail && listDetail.tracks && listDetail.tracks.map((track) => {
+                                console.log("track" + track);
+                                return (
+                                    <TrackList
+                                        key={getUniqueId()}
+                                        track={track}
+                                    />
+                                )
+                            })}
+                            <div className='white-space'></div>
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+        </div>
     );
 };

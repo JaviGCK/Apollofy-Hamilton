@@ -8,7 +8,7 @@ import { useUserContext } from '../../../utils/hooks/useUserContext';
 import { addFavourites, deleteFavourites } from '../../../api/fetchApi';
 import { useAuth0 } from '@auth0/auth0-react';
 import { UserType } from '../../profileChart/ProfileChart';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import { AiFillCheckCircle } from 'react-icons/ai';
 import { useTrackListContext } from '../../../utils/hooks/useTrackListContext';
 import { useIsPlayingContext } from '../../../utils/hooks/useIsPlayingContext';
@@ -18,7 +18,6 @@ interface TrackListProps {
 }
 
 export const TrackList: FC<TrackListProps> = ({ track }) => {
-
   const { currentUser, setCurrentLoggedUser } = useUserContext();
   const [liked, setLiked] = useState<boolean>(false)
   const { getAccessTokenSilently } = useAuth0();
@@ -27,11 +26,11 @@ export const TrackList: FC<TrackListProps> = ({ track }) => {
   const { currentTrack, changeIsPlayingList } = useIsPlayingContext();
   const [trackIsPlaying, setTrackIsPlaying] = useState<boolean>(false);
 
-  const handleLikeTrackClicked = async (event: any) => {
+  const handleLikeTrackClicked = async (event: React.MouseEvent<HTMLElement>) => {
+    event.stopPropagation();
     if (!track.verified) {
       if (track.userId) updateUserStats(track.userId, "views")
     }
-    event.stopPropagation();
     if (!isFetching) {
       const itemSearched = checkFavouriteAlreadyExist();
       setIsFetching(true)
@@ -83,12 +82,13 @@ export const TrackList: FC<TrackListProps> = ({ track }) => {
   }
 
   useEffect(() => {
-    if (currentTrack?.id === track.id) {
-      setTrackIsPlaying(true)
-    } else setTrackIsPlaying(false)
+    if (currentTrack?.id === track.id) setTrackIsPlaying(true)
+    else setTrackIsPlaying(false)
+    // console.log("currentTrack dentro");
   }, [currentTrack])
 
   useEffect(() => {
+    // console.log("entro vacio ");
     const itemSearched = checkFavouriteAlreadyExist();
     if (itemSearched) setLiked(true)
     if (trackList && trackList.length === 1 && trackList[0].id === track.id) {
@@ -97,11 +97,7 @@ export const TrackList: FC<TrackListProps> = ({ track }) => {
   }, [])
 
   return (
-    <>
-      <Toaster
-        position="top-center"
-        reverseOrder={false}
-      />
+    <div>
       {track && <div className="list-detail-track" onClick={trackListDetailClicked}>
         <img
           className="list-detail-track-img"
@@ -122,6 +118,6 @@ export const TrackList: FC<TrackListProps> = ({ track }) => {
           </div>
         </div>
       </div>}
-    </>
+    </div>
   );
 };

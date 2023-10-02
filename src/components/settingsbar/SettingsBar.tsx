@@ -30,7 +30,7 @@ export const SettingsBar = () => {
     }
 
     return (
-        <>
+        <div>
             <Toaster
                 position="top-center"
                 reverseOrder={false}
@@ -51,6 +51,6 @@ export const SettingsBar = () => {
                     </div>
                 </div>
             }
-        </>
+        </div>
     )
 }
