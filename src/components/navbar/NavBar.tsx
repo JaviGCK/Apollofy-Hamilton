@@ -31,7 +31,6 @@ export interface UserDataType {
 
 export const NavBar = () => {
 
-
     const navigate = useNavigate();
     const { user, getAccessTokenSilently } = useAuth0();
     const { currentUser, setCurrentLoggedUser } = useUserContext();
