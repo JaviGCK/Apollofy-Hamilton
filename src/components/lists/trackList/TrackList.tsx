@@ -84,11 +84,9 @@ export const TrackList: FC<TrackListProps> = ({ track }) => {
   useEffect(() => {
     if (currentTrack?.id === track.id) setTrackIsPlaying(true)
     else setTrackIsPlaying(false)
-    // console.log("currentTrack dentro");
   }, [currentTrack])
 
   useEffect(() => {
-    // console.log("entro vacio ");
     const itemSearched = checkFavouriteAlreadyExist();
     if (itemSearched) setLiked(true)
     if (trackList && trackList.length === 1 && trackList[0].id === track.id) {

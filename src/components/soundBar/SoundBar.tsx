@@ -3,20 +3,21 @@ import "./soundBar.css"
 import { SoundPlayer } from "./soundPlayer/SoundPlayer"
 import { useTrackListContext } from "../../utils/hooks/useTrackListContext"
 import { useIsPlayingContext } from "../../utils/hooks/useIsPlayingContext"
+import { TrackType } from "../../types/track"
 
 
 
 
 export const SoundBar = () => {
     const { trackList, audioElement } = useTrackListContext();
-    // const [isPlaying, setIsPlaying] = useState(false)
-    // const [currentTrack, setCurrentTrack] = useState<TrackType | null>(null)
     const [loopActive, setLoopActive] = useState(false)
     const { isPlayingList, currentTrack, changeIsPlayingList, changeCurrentTrack } = useIsPlayingContext();
+    const [currentTrackInfo, setCurrentTrackInfo] = useState<TrackType | null>(null);
 
     useEffect(() => {
         if (trackList !== null) {
             changeCurrentTrack(trackList[0])
+            setCurrentTrackInfo(trackList[0])
         }
     }, [trackList])
 
@@ -28,7 +29,7 @@ export const SoundBar = () => {
             const trackDuration = audioElement.current.duration
             const currentTrackProgress = audioElement.current.currentTime
 
-            changeCurrentTrack({
+            setCurrentTrackInfo({
                 ...currentTrack,
                 progress: currentTrackProgress / trackDuration * 100,
                 duration: trackDuration
@@ -88,13 +89,13 @@ export const SoundBar = () => {
 
     return (
         <div>
-            <audio src={currentTrack ? currentTrack.audioUrl : ""} ref={audioElement} onLoadedMetadata={handleMetaDataLoad} onTimeUpdate={() => getTrackProgress()} />
+            <audio src={currentTrackInfo ? currentTrackInfo.audioUrl : ""} ref={audioElement} onLoadedMetadata={handleMetaDataLoad} onTimeUpdate={() => getTrackProgress()} />
 
             <SoundPlayer
                 isPlaying={isPlayingList}
                 setIsPlaying={changeIsPlayingList}
-                currentTrack={currentTrack}
-                setCurrentTrack={changeCurrentTrack}
+                currentTrack={currentTrackInfo}
+                setCurrentTrack={setCurrentTrackInfo}
                 audioElement={audioElement}
                 handlePrevTrack={handlePrevTrack}
                 handleNextTrack={handleNextTrack}
