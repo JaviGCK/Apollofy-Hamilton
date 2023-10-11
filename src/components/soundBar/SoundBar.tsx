@@ -83,7 +83,7 @@ export const SoundBar = () => {
     useEffect(() => {
         if (isPlayingList && audioElement.current) audioElement.current.play()
         else if (!isPlayingList && audioElement.current) audioElement.current.pause()
-        // console.log(isPlayingList);
+
     }, [isPlayingList, currentTrack])
 
 

@@ -19,7 +19,7 @@ import { PlaylistType } from '../../types/playlist';
 import { useIsPlayingContext } from '../../utils/hooks/useIsPlayingContext';
 
 export const ListDetailPage = () => {
-    console.log("hols");
+
     const [isFetching, setIsFetching] = useState(false);
     const [isLiked, setIsLiked] = useState(false);
     const { currentUser, setCurrentLoggedUser } = useUserContext();
@@ -170,7 +170,7 @@ export const ListDetailPage = () => {
     }, [])
 
     useEffect(() => {
-        console.log("hoooola");
+
     }, [listDetail])
     return (
         <div>
@@ -202,7 +202,7 @@ export const ListDetailPage = () => {
                     <div className="list-detail-container-items">
                         <div className='list-detail-wrapper'>
                             {listDetail && listDetail.tracks && listDetail.tracks.map((track) => {
-                                // console.log("track" + track);
+
                                 return (
                                     <TrackList
                                         key={getUniqueId()}

@@ -11,6 +11,7 @@
   box-sizing: border-box;
 }
 
+
 /*
   2. Remove default margin
 */
@@ -31,7 +32,10 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: #0e0016;
   color: #f1f1f1;
+  scrollbar-width: none;
 }
+
+
 
 /*
   5. Improve media defaults
