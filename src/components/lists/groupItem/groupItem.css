@@ -1,40 +1,37 @@
 .group-item-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 4fr 1fr;
     margin: 20px 5px;
     font-size: 14px;
     font-weight: 400;
-    position: relative;
 }
 
 .img-list {
     width: 70px;
     height: 70px;
     object-fit: cover;
+
 }
 
 .item-list-info {
-    display: inline-block;
-    padding-left: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.gi-playBtn {
+.group-item-track-title {
+    display: block;
+    text-overflow: ellipsis;
+}
+
+.group-item-buttons-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 5vh;
-    border: none;
-    background: none;
-    margin-left: auto;
-
-    padding: 0;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
-.gi-playBtn-ico {
-    text-align: center;
+.group-item-delete-icon {
     color: white;
-    padding: none;
-    font-size: 35px;
-    position: absolute;
-    right: 0;
-    bottom: 50%;
+    height: 26px;
+    width: 26px;
 }

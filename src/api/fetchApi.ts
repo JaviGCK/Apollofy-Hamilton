@@ -5,6 +5,7 @@ import { AlbumType } from "../types/album";
 import { ArtistType } from "../types/artist";
 import { GenreType } from "../types/genre";
 import { PlaylistType } from "../types/playlist";
+import { TrackType } from "../types/track";
 
 
 
@@ -145,6 +146,32 @@ export const updateUserFollowing = async (getToken: any, user: UserType, followi
             action,
         }),
 
+    })
+    return response;
+}
+
+export const deleteTrack = async (getToken: any, trackId: string) => {
+    const { VITE_API_URL: url } = import.meta.env;
+    const token = await getToken();
+    const response = await fetch(`${url}tracks/${trackId}`, {
+        method: 'DELETE',
+        headers: {
+            authorization: `Bearer ${token}`,
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+    return response;
+}
+
+export const deleteAlbum = async (getToken: any, albumId: string) => {
+    const { VITE_API_URL: url } = import.meta.env;
+    const token = await getToken();
+    const response = await fetch(`${url}albums/${albumId}`, {
+        method: 'DELETE',
+        headers: {
+            authorization: `Bearer ${token}`,
+            "Content-type": "application/json; charset=UTF-8"
+        }
     })
     return response;
 }

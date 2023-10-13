@@ -1,21 +1,27 @@
 import './groupItem.css'
-import { BsFillPlayCircleFill, BsStopCircleFill } from 'react-icons/bs';
+import { MdOutlineDeleteForever } from "react-icons/md";
 import { useTrackListContext } from '../../../utils/hooks/useTrackListContext';
 import { useListDetailContext } from '../../../utils/hooks/useListDetailContext';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useIsPlayingContext } from '../../../utils/hooks/useIsPlayingContext';
 import { updateUserStats } from '../../../api/statsFetchApi';
+import { deleteAlbum, deleteTrack, fetchData } from '../../../api/fetchApi';
+import { useAuth0 } from '@auth0/auth0-react';
+import { useUserContext } from '../../../utils/hooks/useUserContext';
+import { UserType } from '../../profileChart/ProfileChart';
 
 export const GroupItem = ({ ...props }) => {
-    const { track, onItemClicked } = props
+    const { track } = props;
     const { trackList, setNewTrackList, audioElement } = useTrackListContext();
     const { changeIsPlayingList } = useIsPlayingContext();
     const { setNewListDetail } = useListDetailContext();
+    const { currentUser, setCurrentLoggedUser } = useUserContext();
     const [trackIsPlaying, setTrackIsPlaying] = useState<boolean>(false);
-    const [isPlaying, setIsPlaying] = useState(false);
+    const { getAccessTokenSilently } = useAuth0();
     const navigate = useNavigate();
+    const location = useLocation();
     const { t } = useTranslation();
 
 
@@ -42,6 +48,30 @@ export const GroupItem = ({ ...props }) => {
             }
         }
     }
+
+    const handleDeleteItem = async () => {
+
+        if (track.listType === "track") {
+
+            const deletedTrack = await deleteTrack(getAccessTokenSilently, track.id);
+
+            if (deletedTrack.ok) {
+
+                const updatedUser = await fetchData(getAccessTokenSilently, `users/${currentUser?.id}`) as UserType;
+                setCurrentLoggedUser(updatedUser);
+            }
+        } else if (track.listType === "album") {
+            const deletedAlbum = await deleteAlbum(getAccessTokenSilently, track.id)
+
+            if (deletedAlbum.ok) {
+
+                const updatedUser = await fetchData(getAccessTokenSilently, `users/${currentUser?.id}`) as UserType;
+                setCurrentLoggedUser(updatedUser);
+            }
+        }
+
+    }
+
     useEffect(() => {
         if (track.listType) {
             if (trackList && trackList.length === 1 && trackList[0].id === track.id) {
@@ -51,27 +81,27 @@ export const GroupItem = ({ ...props }) => {
             }
         }
     }, [trackList])
+
     return (
-        <>
-            <div className="group-item-list" onClick={itemClicked}>
-                <img className={`img-list ${track.type === 'artist' ? 'artist-image' : ''}`} src={track.imageUrl} alt={`Image or Cover of ${track.name}`} />
-                <div className='item-list-info'>
-                    <h3 className={trackIsPlaying ? "active-track" : ""}>{track.name.length > 17 ? `${track.name.slice(0, 17)}...` : track.name}</h3>
-                    {(track.hasOwnProperty('artists') && track.artists.length > 0) ? <p>{track.artists[0].name}</p> : <></>}
-                    <p>{track.type === "artist" && t('artistType')}</p>
-                    <p>{track.type === "album" && t('albumType')}</p>
-                    <p>{track.type === "playlist" && t('playlistType')}</p>
-                    <p>{track.type === "track" && t('trackType')}</p>
-                </div>
-                {track.hasOwnProperty('liked') ?
-                    <button className="gi-playBtn"
-                        onClick={() => { onItemClicked(); setNewTrackList([track]); }}>
-                        {isPlaying ? <BsStopCircleFill className="gi-playBtn-ico" onClick={() => { setIsPlaying(false); audioElement.current.currentTime = 0 }} /> : <BsFillPlayCircleFill
-                            onClick={() => { setIsPlaying(true); }}
-                            className="gi-playBtn-ico"
-                        />}
-                    </button> : <></>}
+
+        <div className="group-item-list">
+
+            <div className='img-list-container' onClick={itemClicked}>
+                <img className={`img-list ${track.listType === 'artist' ? 'artist-image' : ''}`} src={track.imageUrl} alt={`Image or Cover of ${track.name}`} />
             </div>
-        </>
+            <div className='item-list-info' onClick={itemClicked}>
+                <h3 className={`group-item-track-title ${trackIsPlaying ? "active-track" : ""}`}>{track.name.length > 17 ? `${track.name.slice(0, 17)}...` : track.name}</h3>
+                {(track.hasOwnProperty('artists') && track.artists.length > 0) ? <p>{track.artists[0].name}</p> : <></>}
+                <p>{track.listType === "artist" && t('artistType')}</p>
+                <p>{track.listType === "album" && t('albumType')}</p>
+                <p>{track.listType === "playlist" && t('playlistType')}</p>
+                <p>{track.listType === "track" && t('trackType')}</p>
+
+            </div>
+            <div className='group-item-buttons-container'>
+                {location.pathname === "/user" ? <MdOutlineDeleteForever className="group-item-delete-icon" onClick={handleDeleteItem} /> : <></>}
+            </div>
+        </div>
+
     )
 }

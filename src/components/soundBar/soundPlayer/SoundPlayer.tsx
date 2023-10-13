@@ -82,7 +82,7 @@ export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
                         <div id="controls-icon" className="controls-container" >
                             {props.isPlaying ?
                                 <button style={{ border: 'none' }} className="controls-icon" onClick={handlePlayPause}>
-                                    <BsFillPauseCircleFill id="controls-icon" className="controls-ico pause-icon" />
+                                    <BsFillPauseCircleFill id="controls-icon" className="controls-icon pause-icon" />
                                 </button> :
                                 <button style={{ border: 'none' }} className="controls-icon" onClick={handlePlayPause}>
                                     <BsFillPlayCircleFill id="controls-icon" className="controls-icon play-icon" />
