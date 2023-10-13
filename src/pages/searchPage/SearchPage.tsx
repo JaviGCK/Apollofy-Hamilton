@@ -13,12 +13,14 @@ import { UserType } from "../../components/profileChart/ProfileChart";
 import { SearchBarSkeleton } from "../../components/searchBarSkeleton/SearchBarSkeleton";
 import { useSearchDataContext } from "../../utils/hooks/useSearchDataContext";
 import { DataRetrievedType } from "../../context/SearchDataContextProvider";
+import { useUserContext } from "../../utils/hooks/useUserContext";
 
 export const SearchPage = () => {
     const [focus, setFocus] = useState(false);
     const [searchInput, setSearchInput] = useState('');
     const { getAccessTokenSilently } = useAuth0();
     const { dataRetrieved, changeDataRetrieved } = useSearchDataContext();
+    const { currentUser } = useUserContext();
 
     const retrieveData = async () => {
         const fetchedAlbumData: AlbumType[] = await fetchData(getAccessTokenSilently, 'albums') as AlbumType[];
@@ -46,7 +48,7 @@ export const SearchPage = () => {
         if (!dataRetrieved) {
             retrieveData()
         }
-    }, [])
+    }, [currentUser])
 
 
     return (
