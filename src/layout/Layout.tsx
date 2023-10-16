@@ -11,29 +11,32 @@ import { GenreContextProvider } from '../context/GenresContext'
 import { TopTrendsContextProvider } from '../context/TopTrendsContextProvider'
 import { UserLibraryListContextProvider } from '../context/UserLibraryListContextProvider'
 import SearchDataContextProvider from '../context/SearchDataContextProvider'
+import { FilterProvider } from '../context/FilterContext'
 
 export const Layout = () => {
   return (
     <>
       <UserContextProvider>
         <TrackListContextProvider>
-          <ListDetailContextProvider>
-            <IsPlayingContextProvider>
-              <TopTrendsContextProvider>
-                <SelectedUserContextProvider>
-                  <GenreContextProvider>
-                    <UserLibraryListContextProvider>
-                      <SearchDataContextProvider>
-                        <Outlet />
-                        <SoundBar />
-                        <NavBar />
-                      </SearchDataContextProvider>
-                    </UserLibraryListContextProvider>
-                  </GenreContextProvider>
-                </SelectedUserContextProvider>
-              </TopTrendsContextProvider>
-            </IsPlayingContextProvider>
-          </ListDetailContextProvider>
+          <FilterProvider>
+            <ListDetailContextProvider>
+              <IsPlayingContextProvider>
+                <TopTrendsContextProvider>
+                  <SelectedUserContextProvider>
+                    <GenreContextProvider>
+                      <UserLibraryListContextProvider>
+                        <SearchDataContextProvider>
+                          <Outlet />
+                          <SoundBar />
+                          <NavBar />
+                        </SearchDataContextProvider>
+                      </UserLibraryListContextProvider>
+                    </GenreContextProvider>
+                  </SelectedUserContextProvider>
+                </TopTrendsContextProvider>
+              </IsPlayingContextProvider>
+            </ListDetailContextProvider>
+          </FilterProvider>
         </TrackListContextProvider>
       </UserContextProvider>
     </>

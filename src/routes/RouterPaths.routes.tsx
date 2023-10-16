@@ -25,7 +25,6 @@ export const RouterPaths = () => {
           <Auth0ProviderWithNavigate>
             <FilterProvider>
               <Routes>
-
                 <Route path='/'>
                   <Route index element={<LoginPage />} />
                 </Route>
@@ -38,7 +37,6 @@ export const RouterPaths = () => {
                   <Route path='form' element={<AddMusicPage />} />
                   <Route path='detail-page' element={<ListDetailPage />} />
                 </Route>
-
               </Routes>
             </FilterProvider>
           </Auth0ProviderWithNavigate>

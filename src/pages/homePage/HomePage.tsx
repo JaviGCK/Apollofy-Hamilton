@@ -4,7 +4,7 @@ import Logo from '../../assets/img/apollofy-logo.webp'
 import './homePage.css'
 import { useAuth0 } from "@auth0/auth0-react"
 import { SettingsBar } from "../../components/settingsbar/SettingsBar.tsx"
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import 'react-loading-skeleton/dist/skeleton.css'
 import { useTopTrendsContext } from "../../utils/hooks/useTopTrendsContext.ts"
 import { HomeCardsSkeleton } from "../../components/homeCardsSkeleton/HomeCardsSkeleton.tsx"
@@ -30,14 +30,7 @@ export const HomePage = () => {
 
     const handleToggleSettingsMenu = () => {
         setSettingsExpanded(!settingsExpanded)
-
     }
-
-    useEffect(() => {
-
-        settingMenu.current?.classList.toggle('setting-menu-container-expanded')
-
-    }, [settingsExpanded])
 
     return (
         <section className="home-page-container">
@@ -47,7 +40,7 @@ export const HomePage = () => {
                     <IoSettingsSharp className='home-setting-icon' />
                 </span>
             </div>
-            {settingsExpanded ? <div ref={settingMenu} className="settings-menu-container">
+            {settingsExpanded ? <div ref={settingMenu} className="settings-menu-container setting-menu-container-expanded">
                 <SettingsBar />
             </div> : <></>}
             {topTrends ? <TrendList /> : <HomeCardsSkeleton />}
