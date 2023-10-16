@@ -36,7 +36,6 @@ const ProfileChart: FC<ProfileChartProps> = ({ user }) => {
     const { currentUser } = useUserContext();
     user === null ? selectedUser = currentUser : selectedUser = user;
     const [modalState, setModalState] = useState<string | null>(null)
-
     const { t } = useTranslation();
     return (
         <div className='profile-chart-container'>

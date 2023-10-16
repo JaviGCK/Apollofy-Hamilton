@@ -12,6 +12,7 @@ import { SearchResultType } from '../searchUserPage/SearchUserPage';
 import { TrackType } from '../../types/track';
 import { AlbumType } from '../../types/album';
 import { PlaylistType } from '../../types/playlist';
+import { Toaster } from 'react-hot-toast';
 
 export const UserPage: React.FC = () => {
     const { currentUser } = useUserContext();
@@ -70,6 +71,10 @@ export const UserPage: React.FC = () => {
 
     return (
         <>
+            <Toaster
+                position="top-center"
+                reverseOrder={false}
+            />
             <section className="user-page-container">
                 <ShareButton />
                 <ProfileChart
