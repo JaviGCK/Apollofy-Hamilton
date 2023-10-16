@@ -27,41 +27,6 @@ export const fetchData = async (getToken: any, data: string): Promise<GenreType[
 }
 
 
-
-export const getUserListsReferences = async (getToken: any, userEmail: string): Promise<any> => {
-    const { VITE_API_URL: url } = import.meta.env;
-    const token = await getToken();
-    const response = await fetch(`${url}users/${userEmail}`, {
-        method: "GET",
-        headers: {
-            authorization: `Bearer ${token}`,
-            "Content-type": "application/json; charset=UTF-8"
-        }
-    });
-    const dataFetched = await response.json();
-    return dataFetched
-
-}
-
-//--------------------------------------------------------------------------------------------------------------------------------------------
-
-export const getListByReference = async (getToken: any, type: string, id: string): Promise<any> => {
-    const { VITE_API_URL: url } = import.meta.env;
-    const token = await getToken();
-    const response = await fetch(`${url}${type}s/${id}`, {
-        method: "GET",
-        headers: {
-            authorization: `Bearer ${token}`,
-            "Content-type": "application/json; charset=UTF-8"
-        }
-    });
-    const dataFetched = await response.json();
-    return dataFetched
-
-}
-
-
-
 //--------------------------------------------------------------------------------------------------------------------------------------------
 export const postTrack = async (getToken: any, formTrackData: FormData, id: string) => {
     const { VITE_API_URL: url } = import.meta.env;

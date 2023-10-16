@@ -9,7 +9,7 @@ import { ArtistType } from '../../../types/artist';
 import { useTranslation } from 'react-i18next';
 import { GroupUsers } from '../groupUsers/GroupUsers';
 import { UserType } from '../../profileChart/ProfileChart';
-import { DataRetrievedType } from '../../../pages/searchPage/SearchPage';
+import { DataRetrievedType } from '../../../context/SearchDataContextProvider';
 
 
 const reducer = (filter: any, action: any) => {
@@ -42,8 +42,6 @@ export interface SearchProps {
 
 const SearchList = (props: SearchProps) => {
     const { searchInput, dataRetrieved } = props
-
-    // const {albums, playlists, tracks, artists, users} = dataRetrieved;
 
     const [filteredAlbum, setFilteredAlbum] = useState<AlbumType[]>([])
     const [filteredArtist, setFilteredArtists] = useState<ArtistType[]>([])

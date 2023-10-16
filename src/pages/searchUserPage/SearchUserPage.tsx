@@ -40,7 +40,7 @@ export const SearchUserPage: React.FC = () => {
         } else {
             navigate("/search")
         }
-        // Estudiar que son públicas
+        // Study that the items are public
         const filteredTracks = selectedUser?.trackList?.filter((track: TrackType) => !track.privacity)
         const filteredAlbums = selectedUser?.albums?.filter((album: AlbumType) => !album.privacity)
         const filteredPlaylists = selectedUser?.playLists?.filter((playlist: PlaylistType) => !playlist.privacity)
