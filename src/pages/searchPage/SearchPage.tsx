@@ -33,13 +33,14 @@ export const SearchPage = () => {
         const fetchedPlaylistData: PlaylistType[] = await fetchData(getAccessTokenSilently, 'playlists') as PlaylistType[];
 
         const fetchedUsersData: UserType[] = await fetchData(getAccessTokenSilently, 'users') as UserType[];
+        const realUsers: UserType[] = fetchedUsersData.filter((user) => user.email !== "aithamiltonteam@gmail.com") as UserType[];
 
         const allFetchedData: DataRetrievedType = {
             albums: fetchedAlbumData,
             artists: fetchedArtistData,
             tracks: fetchedTracktData,
             playlists: fetchedPlaylistData,
-            users: fetchedUsersData
+            users: realUsers
         }
 
         changeDataRetrieved(allFetchedData);
