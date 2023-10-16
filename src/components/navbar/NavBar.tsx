@@ -22,7 +22,6 @@ import { PossibleItems } from '../../types/enums'
 import { useUserLibraryListContext } from '../../utils/hooks/useUserLibraryListContext'
 import { createUserStats } from '../../api/statsFetchApi'
 
-
 export interface UserDataType {
     userName: string,
     email: string,

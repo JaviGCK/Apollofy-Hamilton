@@ -1,4 +1,3 @@
-
 import { useFilterContext } from '../../../utils/hooks/useFilterProvider'
 import "./filterButton.css"
 

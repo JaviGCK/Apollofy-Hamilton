@@ -5,12 +5,9 @@ import { useTranslation } from "react-i18next";
 import { useGenreContext } from "../../../utils/hooks/useGenresContext";
 
 
-
 export const GenresList = () => {
     const { showGenre } = useGenreContext();
     const { t } = useTranslation();
-
-
 
     return (
         <>

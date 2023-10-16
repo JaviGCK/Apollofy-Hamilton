@@ -4,8 +4,6 @@ import { GenreType } from "./genre";
 import { PlaylistType } from "./playlist";
 import { TrackType } from "./track";
 
-
-
 export type PossibleItems =
     | AlbumType
     | ArtistType

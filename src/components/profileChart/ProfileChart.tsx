@@ -9,7 +9,6 @@ import { FavouriteType } from '../../pages/libraryPage/LibraryPage';
 import { AlbumType } from '../../types/album';
 import { PlaylistType } from '../../types/playlist';
 
-
 export interface UserType {
     id: string,
     userName?: string,

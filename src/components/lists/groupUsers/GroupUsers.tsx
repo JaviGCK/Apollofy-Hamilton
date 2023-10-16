@@ -18,7 +18,6 @@ export const GroupUsers: FC<GroupUsersType> = ({ user }) => {
     const { changeSelectedUser } = useSelectedUserContext();
     const { currentUser } = useUserContext();
 
-
     const navigate = useNavigate();
 
     const itemClicked = () => {

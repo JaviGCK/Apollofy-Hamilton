@@ -3,17 +3,11 @@ import { FC } from "react";
 import { UserType } from '../../profileChart/ProfileChart';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 
-
-
 export interface FollowsPropTypes {
 
     list: UserType[],
     handleClose: any
 }
-
-
-
-
 
 export const FollowsList: FC<FollowsPropTypes> = ({ list, handleClose }) => {
 

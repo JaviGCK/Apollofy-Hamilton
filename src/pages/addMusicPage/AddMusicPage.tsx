@@ -3,14 +3,10 @@ import { AddMusicForm } from "../../components/addMusicForm/AddMusicForm"
 import "./addMusicPage.css"
 import { useTranslation } from "react-i18next"
 
-
-
 export const AddMusicPage = () => {
-
 
     const { t } = useTranslation();
     const { user } = useAuth0()
-
 
     return (
         <section>
@@ -22,7 +18,6 @@ export const AddMusicPage = () => {
                 {user === undefined ? <h2>{t('addTrack')}</h2> : <h2>{user?.given_name}, {t('addTrack')}</h2>}
 
             </div>
-
 
             <AddMusicForm />
         </section>

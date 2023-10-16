@@ -26,8 +26,5 @@ export const AuthenticationGuard = (component: any) => {
 
   });
 
-
-
-
   return <Component />;
 };

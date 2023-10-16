@@ -1,13 +1,8 @@
-
-
 import { FilterButton } from '.'
 import { FilterCategories } from '../../pages/libraryPage/LibraryPage'
 import "./filter.css"
 
-
 export const Filter = ({ ...props }) => {
-
-
 
     return (
         <nav className="library-filter" >

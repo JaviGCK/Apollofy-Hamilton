@@ -6,8 +6,6 @@ import { useIsPlayingContext } from "../../utils/hooks/useIsPlayingContext"
 import { TrackType } from "../../types/track"
 
 
-
-
 export const SoundBar = () => {
     const { trackList, audioElement } = useTrackListContext();
     const [loopActive, setLoopActive] = useState(false)
@@ -20,8 +18,6 @@ export const SoundBar = () => {
             setCurrentTrackInfo(trackList[0])
         }
     }, [trackList])
-
-
 
     const getTrackProgress = () => {
         if (audioElement.current && trackList !== null && currentTrack !== null) {
@@ -79,13 +75,11 @@ export const SoundBar = () => {
         })
     }
 
-
     useEffect(() => {
         if (isPlayingList && audioElement.current) audioElement.current.play()
         else if (!isPlayingList && audioElement.current) audioElement.current.pause()
 
     }, [isPlayingList, currentTrack])
-
 
     return (
         <div>

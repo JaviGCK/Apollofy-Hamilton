@@ -3,10 +3,7 @@ import BgImg from "../../assets/img/bg-image.webp"
 import Logo from '../../assets/img/apollofy-logo.webp'
 import { LoginButton } from "../../components/login/Login"
 
-
 export const LoginPage = () => {
-
-
 
     return (
 

@@ -11,11 +11,6 @@ import { GenreType } from "../../types/genre"
 import { Select, Space } from 'antd';
 import { useGenreContext } from "../../utils/hooks/useGenresContext"
 
-
-
-
-
-
 export const AddMusicForm = () => {
 
     const [privacityState, setPrivacityState] = useState<boolean>(false);

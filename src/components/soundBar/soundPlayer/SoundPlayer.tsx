@@ -6,7 +6,6 @@ import "./soundPlayer.css"
 import { FC, useRef, useState } from 'react';
 import { TrackType } from '../../../types/track';
 
-
 interface SoundPlayerPropTypes {
     isPlaying: boolean,
     setIsPlaying: (playing: boolean) => void,
@@ -52,14 +51,12 @@ export const SoundPlayer: FC<SoundPlayerPropTypes> = ({ ...props }) => {
     }
 
 
-
     const formatTime = (seconds: number): string => {
         const minutes = Math.floor(seconds / 60);
         const remainingSeconds = Math.floor(seconds % 60);
         const formattedTime = `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
         return formattedTime;
     }
-
 
     return (
 
