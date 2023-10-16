@@ -4,6 +4,7 @@ import { FC, useState } from 'react'
 import { GroupItem } from '../lists/groupItem/GroupItem'
 import { useTranslation } from 'react-i18next'
 import { SearchResultType } from '../../pages/searchUserPage/SearchUserPage'
+import { Toaster } from 'react-hot-toast'
 
 interface ProfileMusicListPropTypes {
     searchResults: SearchResultType,
@@ -20,7 +21,10 @@ const ProfileMusicList: FC<ProfileMusicListPropTypes> = ({ searchResults }) => {
 
     return (
         <div className='profile-music-container-wrapper'>
-
+            <Toaster
+                position="top-center"
+                reverseOrder={false}
+            />
             <div className='profile-music-container'>
                 {searchResults && searchResults.map((result, index) => (
                     <div key={index}>

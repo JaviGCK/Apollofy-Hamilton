@@ -20,6 +20,7 @@ export const SearchPage = () => {
     const [searchInput, setSearchInput] = useState('');
     const { getAccessTokenSilently } = useAuth0();
     const { dataRetrieved, changeDataRetrieved } = useSearchDataContext();
+    const { changedUserData, setChangedUserData } = useUserContext();
     const { currentUser } = useUserContext();
 
     const retrieveData = async () => {
@@ -47,6 +48,20 @@ export const SearchPage = () => {
     useEffect(() => {
         if (!dataRetrieved) {
             retrieveData()
+        } else if (changedUserData) {
+            (async function updateDataRetrieved() {
+                const fetchedAlbumData: AlbumType[] = await fetchData(getAccessTokenSilently, 'albums') as AlbumType[];
+                const fetchedTracktData: TrackType[] = await fetchData(getAccessTokenSilently, 'tracks') as TrackType[];
+                const fetchedPlaylistData: PlaylistType[] = await fetchData(getAccessTokenSilently, 'playlists') as PlaylistType[];
+                const allFetchedData: DataRetrievedType = {
+                    ...dataRetrieved,
+                    albums: fetchedAlbumData,
+                    tracks: fetchedTracktData,
+                    playlists: fetchedPlaylistData
+                }
+                changeDataRetrieved(allFetchedData)
+                setChangedUserData(false)
+            }())
         }
     }, [currentUser])
 

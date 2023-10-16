@@ -24,7 +24,7 @@ export const AddMusicForm = () => {
     const [isFetching, setIsFetching] = useState<boolean>(false);
     const [genresSelectedError, setGenresSelectedError] = useState<boolean>(false);
     const { getAccessTokenSilently } = useAuth0()
-    const { currentUser, setCurrentLoggedUser } = useUserContext();
+    const { currentUser, setCurrentLoggedUser, setChangedUserData } = useUserContext();
     const { showGenre } = useGenreContext();
     const { t } = useTranslation();
 
@@ -91,6 +91,7 @@ export const AddMusicForm = () => {
                 if (correctData) {
                     if (currentUser?.id === undefined) return;
                     const updatedUser = await postTrack(getAccessTokenSilently, formTrackData, currentUser?.id);
+                    setChangedUserData(true)
                     setCurrentLoggedUser(updatedUser);
 
                     toast.success('Track uploaded successfully...')

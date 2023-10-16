@@ -11,13 +11,14 @@ import { deleteAlbum, deleteTrack, fetchData } from '../../../api/fetchApi';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useUserContext } from '../../../utils/hooks/useUserContext';
 import { UserType } from '../../profileChart/ProfileChart';
+import toast from 'react-hot-toast';
 
 export const GroupItem = ({ ...props }) => {
     const { track } = props;
     const { trackList, setNewTrackList, audioElement } = useTrackListContext();
     const { changeIsPlayingList } = useIsPlayingContext();
     const { setNewListDetail } = useListDetailContext();
-    const { currentUser, setCurrentLoggedUser } = useUserContext();
+    const { currentUser, setCurrentLoggedUser, setChangedUserData } = useUserContext();
     const [trackIsPlaying, setTrackIsPlaying] = useState<boolean>(false);
     const { getAccessTokenSilently } = useAuth0();
     const navigate = useNavigate();
@@ -50,24 +51,29 @@ export const GroupItem = ({ ...props }) => {
     }
 
     const handleDeleteItem = async () => {
+        const loadingToast = toast.loading("Deleting...")
+        await new Promise((resolve) => setTimeout(resolve, 1000));
 
         if (track.listType === "track") {
 
             const deletedTrack = await deleteTrack(getAccessTokenSilently, track.id);
 
             if (deletedTrack.ok) {
-
                 const updatedUser = await fetchData(getAccessTokenSilently, `users/${currentUser?.id}`) as UserType;
                 setCurrentLoggedUser(updatedUser);
-            }
+                setChangedUserData(true)
+                toast.success("Successfully deleted!", { id: loadingToast })
+            } else toast.error("Error deleting.", { id: loadingToast })
+
         } else if (track.listType === "album") {
             const deletedAlbum = await deleteAlbum(getAccessTokenSilently, track.id)
 
             if (deletedAlbum.ok) {
-
                 const updatedUser = await fetchData(getAccessTokenSilently, `users/${currentUser?.id}`) as UserType;
                 setCurrentLoggedUser(updatedUser);
-            }
+                setChangedUserData(true)
+                toast.success("Successfully deleted!", { id: loadingToast })
+            } else toast.error("Error deleting.", { id: loadingToast })
         }
 
     }
